@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="St1x"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Leon/OneDrive/Leon/St1x/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="St1x.elf">
+				<Option output="D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/St1x.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Leon/OneDrive/Leon/St1x/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F103xB"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/HW_Driver"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Core/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/Target"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 St1x.elf"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="St1x.elf/fast">
+				<Option output="D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/St1x.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Leon/OneDrive/Leon/St1x/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F103xB"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/HW_Driver"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Core/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/Target"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 St1x.elf/fast"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Leon/OneDrive/Leon/St1x/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Leon/OneDrive/Leon/St1x/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/OneDrive/Leon/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/adc.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/dma.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/gpio.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/i2c.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/main.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/spi.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/stm32f1xx_hal_conf.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/stm32f1xx_it.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/tim.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Inc/usart.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/adc.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/dma.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/gpio.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/i2c.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/main.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/spi.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/stm32f1xx_hal_msp.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/stm32f1xx_it.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/syscalls.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/sysmem.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/system_stm32f1xx.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/tim.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Src/usart.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Core/Startup/startup_stm32f103cbtx.s">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/License.md">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/cmsis_armclang.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/cmsis_compiler.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/cmsis_iccarm.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/cmsis_version.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_armv8mbl.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_armv8mml.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_cm1.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_cm23.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_cm33.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/mpu_armv7.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/mpu_armv8.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Include/tz_context.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/LICENSE.txt">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_adc.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_cortex.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_exti.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_i2c.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_utils.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/License.md">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Buzzer.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Buzzer.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/.0B11in05r1ZS067202302171143565a2.i2coled.h.download">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/LED.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/OLEDfont.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/St1xadc.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/delay.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/i2cOLED.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/key.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/multi_button.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/u8g2_OLED.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/LED.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/St1xadc.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/delay.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/i2cOLED.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/key.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/multi_button.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/spiOLED.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/spiOLED.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/mui.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/mui.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/mui_u8g2.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/mui_u8g2.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_bitmap.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_box.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_buffer.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_button.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_circle.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_cleardisplay.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_d_memory.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_d_setup.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_font.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_fonts.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_hvline.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_input_value.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_intersection.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_kerning.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_line.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_ll_hvline.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_message.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_polygon.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_selection_list.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8g2_setup.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8log.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8log_u8g2.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8log_u8x8.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_8x8.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_byte.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_cad.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_capture.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_d_sh1107.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_debounce.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_display.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_fonts.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_gpio.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_input_value.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_message.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_selection_list.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_setup.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_string.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_u16toa.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/u8x8_u8toa.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2_OLED.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/STM32F103CBTX_FLASH.ld">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App/usb_device.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App/usb_device.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App/usbd_custom_hid_if.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App/usbd_custom_hid_if.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App/usbd_desc.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App/usbd_desc.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/Target/usbd_conf.c">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/Target/usbd_conf.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
