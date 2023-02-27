@@ -440,10 +440,10 @@
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Buzzer.c">
 			<Option target="St1x.elf"/>
 		</Unit>
-		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Buzzer.h">
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/.0B11in05r1ZS067202302171143565a2.i2coled.h.download">
 			<Option target="St1x.elf"/>
 		</Unit>
-		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/.0B11in05r1ZS067202302171143565a2.i2coled.h.download">
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/Buzzer.h">
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/LED.h">
@@ -465,6 +465,9 @@
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/multi_button.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/spiOLED.h">
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/Inc/u8g2_OLED.h">
@@ -489,9 +492,6 @@
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/spiOLED.c">
-			<Option target="St1x.elf"/>
-		</Unit>
-		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/spiOLED.h">
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/HW_Driver/u8g2Lib/mui.c">
