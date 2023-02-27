@@ -4,7 +4,7 @@
 
 #include "LED.h"
 #include "tim.h"
-#include "stm32f1xx_hal_tim.h"
+#include "stdio.h"
 
 /************************LED测试***************************/
 void LED_Init() {
@@ -92,6 +92,7 @@ void KEY_Task(void) {
         }
             break;
     }
+    printf("KEY事件\r\n");
 }
 
 void BEEP_Task(void) {
@@ -123,6 +124,7 @@ void BEEP_Task(void) {
                 break;
         }
     }
+    printf("Buzzer事件\r\n");
 }
 
 void LED_Task(void)
@@ -240,6 +242,7 @@ void LED_Task(void)
         }
             break;
     }
+    printf("LED事件\r\n");
 }
 
 /************************LED测试***************************/

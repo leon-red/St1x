@@ -56,10 +56,10 @@ RM = "D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Leon\OneDrive\Leon\St1x
+CMAKE_SOURCE_DIR = D:\Leon\MyDesign\St1x
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Leon\OneDrive\Leon\St1x\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Leon\MyDesign\St1x\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Leon\OneDrive\Leon\St1x\cmake-build-debug\CMakeFiles D:\Leon\OneDrive\Leon\St1x\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles D:\Leon\MyDesign\St1x\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Leon\OneDrive\Leon\St1x\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1000,29 +1000,29 @@ HW_Driver/LED.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.s
 .PHONY : HW_Driver/LED.c.s
 
-HW_Driver/St1xadc.obj: HW_Driver/St1xadc.c.obj
-.PHONY : HW_Driver/St1xadc.obj
+HW_Driver/St1xADC.obj: HW_Driver/St1xADC.c.obj
+.PHONY : HW_Driver/St1xADC.obj
 
 # target to build an object file
-HW_Driver/St1xadc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/St1xadc.c.obj
-.PHONY : HW_Driver/St1xadc.c.obj
+HW_Driver/St1xADC.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj
+.PHONY : HW_Driver/St1xADC.c.obj
 
-HW_Driver/St1xadc.i: HW_Driver/St1xadc.c.i
-.PHONY : HW_Driver/St1xadc.i
+HW_Driver/St1xADC.i: HW_Driver/St1xADC.c.i
+.PHONY : HW_Driver/St1xADC.i
 
 # target to preprocess a source file
-HW_Driver/St1xadc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/St1xadc.c.i
-.PHONY : HW_Driver/St1xadc.c.i
+HW_Driver/St1xADC.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.i
+.PHONY : HW_Driver/St1xADC.c.i
 
-HW_Driver/St1xadc.s: HW_Driver/St1xadc.c.s
-.PHONY : HW_Driver/St1xadc.s
+HW_Driver/St1xADC.s: HW_Driver/St1xADC.c.s
+.PHONY : HW_Driver/St1xADC.s
 
 # target to generate assembly for a file
-HW_Driver/St1xadc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/St1xadc.c.s
-.PHONY : HW_Driver/St1xadc.c.s
+HW_Driver/St1xADC.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.s
+.PHONY : HW_Driver/St1xADC.c.s
 
 HW_Driver/delay.obj: HW_Driver/delay.c.obj
 .PHONY : HW_Driver/delay.obj
@@ -2462,9 +2462,9 @@ help:
 	@echo ... HW_Driver/LED.obj
 	@echo ... HW_Driver/LED.i
 	@echo ... HW_Driver/LED.s
-	@echo ... HW_Driver/St1xadc.obj
-	@echo ... HW_Driver/St1xadc.i
-	@echo ... HW_Driver/St1xadc.s
+	@echo ... HW_Driver/St1xADC.obj
+	@echo ... HW_Driver/St1xADC.i
+	@echo ... HW_Driver/St1xADC.s
 	@echo ... HW_Driver/delay.obj
 	@echo ... HW_Driver/delay.i
 	@echo ... HW_Driver/delay.s

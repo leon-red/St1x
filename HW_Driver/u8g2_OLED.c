@@ -4,7 +4,7 @@
 //
 //
 
-#include "Inc/u8g2_OLED.h"
+#include "u8g2_OLED.h"
 #include "u8g2.h"
 #include "i2c.h"
 #include "stdio.h"
@@ -45,7 +45,7 @@ uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int,void *
     switch (msg)
     {
         case U8X8_MSG_BYTE_SEND: /*通过SPI发送arg_int个字节数据*/
-            HAL_SPI_Transmit(&hspi2,(uint8_t *)arg_ptr,arg_int,200);
+            HAL_SPI_Transmit(&hspi2,(uint8_t *)arg_ptr,arg_int,500);
             break;
         case U8X8_MSG_BYTE_INIT: /*初始化函数*/
             break;
@@ -116,13 +116,13 @@ uint8_t u8x8_stm32_gpio_and_delay(U8X8_UNUSED u8x8_t *u8x8,
 
 /************************************************OLED初始化************************************************/
 void oled_Init(u8g2_t *u8g2) {
-    u8g2_Setup_sh1107_i2c_128x80_f(u8g2, U8G2_R3, u8x8_byte_i2c, u8x8_delay);
+    u8g2_Setup_sh1107_i2c_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_i2c, u8x8_delay);
     u8g2_InitDisplay(u8g2); // send init sequence to the display, display is in sleep mode after this,
     u8g2_ClearDisplay(u8g2);   //清空屏幕
     u8g2_SetPowerSave(u8g2, 0); // wake up display
 }
 void spi_oled_Init(u8g2_t *u8g2) {
-    u8g2_Setup_sh1107_i2c_128x80_f(u8g2, U8G2_R3, u8x8_byte_4wire_hw_spi, u8x8_stm32_gpio_and_delay);
+    u8g2_Setup_sh1107_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_4wire_hw_spi, u8x8_delay/*u8x8_stm32_gpio_and_delay*/);
     u8g2_InitDisplay(u8g2); // send init sequence to the display, display is in sleep mode after this,
     u8g2_ClearDisplay(u8g2);   //清空屏幕
     u8g2_SetPowerSave(u8g2, 0); // wake up display

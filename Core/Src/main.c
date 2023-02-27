@@ -30,6 +30,10 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "LED.h"
+#include "u8g2.h"
+#include "u8g2_OLED.h"
+#include "St1xADC.h"
+#include "spiOLED.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -70,7 +74,6 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -102,20 +105,29 @@ int main(void)
   MX_USB_DEVICE_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-
+    u8g2_t u8g2;
+//    oled_Init(&u8g2);
+    spi_oled_Init(&u8g2);
+//    SH1107_Init();
+//    OLED_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-      KEY_Task();
-      BEEP_Task();
-      LED_Task();
+    while (1) {
+//        KEY_Task();
+//        BEEP_Task();
+//        LED_Task();
+//        DMA_ADC_TEST();
+      u8g2_FirstPage(&u8g2);
+      do {
+          u8g2DrawTest(&u8g2);
+          draw(&u8g2);
+      } while (u8g2_NextPage(&u8g2));
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+    }
   /* USER CODE END 3 */
 }
 
@@ -177,11 +189,10 @@ void SystemClock_Config(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+    /* User can add his own implementation to report the HAL error return state */
+    __disable_irq();
+    while (1) {
+    }
   /* USER CODE END Error_Handler_Debug */
 }
 

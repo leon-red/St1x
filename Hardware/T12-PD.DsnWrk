@@ -1,0 +1,6 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=T12PD_V01.PrjPcb
+[Project2]
+ProjectPath=ATmega328\ATmega328.PrjPcb
