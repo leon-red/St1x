@@ -156,9 +156,6 @@ void LED_Task(void)
                     if(count>=50000)
                     {
                         count=0;
-//                        HAL_TIM_PWM_GetState(&htim2);
-                        HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_4);
-                                __HAL_TIM_SetCompare(&htim2,TIM_CHANNEL_4,100);
                         HAL_GPIO_WritePin(LED_RED_GPIO_Port,LED_RED_Pin,GPIO_PIN_RESET); //좋LED1
                         HAL_GPIO_WritePin(LED_GREEN_GPIO_Port,LED_GREEN_Pin,GPIO_PIN_RESET); //좋LED2
                         HAL_GPIO_WritePin(LED_BLUE_GPIO_Port,LED_BLUE_Pin,GPIO_PIN_RESET); //좋LED3
@@ -194,6 +191,8 @@ void LED_Task(void)
                     if(count>=150000)
                     {
                         count=0;
+                        HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_4);
+                                __HAL_TIM_SetCompare(&htim2,TIM_CHANNEL_4,100);
                         HAL_GPIO_WritePin(LED_RED_GPIO_Port,LED_RED_Pin,GPIO_PIN_RESET); //좋LED1
                         HAL_GPIO_WritePin(LED_GREEN_GPIO_Port,LED_GREEN_Pin,GPIO_PIN_RESET); //좋LED2
                         HAL_GPIO_WritePin(LED_BLUE_GPIO_Port,LED_BLUE_Pin,GPIO_PIN_RESET); //좋LED3
