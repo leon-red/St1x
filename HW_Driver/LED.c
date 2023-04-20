@@ -246,23 +246,3 @@ void LED_Task(void)
 }
 
 /************************LED测试***************************/
-uint16_t pwmVal=0;   //PWM占空比
-//uint8_t dir=1;
-void pwm_up()
-{
-    HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
-    while (pwmVal< 1000)
-    {
-        pwmVal=pwmVal+100;
-                __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, pwmVal);    //修改比较值，修改占空比
-        HAL_Delay(1);
-    }
-}
-
-void pwm_down()
-{
-    HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
-    pwmVal=pwmVal-100;
-            __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, pwmVal);    //修改比较值，修改占空比
-    HAL_Delay(1);
-}

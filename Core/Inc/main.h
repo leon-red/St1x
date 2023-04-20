@@ -89,12 +89,10 @@ void Error_Handler(void);
 #define SPI2_MOSI_GPIO_Port GPIOB
 #define OLED_PW_EN_Pin GPIO_PIN_15
 #define OLED_PW_EN_GPIO_Port GPIOA
-#define LED_RED_Pin GPIO_PIN_3
-#define LED_RED_GPIO_Port GPIOB
 #define OLED_Reset_Pin GPIO_PIN_4
 #define OLED_Reset_GPIO_Port GPIOB
-#define LED_RGB_Pin GPIO_PIN_5
-#define LED_RGB_GPIO_Port GPIOB
+#define LED_RED_Pin GPIO_PIN_5
+#define LED_RED_GPIO_Port GPIOB
 #define I2C1_SCL_Pin GPIO_PIN_6
 #define I2C1_SCL_GPIO_Port GPIOB
 #define I2C1_SDA_Pin GPIO_PIN_7

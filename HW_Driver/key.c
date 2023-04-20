@@ -8,7 +8,6 @@
 #include "Inc/multi_button.h"
 #include "main.h"
 #include "stdio.h"
-#include "LED.h"
 
 /************************按键事件测试**********************************/
 enum Button_IDs {
@@ -198,30 +197,3 @@ void KEY_Init() {
 //    __timer_start(button_ticks, 0, 5);
 }
 /****************初始化按键******************/
-void delay_ms(uint32_t nms)   //利用SysTick写一个延时函数
-{
-    uint32_t temp;
-    SysTick->LOAD = 8000*nms;
-    SysTick->VAL=0X00;
-    SysTick->CTRL=0X01;
-    do
-    {
-        temp=SysTick->CTRL;
-    }
-    while((temp&0x01)&&(!(temp&(1<<16))));
-    SysTick->CTRL=0x00;
-    SysTick->VAL =0X00;
-}
-
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)//中断回调函数，当按键按下跳入
-{
-    switch(GPIO_Pin)
-    {
-        case KEY_UP_Pin:
-            pwm_up();
-            break;
-        case KEY_DOWN_Pin:
-            pwm_down();
-            break;
-    }
-}

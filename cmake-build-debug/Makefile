@@ -47,10 +47,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe -E rm -f
+RM = "D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = D:\Leon\MyDesign\St1x\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	"D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -1000,30 +1000,6 @@ HW_Driver/LED.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.s
 .PHONY : HW_Driver/LED.c.s
 
-HW_Driver/OLED.obj: HW_Driver/OLED.c.obj
-.PHONY : HW_Driver/OLED.obj
-
-# target to build an object file
-HW_Driver/OLED.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/OLED.c.obj
-.PHONY : HW_Driver/OLED.c.obj
-
-HW_Driver/OLED.i: HW_Driver/OLED.c.i
-.PHONY : HW_Driver/OLED.i
-
-# target to preprocess a source file
-HW_Driver/OLED.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/OLED.c.i
-.PHONY : HW_Driver/OLED.c.i
-
-HW_Driver/OLED.s: HW_Driver/OLED.c.s
-.PHONY : HW_Driver/OLED.s
-
-# target to generate assembly for a file
-HW_Driver/OLED.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/OLED.c.s
-.PHONY : HW_Driver/OLED.c.s
-
 HW_Driver/St1xADC.obj: HW_Driver/St1xADC.c.obj
 .PHONY : HW_Driver/St1xADC.obj
 
@@ -1071,6 +1047,30 @@ HW_Driver/delay.s: HW_Driver/delay.c.s
 HW_Driver/delay.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.s
 .PHONY : HW_Driver/delay.c.s
+
+HW_Driver/i2cOLED.obj: HW_Driver/i2cOLED.c.obj
+.PHONY : HW_Driver/i2cOLED.obj
+
+# target to build an object file
+HW_Driver/i2cOLED.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.obj
+.PHONY : HW_Driver/i2cOLED.c.obj
+
+HW_Driver/i2cOLED.i: HW_Driver/i2cOLED.c.i
+.PHONY : HW_Driver/i2cOLED.i
+
+# target to preprocess a source file
+HW_Driver/i2cOLED.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.i
+.PHONY : HW_Driver/i2cOLED.c.i
+
+HW_Driver/i2cOLED.s: HW_Driver/i2cOLED.c.s
+.PHONY : HW_Driver/i2cOLED.s
+
+# target to generate assembly for a file
+HW_Driver/i2cOLED.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.s
+.PHONY : HW_Driver/i2cOLED.c.s
 
 HW_Driver/key.obj: HW_Driver/key.c.obj
 .PHONY : HW_Driver/key.obj
@@ -2462,15 +2462,15 @@ help:
 	@echo ... HW_Driver/LED.obj
 	@echo ... HW_Driver/LED.i
 	@echo ... HW_Driver/LED.s
-	@echo ... HW_Driver/OLED.obj
-	@echo ... HW_Driver/OLED.i
-	@echo ... HW_Driver/OLED.s
 	@echo ... HW_Driver/St1xADC.obj
 	@echo ... HW_Driver/St1xADC.i
 	@echo ... HW_Driver/St1xADC.s
 	@echo ... HW_Driver/delay.obj
 	@echo ... HW_Driver/delay.i
 	@echo ... HW_Driver/delay.s
+	@echo ... HW_Driver/i2cOLED.obj
+	@echo ... HW_Driver/i2cOLED.i
+	@echo ... HW_Driver/i2cOLED.s
 	@echo ... HW_Driver/key.obj
 	@echo ... HW_Driver/key.i
 	@echo ... HW_Driver/key.s
