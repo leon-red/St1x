@@ -10,7 +10,7 @@
 #include "stdio.h"
 #include "spi.h"
 
-/*******************************************获取I2C地址以及引脚定义*******************************************/
+/*******************************************I2C驱动*******************************************/
 uint8_t u8x8_byte_i2c(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
 {
     static uint8_t buffer[32];		/* u8g2/u8x8 will never send more than 32 bytes between START_TRANSFER and END_TRANSFER */
@@ -39,13 +39,18 @@ uint8_t u8x8_byte_i2c(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
     }
     return 1;
 }
+/*******************************************I2C驱动*******************************************/
 
+
+/*******************************************SPI驱动*******************************************/
 uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int,void *arg_ptr)
 {
     switch (msg)
     {
         case U8X8_MSG_BYTE_SEND: /*通过SPI发送arg_int个字节数据*/
-            HAL_SPI_Transmit(&hspi2,(uint8_t *)arg_ptr,arg_int,500);
+            HAL_SPI_Transmit_DMA(&hspi2,(uint8_t *)arg_ptr,arg_int);
+            while (hspi2.TxXferCount);
+//            HAL_SPI_Transmit(&hspi2,(uint8_t *)arg_ptr,arg_int,500);
             break;
         case U8X8_MSG_BYTE_INIT: /*初始化函数*/
             break;
@@ -53,15 +58,19 @@ uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int,void *
             HAL_GPIO_WritePin(OLED_DC_GPIO_Port,OLED_DC_Pin,arg_int);
             break;
         case U8X8_MSG_BYTE_START_TRANSFER:
+            u8x8_gpio_SetCS(u8x8, u8x8->display_info->chip_enable_level);
+            u8x8->gpio_and_delay_cb(u8x8,U8X8_MSG_DELAY_NANO,u8x8->display_info->post_chip_enable_wait_ns,NULL);
             break;
         case U8X8_MSG_BYTE_END_TRANSFER:
+            u8x8->gpio_and_delay_cb(u8x8,U8X8_MSG_DELAY_NANO,u8x8->display_info->pre_chip_disable_wait_ns,NULL);
+            u8x8_gpio_SetCS(u8x8,u8x8->display_info->chip_disable_level);
             break;
         default:
             return 0;
     }
     return 1;
 }
-/*******************************************获取I2C地址以及引脚定义*******************************************/
+/*******************************************SPI驱动*******************************************/
 
 /**********************************************OLED微秒延时函数**********************************************/
 uint8_t u8x8_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
@@ -70,7 +79,6 @@ uint8_t u8x8_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
     {
         case U8X8_MSG_DELAY_MILLI:
             HAL_Delay(arg_int);
-
             break;
             //Function which delays 10us
         case U8X8_MSG_DELAY_10MICRO:
@@ -102,7 +110,7 @@ uint8_t u8x8_stm32_gpio_and_delay(U8X8_UNUSED u8x8_t *u8x8,
             HAL_Delay(arg_int);
             break;
         case U8X8_MSG_GPIO_CS: /*片选信号*/
-//            HAL_GPIO_WritePin(OLED_CS_GPIO_Port,OLED_CS_Pin,arg_int);
+            HAL_GPIO_WritePin(OLED_CS_GPIO_Port,OLED_CS_Pin,arg_int);
             break;
         case U8X8_MSG_GPIO_DC: /*设置DC引脚,表明发送的是数据还是命令*/
             HAL_GPIO_WritePin(OLED_DC_GPIO_Port,OLED_DC_Pin,arg_int);
@@ -116,13 +124,16 @@ uint8_t u8x8_stm32_gpio_and_delay(U8X8_UNUSED u8x8_t *u8x8,
 
 /************************************************OLED初始化************************************************/
 void oled_Init(u8g2_t *u8g2) {
+    HAL_GPIO_WritePin(OLED_CS_GPIO_Port,OLED_CS_Pin,GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(OLED_DC_GPIO_Port,OLED_DC_Pin,GPIO_PIN_RESET);
     u8g2_Setup_sh1107_i2c_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_i2c, u8x8_delay);
     u8g2_InitDisplay(u8g2); // send init sequence to the display, display is in sleep mode after this,
     u8g2_ClearDisplay(u8g2);   //清空屏幕
     u8g2_SetPowerSave(u8g2, 0); // wake up display
 }
 void spi_oled_Init(u8g2_t *u8g2) {
-    u8g2_Setup_sh1107_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_4wire_hw_spi, u8x8_delay/*u8x8_stm32_gpio_and_delay*/);
+    HAL_GPIO_WritePin(OLED_CS_GPIO_Port,OLED_CS_Pin,GPIO_PIN_SET);
+    u8g2_Setup_sh1107_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_4wire_hw_spi, /*u8x8_delay*/u8x8_stm32_gpio_and_delay);
     u8g2_InitDisplay(u8g2); // send init sequence to the display, display is in sleep mode after this,
     u8g2_ClearDisplay(u8g2);   //清空屏幕
     u8g2_SetPowerSave(u8g2, 0); // wake up display
@@ -217,7 +228,7 @@ void testDrawProcess(u8g2_t *u8g2)
 void testShowFont(u8g2_t *u8g2)
 {
     int t = 1000;
-    char testStr[14] = "STM32F103C8T6";
+    char testStr[14] = "STM32F103CBT6";
 
     u8g2_ClearBuffer(u8g2);
 
@@ -323,14 +334,12 @@ void testDrawFilledEllipse(u8g2_t *u8g2)
 }
 /************************************************画实心椭圆************************************************/
 
-
-/************************************************环形测试************************************************/
 void testDrawMulti(u8g2_t *u8g2)
 {
     u8g2_ClearBuffer(u8g2);
-    for (int j = 0; j < 80; j+=15)
+    for (int j = 0; j < 64; j+=16)
     {
-        for (int i = 0; i < 128; i+=15)
+        for (int i = 0; i < 128; i+=16)
         {
             u8g2_DrawPixel(u8g2, i, j);
             u8g2_SendBuffer(u8g2);
@@ -341,73 +350,70 @@ void testDrawMulti(u8g2_t *u8g2)
     u8g2_ClearBuffer(u8g2);
     for(int i=30; i>0; i-=2)
     {
-        u8g2_DrawBox(u8g2,i*2,i,128-i*4,80-2*i);
+        u8g2_DrawBox(u8g2,i*2,i,128-i*4,64-2*i);
         u8g2_SendBuffer(u8g2);
     }
     //空心矩形逐渐变小
     u8g2_ClearBuffer(u8g2);
-    for(int i=0; i<40; i+=2)
+    for(int i=0; i<32; i+=2)
     {
-        u8g2_DrawFrame(u8g2,i,i,128-i*4,80-2*i);
+        u8g2_DrawFrame(u8g2,i*2,i,128-i*4,64-2*i);
         u8g2_SendBuffer(u8g2);
     }
 
     //实心圆角矩形逐渐变大
     u8g2_ClearBuffer(u8g2);
-    for(int i=32; i>0; i-=2)
+    for(int i=30; i>0; i-=2)
     {
-        u8g2_DrawRBox(u8g2,64,40,128-i*4,80-2*i,10-i/4);
+        u8g2_DrawRBox(u8g2,i*2,i,128-i*4,64-2*i,10-i/3);
         u8g2_SendBuffer(u8g2);
     }
     //空心圆角矩形逐渐变小
     u8g2_ClearBuffer(u8g2);
-    for(int i=0; i<40; i+=2)
+    for(int i=0; i<32; i+=2)
     {
-        u8g2_DrawRFrame(u8g2,i*2,i,128-i*4,80-2*i,10-i/3);
+        u8g2_DrawRFrame(u8g2,i*2,i,128-i*4,64-2*i,10-i/3);
         u8g2_SendBuffer(u8g2);
     }
 
     //实心圆逐渐变大
     u8g2_ClearBuffer(u8g2);
-    for(int i=2; i<80; i+=3)
+    for(int i=2; i<64; i+=3)
     {
-        u8g2_DrawDisc(u8g2,64,40,i, U8G2_DRAW_ALL);
+        u8g2_DrawDisc(u8g2,64,32,i, U8G2_DRAW_ALL);
         u8g2_SendBuffer(u8g2);
     }
     //空心圆逐渐变小
     u8g2_ClearBuffer(u8g2);
-    for(int i=80; i>0; i-=3)
+    for(int i=64; i>0; i-=3)
     {
-        u8g2_DrawCircle(u8g2,64,40,i, U8G2_DRAW_ALL);
+        u8g2_DrawCircle(u8g2,64,32,i, U8G2_DRAW_ALL);
         u8g2_SendBuffer(u8g2);
     }
 
     //实心椭圆逐渐变大
     u8g2_ClearBuffer(u8g2);
-    for(int i=2; i<40; i+=3)
+    for(int i=2; i<32; i+=3)
     {
-        u8g2_DrawFilledEllipse(u8g2,64,40, i*2, i, U8G2_DRAW_ALL);
+        u8g2_DrawFilledEllipse(u8g2,64,32, i*2, i, U8G2_DRAW_ALL);
         u8g2_SendBuffer(u8g2);
     }
     //空心椭圆逐渐变小
     u8g2_ClearBuffer(u8g2);
-    for(int i=40; i>0; i-=3)
+    for(int i=32; i>0; i-=3)
     {
-        u8g2_DrawEllipse(u8g2,64,40, i*2, i, U8G2_DRAW_ALL);
+        u8g2_DrawEllipse(u8g2,64,32, i*2, i, U8G2_DRAW_ALL);
         u8g2_SendBuffer(u8g2);
     }
 }
-/************************************************环形测试************************************************/
-
 //测试上面的例子
 void u8g2DrawTest(u8g2_t *u8g2)
 {
     testDrawProcess(u8g2);
+    testDrawFrame(u8g2);
+    testDrawRBox(u8g2);
+    testDrawCircle(u8g2);
+    testDrawFilledEllipse(u8g2);
+    testShowFont(u8g2);
     testDrawMulti(u8g2);
-//    testDrawFrame(u8g2);
-//    testDrawRBox(u8g2);
-//    testDrawCircle(u8g2);
-//    testDrawFilledEllipse(u8g2);
-//    testShowFont(u8g2);
-//    testDrawXBM(u8g2);
 }
