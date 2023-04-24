@@ -14,4 +14,6 @@ void KEY_Task(void);
 void BEEP_Task(void);
 void LED_Task(void);
 
+void pwm_up();
+void pwm_down();
 #endif //ST1X_LED_H

@@ -1048,30 +1048,6 @@ HW_Driver/delay.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.s
 .PHONY : HW_Driver/delay.c.s
 
-HW_Driver/i2cOLED.obj: HW_Driver/i2cOLED.c.obj
-.PHONY : HW_Driver/i2cOLED.obj
-
-# target to build an object file
-HW_Driver/i2cOLED.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.obj
-.PHONY : HW_Driver/i2cOLED.c.obj
-
-HW_Driver/i2cOLED.i: HW_Driver/i2cOLED.c.i
-.PHONY : HW_Driver/i2cOLED.i
-
-# target to preprocess a source file
-HW_Driver/i2cOLED.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.i
-.PHONY : HW_Driver/i2cOLED.c.i
-
-HW_Driver/i2cOLED.s: HW_Driver/i2cOLED.c.s
-.PHONY : HW_Driver/i2cOLED.s
-
-# target to generate assembly for a file
-HW_Driver/i2cOLED.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.s
-.PHONY : HW_Driver/i2cOLED.c.s
-
 HW_Driver/key.obj: HW_Driver/key.c.obj
 .PHONY : HW_Driver/key.obj
 
@@ -1119,6 +1095,30 @@ HW_Driver/multi_button.s: HW_Driver/multi_button.c.s
 HW_Driver/multi_button.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.s
 .PHONY : HW_Driver/multi_button.c.s
+
+HW_Driver/oled.obj: HW_Driver/oled.c.obj
+.PHONY : HW_Driver/oled.obj
+
+# target to build an object file
+HW_Driver/oled.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj
+.PHONY : HW_Driver/oled.c.obj
+
+HW_Driver/oled.i: HW_Driver/oled.c.i
+.PHONY : HW_Driver/oled.i
+
+# target to preprocess a source file
+HW_Driver/oled.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.i
+.PHONY : HW_Driver/oled.c.i
+
+HW_Driver/oled.s: HW_Driver/oled.c.s
+.PHONY : HW_Driver/oled.s
+
+# target to generate assembly for a file
+HW_Driver/oled.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.s
+.PHONY : HW_Driver/oled.c.s
 
 HW_Driver/spiOLED.obj: HW_Driver/spiOLED.c.obj
 .PHONY : HW_Driver/spiOLED.obj
@@ -2128,29 +2128,29 @@ HW_Driver/u8g2Lib/u8x8_u8toa.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.s
 .PHONY : HW_Driver/u8g2Lib/u8x8_u8toa.c.s
 
-HW_Driver/u8g2_OLED.obj: HW_Driver/u8g2_OLED.c.obj
-.PHONY : HW_Driver/u8g2_OLED.obj
+HW_Driver/u8g2_oled.obj: HW_Driver/u8g2_oled.c.obj
+.PHONY : HW_Driver/u8g2_oled.obj
 
 # target to build an object file
-HW_Driver/u8g2_OLED.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.obj
-.PHONY : HW_Driver/u8g2_OLED.c.obj
+HW_Driver/u8g2_oled.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj
+.PHONY : HW_Driver/u8g2_oled.c.obj
 
-HW_Driver/u8g2_OLED.i: HW_Driver/u8g2_OLED.c.i
-.PHONY : HW_Driver/u8g2_OLED.i
+HW_Driver/u8g2_oled.i: HW_Driver/u8g2_oled.c.i
+.PHONY : HW_Driver/u8g2_oled.i
 
 # target to preprocess a source file
-HW_Driver/u8g2_OLED.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.i
-.PHONY : HW_Driver/u8g2_OLED.c.i
+HW_Driver/u8g2_oled.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.i
+.PHONY : HW_Driver/u8g2_oled.c.i
 
-HW_Driver/u8g2_OLED.s: HW_Driver/u8g2_OLED.c.s
-.PHONY : HW_Driver/u8g2_OLED.s
+HW_Driver/u8g2_oled.s: HW_Driver/u8g2_oled.c.s
+.PHONY : HW_Driver/u8g2_oled.s
 
 # target to generate assembly for a file
-HW_Driver/u8g2_OLED.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.s
-.PHONY : HW_Driver/u8g2_OLED.c.s
+HW_Driver/u8g2_oled.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.s
+.PHONY : HW_Driver/u8g2_oled.c.s
 
 Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.obj: Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.obj
@@ -2468,15 +2468,15 @@ help:
 	@echo ... HW_Driver/delay.obj
 	@echo ... HW_Driver/delay.i
 	@echo ... HW_Driver/delay.s
-	@echo ... HW_Driver/i2cOLED.obj
-	@echo ... HW_Driver/i2cOLED.i
-	@echo ... HW_Driver/i2cOLED.s
 	@echo ... HW_Driver/key.obj
 	@echo ... HW_Driver/key.i
 	@echo ... HW_Driver/key.s
 	@echo ... HW_Driver/multi_button.obj
 	@echo ... HW_Driver/multi_button.i
 	@echo ... HW_Driver/multi_button.s
+	@echo ... HW_Driver/oled.obj
+	@echo ... HW_Driver/oled.i
+	@echo ... HW_Driver/oled.s
 	@echo ... HW_Driver/spiOLED.obj
 	@echo ... HW_Driver/spiOLED.i
 	@echo ... HW_Driver/spiOLED.s
@@ -2603,9 +2603,9 @@ help:
 	@echo ... HW_Driver/u8g2Lib/u8x8_u8toa.obj
 	@echo ... HW_Driver/u8g2Lib/u8x8_u8toa.i
 	@echo ... HW_Driver/u8g2Lib/u8x8_u8toa.s
-	@echo ... HW_Driver/u8g2_OLED.obj
-	@echo ... HW_Driver/u8g2_OLED.i
-	@echo ... HW_Driver/u8g2_OLED.s
+	@echo ... HW_Driver/u8g2_oled.obj
+	@echo ... HW_Driver/u8g2_oled.i
+	@echo ... HW_Driver/u8g2_oled.s
 	@echo ... Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.obj
 	@echo ... Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.i
 	@echo ... Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.s

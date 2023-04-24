@@ -613,24 +613,10 @@ CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.s"
 	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\delay.c -o CMakeFiles\St1x.elf.dir\HW_Driver\delay.c.s
 
-CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.obj: CMakeFiles/St1x.elf.dir/flags.make
-CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/i2cOLED.c
-CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.obj"
-	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\i2cOLED.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\i2cOLED.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\i2cOLED.c
-
-CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.i"
-	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\i2cOLED.c > CMakeFiles\St1x.elf.dir\HW_Driver\i2cOLED.c.i
-
-CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.s"
-	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\i2cOLED.c -o CMakeFiles\St1x.elf.dir\HW_Driver\i2cOLED.c.s
-
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/key.c
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj"
 	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\key.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\key.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\key.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.i: cmake_force
@@ -644,7 +630,7 @@ CMakeFiles/St1x.elf.dir/HW_Driver/key.c.s: cmake_force
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/multi_button.c
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj"
 	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\multi_button.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.i: cmake_force
@@ -654,6 +640,20 @@ CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.i: cmake_force
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.s"
 	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\multi_button.c -o CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.s
+
+CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: CMakeFiles/St1x.elf.dir/flags.make
+CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/oled.c
+CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\oled.c
+
+CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.i"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\oled.c > CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.i
+
+CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.s"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\oled.c -o CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/spiOLED.c
@@ -1243,19 +1243,19 @@ CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.s"
 	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u8toa.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u8toa.c.s
 
-CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.obj: CMakeFiles/St1x.elf.dir/flags.make
-CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2_OLED.c
-CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.obj"
-	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_OLED.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_OLED.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2_OLED.c
+CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj: CMakeFiles/St1x.elf.dir/flags.make
+CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2_oled.c
+CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2_oled.c
 
-CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.i"
-	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2_OLED.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_OLED.c.i
+CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.i"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2_oled.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.i
 
-CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.s"
-	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2_OLED.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_OLED.c.s
+CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.s"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2_oled.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.s
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj: D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c
@@ -1410,9 +1410,9 @@ St1x_elf_OBJECTS = \
 "CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj" \
-"CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj" \
+"CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj" \
@@ -1455,7 +1455,7 @@ St1x_elf_OBJECTS = \
 "CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj" \
-"CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.obj" \
+"CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj" \
 "CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj" \
 "CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj" \
 "CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj" \
@@ -1507,9 +1507,9 @@ St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj
-St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/i2cOLED.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj
+St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj
@@ -1552,7 +1552,7 @@ St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj
-St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_OLED.c.obj
+St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
