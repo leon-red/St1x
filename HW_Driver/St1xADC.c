@@ -28,7 +28,7 @@ void DMA_ADC_TEST() {
     printf("PEN=%d\r\nUSB=%d\r\n", DMA_ADC[0], DMA_ADC[1]);
 //    HAL_Delay(800);
     printf("/************************************/\r\n");
-    sprintf(usb,"USB=%f",DMA_ADC[1] * 3.3 / 4096 );
+    sprintf(usb,"USB=%f",DMA_ADC[1] * 3.3 / 4096 * 6.6);
     OLED_ShowString(0,0,usb,16,1);
     sprintf(usb,"USB=%d",DMA_ADC[1]);
     OLED_ShowString(0,16,usb,16,1);

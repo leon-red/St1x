@@ -168,6 +168,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj.d"
   "CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj"
   "CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj.d"
+  "CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj"
+  "CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj.d"
   "CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj"
   "CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj.d"
   "CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj"

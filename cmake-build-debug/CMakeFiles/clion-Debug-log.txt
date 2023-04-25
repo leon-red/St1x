@@ -1,4 +1,4 @@
-"D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S D:\Leon\MyDesign\St1x -B D:\Leon\MyDesign\St1x\cmake-build-debug
+D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S D:\Leon\MyDesign\St1x -B D:\Leon\MyDesign\St1x\cmake-build-debug
 -- Minimal optimization, debug info included
 -- Configuring done
 -- Generating done

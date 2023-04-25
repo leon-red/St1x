@@ -67,7 +67,7 @@ void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_8;
+  sConfig.Channel = ADC_CHANNEL_2;
   sConfig.Rank = ADC_REGULAR_RANK_2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -91,14 +91,19 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
     /* ADC1 clock enable */
     __HAL_RCC_ADC1_CLK_ENABLE();
 
+    __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
     /**ADC1 GPIO Configuration
-    PB0     ------> ADC1_IN8
+    PA2     ------> ADC1_IN2
     PB1     ------> ADC1_IN9
     */
-    GPIO_InitStruct.Pin = USB_VOLT_DET_Pin|PEN_VOLT_DET_Pin;
+    GPIO_InitStruct.Pin = USB_VOLT_DET_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
-    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+    HAL_GPIO_Init(USB_VOLT_DET_GPIO_Port, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = PEN_VOLT_DET_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    HAL_GPIO_Init(PEN_VOLT_DET_GPIO_Port, &GPIO_InitStruct);
 
     /* ADC1 DMA Init */
     /* ADC1 Init */
@@ -135,10 +140,12 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
     __HAL_RCC_ADC1_CLK_DISABLE();
 
     /**ADC1 GPIO Configuration
-    PB0     ------> ADC1_IN8
+    PA2     ------> ADC1_IN2
     PB1     ------> ADC1_IN9
     */
-    HAL_GPIO_DeInit(GPIOB, USB_VOLT_DET_Pin|PEN_VOLT_DET_Pin);
+    HAL_GPIO_DeInit(USB_VOLT_DET_GPIO_Port, USB_VOLT_DET_Pin);
+
+    HAL_GPIO_DeInit(PEN_VOLT_DET_GPIO_Port, PEN_VOLT_DET_Pin);
 
     /* ADC1 DMA DeInit */
     HAL_DMA_DeInit(adcHandle->DMA_Handle);

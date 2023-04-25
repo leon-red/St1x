@@ -47,10 +47,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = "D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = D:\Leon\MyDesign\St1x\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -2152,6 +2152,30 @@ HW_Driver/u8g2_oled.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.s
 .PHONY : HW_Driver/u8g2_oled.c.s
 
+HW_Driver/ws2812.obj: HW_Driver/ws2812.c.obj
+.PHONY : HW_Driver/ws2812.obj
+
+# target to build an object file
+HW_Driver/ws2812.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj
+.PHONY : HW_Driver/ws2812.c.obj
+
+HW_Driver/ws2812.i: HW_Driver/ws2812.c.i
+.PHONY : HW_Driver/ws2812.i
+
+# target to preprocess a source file
+HW_Driver/ws2812.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.i
+.PHONY : HW_Driver/ws2812.c.i
+
+HW_Driver/ws2812.s: HW_Driver/ws2812.c.s
+.PHONY : HW_Driver/ws2812.s
+
+# target to generate assembly for a file
+HW_Driver/ws2812.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.s
+.PHONY : HW_Driver/ws2812.c.s
+
 Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.obj: Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.obj
 
@@ -2606,6 +2630,9 @@ help:
 	@echo ... HW_Driver/u8g2_oled.obj
 	@echo ... HW_Driver/u8g2_oled.i
 	@echo ... HW_Driver/u8g2_oled.s
+	@echo ... HW_Driver/ws2812.obj
+	@echo ... HW_Driver/ws2812.i
+	@echo ... HW_Driver/ws2812.s
 	@echo ... Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.obj
 	@echo ... Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.i
 	@echo ... Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.s
