@@ -9,7 +9,7 @@ uint16_t send_Buf[NUM];
 // 启动DMA载入数据
 void WS_Load(void)
 {
-    HAL_TIM_PWM_Start_DMA(&htim3, LED_RGB_Pin, (uint32_t *)send_Buf, NUM);
+    HAL_TIM_PWM_Start_DMA(&htim3, TIM_CHANNEL_2, (uint32_t *)send_Buf, NUM);
 }
 
 // 关闭所有LED灯

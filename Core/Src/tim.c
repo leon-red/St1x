@@ -143,7 +143,7 @@ void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 72-1;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 60-1;
+  htim3.Init.Period = 1000;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -173,10 +173,12 @@ void MX_TIM3_Init(void)
   {
     Error_Handler();
   }
+  sConfigOC.Pulse = 256;
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();
   }
+  sConfigOC.Pulse = 0;
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
     Error_Handler();
@@ -282,7 +284,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
     /* TIM3 DMA Init */
     /* TIM3_CH3 Init */
     hdma_tim3_ch3.Instance = DMA1_Channel2;
-    hdma_tim3_ch3.Init.Direction = DMA_PERIPH_TO_MEMORY;
+    hdma_tim3_ch3.Init.Direction = DMA_MEMORY_TO_PERIPH;
     hdma_tim3_ch3.Init.PeriphInc = DMA_PINC_DISABLE;
     hdma_tim3_ch3.Init.MemInc = DMA_MINC_ENABLE;
     hdma_tim3_ch3.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;

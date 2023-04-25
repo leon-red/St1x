@@ -147,16 +147,18 @@ int main(void)
             HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
             HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
             HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
+            HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
                     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, 600);   //ÀÓÌúÎÂ¶È¿ØÖÆ
                     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, 5);   //·äÃùÆ÷
                     __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, 900);   //ÂÌÉ«LED
+                    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 128);   //WS2812_RGB
+            WS_WriteAll_RGB(0,255,0);
         } else {
             HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_4);
             HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_3);
                     __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 1000);   //ÂÌÉ«LED
             DMA_ADC_TEST();
-            __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 500);
-            rainbow(100);
+//            rainbow(100);
         }
     }
   /* USER CODE END 3 */
