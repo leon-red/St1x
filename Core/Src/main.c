@@ -126,7 +126,7 @@ int main(void)
     OLED_DisplayTurn(0);//0正常显示 1 屏幕翻转显示
     OLED_ShowPicture(0,0,128,80,BMP2,1);
     OLED_Refresh();
-    HAL_Delay(1500);
+    HAL_Delay(1000);
     OLED_Clear();
 
   /* USER CODE END 2 */
@@ -147,19 +147,20 @@ int main(void)
             HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
             HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
             HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
-            HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+//            HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+//            __HAL_TIM_GET_COMPARE(&htim3,TIM_CHANNEL_2);
                     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, 600);   //烙铁温度控制
-                    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, 5);   //蜂鸣器
-                    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, 900);   //绿色LED
-                    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 128);   //WS2812_RGB
-            WS_WriteAll_RGB(0,255,0);
+                    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, 5);   //蜂鸣器
+                    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 900);   //绿色LED
+            ws281x_sendOne(0xFF0000);
+            ws281x_delay(10);
+            ws281x_sendOne(0x00ff00);
         } else {
             HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_4);
             HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_3);
                     __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 1000);   //绿色LED
-            DMA_ADC_TEST();
-//            rainbow(100);
         }
+        DMA_ADC_TEST();
     }
   /* USER CODE END 3 */
 }

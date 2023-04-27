@@ -388,6 +388,7 @@ void OLED_ShowPicture(uint8_t x, uint8_t y, uint8_t sizex, uint8_t sizey, uint8_
 //OLEDµÄ³õÊ¼»¯
 void OLED_Init(void)
 {
+    HAL_GPIO_WritePin(OLED_IM_GPIO_Port,OLED_IM_Pin,0);
 	OLED_RES_Set();
 	OLED_WR_Byte(0xAE,OLED_CMD); /*display off*/
 	OLED_WR_Byte(0x00,OLED_CMD); /*set lower column address*/

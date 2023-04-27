@@ -74,7 +74,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Leon/MyDesign/St1x/HW_Driver/Buzzer.c" "CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj" "gcc" "CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj.d"
   "D:/Leon/MyDesign/St1x/HW_Driver/LED.c" "CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj" "gcc" "CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj.d"
   "D:/Leon/MyDesign/St1x/HW_Driver/St1xADC.c" "CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj" "gcc" "CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj.d"
-  "D:/Leon/MyDesign/St1x/HW_Driver/delay.c" "CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj" "gcc" "CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj.d"
   "D:/Leon/MyDesign/St1x/HW_Driver/key.c" "CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj" "gcc" "CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj.d"
   "D:/Leon/MyDesign/St1x/HW_Driver/multi_button.c" "CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj" "gcc" "CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj.d"
   "D:/Leon/MyDesign/St1x/HW_Driver/oled.c" "CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj" "gcc" "CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj.d"

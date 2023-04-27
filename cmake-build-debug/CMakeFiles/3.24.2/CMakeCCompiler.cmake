@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe")
+set(CMAKE_C_COMPILER "D:/Program/Clinon/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "10.3.1")
@@ -22,10 +22,10 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 set(CMAKE_AR "arm-none-eabi-ar")
-set(CMAKE_C_COMPILER_AR "D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar.exe")
-set(CMAKE_RANLIB "D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib.exe")
-set(CMAKE_LINKER "D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ld.exe")
+set(CMAKE_C_COMPILER_AR "D:/Program/Clinon/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-ar.exe")
+set(CMAKE_RANLIB "D:/Program/Clinon/gcc-arm-none-eabi/bin/arm-none-eabi-ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "D:/Program/Clinon/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib.exe")
+set(CMAKE_LINKER "D:/Program/Clinon/gcc-arm-none-eabi/bin/arm-none-eabi-ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -66,7 +66,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include;D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include;D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed;D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

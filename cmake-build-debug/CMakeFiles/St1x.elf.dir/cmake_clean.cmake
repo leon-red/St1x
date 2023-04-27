@@ -74,8 +74,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj.d"
   "CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj"
   "CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj.d"
-  "CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj"
-  "CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj.d"
   "CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj"
   "CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj.d"
   "CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj"

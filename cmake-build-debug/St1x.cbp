@@ -11,10 +11,10 @@
 				<Option working_dir="D:/Leon/MyDesign/St1x/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="St1x.elf">
@@ -39,18 +39,18 @@
 					<Add directory="D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc"/>
 					<Add directory="D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
 					<Add directory="D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 St1x.elf"/>
-					<CompileFile command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 St1x.elf"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="St1x.elf/fast">
@@ -75,38 +75,38 @@
 					<Add directory="D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc"/>
 					<Add directory="D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
 					<Add directory="D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
-					<Add directory="d:\program\clion\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\program\clinon\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 St1x.elf/fast"/>
-					<CompileFile command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 St1x.elf/fast"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="D:/Leon/MyDesign/St1x/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="D:/Leon/MyDesign/St1x/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program/Clion/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program/Clinon/mingw64/bin/mingw32-make.exe -f &quot;D:/Leon/MyDesign/St1x/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -449,9 +449,6 @@
 		<Unit filename="D:/Leon/MyDesign/St1x/HW_Driver/Inc/LED.h">
 			<Option target="St1x.elf"/>
 		</Unit>
-		<Unit filename="D:/Leon/MyDesign/St1x/HW_Driver/Inc/OLEDfont.h">
-			<Option target="St1x.elf"/>
-		</Unit>
 		<Unit filename="D:/Leon/MyDesign/St1x/HW_Driver/Inc/St1xADC.h">
 			<Option target="St1x.elf"/>
 		</Unit>
@@ -470,6 +467,9 @@
 		<Unit filename="D:/Leon/MyDesign/St1x/HW_Driver/Inc/oled.h">
 			<Option target="St1x.elf"/>
 		</Unit>
+		<Unit filename="D:/Leon/MyDesign/St1x/HW_Driver/Inc/oledfont.h">
+			<Option target="St1x.elf"/>
+		</Unit>
 		<Unit filename="D:/Leon/MyDesign/St1x/HW_Driver/Inc/u8g2_oled.h">
 			<Option target="St1x.elf"/>
 		</Unit>
@@ -477,9 +477,6 @@
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/MyDesign/St1x/HW_Driver/St1xADC.c">
-			<Option target="St1x.elf"/>
-		</Unit>
-		<Unit filename="D:/Leon/MyDesign/St1x/HW_Driver/delay.c">
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/MyDesign/St1x/HW_Driver/key.c">

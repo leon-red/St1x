@@ -43,10 +43,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe -E rm -f
+RM = "D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -72,1316 +72,1302 @@ CMakeFiles/St1x.elf.dir/Core/Src/adc.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/adc.c.obj: D:/Leon/MyDesign/St1x/Core/Src/adc.c
 CMakeFiles/St1x.elf.dir/Core/Src/adc.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/adc.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/adc.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\adc.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\adc.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\adc.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/adc.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\adc.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\adc.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\adc.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/adc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/adc.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\adc.c > CMakeFiles\St1x.elf.dir\Core\Src\adc.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\adc.c > CMakeFiles\St1x.elf.dir\Core\Src\adc.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/adc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/adc.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\adc.c -o CMakeFiles\St1x.elf.dir\Core\Src\adc.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\adc.c -o CMakeFiles\St1x.elf.dir\Core\Src\adc.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/dma.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/dma.c.obj: D:/Leon/MyDesign/St1x/Core/Src/dma.c
 CMakeFiles/St1x.elf.dir/Core/Src/dma.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/dma.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/dma.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\dma.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\dma.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\dma.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/dma.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\dma.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\dma.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\dma.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/dma.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/dma.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\dma.c > CMakeFiles\St1x.elf.dir\Core\Src\dma.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\dma.c > CMakeFiles\St1x.elf.dir\Core\Src\dma.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/dma.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/dma.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\dma.c -o CMakeFiles\St1x.elf.dir\Core\Src\dma.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\dma.c -o CMakeFiles\St1x.elf.dir\Core\Src\dma.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.obj: D:/Leon/MyDesign/St1x/Core/Src/gpio.c
 CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\gpio.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\gpio.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\gpio.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\gpio.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\gpio.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\gpio.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\gpio.c > CMakeFiles\St1x.elf.dir\Core\Src\gpio.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\gpio.c > CMakeFiles\St1x.elf.dir\Core\Src\gpio.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\gpio.c -o CMakeFiles\St1x.elf.dir\Core\Src\gpio.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\gpio.c -o CMakeFiles\St1x.elf.dir\Core\Src\gpio.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.obj: D:/Leon/MyDesign/St1x/Core/Src/i2c.c
 CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\i2c.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\i2c.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\i2c.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\i2c.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\i2c.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\i2c.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\i2c.c > CMakeFiles\St1x.elf.dir\Core\Src\i2c.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\i2c.c > CMakeFiles\St1x.elf.dir\Core\Src\i2c.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\i2c.c -o CMakeFiles\St1x.elf.dir\Core\Src\i2c.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\i2c.c -o CMakeFiles\St1x.elf.dir\Core\Src\i2c.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/main.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/main.c.obj: D:/Leon/MyDesign/St1x/Core/Src/main.c
 CMakeFiles/St1x.elf.dir/Core/Src/main.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/main.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/main.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\main.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\main.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\main.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/main.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\main.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\main.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\main.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/main.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\main.c > CMakeFiles\St1x.elf.dir\Core\Src\main.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\main.c > CMakeFiles\St1x.elf.dir\Core\Src\main.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/main.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\main.c -o CMakeFiles\St1x.elf.dir\Core\Src\main.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\main.c -o CMakeFiles\St1x.elf.dir\Core\Src\main.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/spi.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/spi.c.obj: D:/Leon/MyDesign/St1x/Core/Src/spi.c
 CMakeFiles/St1x.elf.dir/Core/Src/spi.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/spi.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/spi.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\spi.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\spi.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\spi.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/spi.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\spi.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\spi.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\spi.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/spi.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/spi.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\spi.c > CMakeFiles\St1x.elf.dir\Core\Src\spi.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\spi.c > CMakeFiles\St1x.elf.dir\Core\Src\spi.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/spi.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/spi.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\spi.c -o CMakeFiles\St1x.elf.dir\Core\Src\spi.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\spi.c -o CMakeFiles\St1x.elf.dir\Core\Src\spi.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: D:/Leon/MyDesign/St1x/Core/Src/stm32f1xx_hal_msp.c
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_hal_msp.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_hal_msp.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_hal_msp.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_hal_msp.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_hal_msp.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_hal_msp.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_hal_msp.c > CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_hal_msp.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_hal_msp.c > CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_hal_msp.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_hal_msp.c -o CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_hal_msp.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_hal_msp.c -o CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_hal_msp.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.obj: D:/Leon/MyDesign/St1x/Core/Src/stm32f1xx_it.c
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_it.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_it.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_it.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_it.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_it.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_it.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_it.c > CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_it.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_it.c > CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_it.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_it.c -o CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_it.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\stm32f1xx_it.c -o CMakeFiles\St1x.elf.dir\Core\Src\stm32f1xx_it.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.obj: D:/Leon/MyDesign/St1x/Core/Src/syscalls.c
 CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\syscalls.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\syscalls.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\syscalls.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\syscalls.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\syscalls.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\syscalls.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\syscalls.c > CMakeFiles\St1x.elf.dir\Core\Src\syscalls.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\syscalls.c > CMakeFiles\St1x.elf.dir\Core\Src\syscalls.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\syscalls.c -o CMakeFiles\St1x.elf.dir\Core\Src\syscalls.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\syscalls.c -o CMakeFiles\St1x.elf.dir\Core\Src\syscalls.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.obj: D:/Leon/MyDesign/St1x/Core/Src/sysmem.c
 CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\sysmem.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\sysmem.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\sysmem.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\sysmem.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\sysmem.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\sysmem.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\sysmem.c > CMakeFiles\St1x.elf.dir\Core\Src\sysmem.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\sysmem.c > CMakeFiles\St1x.elf.dir\Core\Src\sysmem.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\sysmem.c -o CMakeFiles\St1x.elf.dir\Core\Src\sysmem.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\sysmem.c -o CMakeFiles\St1x.elf.dir\Core\Src\sysmem.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.obj: D:/Leon/MyDesign/St1x/Core/Src/system_stm32f1xx.c
 CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\system_stm32f1xx.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\system_stm32f1xx.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\system_stm32f1xx.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\system_stm32f1xx.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\system_stm32f1xx.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\system_stm32f1xx.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\system_stm32f1xx.c > CMakeFiles\St1x.elf.dir\Core\Src\system_stm32f1xx.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\system_stm32f1xx.c > CMakeFiles\St1x.elf.dir\Core\Src\system_stm32f1xx.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\system_stm32f1xx.c -o CMakeFiles\St1x.elf.dir\Core\Src\system_stm32f1xx.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\system_stm32f1xx.c -o CMakeFiles\St1x.elf.dir\Core\Src\system_stm32f1xx.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/tim.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/tim.c.obj: D:/Leon/MyDesign/St1x/Core/Src/tim.c
 CMakeFiles/St1x.elf.dir/Core/Src/tim.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/tim.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/tim.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\tim.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\tim.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\tim.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/tim.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\tim.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\tim.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\tim.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/tim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/tim.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\tim.c > CMakeFiles\St1x.elf.dir\Core\Src\tim.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\tim.c > CMakeFiles\St1x.elf.dir\Core\Src\tim.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/tim.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/tim.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\tim.c -o CMakeFiles\St1x.elf.dir\Core\Src\tim.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\tim.c -o CMakeFiles\St1x.elf.dir\Core\Src\tim.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Src/usart.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Src/usart.c.obj: D:/Leon/MyDesign/St1x/Core/Src/usart.c
 CMakeFiles/St1x.elf.dir/Core/Src/usart.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/St1x.elf.dir/Core/Src/usart.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/usart.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\usart.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\usart.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\usart.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Core/Src/usart.c.obj -MF CMakeFiles\St1x.elf.dir\Core\Src\usart.c.obj.d -o CMakeFiles\St1x.elf.dir\Core\Src\usart.c.obj -c D:\Leon\MyDesign\St1x\Core\Src\usart.c
 
 CMakeFiles/St1x.elf.dir/Core/Src/usart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Core/Src/usart.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\usart.c > CMakeFiles\St1x.elf.dir\Core\Src\usart.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Src\usart.c > CMakeFiles\St1x.elf.dir\Core\Src\usart.c.i
 
 CMakeFiles/St1x.elf.dir/Core/Src/usart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Core/Src/usart.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\usart.c -o CMakeFiles\St1x.elf.dir\Core\Src\usart.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Src\usart.c -o CMakeFiles\St1x.elf.dir\Core\Src\usart.c.s
 
 CMakeFiles/St1x.elf.dir/Core/Startup/startup_stm32f103cbtx.s.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Core/Startup/startup_stm32f103cbtx.s.obj: D:/Leon/MyDesign/St1x/Core/Startup/startup_stm32f103cbtx.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building ASM object CMakeFiles/St1x.elf.dir/Core/Startup/startup_stm32f103cbtx.s.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\St1x.elf.dir\Core\Startup\startup_stm32f103cbtx.s.obj -c D:\Leon\MyDesign\St1x\Core\Startup\startup_stm32f103cbtx.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\St1x.elf.dir\Core\Startup\startup_stm32f103cbtx.s.obj -c D:\Leon\MyDesign\St1x\Core\Startup\startup_stm32f103cbtx.s
 
 CMakeFiles/St1x.elf.dir/Core/Startup/startup_stm32f103cbtx.s.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/St1x.elf.dir/Core/Startup/startup_stm32f103cbtx.s.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Startup\startup_stm32f103cbtx.s > CMakeFiles\St1x.elf.dir\Core\Startup\startup_stm32f103cbtx.s.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E D:\Leon\MyDesign\St1x\Core\Startup\startup_stm32f103cbtx.s > CMakeFiles\St1x.elf.dir\Core\Startup\startup_stm32f103cbtx.s.i
 
 CMakeFiles/St1x.elf.dir/Core/Startup/startup_stm32f103cbtx.s.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/St1x.elf.dir/Core/Startup/startup_stm32f103cbtx.s.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Startup\startup_stm32f103cbtx.s -o CMakeFiles\St1x.elf.dir\Core\Startup\startup_stm32f103cbtx.s.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S D:\Leon\MyDesign\St1x\Core\Startup\startup_stm32f103cbtx.s -o CMakeFiles\St1x.elf.dir\Core\Startup\startup_stm32f103cbtx.s.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.s
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj -MF CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c.obj.d -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c.obj -c D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c > CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c.i
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c -o CMakeFiles\St1x.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/Buzzer.c
 CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\Buzzer.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\Buzzer.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\Buzzer.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\Buzzer.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\Buzzer.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\Buzzer.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\Buzzer.c > CMakeFiles\St1x.elf.dir\HW_Driver\Buzzer.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\Buzzer.c > CMakeFiles\St1x.elf.dir\HW_Driver\Buzzer.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\Buzzer.c -o CMakeFiles\St1x.elf.dir\HW_Driver\Buzzer.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\Buzzer.c -o CMakeFiles\St1x.elf.dir\HW_Driver\Buzzer.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/LED.c
 CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\LED.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\LED.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\LED.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\LED.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\LED.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\LED.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\LED.c > CMakeFiles\St1x.elf.dir\HW_Driver\LED.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\LED.c > CMakeFiles\St1x.elf.dir\HW_Driver\LED.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\LED.c -o CMakeFiles\St1x.elf.dir\HW_Driver\LED.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\LED.c -o CMakeFiles\St1x.elf.dir\HW_Driver\LED.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/St1xADC.c
 CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\St1xADC.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\St1xADC.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\St1xADC.c
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\St1xADC.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\St1xADC.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\St1xADC.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\St1xADC.c > CMakeFiles\St1x.elf.dir\HW_Driver\St1xADC.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\St1xADC.c > CMakeFiles\St1x.elf.dir\HW_Driver\St1xADC.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\St1xADC.c -o CMakeFiles\St1x.elf.dir\HW_Driver\St1xADC.c.s
-
-CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj: CMakeFiles/St1x.elf.dir/flags.make
-CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/delay.c
-CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\delay.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\delay.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\delay.c
-
-CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\delay.c > CMakeFiles\St1x.elf.dir\HW_Driver\delay.c.i
-
-CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\delay.c -o CMakeFiles\St1x.elf.dir\HW_Driver\delay.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\St1xADC.c -o CMakeFiles\St1x.elf.dir\HW_Driver\St1xADC.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/key.c
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\key.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\key.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\key.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\key.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\key.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\key.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/key.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\key.c > CMakeFiles\St1x.elf.dir\HW_Driver\key.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\key.c > CMakeFiles\St1x.elf.dir\HW_Driver\key.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/key.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\key.c -o CMakeFiles\St1x.elf.dir\HW_Driver\key.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\key.c -o CMakeFiles\St1x.elf.dir\HW_Driver\key.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/multi_button.c
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\multi_button.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\multi_button.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\multi_button.c > CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\multi_button.c > CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\multi_button.c -o CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\multi_button.c -o CMakeFiles\St1x.elf.dir\HW_Driver\multi_button.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/oled.c
 CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\oled.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\oled.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\oled.c > CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\oled.c > CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\oled.c -o CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\oled.c -o CMakeFiles\St1x.elf.dir\HW_Driver\oled.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/spiOLED.c
 CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\spiOLED.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\spiOLED.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\spiOLED.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\spiOLED.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\spiOLED.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\spiOLED.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\spiOLED.c > CMakeFiles\St1x.elf.dir\HW_Driver\spiOLED.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\spiOLED.c > CMakeFiles\St1x.elf.dir\HW_Driver\spiOLED.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\spiOLED.c -o CMakeFiles\St1x.elf.dir\HW_Driver\spiOLED.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\spiOLED.c -o CMakeFiles\St1x.elf.dir\HW_Driver\spiOLED.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui_u8g2.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui_u8g2.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui_u8g2.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui_u8g2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui_u8g2.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui_u8g2.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui_u8g2.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui_u8g2.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui_u8g2.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui_u8g2.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui_u8g2.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui_u8g2.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui_u8g2.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\mui_u8g2.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\mui_u8g2.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_bitmap.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_bitmap.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_bitmap.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_bitmap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_bitmap.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_bitmap.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_bitmap.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_bitmap.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_bitmap.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_bitmap.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_bitmap.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_bitmap.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_bitmap.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_bitmap.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_bitmap.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_box.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_box.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_box.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_box.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_box.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_box.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_box.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_box.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_box.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_box.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_box.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_box.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_box.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_box.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_box.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_buffer.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_buffer.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_buffer.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_buffer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_buffer.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_buffer.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_buffer.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_buffer.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_buffer.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_buffer.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_buffer.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_buffer.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_buffer.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_buffer.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_buffer.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_button.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_button.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_button.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_button.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_button.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_button.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_button.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_button.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_button.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_button.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_button.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_button.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_button.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_button.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_button.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_circle.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_circle.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_circle.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_circle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_circle.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_circle.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_circle.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_circle.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_circle.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_circle.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_circle.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_circle.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_circle.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_circle.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_circle.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_cleardisplay.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_cleardisplay.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_cleardisplay.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_cleardisplay.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_cleardisplay.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_cleardisplay.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_cleardisplay.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_cleardisplay.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_cleardisplay.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_cleardisplay.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_cleardisplay.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_cleardisplay.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_cleardisplay.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_cleardisplay.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_cleardisplay.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_d_memory.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_memory.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_memory.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_memory.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_memory.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_memory.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_memory.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_memory.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_memory.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_memory.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_memory.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_memory.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_memory.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_memory.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_memory.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_d_setup.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_setup.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_setup.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_setup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_setup.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_setup.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_setup.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_setup.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_setup.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_setup.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_setup.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_setup.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_setup.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_d_setup.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_d_setup.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_font.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_font.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_font.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_font.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_font.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_font.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_font.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_font.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_font.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_font.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_font.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_font.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_font.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_font.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_font.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_fonts.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_fonts.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_fonts.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_fonts.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_fonts.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_fonts.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_fonts.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_fonts.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_fonts.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_fonts.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_fonts.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_fonts.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_fonts.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_fonts.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_fonts.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_hvline.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_hvline.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_hvline.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_hvline.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_hvline.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_hvline.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_hvline.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_hvline.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_hvline.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_hvline.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_hvline.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_hvline.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_hvline.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_hvline.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_hvline.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_input_value.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_input_value.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_input_value.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_input_value.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_input_value.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_input_value.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_input_value.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_input_value.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_input_value.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_input_value.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_input_value.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_input_value.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_input_value.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_input_value.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_input_value.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_intersection.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_intersection.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_intersection.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_intersection.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_intersection.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_intersection.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_intersection.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_intersection.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_intersection.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_intersection.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_intersection.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_intersection.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_intersection.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_intersection.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_intersection.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_kerning.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_kerning.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_kerning.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_kerning.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_kerning.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_kerning.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_kerning.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_kerning.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_kerning.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_kerning.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_kerning.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_kerning.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_kerning.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_kerning.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_kerning.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_line.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_line.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_line.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_line.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_line.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_line.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_line.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_line.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_line.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_line.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_line.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_line.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_line.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_line.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_line.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_ll_hvline.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_ll_hvline.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_ll_hvline.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_ll_hvline.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_ll_hvline.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_ll_hvline.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_ll_hvline.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_ll_hvline.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_ll_hvline.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_ll_hvline.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_ll_hvline.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_ll_hvline.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_ll_hvline.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_ll_hvline.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_ll_hvline.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_message.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_message.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_message.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_message.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_message.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_message.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_message.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_message.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_message.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_message.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_message.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_message.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_message.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_message.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_message.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_polygon.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_polygon.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_polygon.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_polygon.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_polygon.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_polygon.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_polygon.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_polygon.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_polygon.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_polygon.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_polygon.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_polygon.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_polygon.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_polygon.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_polygon.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_selection_list.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_selection_list.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_selection_list.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_selection_list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_selection_list.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_selection_list.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_selection_list.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_selection_list.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_selection_list.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_selection_list.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_selection_list.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_selection_list.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_selection_list.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_selection_list.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_selection_list.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_setup.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_setup.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_setup.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_setup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_setup.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_setup.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_setup.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_setup.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_setup.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_setup.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_setup.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_setup.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_setup.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8g2_setup.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8g2_setup.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log_u8g2.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8g2.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8g2.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8g2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8g2.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8g2.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8g2.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8g2.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8g2.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8g2.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8g2.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8g2.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8g2.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8g2.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8g2.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log_u8x8.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8x8.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8x8.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8x8.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8x8.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8x8.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8x8.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8x8.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8x8.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8x8.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8x8.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8x8.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8x8.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8log_u8x8.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8log_u8x8.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_8x8.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_8x8.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_8x8.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_8x8.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_8x8.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_8x8.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_8x8.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_8x8.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_8x8.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_8x8.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_8x8.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_8x8.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_8x8.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_8x8.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_8x8.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_byte.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_byte.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_byte.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_byte.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_byte.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_byte.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_byte.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_byte.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_byte.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_byte.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_byte.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_byte.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_byte.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_byte.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_byte.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_cad.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_cad.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_cad.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_cad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_cad.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_cad.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_cad.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_cad.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_cad.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_cad.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_cad.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_cad.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_cad.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_cad.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_cad.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_capture.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_capture.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_capture.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_capture.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_capture.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_capture.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_capture.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_capture.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_capture.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_capture.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_capture.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_capture.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_capture.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_capture.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_capture.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_d_sh1107.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_d_sh1107.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_d_sh1107.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_d_sh1107.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_d_sh1107.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_d_sh1107.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_d_sh1107.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_d_sh1107.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_d_sh1107.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_d_sh1107.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_d_sh1107.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_d_sh1107.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_d_sh1107.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_d_sh1107.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_d_sh1107.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_debounce.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_debounce.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_debounce.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_debounce.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_debounce.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_debounce.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_debounce.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_debounce.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_debounce.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_debounce.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_debounce.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_debounce.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_debounce.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_debounce.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_debounce.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_display.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_display.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_display.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_display.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_display.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_display.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_display.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_display.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_display.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_display.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_display.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_display.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_display.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_display.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_display.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_fonts.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_fonts.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_fonts.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_fonts.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_fonts.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_fonts.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_fonts.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_fonts.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_fonts.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_fonts.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_fonts.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_fonts.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_fonts.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_fonts.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_fonts.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_gpio.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_gpio.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_gpio.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_gpio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_gpio.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_gpio.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_gpio.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_gpio.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_gpio.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_gpio.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_gpio.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_gpio.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_gpio.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_gpio.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_gpio.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_input_value.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_input_value.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_input_value.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_input_value.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_input_value.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_input_value.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_input_value.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_input_value.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_input_value.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_input_value.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_input_value.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_input_value.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_input_value.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_input_value.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_input_value.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_message.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_message.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_message.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_message.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_message.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_message.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_message.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_message.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_message.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_message.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_message.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_message.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_message.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_message.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_message.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_selection_list.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_selection_list.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_selection_list.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_selection_list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_selection_list.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_selection_list.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_selection_list.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_selection_list.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_selection_list.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_selection_list.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_selection_list.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_selection_list.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_selection_list.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_selection_list.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_selection_list.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_setup.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_setup.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_setup.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_setup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_setup.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_setup.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_setup.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_setup.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_setup.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_setup.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_setup.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_setup.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_setup.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_setup.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_setup.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_string.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_string.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_string.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_string.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_string.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_string.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_string.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_string.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_string.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_string.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_string.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_string.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_string.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_string.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_u16toa.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u16toa.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u16toa.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u16toa.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u16toa.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u16toa.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u16toa.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u16toa.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u16toa.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u16toa.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u16toa.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u16toa.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u16toa.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u16toa.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u16toa.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_u8toa.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u8toa.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u8toa.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u8toa.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u8toa.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u8toa.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u8toa.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u8toa.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u8toa.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u8toa.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u8toa.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u8toa.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u8toa.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2Lib\u8x8_u8toa.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2Lib\u8x8_u8toa.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2_oled.c
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2_oled.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\u8g2_oled.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2_oled.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\u8g2_oled.c > CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2_oled.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\u8g2_oled.c -o CMakeFiles\St1x.elf.dir\HW_Driver\u8g2_oled.c.s
 
 CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/ws2812.c
 CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\ws2812.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\ws2812.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\ws2812.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj -MF CMakeFiles\St1x.elf.dir\HW_Driver\ws2812.c.obj.d -o CMakeFiles\St1x.elf.dir\HW_Driver\ws2812.c.obj -c D:\Leon\MyDesign\St1x\HW_Driver\ws2812.c
 
 CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\ws2812.c > CMakeFiles\St1x.elf.dir\HW_Driver\ws2812.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\HW_Driver\ws2812.c > CMakeFiles\St1x.elf.dir\HW_Driver\ws2812.c.i
 
 CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\ws2812.c -o CMakeFiles\St1x.elf.dir\HW_Driver\ws2812.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\HW_Driver\ws2812.c -o CMakeFiles\St1x.elf.dir\HW_Driver\ws2812.c.s
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj: D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj -MF CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c.obj.d -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c.obj -c D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.obj -MF CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c.obj.d -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c.obj -c D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c > CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c > CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c.i
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Class\CustomHID\Src\usbd_customhid.c.s
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj: D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj -MF CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c.obj.d -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c.obj -c D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj -MF CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c.obj.d -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c.obj -c D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c > CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c > CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c.i
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c.s
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj: D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj -MF CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c.obj.d -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c.obj -c D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj -MF CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c.obj.d -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c.obj -c D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c > CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c > CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c.i
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c.s
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj: D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj -MF CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c.obj.d -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c.obj -c D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj -MF CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c.obj.d -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c.obj -c D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c > CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c > CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c.i
 
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c -o CMakeFiles\St1x.elf.dir\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c.s
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj: D:/Leon/MyDesign/St1x/USB_DEVICE/App/usb_device.c
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj -MF CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usb_device.c.obj.d -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usb_device.c.obj -c D:\Leon\MyDesign\St1x\USB_DEVICE\App\usb_device.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj -MF CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usb_device.c.obj.d -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usb_device.c.obj -c D:\Leon\MyDesign\St1x\USB_DEVICE\App\usb_device.c
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\USB_DEVICE\App\usb_device.c > CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usb_device.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\USB_DEVICE\App\usb_device.c > CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usb_device.c.i
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\USB_DEVICE\App\usb_device.c -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usb_device.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\USB_DEVICE\App\usb_device.c -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usb_device.c.s
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj: D:/Leon/MyDesign/St1x/USB_DEVICE/App/usbd_custom_hid_if.c
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj -MF CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_custom_hid_if.c.obj.d -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_custom_hid_if.c.obj -c D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_custom_hid_if.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj -MF CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_custom_hid_if.c.obj.d -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_custom_hid_if.c.obj -c D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_custom_hid_if.c
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_custom_hid_if.c > CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_custom_hid_if.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_custom_hid_if.c > CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_custom_hid_if.c.i
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_custom_hid_if.c -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_custom_hid_if.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_custom_hid_if.c -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_custom_hid_if.c.s
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj: D:/Leon/MyDesign/St1x/USB_DEVICE/App/usbd_desc.c
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj -MF CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_desc.c.obj.d -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_desc.c.obj -c D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_desc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj -MF CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_desc.c.obj.d -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_desc.c.obj -c D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_desc.c
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_desc.c > CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_desc.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_desc.c > CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_desc.c.i
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_desc.c -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_desc.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\USB_DEVICE\App\usbd_desc.c -o CMakeFiles\St1x.elf.dir\USB_DEVICE\App\usbd_desc.c.s
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj: CMakeFiles/St1x.elf.dir/flags.make
 CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj: D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.c
 CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj: CMakeFiles/St1x.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj -MF CMakeFiles\St1x.elf.dir\USB_DEVICE\Target\usbd_conf.c.obj.d -o CMakeFiles\St1x.elf.dir\USB_DEVICE\Target\usbd_conf.c.obj -c D:\Leon\MyDesign\St1x\USB_DEVICE\Target\usbd_conf.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj"
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj -MF CMakeFiles\St1x.elf.dir\USB_DEVICE\Target\usbd_conf.c.obj.d -o CMakeFiles\St1x.elf.dir\USB_DEVICE\Target\usbd_conf.c.obj -c D:\Leon\MyDesign\St1x\USB_DEVICE\Target\usbd_conf.c
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.i"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\USB_DEVICE\Target\usbd_conf.c > CMakeFiles\St1x.elf.dir\USB_DEVICE\Target\usbd_conf.c.i
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Leon\MyDesign\St1x\USB_DEVICE\Target\usbd_conf.c > CMakeFiles\St1x.elf.dir\USB_DEVICE\Target\usbd_conf.c.i
 
 CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.s"
-	D:\Program\Clion\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\USB_DEVICE\Target\usbd_conf.c -o CMakeFiles\St1x.elf.dir\USB_DEVICE\Target\usbd_conf.c.s
+	D:\Program\Clinon\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Leon\MyDesign\St1x\USB_DEVICE\Target\usbd_conf.c -o CMakeFiles\St1x.elf.dir\USB_DEVICE\Target\usbd_conf.c.s
 
 # Object files for target St1x.elf
 St1x_elf_OBJECTS = \
@@ -1423,7 +1409,6 @@ St1x_elf_OBJECTS = \
 "CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj" \
-"CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj" \
 "CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj" \
@@ -1521,7 +1506,6 @@ St1x.elf: CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/Buzzer.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj
-St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/delay.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj
@@ -1580,7 +1564,7 @@ St1x.elf: CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
 St1x.elf: CMakeFiles/St1x.elf.dir/build.make
 St1x.elf: CMakeFiles/St1x.elf.dir/objects1.rsp
 St1x.elf: CMakeFiles/St1x.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Linking C executable St1x.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Leon\MyDesign\St1x\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Linking C executable St1x.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\St1x.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/Leon/MyDesign/St1x/cmake-build-debug/St1x.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/Leon/MyDesign/St1x/cmake-build-debug/St1x.bin"
