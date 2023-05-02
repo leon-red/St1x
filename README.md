@@ -3,7 +3,7 @@
  - T：T系列烙铁头
  - 1x：12 & 13
 ### 基于SMT32F103CBT6自动调温烙铁，使用T12 & T13烙铁头实现
-
+***
 - 打开St1x.ico使用STM32CulbMX6.5版本打开文件之后，选择自己的IDE，点击GENERATE CODE即可。
 
 - 下载u8g2的支持库，将csrc整个文件夹及内容添加进自己的项目中，u8g2库下载地址：https://github.com/olikraus/u8g2
@@ -17,9 +17,9 @@
 - 更详细的精减u8g2库可以自行搜索，我就不再详细描述了。
 
 - 将St1x.ioc版本由STM32CulbMX6.5更新到STM32CulbMX6.7，同时把所有关于u8g2相关的库加入进去，直接编译下载即可使用不需要再重新整理。
-
-## 功能实现结果
-- [x] 硬件设计
+***
+# 功能实现结果
+## 硬件设计
   - [x] 原理图设计
   - [X] PCB设计
   - [x] 硬件电路调试
@@ -33,16 +33,27 @@
     - [x] 烙铁头电动势运放电路
     - [x] 加速度传感器
     - [x] 屏幕显示
-- [ ] 外观设计
-  - [ ] ID设计
-  - [ ] 外壳3D设计
-- [ ] 软件设计
-  - [ ] U8G2驱动
-  - [ ] 界面显示
-  - [ ] 按键控制
-  - [ ] PID算法
-  - [ ] ADC温度读取
-  - [ ] USB输入电压检测
-  - [ ] 自动温度控制
-  - [ ] LED提示
-  - [ ] 蜂鸣器事件
+***
+## 外观设计
+- [ ] ID设计
+- [ ] 外壳3D设计
+***
+## 软件设计
+- [ ] U8G2驱动
+- [ ] 界面显示
+- [ ] 按键控制
+- [ ] PID算法
+- [ ] ADC温度读取
+- [ ] USB输入电压检测
+- [ ] 自动温度控制
+- [ ] LED提示
+- [ ] 蜂鸣器事件
+
+# 图片展示
+![SCH.png](Hardware%2FImage%2FSCH.png)
+![St1x_TOP.png](Hardware%2FImage%2FSt1x_TOP.png)
+![St1x_BOT.png](Hardware%2FImage%2FSt1x_BOT.png)
+![St1x_MB.png](Hardware%2FImage%2FSt1x_MB.png)
+![实物1.jpg](Hardware%2FImage%2F%CA%B5%CE%EF1.jpg)
+![实物2.jpg](Hardware%2FImage%2F%CA%B5%CE%EF2.jpg)
+[SCH.pdf](Hardware%2FSCH.pdf)
