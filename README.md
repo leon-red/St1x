@@ -48,12 +48,18 @@
 - [ ] 自动温度控制
 - [ ] LED提示
 - [ ] 蜂鸣器事件
-
+***
 # 图片展示
 ![SCH.png](Hardware%2FImage%2FSCH.png)
+
 ![St1x_TOP.png](Hardware%2FImage%2FSt1x_TOP.png)
+
 ![St1x_BOT.png](Hardware%2FImage%2FSt1x_BOT.png)
+
 ![St1x_MB.png](Hardware%2FImage%2FSt1x_MB.png)
-![实物1.jpg](Hardware%2FImage%2F%CA%B5%CE%EF1.jpg)
-![实物2.jpg](Hardware%2FImage%2F%CA%B5%CE%EF2.jpg)
+
+![1.jpg](Hardware%2FImage%2F1.jpg)
+
+![2.jpg](Hardware%2FImage%2F2.jpg)
+
 [SCH.pdf](Hardware%2FSCH.pdf)
