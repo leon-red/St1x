@@ -47,10 +47,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = "D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = D:\Leon\MyDesign\St1x\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\Program\Clinon\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -199,30 +199,6 @@ Core/Src/gpio.s: Core/Src/gpio.c.s
 Core/Src/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.s
 .PHONY : Core/Src/gpio.c.s
-
-Core/Src/i2c.obj: Core/Src/i2c.c.obj
-.PHONY : Core/Src/i2c.obj
-
-# target to build an object file
-Core/Src/i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.obj
-.PHONY : Core/Src/i2c.c.obj
-
-Core/Src/i2c.i: Core/Src/i2c.c.i
-.PHONY : Core/Src/i2c.i
-
-# target to preprocess a source file
-Core/Src/i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.i
-.PHONY : Core/Src/i2c.c.i
-
-Core/Src/i2c.s: Core/Src/i2c.c.s
-.PHONY : Core/Src/i2c.s
-
-# target to generate assembly for a file
-Core/Src/i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.s
-.PHONY : Core/Src/i2c.c.s
 
 Core/Src/main.obj: Core/Src/main.c.obj
 .PHONY : Core/Src/main.obj
@@ -688,30 +664,6 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.s
 .PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.s
 
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.obj: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj
-.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.obj
-
-# target to build an object file
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj
-.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj
-
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.i: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.i
-.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.i
-
-# target to preprocess a source file
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.i
-.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.i
-
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.s: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.s
-.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.s
-
-# target to generate assembly for a file
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.s
-.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.s
-
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.obj: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj
 .PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.obj
 
@@ -1096,29 +1048,29 @@ HW_Driver/oled.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.s
 .PHONY : HW_Driver/oled.c.s
 
-HW_Driver/spiOLED.obj: HW_Driver/spiOLED.c.obj
-.PHONY : HW_Driver/spiOLED.obj
+HW_Driver/pid.obj: HW_Driver/pid.c.obj
+.PHONY : HW_Driver/pid.obj
 
 # target to build an object file
-HW_Driver/spiOLED.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj
-.PHONY : HW_Driver/spiOLED.c.obj
+HW_Driver/pid.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/pid.c.obj
+.PHONY : HW_Driver/pid.c.obj
 
-HW_Driver/spiOLED.i: HW_Driver/spiOLED.c.i
-.PHONY : HW_Driver/spiOLED.i
+HW_Driver/pid.i: HW_Driver/pid.c.i
+.PHONY : HW_Driver/pid.i
 
 # target to preprocess a source file
-HW_Driver/spiOLED.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.i
-.PHONY : HW_Driver/spiOLED.c.i
+HW_Driver/pid.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/pid.c.i
+.PHONY : HW_Driver/pid.c.i
 
-HW_Driver/spiOLED.s: HW_Driver/spiOLED.c.s
-.PHONY : HW_Driver/spiOLED.s
+HW_Driver/pid.s: HW_Driver/pid.c.s
+.PHONY : HW_Driver/pid.s
 
 # target to generate assembly for a file
-HW_Driver/spiOLED.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.s
-.PHONY : HW_Driver/spiOLED.c.s
+HW_Driver/pid.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\St1x.elf.dir\build.make CMakeFiles/St1x.elf.dir/HW_Driver/pid.c.s
+.PHONY : HW_Driver/pid.c.s
 
 HW_Driver/u8g2Lib/mui.obj: HW_Driver/u8g2Lib/mui.c.obj
 .PHONY : HW_Driver/u8g2Lib/mui.obj
@@ -2362,9 +2314,6 @@ help:
 	@echo ... Core/Src/gpio.obj
 	@echo ... Core/Src/gpio.i
 	@echo ... Core/Src/gpio.s
-	@echo ... Core/Src/i2c.obj
-	@echo ... Core/Src/i2c.i
-	@echo ... Core/Src/i2c.s
 	@echo ... Core/Src/main.obj
 	@echo ... Core/Src/main.i
 	@echo ... Core/Src/main.s
@@ -2423,9 +2372,6 @@ help:
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.obj
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.i
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.s
-	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.obj
-	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.i
-	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.s
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.obj
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.i
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.s
@@ -2474,9 +2420,9 @@ help:
 	@echo ... HW_Driver/oled.obj
 	@echo ... HW_Driver/oled.i
 	@echo ... HW_Driver/oled.s
-	@echo ... HW_Driver/spiOLED.obj
-	@echo ... HW_Driver/spiOLED.i
-	@echo ... HW_Driver/spiOLED.s
+	@echo ... HW_Driver/pid.obj
+	@echo ... HW_Driver/pid.i
+	@echo ... HW_Driver/pid.s
 	@echo ... HW_Driver/u8g2Lib/mui.obj
 	@echo ... HW_Driver/u8g2Lib/mui.i
 	@echo ... HW_Driver/u8g2Lib/mui.s

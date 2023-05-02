@@ -53,7 +53,7 @@ include_directories(HW_Driver HW_Driver/Inc HW_Driver/u8g2Lib Core/Inc USB_DEVIC
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "Drivers/*.*" "USB_DEVICE/*.*" "HW_Driver/*.*" "HW_Driver/Inc*.*" "HW_Driver/u8g2Lib/*.*")
+file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "Drivers/*.*" "USB_DEVICE/*.*" "HW_Driver/*.*" "HW_Driver/Inc/*.*" "HW_Driver/u8g2Lib/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103CBTX_FLASH.ld)
 

@@ -20,7 +20,6 @@
 #include "main.h"
 #include "adc.h"
 #include "dma.h"
-#include "i2c.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
@@ -99,7 +98,6 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_ADC1_Init();
-  MX_I2C1_Init();
   MX_SPI2_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
@@ -108,26 +106,23 @@ int main(void)
   MX_TIM4_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-//    u8g2_t u8g2;
-//    spi_oled_Init(&u8g2);   //初始化OLED(SPI驱动)
-//    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
-//    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
-    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+//    HAL_GPIO_WritePin(OLED_IM_GPIO_Port,OLED_IM_Pin,0);
+    u8g2_t u8g2;
+    OLED_Init();    //初始化OLED(SPI驱动)
+    spi_oled_Init(&u8g2);   //初始化OLED(SPI驱动)
+
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
-//            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, 100);//烙铁温度控制
-//            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, 0);//蜂鸣器
-            __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 1000);//红色LED灯
+            __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, 1000);//红色LED灯
             __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 1000);//绿色LED灯
-            __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 1000);//蓝色LED灯
-//    OLED_SPI_Init;
-    OLED_Init();
+            __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 1);//蓝色LED灯
+//    OLED_SPI_Init();
     OLED_ColorTurn(0);//0正常显示，1 反色显示
-    OLED_DisplayTurn(0);//0正常显示 1 屏幕翻转显示
     OLED_ShowPicture(0,0,128,80,BMP2,1);
     OLED_Refresh();
     HAL_Delay(1000);
-    OLED_Clear();
+//    OLED_Clear();
 
   /* USER CODE END 2 */
 
@@ -147,20 +142,22 @@ int main(void)
             HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
             HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
             HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
-//            HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-//            __HAL_TIM_GET_COMPARE(&htim3,TIM_CHANNEL_2);
                     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, 600);   //烙铁温度控制
-                    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, 5);   //蜂鸣器
+                    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, 1);   //蜂鸣器
                     __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 900);   //绿色LED
-            ws281x_sendOne(0xFF0000);
-            ws281x_delay(10);
-            ws281x_sendOne(0x00ff00);
+            ws2811_Reset();
+            RGB_WriteByte(0X88);
+//            circular_led_show();
+//            ws2812_refresh(6);
         } else {
             HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_4);
             HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_3);
                     __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 1000);   //绿色LED
         }
-        DMA_ADC_TEST();
+        u8g2_FirstPage(&u8g2);
+        do {
+            DMA_ADC_TEST(&u8g2);
+        } while (u8g2_NextPage(&u8g2));
     }
   /* USER CODE END 3 */
 }

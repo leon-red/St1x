@@ -42,8 +42,8 @@ void OLED_WR_Byte(uint8_t dat,uint8_t cmd)
 {
 	if(cmd)
 	  OLED_DC_Set();
-	else 
-	  OLED_DC_Clr();		  
+	else
+	  OLED_DC_Clr();
 	OLED_CS_Clr();
     HAL_SPI_Transmit_DMA(&hspi2,&dat,1);
 	OLED_CS_Set();
@@ -58,7 +58,7 @@ void OLED_DisPlay_On(void)
 	OLED_WR_Byte(0xAF,OLED_CMD);//点亮屏幕
 }
 
-//关闭OLED显示 
+//关闭OLED显示
 void OLED_DisPlay_Off(void)
 {
 	OLED_WR_Byte(0x8D,OLED_CMD);//电荷泵使能
@@ -94,7 +94,7 @@ void OLED_Clear(void)
 	OLED_Refresh();//更新显示
 }
 
-//画点 
+//画点
 //x:0~127
 //y:0~63
 //t:1 填充 0,清空
@@ -129,20 +129,20 @@ void OLED_DrawPoint(uint8_t x,uint8_t y,uint8_t t)
 //x2,y2:结束坐标
 void OLED_DrawLine(uint8_t x1,uint8_t y1,uint8_t x2,uint8_t y2,uint8_t mode)
 {
-	uint16_t t; 
+	uint16_t t;
 	int xerr=0,yerr=0,delta_x,delta_y,distance;
 	int incx,incy,uRow,uCol;
-	delta_x=x2-x1; //计算坐标增量 
+	delta_x=x2-x1;  //计算坐标增量
 	delta_y=y2-y1;
-	uRow=x1;//画线起点坐标
+	uRow=x1;    //画线起点坐标
 	uCol=y1;
-	if(delta_x>0)incx=1; //设置单步方向 
-	else if (delta_x==0)incx=0;//垂直线 
+	if(delta_x>0)incx=1;    //设置单步方向
+	else if (delta_x==0)incx=0; //垂直线
 	else {incx=-1;delta_x=-delta_x;}
 	if(delta_y>0)incy=1;
-	else if (delta_y==0)incy=0;//水平线 
+	else if (delta_y==0)incy=0; //水平线
 	else {incy=-1;delta_y=-delta_x;}
-	if(delta_x>delta_y)distance=delta_x; //选取基本增量坐标轴 
+	if(delta_x>delta_y)distance=delta_x;    //选取基本增量坐标轴
 	else distance=delta_y;
 	for(t=0;t<distance+1;t++)
 	{
@@ -168,7 +168,7 @@ void OLED_DrawCircle(uint8_t x,uint8_t y,uint8_t r)
 	int a, b,num;
     a = 0;
     b = r;
-    while(2 * b * b >= r * r)      
+    while(2 * b * b >= r * r)
     {
         OLED_DrawPoint(x + a, y - b,1);
         OLED_DrawPoint(x - a, y - b,1);
@@ -179,9 +179,9 @@ void OLED_DrawCircle(uint8_t x,uint8_t y,uint8_t r)
         OLED_DrawPoint(x + b, y - a,1);
         OLED_DrawPoint(x - b, y - a,1);
         OLED_DrawPoint(x - b, y + a,1);
-        
+
         a++;
-        num = (a * a + b * b) - r*r;//计算画的点离圆心的距离
+        num = (a * a + b * b) - r*r;    //计算画的点离圆心的距离
         if(num > 0)
         {
             b--;
@@ -189,8 +189,6 @@ void OLED_DrawCircle(uint8_t x,uint8_t y,uint8_t r)
         }
     }
 }
-
-
 
 //在指定位置显示一个字符,包括部分字符
 //x:0~127
@@ -202,16 +200,16 @@ void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t size1,uint8_t mode)
 	uint8_t i,m,temp,size2,chr1;
 	uint8_t x0=x,y0=y;
 	if(size1==8)size2=6;
-	else size2=(size1/8+((size1%8)?1:0))*(size1/2);  //得到字体一个字符对应点阵集所占的字节数
+	else size2=(size1/8+((size1%8)?1:0))*(size1/2); //得到字体一个字符对应点阵集所占的字节数
 	chr1=chr-' ';  //计算偏移后的值
 	for(i=0;i<size2;i++)
 	{
 		if(size1==8)
-			  {temp=asc2_0806[chr1][i];} //调用0806字体
+			  {temp=asc2_0806[chr1][i];}    //调用0806字体
 		else if(size1==12)
-        {temp=asc2_1206[chr1][i];} //调用1206字体
+        {temp=asc2_1206[chr1][i];}  //调用1206字体
 		else if(size1==16)
-        {temp=asc2_1608[chr1][i];} //调用1608字体
+        {temp=asc2_1608[chr1][i];}  //调用1608字体
 		else if(size1==24)
         {temp=asc2_2412[chr1][i];} //调用2412字体
 		else return;
@@ -231,9 +229,9 @@ void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t size1,uint8_t mode)
 
 
 //显示字符串
-//x,y:起点坐标  
-//size1:字体大小 
-//*chr:字符串起始地址 
+//x,y:起点坐标
+//size1:字体大小
+//*chr:字符串起始地址
 //mode:0,反色显示;1,正常显示
 void OLED_ShowString(uint8_t x,uint8_t y,uint8_t *chr,uint8_t size1,uint8_t mode)
 {
@@ -263,22 +261,17 @@ uint32_t OLED_Pow(uint8_t m,uint8_t n)
 //len :数字的位数
 //size:字体大小
 //mode:0,反色显示;1,正常显示
-void OLED_ShowNum(uint8_t x,uint8_t y,uint32_t num,uint8_t len,uint8_t size1,uint8_t mode)
-{
-	uint8_t t,temp,m=0;
-	if(size1==8)m=2;
-	for(t=0;t<len;t++)
-	{
-		temp=(num/OLED_Pow(10,len-t-1))%10;
-			if(temp==0)
-			{
-				OLED_ShowChar(x+(size1/2+m)*t,y,'0',size1,mode);
-      }
-			else 
-			{
-			  OLED_ShowChar(x+(size1/2+m)*t,y,temp+'0',size1,mode);
-			}
-  }
+void OLED_ShowNum(uint8_t x, uint8_t y, uint32_t num, uint8_t len, uint8_t size1, uint8_t mode) {
+    uint8_t t, temp, m = 0;
+    if (size1 == 8)m = 2;
+    for (t = 0; t < len; t++) {
+        temp = (num / OLED_Pow(10, len - t - 1)) % 10;
+        if (temp == 0) {
+            OLED_ShowChar(x + (size1 / 2 + m) * t, y, '0', size1, mode);
+        } else {
+            OLED_ShowChar(x + (size1 / 2 + m) * t, y, temp + '0', size1, mode);
+        }
+    }
 }
 
 //显示汉字
@@ -289,17 +282,17 @@ void OLED_ShowChinese(uint8_t x,uint8_t y,uint8_t num,uint8_t size1,uint8_t mode
 {
 	uint8_t m,temp;
 	uint8_t x0=x,y0=y;
-	uint16_t i,size3=(size1/8+((size1%8)?1:0))*size1;  //得到字体一个字符对应点阵集所占的字节数
+	uint16_t i,size3=(size1/8+((size1%8)?1:0))*size1;   //得到字体一个字符对应点阵集所占的字节数
 	for(i=0;i<size3;i++)
 	{
 		if(size1==16)
-				{temp=Hzk1[num][i];}//调用16*16字体
+				{temp=Hzk1[num][i];}    //调用16*16字体
 		else if(size1==24)
-				{temp=Hzk2[num][i];}//调用24*24字体
-		else if(size1==32)       
-				{temp=Hzk3[num][i];}//调用32*32字体
+				{temp=Hzk2[num][i];}    //调用24*24字体
+		else if(size1==32)
+				{temp=Hzk3[num][i];}    //调用32*32字体
 		else if(size1==64)
-				{temp=Hzk4[num][i];}//调用64*64字体
+				{temp=Hzk4[num][i];}    //调用64*64字体
 		else return;
 		for(m=0;m<8;m++)
 		{

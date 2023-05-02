@@ -3,10 +3,9 @@
 //
 
 #include "St1xADC.h"
+#include "adc.h"
 #include "stdio.h"
 #include "u8g2.h"
-#include "u8g2_oled.h"
-#include "oled.h"
 
 uint16_t ADC_IN_1(void) {
 //    HAL_ADC_Start(&hadc1);//开启ADC采集
@@ -19,23 +18,25 @@ uint16_t ADC_IN_1(void) {
 }
 
 uint16_t DMA_ADC[2];
-char usb[80];
-char pen[80];
-void DMA_ADC_TEST() {
+u8g2_t u8g2;
+
+void DMA_ADC_TEST(u8g2_t *u8g2) {
 //    HAL_ADCEx_Calibration_Start(&hadc1);//ADC采样校准
     HAL_ADC_Start_DMA(&hadc1, (uint32_t *) &DMA_ADC, 2);
-    printf("PEN=%f\r\nUSB=%f\r\n", DMA_ADC[0] * 3.3 / 4096, DMA_ADC[1] * 3.3 / 4096 );
+    printf("PEN=%f\r\nUSB=%f\r\n", DMA_ADC[0] * 3.3 / 4096, DMA_ADC[1] * 3.3 / 4096);
     printf("PEN=%d\r\nUSB=%d\r\n", DMA_ADC[0], DMA_ADC[1]);
-//    HAL_Delay(800);
     printf("/************************************/\r\n");
-    sprintf(usb,"USB=%f",DMA_ADC[1] * 3.3 / 4096 * 6.6);
-    OLED_ShowString(0,0,usb,16,1);
-    sprintf(usb,"USB=%d",DMA_ADC[1]);
-    OLED_ShowString(0,16,usb,16,1);
-    sprintf(pen,"PEN=%f",DMA_ADC[0] * 3.3 / 4096);
-    OLED_ShowString(0,32,pen,16,1);
-    sprintf(pen,"PEN=%d",DMA_ADC[0]);
-    OLED_ShowString(0,48,pen,16,1);
-    OLED_Refresh();
-    HAL_Delay(1);
+
+    u8g2_ClearBuffer(u8g2);
+    char buff[20], iron[20];
+    sprintf(buff, "USB=%.3fV", DMA_ADC[1] * 3.27 / 4096 * 6.6);
+    sprintf(iron, "Iron=%.4f", DMA_ADC[0] * 3.3 / 4096);
+    u8g2_SetFont(u8g2, u8g2_font_ncenB08_tf);
+    u8g2_DrawStr(u8g2, 0, 16, buff);
+    u8g2_DrawStr(u8g2, 0, 48, iron);
+    sprintf(buff, "USB=%d", DMA_ADC[1]);
+    sprintf(iron, "Iron=%d", DMA_ADC[0]);
+    u8g2_DrawStr(u8g2, 0, 32, buff);
+    u8g2_DrawStr(u8g2, 0, 64, iron);
+    u8g2_SendBuffer(u8g2);
 }

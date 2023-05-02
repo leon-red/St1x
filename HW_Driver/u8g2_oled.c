@@ -6,40 +6,39 @@
 
 #include "u8g2_oled.h"
 #include "u8g2.h"
-#include "i2c.h"
+//#include "i2c.h"
 #include "stdio.h"
 #include "spi.h"
 
 /*******************************************I2C驱动*******************************************/
-//uint8_t u8x8_byte_i2c(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
-//{
-//    static uint8_t buffer[32];		/* u8g2/u8x8 will never send more than 32 bytes between START_TRANSFER and END_TRANSFER */
-//    static uint8_t buf_idx;
-//    uint8_t *data;
-//
-//    switch(msg)
-//    {
-//        case U8X8_MSG_BYTE_SEND:
-//            data = (uint8_t *)arg_ptr;
-//            while( arg_int > 0 )
-//            {
-//                buffer[buf_idx++] = *data;
-//                data++;
-//                arg_int--;
-//            }
-//            break;
-//        case U8X8_MSG_BYTE_START_TRANSFER:
-//            buf_idx = 0;
-//            break;
-//        case U8X8_MSG_BYTE_END_TRANSFER:
+uint8_t u8x8_byte_i2c(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
+{
+    static uint8_t buffer[32];  /* u8g2/u8x8 will never send more than 32 bytes between START_TRANSFER and END_TRANSFER */
+    static uint8_t buf_idx;
+    uint8_t *data;
+
+    switch(msg)
+    {
+        case U8X8_MSG_BYTE_SEND:
+            data = (uint8_t *)arg_ptr;
+            while( arg_int > 0 )
+            {
+                buffer[buf_idx++] = *data;
+                data++;
+                arg_int--;
+            }
+            break;
+        case U8X8_MSG_BYTE_START_TRANSFER:
+            buf_idx = 0;
+            break;
+        case U8X8_MSG_BYTE_END_TRANSFER:
 //            HAL_I2C_Master_Transmit(&hi2c1, u8x8_GetI2CAddress(u8x8), buffer, buf_idx, 500);
-//            break;
-//        default:
-//            return 0;
-//    }
-//    return 1;
-//}
-/*******************************************I2C驱动*******************************************/
+            break;
+        default:
+            return 0;
+    }
+    return 1;
+}
 
 /*******************************************SPI驱动*******************************************/
 uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int,void *arg_ptr)
@@ -68,7 +67,6 @@ uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int,void *
     }
     return 1;
 }
-/*******************************************SPI驱动*******************************************/
 
 /**********************************************OLED微秒延时函数**********************************************/
 uint8_t u8x8_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
@@ -121,24 +119,25 @@ uint8_t u8x8_stm32_gpio_and_delay(U8X8_UNUSED u8x8_t *u8x8,
 /**********************************************OLED微秒延时函数**********************************************/
 
 /************************************************OLED初始化************************************************/
-//void oled_Init(u8g2_t *u8g2)    //初始化I2C驱动
-//{
-//    HAL_GPIO_WritePin(OLED_CS_GPIO_Port,OLED_CS_Pin,GPIO_PIN_RESET);
-//    HAL_GPIO_WritePin(OLED_DC_GPIO_Port,OLED_DC_Pin,GPIO_PIN_RESET);
-//    u8g2_Setup_sh1107_i2c_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_i2c, u8x8_delay);
-//    u8g2_InitDisplay(u8g2); // send init sequence to the display, display is in sleep mode after this,
-//    u8g2_ClearDisplay(u8g2);   //清空屏幕
-//    u8g2_SetPowerSave(u8g2, 0); // wake up display
-//}
-void spi_oled_Init(u8g2_t *u8g2)    //初始化SPI驱动
+void oled_Init(u8g2_t *u8g2)    //初始化I2C驱动
 {
-    HAL_GPIO_WritePin(OLED_CS_GPIO_Port,OLED_CS_Pin,GPIO_PIN_SET);
-    u8g2_Setup_sh1107_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_4wire_hw_spi, /*u8x8_delay*/u8x8_stm32_gpio_and_delay);
+    HAL_GPIO_WritePin(OLED_CS_GPIO_Port,OLED_CS_Pin,0);
+    HAL_GPIO_WritePin(OLED_DC_GPIO_Port,OLED_DC_Pin,0);
+    HAL_GPIO_WritePin(OLED_IM_GPIO_Port,OLED_IM_Pin,1);
+    u8g2_Setup_sh1107_i2c_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_i2c, u8x8_delay);
     u8g2_InitDisplay(u8g2); // send init sequence to the display, display is in sleep mode after this,
     u8g2_ClearDisplay(u8g2);   //清空屏幕
     u8g2_SetPowerSave(u8g2, 0); // wake up display
 }
-/************************************************OLED初始化************************************************/
+
+void spi_oled_Init(u8g2_t *u8g2)    //初始化SPI驱动
+{
+    u8g2_Setup_sh1107_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_4wire_hw_spi,u8x8_stm32_gpio_and_delay);
+    u8g2_InitDisplay(u8g2); // send init sequence to the display, display is in sleep mode after this,
+    u8g2_ClearDisplay(u8g2);   //清空屏幕
+    u8g2_SetPowerSave(u8g2, 0); // wake up display
+}
+
 
 #define SEND_BUFFER_DISPLAY_MS(u8g2, ms)\
   do {\
@@ -207,7 +206,7 @@ void testDrawProcess(u8g2_t *u8g2)
         u8g2_ClearBuffer(u8g2);
 
         char buff[20];
-        sprintf(buff,"%f%%",(float)(i/128.0*100));
+        sprintf(buff,"%.4f%%",(float)(i/128.0*100));
 
         u8g2_SetFont(u8g2,u8g2_font_ncenB18_tf);
         u8g2_DrawStr(u8g2,0,32,"St1x U8g2");//字符显示
@@ -227,7 +226,7 @@ void testDrawProcess(u8g2_t *u8g2)
 void testShowFont(u8g2_t *u8g2)
 {
     int t = 1000;
-    char testStr[14] = "STM32F103CBT6";
+    char testStr[13] = "STM32F103CBT6";
 
     u8g2_ClearBuffer(u8g2);
 
@@ -409,10 +408,10 @@ void testDrawMulti(u8g2_t *u8g2)
 void u8g2DrawTest(u8g2_t *u8g2)
 {
     testDrawProcess(u8g2);
-    testDrawFrame(u8g2);
-    testDrawRBox(u8g2);
-    testDrawCircle(u8g2);
-    testDrawFilledEllipse(u8g2);
+//    testDrawFrame(u8g2);
+//    testDrawRBox(u8g2);
+//    testDrawCircle(u8g2);
+//    testDrawFilledEllipse(u8g2);
     testShowFont(u8g2);
-    testDrawMulti(u8g2);
+//    testDrawMulti(u8g2);
 }

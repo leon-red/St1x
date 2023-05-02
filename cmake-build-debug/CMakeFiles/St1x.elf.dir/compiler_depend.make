@@ -11,19 +11,19 @@ CMakeFiles/St1x.elf.dir/Core/Src/adc.c.obj: D:/Leon/MyDesign/St1x/Core/Src/adc.c
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -35,7 +35,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/adc.c.obj: D:/Leon/MyDesign/St1x/Core/Src/adc.c
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -55,19 +54,19 @@ CMakeFiles/St1x.elf.dir/Core/Src/dma.c.obj: D:/Leon/MyDesign/St1x/Core/Src/dma.c
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -79,7 +78,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/dma.c.obj: D:/Leon/MyDesign/St1x/Core/Src/dma.c
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -99,19 +97,19 @@ CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.obj: D:/Leon/MyDesign/St1x/Core/Src/gpio
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -123,51 +121,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/gpio.c.obj: D:/Leon/MyDesign/St1x/Core/Src/gpio
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
-
-CMakeFiles/St1x.elf.dir/Core/Src/i2c.c.obj: D:/Leon/MyDesign/St1x/Core/Src/i2c.c \
-  D:/Leon/MyDesign/St1x/Core/Inc/i2c.h \
-  D:/Leon/MyDesign/St1x/Core/Inc/main.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
-  D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -186,19 +139,19 @@ CMakeFiles/St1x.elf.dir/Core/Src/main.c.obj: D:/Leon/MyDesign/St1x/Core/Src/main
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -210,7 +163,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/main.c.obj: D:/Leon/MyDesign/St1x/Core/Src/main
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -222,52 +174,51 @@ CMakeFiles/St1x.elf.dir/Core/Src/main.c.obj: D:/Leon/MyDesign/St1x/Core/Src/main
   D:/Leon/MyDesign/St1x/Core/Inc/adc.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Core/Inc/dma.h \
-  D:/Leon/MyDesign/St1x/Core/Inc/i2c.h \
   D:/Leon/MyDesign/St1x/Core/Inc/spi.h \
   D:/Leon/MyDesign/St1x/Core/Inc/tim.h \
   D:/Leon/MyDesign/St1x/Core/Inc/usart.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/App/usb_device.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/gpio.h \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/LED.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/u8g2_oled.h \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/St1xADC.h \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/key.h \
@@ -285,19 +236,19 @@ CMakeFiles/St1x.elf.dir/Core/Src/spi.c.obj: D:/Leon/MyDesign/St1x/Core/Src/spi.c
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -309,7 +260,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/spi.c.obj: D:/Leon/MyDesign/St1x/Core/Src/spi.c
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -328,19 +278,19 @@ CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: D:/Leon/MyDesign/St1x/
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -352,7 +302,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: D:/Leon/MyDesign/St1x/
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -371,19 +320,19 @@ CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.obj: D:/Leon/MyDesign/St1x/Core/
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -395,7 +344,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.obj: D:/Leon/MyDesign/St1x/Core/
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -407,81 +355,81 @@ CMakeFiles/St1x.elf.dir/Core/Src/stm32f1xx_it.c.obj: D:/Leon/MyDesign/St1x/Core/
   D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_it.h
 
 CMakeFiles/St1x.elf.dir/Core/Src/syscalls.c.obj: D:/Leon/MyDesign/St1x/Core/Src/syscalls.c \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stat.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/time.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/time.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/errno.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/errno.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/signal.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/signal.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/time.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_time.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/times.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stat.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/time.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/time.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/errno.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/errno.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/signal.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/signal.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/time.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_time.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/times.h
 
 CMakeFiles/St1x.elf.dir/Core/Src/sysmem.c.obj: D:/Leon/MyDesign/St1x/Core/Src/sysmem.c \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/errno.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/errno.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/errno.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/errno.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h
 
 CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.obj: D:/Leon/MyDesign/St1x/Core/Src/system_stm32f1xx.c \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -491,7 +439,7 @@ CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.obj: D:/Leon/MyDesign/St1x/C
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -503,7 +451,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/system_stm32f1xx.c.obj: D:/Leon/MyDesign/St1x/C
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -523,19 +470,19 @@ CMakeFiles/St1x.elf.dir/Core/Src/tim.c.obj: D:/Leon/MyDesign/St1x/Core/Src/tim.c
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -547,7 +494,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/tim.c.obj: D:/Leon/MyDesign/St1x/Core/Src/tim.c
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -567,19 +513,19 @@ CMakeFiles/St1x.elf.dir/Core/Src/usart.c.obj: D:/Leon/MyDesign/St1x/Core/Src/usa
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -591,7 +537,6 @@ CMakeFiles/St1x.elf.dir/Core/Src/usart.c.obj: D:/Leon/MyDesign/St1x/Core/Src/usa
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -600,30 +545,30 @@ CMakeFiles/St1x.elf.dir/Core/Src/usart.c.obj: D:/Leon/MyDesign/St1x/Core/Src/usa
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h
 
 CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
@@ -633,19 +578,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: D:
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -657,7 +602,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: D:
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -675,19 +619,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -699,7 +643,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -717,19 +660,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -741,7 +684,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -759,19 +701,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -783,7 +725,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -801,19 +742,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -825,7 +766,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -843,19 +783,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.ob
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -867,7 +807,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.ob
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -885,19 +824,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.o
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -909,7 +848,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.o
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -927,19 +865,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -951,7 +889,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -969,19 +906,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.ob
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -993,7 +930,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.ob
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1011,19 +947,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1035,49 +971,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
-
-CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj: D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
-  D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
-  D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1095,19 +988,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1119,7 +1012,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1137,19 +1029,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1161,7 +1053,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c.
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1179,19 +1070,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1203,7 +1094,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1221,19 +1111,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1245,7 +1135,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1263,19 +1152,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1287,7 +1176,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1305,19 +1193,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1329,7 +1217,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1347,19 +1234,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1371,7 +1258,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1389,19 +1275,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1413,7 +1299,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1431,19 +1316,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.ob
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1455,7 +1340,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.ob
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1473,19 +1357,19 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj:
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1497,7 +1381,6 @@ CMakeFiles/St1x.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c.obj:
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1521,19 +1404,19 @@ CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/LED
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1545,7 +1428,6 @@ CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/LED
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1554,33 +1436,50 @@ CMakeFiles/St1x.elf.dir/HW_Driver/LED.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/LED
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/St1xADC.c \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/St1xADC.h \
+  D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
+  D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h \
   D:/Leon/MyDesign/St1x/Core/Inc/adc.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
@@ -1590,19 +1489,11 @@ CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj: D:/Leon/MyDesign/St1x/HW_Driver
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1614,7 +1505,6 @@ CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj: D:/Leon/MyDesign/St1x/HW_Driver
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1623,86 +1513,67 @@ CMakeFiles/St1x.elf.dir/HW_Driver/St1xADC.c.obj: D:/Leon/MyDesign/St1x/HW_Driver
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
-  D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h \
-  D:/Leon/MyDesign/St1x/HW_Driver/Inc/u8g2_oled.h \
-  D:/Leon/MyDesign/St1x/HW_Driver/Inc/oled.h \
-  D:/Leon/MyDesign/St1x/Core/Inc/main.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/key.c \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/key.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/multi_button.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
   D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
@@ -1727,7 +1598,6 @@ CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/key
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1740,28 +1610,28 @@ CMakeFiles/St1x.elf.dir/HW_Driver/key.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/key
 
 CMakeFiles/St1x.elf.dir/HW_Driver/multi_button.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/multi_button.c \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/multi_button.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/oled.c \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/oled.h \
@@ -1773,19 +1643,19 @@ CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/ol
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -1797,7 +1667,6 @@ CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/ol
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -1806,890 +1675,909 @@ CMakeFiles/St1x.elf.dir/HW_Driver/oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/ol
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Leon/MyDesign/St1x/HW_Driver/Inc/oledfont.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Leon/MyDesign/St1x/HW_Driver/Inc/OLEDfont.h \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/ASCII_8x16.h \
   D:/Leon/MyDesign/St1x/Core/Inc/spi.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h
 
-CMakeFiles/St1x.elf.dir/HW_Driver/spiOLED.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/spiOLED.c
-
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/mui_u8g2.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui_u8g2.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui_u8g2.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_bitmap.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_bitmap.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_box.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_box.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_buffer.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_buffer.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_button.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_button.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_circle.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_circle.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_cleardisplay.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_cleardisplay.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_memory.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_d_memory.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_d_setup.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_d_setup.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_font.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_font.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_fonts.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_fonts.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_hvline.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_hvline.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/assert.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/assert.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_input_value.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_input_value.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_intersection.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_intersection.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_kerning.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_kerning.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_line.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_line.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_ll_hvline.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_ll_hvline.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/assert.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/assert.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_message.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_message.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_polygon.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_polygon.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_selection_list.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_selection_list.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8g2_setup.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_setup.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/assert.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/assert.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log.c \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8g2.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log_u8g2.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8log_u8x8.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log_u8x8.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_8x8.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_8x8.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_byte.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_byte.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_cad.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_cad.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_capture.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_capture.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_d_sh1107.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_d_sh1107.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_debounce.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_debounce.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_display.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_display.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_fonts.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_fonts.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_gpio.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_gpio.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_input_value.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_input_value.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_message.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_message.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_selection_list.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_selection_list.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_setup.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_setup.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_string.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_string.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u16toa.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_u16toa.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2Lib/u8x8_u8toa.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_u8toa.c \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/u8g2_oled.c \
   D:/Leon/MyDesign/St1x/HW_Driver/Inc/u8g2_oled.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h \
   D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h \
-  D:/Leon/MyDesign/St1x/Core/Inc/i2c.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Leon/MyDesign/St1x/Core/Inc/spi.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
   D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
@@ -2714,7 +2602,6 @@ CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driv
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -2722,29 +2609,7 @@ CMakeFiles/St1x.elf.dir/HW_Driver/u8g2_oled.c.obj: D:/Leon/MyDesign/St1x/HW_Driv
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Leon/MyDesign/St1x/Core/Inc/spi.h
+  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
 
 CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/ws2812.c \
   D:/Leon/MyDesign/St1x/HW_Driver/ws2812.h \
@@ -2756,19 +2621,19 @@ CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -2780,7 +2645,6 @@ CMakeFiles/St1x.elf.dir/HW_Driver/ws2812.c.obj: D:/Leon/MyDesign/St1x/HW_Driver/
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -2795,42 +2659,42 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
   D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
@@ -2839,9 +2703,9 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -2858,7 +2722,6 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -2875,42 +2738,42 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/
 CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj: D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
   D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
@@ -2919,9 +2782,9 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_co
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -2938,7 +2801,6 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_co
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -2956,42 +2818,42 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ct
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
   D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
@@ -3000,9 +2862,9 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ct
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -3019,7 +2881,6 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ct
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -3037,42 +2898,42 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_io
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
   D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
@@ -3081,9 +2942,9 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_io
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -3100,7 +2961,6 @@ CMakeFiles/St1x.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_io
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -3118,13 +2978,13 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj: D:/Leon/MyDesign/St1x/U
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -3134,7 +2994,7 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj: D:/Leon/MyDesign/St1x/U
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -3146,7 +3006,6 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj: D:/Leon/MyDesign/St1x/U
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -3157,37 +3016,37 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usb_device.c.obj: D:/Leon/MyDesign/St1x/U
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
@@ -3205,42 +3064,42 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj: D:/Leon/MyDesig
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
   D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
@@ -3249,9 +3108,9 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj: D:/Leon/MyDesig
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -3268,7 +3127,6 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj: D:/Leon/MyDesig
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -3284,42 +3142,42 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_custom_hid_if.c.obj: D:/Leon/MyDesig
 CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj: D:/Leon/MyDesign/St1x/USB_DEVICE/App/usbd_desc.c \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
   D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_hal_conf.h \
@@ -3328,9 +3186,9 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj: D:/Leon/MyDesign/St1x/US
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -3347,7 +3205,6 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/App/usbd_desc.c.obj: D:/Leon/MyDesign/St1x/US
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -3367,13 +3224,13 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj: D:/Leon/MyDesign/St1x
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h \
   D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h \
@@ -3383,7 +3240,7 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj: D:/Leon/MyDesign/St1x
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -3395,7 +3252,6 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj: D:/Leon/MyDesign/St1x
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
-  D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -3406,37 +3262,37 @@ CMakeFiles/St1x.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj: D:/Leon/MyDesign/St1x
   D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
   D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h \
-  D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+  D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
   D:/Leon/MyDesign/St1x/Core/Inc/main.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
   D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
@@ -3453,17 +3309,11 @@ D:/Leon/MyDesign/St1x/Core/Src/adc.c:
 
 D:/Leon/MyDesign/St1x/Core/Inc/usart.h:
 
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h:
+
 D:/Leon/MyDesign/St1x/Core/Inc/adc.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/string.h:
-
 D:/Leon/MyDesign/St1x/Core/Inc/main.h:
-
-D:/Leon/MyDesign/St1x/HW_Driver/u8g2_oled.c:
-
-D:/Leon/MyDesign/St1x/Core/Inc/i2c.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 
@@ -3479,9 +3329,7 @@ D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:
 
 D:/Leon/MyDesign/St1x/Core/Src/gpio.c:
 
-D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/newlib.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h:
 
 D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:
 
@@ -3491,43 +3339,37 @@ D:/Leon/MyDesign/St1x/Core/Src/dma.c:
 
 D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/core_cm3.h:
 
-D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_it.h:
+D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
+D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdint.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/errno.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h:
+D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log.c:
 
-D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log_u8g2.c:
+D:/Leon/MyDesign/St1x/Core/Inc/spi.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_newlib_version.h:
+D:/Leon/MyDesign/St1x/Core/Inc/dma.h:
 
-D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_hvline.c:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h:
+D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h:
 
-D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_display.c:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h:
 
-D:/Leon/MyDesign/St1x/Core/Src/i2c.c:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h:
 
 D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_version.h:
 
-D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_font.c:
-
-D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
-
 D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_compiler.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/time.h:
-
 D:/Leon/MyDesign/St1x/Drivers/CMSIS/Include/cmsis_gcc.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_types.h:
 
 D:/Leon/MyDesign/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:
 
@@ -3535,7 +3377,11 @@ D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_time.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h:
 
@@ -3549,25 +3395,19 @@ D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/string.h:
-
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h:
-
-D:/Leon/MyDesign/St1x/USB_DEVICE/Target/usbd_conf.h:
-
-D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h:
-
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 
-D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 
@@ -3576,12 +3416,6 @@ D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h:
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h:
-
-D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log.c:
-
-D:/Leon/MyDesign/St1x/Core/Inc/spi.h:
-
-D:/Leon/MyDesign/St1x/Core/Inc/dma.h:
 
 D:/Leon/MyDesign/St1x/Core/Inc/gpio.h:
 
@@ -3593,55 +3427,67 @@ D:/Leon/MyDesign/St1x/Core/Inc/tim.h:
 
 D:/Leon/MyDesign/St1x/USB_DEVICE/App/usb_device.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/_ansi.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/config.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h:
 
-D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_message.c:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/types.h:
+D:/Leon/MyDesign/St1x/HW_Driver/Inc/Buzzer.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/endian.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_endian.h:
+D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/select.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h:
+D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui.c:
 
-D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/timespec.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_locale.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/sched.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/types.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stdio.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/stdlib.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/stdlib.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/alloca.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/strings.h:
+D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h:
 
 D:/Leon/MyDesign/St1x/HW_Driver/Inc/LED.h:
 
@@ -3651,15 +3497,15 @@ D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2.h:
 
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8.h:
 
-D:/Leon/MyDesign/St1x/HW_Driver/oled.c:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h:
+D:/Leon/MyDesign/St1x/HW_Driver/u8g2_oled.c:
 
-D:/Program/Clinon/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/10.3.1/include-fixed/syslimits.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/limits.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/limits.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/time.h:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/syslimits.h:
 
 D:/Leon/MyDesign/St1x/HW_Driver/Inc/u8g2_oled.h:
 
@@ -3681,27 +3527,27 @@ D:/Leon/MyDesign/St1x/Core/Src/stm32f1xx_hal_msp.c:
 
 D:/Leon/MyDesign/St1x/Core/Src/stm32f1xx_it.c:
 
+D:/Leon/MyDesign/St1x/Core/Inc/stm32f1xx_it.h:
+
 D:/Leon/MyDesign/St1x/Core/Src/syscalls.c:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/stat.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/time.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/time.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/errno.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/errno.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/signal.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/signal.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/machine/_time.h:
-
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/sys/times.h:
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stat.h:
 
 D:/Leon/MyDesign/St1x/Core/Src/sysmem.c:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/time.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/time.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/errno.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/signal.h:
+
+D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_polygon.c:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/signal.h:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/times.h:
 
 D:/Leon/MyDesign/St1x/Core/Src/system_stm32f1xx.c:
 
@@ -3723,11 +3569,7 @@ D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c:
 
-D:/Leon/MyDesign/St1x/HW_Driver/Inc/oledfont.h:
-
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c:
-
-D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c:
 
@@ -3739,19 +3581,15 @@ D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_cad.c:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c:
 
-D:/Leon/MyDesign/St1x/HW_Driver/Inc/ASCII_8x16.h:
-
-D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c:
-
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c:
 
-D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:
-
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c:
+
+D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c:
 
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c:
 
@@ -3762,8 +3600,6 @@ D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c:
 D:/Leon/MyDesign/St1x/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c:
 
 D:/Leon/MyDesign/St1x/HW_Driver/Buzzer.c:
-
-D:/Leon/MyDesign/St1x/HW_Driver/Inc/Buzzer.h:
 
 D:/Leon/MyDesign/St1x/HW_Driver/LED.c:
 
@@ -3777,9 +3613,13 @@ D:/Leon/MyDesign/St1x/HW_Driver/key.c:
 
 D:/Leon/MyDesign/St1x/HW_Driver/multi_button.c:
 
-D:/Leon/MyDesign/St1x/HW_Driver/spiOLED.c:
+D:/Leon/MyDesign/St1x/HW_Driver/oled.c:
 
-D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui.c:
+D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c:
+
+D:/Leon/MyDesign/St1x/HW_Driver/Inc/OLEDfont.h:
+
+D:/Leon/MyDesign/St1x/HW_Driver/Inc/ASCII_8x16.h:
 
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/mui.h:
 
@@ -3801,9 +3641,13 @@ D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_d_memory.c:
 
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_d_setup.c:
 
+D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_font.c:
+
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_fonts.c:
 
-D:/Program/Clinon/gcc-arm-none-eabi/arm-none-eabi/include/assert.h:
+D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_hvline.c:
+
+D:/Program/Clion/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/assert.h:
 
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_input_value.c:
 
@@ -3813,9 +3657,11 @@ D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_d_sh1107.c:
 
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_kerning.c:
 
-D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_polygon.c:
+D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_message.c:
 
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8g2_selection_list.c:
+
+D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log_u8g2.c:
 
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8log_u8x8.c:
 
@@ -3826,6 +3672,8 @@ D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_byte.c:
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_capture.c:
 
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_debounce.c:
+
+D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_display.c:
 
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_fonts.c:
 
@@ -3846,8 +3694,6 @@ D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_u16toa.c:
 D:/Leon/MyDesign/St1x/HW_Driver/u8g2Lib/u8x8_u8toa.c:
 
 D:/Leon/MyDesign/St1x/HW_Driver/ws2812.c:
-
-D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c:
 
 D:/Leon/MyDesign/St1x/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
 
