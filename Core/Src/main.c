@@ -145,8 +145,8 @@ int main(void)
                     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, 600);   //ÀÓÌúÎÂ¶È¿ØÖÆ
                     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, 1);   //·äÃùÆ÷
                     __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 900);   //ÂÌÉ«LED
-            ws2811_Reset();
-            RGB_WriteByte(0X88);
+//            ws2811_Reset();
+//            RGB_WriteByte(0X88);
 //            circular_led_show();
 //            ws2812_refresh(6);
         } else {

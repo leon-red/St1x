@@ -8,4 +8,5 @@
 
 uint16_t ADC_IN_1(void);
 void DMA_ADC_TEST(u8g2_t *u8g2);
+
 #endif
