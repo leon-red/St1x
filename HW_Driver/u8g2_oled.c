@@ -6,7 +6,7 @@
 
 #include "u8g2_oled.h"
 #include "u8g2.h"
-//#include "i2c.h"
+#include "i2c.h"
 #include "stdio.h"
 #include "spi.h"
 
@@ -32,7 +32,9 @@ uint8_t u8x8_byte_i2c(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
             buf_idx = 0;
             break;
         case U8X8_MSG_BYTE_END_TRANSFER:
-//            HAL_I2C_Master_Transmit(&hi2c1, u8x8_GetI2CAddress(u8x8), buffer, buf_idx, 500);
+            HAL_I2C_Master_Transmit(&hi2c1, u8x8_GetI2CAddress(u8x8), buffer, buf_idx, 500);
+//            HAL_I2C_Master_Transmit_DMA(&hi2c1,u8x8_GetI2CAddress(u8x8),buffer,buf_idx);
+//            HAL_I2C_Master_Receive_DMA(&hi2c1,u8x8_GetI2CAddress(u8x8),buffer,buf_idx);
             break;
         default:
             return 0;
@@ -119,25 +121,26 @@ uint8_t u8x8_stm32_gpio_and_delay(U8X8_UNUSED u8x8_t *u8x8,
 /**********************************************OLED微秒延时函数**********************************************/
 
 /************************************************OLED初始化************************************************/
-void oled_Init(u8g2_t *u8g2)    //初始化I2C驱动
+void oled_Init(u8g2_t *u8g2)    //初始化_I2C驱动
 {
+    HAL_GPIO_WritePin(OLED_Reset_GPIO_Port,OLED_Reset_Pin,1);
+    HAL_GPIO_WritePin(OLED_IM_GPIO_Port,OLED_IM_Pin,1);
     HAL_GPIO_WritePin(OLED_CS_GPIO_Port,OLED_CS_Pin,0);
     HAL_GPIO_WritePin(OLED_DC_GPIO_Port,OLED_DC_Pin,0);
-    HAL_GPIO_WritePin(OLED_IM_GPIO_Port,OLED_IM_Pin,1);
     u8g2_Setup_sh1107_i2c_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_i2c, u8x8_delay);
-    u8g2_InitDisplay(u8g2); // send init sequence to the display, display is in sleep mode after this,
-    u8g2_ClearDisplay(u8g2);   //清空屏幕
-    u8g2_SetPowerSave(u8g2, 0); // wake up display
+    u8g2_InitDisplay(u8g2);     //send init sequence to the display, display is in sleep mode after this,
+    u8g2_ClearDisplay(u8g2);    //清空屏幕
+    u8g2_SetPowerSave(u8g2, 0); //wake up display
 }
 
-void spi_oled_Init(u8g2_t *u8g2)    //初始化SPI驱动
+void spi_oled_Init(u8g2_t *u8g2)    //初始化_SPI驱动
 {
+    HAL_GPIO_WritePin(OLED_IM_GPIO_Port,OLED_IM_Pin,0);
     u8g2_Setup_sh1107_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_4wire_hw_spi,u8x8_stm32_gpio_and_delay);
-    u8g2_InitDisplay(u8g2); // send init sequence to the display, display is in sleep mode after this,
-    u8g2_ClearDisplay(u8g2);   //清空屏幕
-    u8g2_SetPowerSave(u8g2, 0); // wake up display
+    u8g2_InitDisplay(u8g2);     //send init sequence to the display, display is in sleep mode after this,
+    u8g2_ClearDisplay(u8g2);    //清空屏幕
+    u8g2_SetPowerSave(u8g2, 0); //wake up display
 }
-
 
 #define SEND_BUFFER_DISPLAY_MS(u8g2, ms)\
   do {\
@@ -415,3 +418,4 @@ void u8g2DrawTest(u8g2_t *u8g2)
     testShowFont(u8g2);
 //    testDrawMulti(u8g2);
 }
+

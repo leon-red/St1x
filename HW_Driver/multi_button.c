@@ -12,9 +12,9 @@ static struct Button* head_handle = NULL;
 
 /**
   * @brief  Initializes the button struct handle.
-  * @param  handle: the button handle strcut.
-  * @param  pin_level: read the HAL GPIO of the connet button level.
-  * @param  active_level: pressed GPIO level.
+  * @param  handle: the button handle strcut.刚刚创建的按键对象的指针
+  * @param  pin_level: read the HAL GPIO of the connet button level.绑定按键的GPIO电平读取接口
+  * @param  active_level: pressed GPIO level.设置有效触发电平
   * @param  button_id: the button id.
   * @retval None
   */

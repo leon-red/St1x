@@ -11,8 +11,8 @@
 */
 void ws281x_delay(unsigned int delay_num)
 {
-    while (delay_num--)
-        __NOP();
+    while (delay_num--);
+//        __NOP();
 }
 
 

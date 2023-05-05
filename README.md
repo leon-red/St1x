@@ -39,7 +39,7 @@
 - [ ] 外壳3D设计
 ***
 ## 软件设计
-- [ ] O-LED_U8G2 驱动（SPI）
+- [x] O-LED_U8G2 驱动（SPI）
 - [ ] O-LED_U8G2 驱动（I2C）
 - [x] O-LED 厂家驱动（SPI）
 - [ ] O-LED 厂家驱动（I2C）
