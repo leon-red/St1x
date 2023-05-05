@@ -209,4 +209,3 @@ PidModeType PID_GetMode(PidType* pid) {
 PidDirectionType PID_GetDirection(PidType* pid) {
   return pid->controllerDirection;
 }
-

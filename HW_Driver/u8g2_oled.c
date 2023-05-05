@@ -136,7 +136,7 @@ void oled_Init(u8g2_t *u8g2)    //初始化_I2C驱动
 void spi_oled_Init(u8g2_t *u8g2)    //初始化_SPI驱动
 {
     HAL_GPIO_WritePin(OLED_IM_GPIO_Port,OLED_IM_Pin,0);
-    u8g2_Setup_sh1107_tk078f288_80x128_f(u8g2, U8G2_R3, u8x8_byte_4wire_hw_spi,u8x8_stm32_gpio_and_delay);
+    u8g2_Setup_sh1107_tk078f288_80x128_f(u8g2, U8G2_R1, u8x8_byte_4wire_hw_spi,u8x8_stm32_gpio_and_delay);
     u8g2_InitDisplay(u8g2);     //send init sequence to the display, display is in sleep mode after this,
     u8g2_ClearDisplay(u8g2);    //清空屏幕
     u8g2_SetPowerSave(u8g2, 0); //wake up display
