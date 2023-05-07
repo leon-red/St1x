@@ -19,13 +19,12 @@ uint16_t ADC_IN_1(void) {
     return 0;
 }
 
-
 uint16_t DMA_ADC[1000]={0};
-//u8g2_t u8g2;
+
 
 void DMA_ADC_TEST(u8g2_t *u8g2) {
 //    HAL_ADCEx_Calibration_Start(&hadc1);  //ADC采样校准
-//    HAL_ADC_PollForConversion(&hadc1,50); //等待采集结束
+//    HAL_ADC_PollForConversion(&hadc1, 50); //等待采集结束
     HAL_ADC_Start_DMA(&hadc1, (uint32_t *) &DMA_ADC, 1000);
 
     //均值滤波
@@ -44,8 +43,14 @@ void DMA_ADC_TEST(u8g2_t *u8g2) {
 
     u8g2_ClearBuffer(u8g2);
     char usb[20], iron[20];
-    sprintf(usb, "USB=%fV", /*DMA_ADC[1]*/ad2_usb * 3.3 / 4096 * 6.6);
-    sprintf(iron, "Iron=%fV", /*DMA_ADC[0]*/ad1_iron * 3.3 / 4096);
+
+
+/* 电阻分压计算公式 Vin * R2/R1+R2 = Vout
+* 计算输入电压：ADC * VRef / 12bit / R2 / R1 + R2 = Vin
+* R1=56K(接Vin的电阻),R2=10K接GND电阻), R2 / R1 + R2
+*/
+    sprintf(usb, "USB=%0.4fV", /*DMA_ADC[1]*/ad2_usb * 3.3 / 4096 / 0.151515);
+    sprintf(iron, "Iron=%f`V", /*DMA_ADC[0]*/ad1_iron * 3.3 / 4096);
     u8g2_SetFont(u8g2, u8g2_font_ncenB08_tf);
     u8g2_DrawStr(u8g2, 0, 16, usb);
     u8g2_DrawStr(u8g2, 0, 48, iron);

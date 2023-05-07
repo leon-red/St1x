@@ -115,6 +115,8 @@ int main(void)
     u8g2_DrawXBMP(&u8g2,0,0,128,80,Logo);   //显示开机LOGO
     u8g2_SendBuffer(&u8g2);
     HAL_Delay(1000);
+    HAL_ADCEx_Calibration_Start(&hadc1);  //ADC采样校准
+    HAL_Delay(100);
 
   /* USER CODE END 2 */
 

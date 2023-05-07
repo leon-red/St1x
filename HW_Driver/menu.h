@@ -22,29 +22,45 @@ typedef struct
     void (*current_operation)();
 } key_table;
 
-extern key_table table[30];
+extern key_table table[43];
 
 extern u8g2_t u8g2;
 
-extern void MainMenu();
-extern void fun_b1();
-extern void fun_c1();
-extern void fun_d1();
+extern void MainMenu1();
+extern void MainMenu2();
+extern void MainMenu3();
+extern void MainMenu4();
+extern void MainMenu5();
 
 extern void fun_a21();
 extern void fun_a22();
 extern void fun_a23();
 extern void fun_a24();
+extern void fun_a25();
 
 extern void fun_b21();
 extern void fun_b22();
 extern void fun_b23();
 extern void fun_b24();
+extern void fun_b25();
 
 extern void fun_c21();
 extern void fun_c22();
 extern void fun_c23();
 extern void fun_c24();
+extern void fun_c25();
+
+extern void fun_d21();
+extern void fun_d22();
+extern void fun_d23();
+extern void fun_d24();
+extern void fun_d25();
+
+extern void fun_e21();
+extern void fun_e22();
+extern void fun_e23();
+extern void fun_e24();
+extern void fun_e25();
 
 extern void fun_a31();
 extern void fun_a32();

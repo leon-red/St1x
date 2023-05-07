@@ -243,7 +243,7 @@ void Iron_PullUp() {
                 __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 900);   //ÂÌÉ«LED
         u8g2_SetFont(&u8g2, u8g2_font_ncenB08_tf);
         u8g2_DrawStr(&u8g2, 64, 64, "Heating Up");
-        beep((uint32_t *) 5);   //·äÃùÆ÷
+//        beep((uint32_t *) 5);   //·äÃùÆ÷
 //        u8g2_SendBuffer(&u8g2);
     } else {
         HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_4);   //ÀÓÌúÎÂ¶È¿ØÖÆ
