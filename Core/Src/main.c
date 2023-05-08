@@ -39,6 +39,7 @@
 #include "ws2812.h"
 #include "multi_button.h"
 #include "menu.h"
+#include "St1x_menu.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -127,7 +128,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 /* USER CODE BEGIN 3 */
-        menu_init();
+        Iron_PullUp();
+        St1x_main_menu();
+//        menu_init();
     }
   /* USER CODE END 3 */
 }

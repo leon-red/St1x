@@ -3,11 +3,13 @@
 //
 //参考代码：https://gitee.com/xxpcb/stm32_useful_demo/tree/master/03_stm32_%E5%A4%9A%E7%BA%A7%E8%8F%9C%E5%8D%95
 
+#include <stdlib.h>
 #include "menu.h"
 #include "main.h"
 #include "u8g2.h"
 #include "St1xADC.h"
 #include "key.h"
+#include "tim.h"
 
 u8g2_t u8g2;
 
@@ -493,18 +495,7 @@ void fun_c33()
     u8g2_DrawStr(&u8g2,0,80,"Enter to Return");
 }
 
-/*********0***********/
-void Welcome() {
-    while (Mode == 1) {
-//    u8g2_SetFont(&u8g2, u8g2_font_ncenB08_tf);
-//    u8g2_DrawStr(&u8g2,0,16,"STM32");
-//    u8g2_DrawStr(&u8g2,0,32,"Multi Menu Test");
-//    u8g2_DrawStr(&u8g2,0,48,"");
-//    u8g2_DrawStr(&u8g2, 24, 80, "Enter to Test");
-        Iron_PullUp();
-        DMA_ADC_TEST(&u8g2);
-    }
-}
+
 
 void (*current_operation_index)();
 uchar func_index = 0; //初始显示欢迎界面
@@ -538,3 +529,14 @@ void menu_init(void)
     }
 }
 
+/*********0***********/
+void Welcome() {
+    while (Mode == 1) {
+//    u8g2_SetFont(&u8g2, u8g2_font_ncenB08_tf);
+//    u8g2_DrawStr(&u8g2,0,16,"STM32");
+//    u8g2_DrawStr(&u8g2,0,32,"Multi Menu Test");
+//    u8g2_DrawStr(&u8g2,0,48,"");
+//    u8g2_DrawStr(&u8g2, 24, 80, "Enter to Test");
+    DMA_ADC_TEST(&u8g2);
+    }
+}

@@ -62,6 +62,7 @@ extern DMA_HandleTypeDef hdma_spi2_tx;
 extern DMA_HandleTypeDef hdma_spi2_rx;
 extern DMA_HandleTypeDef hdma_tim3_ch1_trig;
 extern DMA_HandleTypeDef hdma_tim3_ch3;
+extern TIM_HandleTypeDef htim1;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -328,6 +329,20 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
   /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 1 */
 
   /* USER CODE END USB_LP_CAN1_RX0_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM1 update interrupt.
+  */
+void TIM1_UP_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM1_UP_IRQn 0 */
+
+  /* USER CODE END TIM1_UP_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim1);
+  /* USER CODE BEGIN TIM1_UP_IRQn 1 */
+
+  /* USER CODE END TIM1_UP_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

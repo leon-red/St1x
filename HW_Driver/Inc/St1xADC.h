@@ -6,7 +6,7 @@
 #define ST1XADC_H
 #include "u8g2.h"
 
-uint16_t ADC_IN_1(void);
 void DMA_ADC_TEST(u8g2_t *u8g2);
+void Display_ADC(u8g2_t *u8g2);
 
 #endif
