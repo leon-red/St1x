@@ -7,20 +7,28 @@
 #include "stdio.h"
 
 /************************LED测试***************************/
+void LED_Init_stop() {
+    HAL_TIM_PWM_Stop(&htim4, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Stop(&htim4, TIM_CHANNEL_4);
+    HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_1);
+}
 void LED_Init() {
-    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+            __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, 1000);//红色LED灯
+            __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 1000);//绿色LED灯
+            __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 1000);//蓝色LED灯
 }
 
 //红色LED渐亮渐灭
 void LED_RED() {
     for (uint16_t i = 1; i <= 1000; i++) {
-                __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, i);
+                __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, i);
     }
     HAL_Delay(1);
     for (uint16_t i = 1000; i >= 1; i--) {
-                __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, i);
+                __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, i);
     }
 }
 
@@ -29,13 +37,13 @@ void LED_GREEN() {
     for (
             uint16_t i = 1;
             i <= 1000; i++) {
-                __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, i);
+                __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, i);
         HAL_Delay(1);
     }
     for (
             uint16_t i = 1000;
             i >= 1; i--) {
-                __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, i);
+                __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, i);
         HAL_Delay(1);
     }
 }
@@ -45,13 +53,13 @@ void LED_BLUE() {
     for (
             uint16_t i = 1;
             i <= 1000; i++) {
-                __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, i);
+                __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, i);
         HAL_Delay(1);
     }
     for (
             uint16_t i = 1000;
             i >= 1; i--) {
-                __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, i);
+                __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, i);
         HAL_Delay(1);
     }
 }
@@ -93,38 +101,6 @@ void KEY_Task(void) {
             break;
     }
     printf("KEY事件\r\n");
-}
-
-void BEEP_Task(void) {
-    static uint32_t count = 0;
-    static uint8_t step = 0;
-
-    if (flg) {
-        switch (step) {
-            case 0: {
-                HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_4);
-                HAL_Delay(1);
-                __HAL_TIM_SetCompare(&htim2,TIM_CHANNEL_4,20);
-//                HAL_Delay(10);
-//                HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_SET);
-                step = 1;
-            }
-                break;
-
-            case 1: {
-                count++;
-                if (count >= 8000) {
-                    count = 0;
-                    HAL_TIM_PWM_Stop(&htim2,TIM_CHANNEL_4);
-//                    HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_RESET);
-                    step = 0;
-                    flg = 0;
-                }
-            }
-                break;
-        }
-    }
-    printf("Buzzer事件\r\n");
 }
 
 void LED_Task(void)

@@ -232,10 +232,10 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)//中断回调函数，当按键按下跳入
 void Iron_PullUp() {
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);   //红色LED灯
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);   //绿色LED灯
-//    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);   //蓝色LED灯
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);   //蓝色LED灯
             __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, 1000);//红色LED灯
             __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 1000);//绿色LED灯
-//            __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 1);//蓝色LED灯
+            __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 1000);//蓝色LED灯
     if (HAL_GPIO_ReadPin(KEY_UP_GPIO_Port, KEY_UP_Pin) == 0) {
         HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);   //烙铁温度控制
         HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);   //绿色LED
@@ -243,7 +243,7 @@ void Iron_PullUp() {
                 __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 900);   //绿色LED
         u8g2_SetFont(&u8g2, u8g2_font_ncenB08_tf);
         u8g2_DrawStr(&u8g2, 64, 64, "Heating Up");
-//        beep((uint32_t *) 5);   //蜂鸣器
+        Buzzer();   //蜂鸣器
 //        u8g2_SendBuffer(&u8g2);
     } else {
         HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_4);   //烙铁温度控制

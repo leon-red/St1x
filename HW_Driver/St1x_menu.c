@@ -265,28 +265,28 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 }
 
 
-unsigned long millis()
-{
-    unsigned long m;
-    uint8_t oldSREG = SREG;
+//unsigned long millis()
+//{
+//    unsigned long m;
+//    uint8_t oldSREG = SREG;
+//
+//    cli();
+//    m = timer0_millis;
+//    SREG = oldSREG;
+//
+//    return m;
+//}
 
-    cli();
-    m = timer0_millis;
-    SREG = oldSREG;
-
-    return m;
-}
-
-void system_tick(void)//系统1ms时钟
-{
-    static unsigned long tick = 0;
-    if (tick != millis())
-    if (tick != millis()) {
-        tick = millis();
-        key_scan();
-        key_press_cb();
-    }
-}
+//void system_tick(void)//系统1ms时钟
+//{
+//    static unsigned long tick = 0;
+//    if (tick != millis())
+//    if (tick != millis()) {
+//        tick = millis();
+//        key_scan();
+//        key_press_cb();
+//    }
+//}
 
 int ui_run(short *a, short *a_trg, uint8_t step, uint8_t slow_cnt) //ui 滑动效果实现 前面讲了
 {

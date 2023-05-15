@@ -5,7 +5,7 @@
 #ifndef ST1X_BUZZER_H
 #define ST1X_BUZZER_H
 #include "main.h"
-
-void beep(uint32_t *Data);
+void delay_us(uint16_t nus);
+void Buzzer();
 
 #endif //ST1X_BUZZER_H

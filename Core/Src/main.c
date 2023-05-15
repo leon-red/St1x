@@ -112,6 +112,7 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 //    oled_Init(&u8g2);       //初始化OLED(i2c驱动)
+    LED_Init_stop();             //初始化RGB灯(禁止开机后亮灯)
     spi_oled_Init(&u8g2);   //初始化OLED(SPI驱动)
     u8g2_DrawXBMP(&u8g2,0,0,128,80,Logo);   //显示开机LOGO
     u8g2_SendBuffer(&u8g2);
@@ -128,9 +129,8 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 /* USER CODE BEGIN 3 */
-        Iron_PullUp();
-        St1x_main_menu();
-//        menu_init();
+//        St1x_main_menu();
+        menu_init();
     }
   /* USER CODE END 3 */
 }

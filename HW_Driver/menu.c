@@ -538,5 +538,6 @@ void Welcome() {
 //    u8g2_DrawStr(&u8g2,0,48,"");
 //    u8g2_DrawStr(&u8g2, 24, 80, "Enter to Test");
     DMA_ADC_TEST(&u8g2);
+    Iron_PullUp();
     }
 }
