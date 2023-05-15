@@ -130,7 +130,9 @@ int main(void)
     /* USER CODE BEGIN 3 */
 /* USER CODE BEGIN 3 */
 //        St1x_main_menu();
-        menu_init();
+//        menu_init();
+        Iron_PullUp();
+        DMA_ADC_TEST(&u8g2);
     }
   /* USER CODE END 3 */
 }

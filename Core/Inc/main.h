@@ -99,10 +99,10 @@ void Error_Handler(void);
 #define LED_BLUE_GPIO_Port GPIOB
 #define LED_RGB_Pin GPIO_PIN_5
 #define LED_RGB_GPIO_Port GPIOB
-#define LED_RED_Pin GPIO_PIN_8
-#define LED_RED_GPIO_Port GPIOB
-#define LED_GREEN_Pin GPIO_PIN_9
+#define LED_GREEN_Pin GPIO_PIN_8
 #define LED_GREEN_GPIO_Port GPIOB
+#define LED_RED_Pin GPIO_PIN_9
+#define LED_RED_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
