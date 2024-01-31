@@ -1,4 +1,4 @@
-ToolSet: w64 9.0 (local)@D:\Program\Clion\CLion\bin\mingw
+ToolSet: w64 11.0 (local)@D:\Program\Embedded\mingw64
 Options: 
 
 Options:

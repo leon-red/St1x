@@ -1,5 +1,5 @@
-D:\Program\Clion\CLion\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S D:\Leon\MyDesign\St1x -B D:\Leon\MyDesign\St1x\cmake-build-debug
+"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S D:\Leon\OneDrive\Leon\St1x -B D:\Leon\OneDrive\Leon\St1x\cmake-build-debug
 -- Minimal optimization, debug info included
--- Configuring done
--- Generating done
--- Build files have been written to: D:/Leon/MyDesign/St1x/cmake-build-debug
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: D:/Leon/OneDrive/Leon/St1x/cmake-build-debug
