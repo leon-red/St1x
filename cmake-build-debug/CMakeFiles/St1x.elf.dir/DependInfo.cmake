@@ -22,8 +22,8 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "D:/Leon/OneDrive/Leon/St1x/Hardware"
-  "D:/Leon/OneDrive/Leon/St1x/Hardware/Inc"
   "D:/Leon/OneDrive/Leon/St1x/Hardware/u8g2Lib"
+  "D:/Leon/OneDrive/Leon/St1x/Hardware/Inc"
   "D:/Leon/OneDrive/Leon/St1x/Core/Inc"
   "D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App"
   "D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/Target"

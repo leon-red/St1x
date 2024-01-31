@@ -9,12 +9,15 @@
 * @param  delay_num :延时数 （示波器测量延时时间 = delay_num * 440ns ）
 * @retval None
 */
-void ws281x_delay(unsigned int delay_num)
-{
-    while (delay_num--);
-//        __NOP();
-}
 
+void ws281x_delay(__IO uint32_t nCount)
+{
+    while(nCount--);
+}
+//{
+//    for (int i = 0; i < nCount; i++)
+//        __NOP();
+//}
 
 /**
 * @brief  根据WS281x芯片时序图编写的发送0码，1码RESET码的函数
@@ -24,23 +27,23 @@ void ws281x_delay(unsigned int delay_num)
 void ws281x_sendLow(void)   //发送0码
 {
     WS2812B_Pin_H;
-    ws281x_delay(22);    //示波器测试约为440ns
+    ws281x_delay(1);
     WS2812B_Pin_L;
-    ws281x_delay(66);
+    ws281x_delay(3);
 }
 
 void ws281x_sendHigh(void)   //发送1码
 {
     WS2812B_Pin_H;
-    ws281x_delay(66);
+    ws281x_delay(3);
     WS2812B_Pin_L;
-    ws281x_delay(22);
+    ws281x_delay(1);
 }
 
 void ws2811_Reset(void)        //发送RESET码
 {
     WS2812B_Pin_L;
-    ws281x_delay(60);
+    ws281x_delay(30);
 }
 
 /**
@@ -179,13 +182,13 @@ void send_0(void)   //发送0码
     WS2812B_Pin_H;
     ws281x_delay(1);    //示波器测试约为440ns
     WS2812B_Pin_L;
-    ws281x_delay(2);
+    ws281x_delay(3);
 }
 
 void send_1(void)   //发送1码
 {
     WS2812B_Pin_H;
-    ws281x_delay(2);
+    ws281x_delay(3);
     WS2812B_Pin_L;
     ws281x_delay(1);
 }

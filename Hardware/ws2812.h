@@ -10,7 +10,7 @@
 #define WS2812B_Pin_L HAL_GPIO_WritePin(LED_RGB_GPIO_Port,LED_RGB_Pin,0);
 
 void ws2812_onepixel(unsigned int color);
-void ws281x_delay(unsigned int delay_num);
+void ws281x_delay(__IO uint32_t nCount);
 void ws281x_sendLow(void);
 void ws281x_sendHigh(void);
 void ws2811_Reset(void);

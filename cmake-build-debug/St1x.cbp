@@ -28,8 +28,8 @@
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F103xB"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/Hardware"/>
-					<Add directory="D:/Leon/OneDrive/Leon/St1x/Hardware/Inc"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/Hardware/u8g2Lib"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Hardware/Inc"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/Core/Inc"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/Target"/>
@@ -64,8 +64,8 @@
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F103xB"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/Hardware"/>
-					<Add directory="D:/Leon/OneDrive/Leon/St1x/Hardware/Inc"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/Hardware/u8g2Lib"/>
+					<Add directory="D:/Leon/OneDrive/Leon/St1x/Hardware/Inc"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/Core/Inc"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/App"/>
 					<Add directory="D:/Leon/OneDrive/Leon/St1x/USB_DEVICE/Target"/>
@@ -189,6 +189,9 @@
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/LICENSE.txt">
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/CMSIS/Device/ST/STM32F1xx/License.md">
@@ -356,6 +359,9 @@
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h">
 			<Option target="St1x.elf"/>
 		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_spi.h">
+			<Option target="St1x.elf"/>
+		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h">
 			<Option target="St1x.elf"/>
 		</Unit>
@@ -369,6 +375,9 @@
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_utils.h">
+			<Option target="St1x.elf"/>
+		</Unit>
+		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/LICENSE.txt">
 			<Option target="St1x.elf"/>
 		</Unit>
 		<Unit filename="D:/Leon/OneDrive/Leon/St1x/Drivers/STM32F1xx_HAL_Driver/License.md">
