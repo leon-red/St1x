@@ -1,0 +1,134 @@
+(ExpressProject "St1x"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "23.1 S001 (4155653)  [11/15/2023]-[01/31/24]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "d:\leon\onedrive\sch_cadence\2022.olb"
+        (Type "Schematic Library"))
+      (File "d:\leon\onedrive\sch_cadence\leon.olb"
+        (Type "Schematic Library")))
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\st1x.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Display_Online_DRC_Results "FALSE")
+    (Board_sim_option "VHDL_flow"))
+  (Folder "Layout")
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs")
+  (PartMRUSelector
+    (QbreakN
+      (FullPartName "QbreakN.Normal")
+      (LibraryName
+         "D:\PROGRAM\DESIGN\CADENCE\SPB_23.1\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MSK30P02DF
+      (FullPartName "MSK30P02DF.Normal")
+      (LibraryName "D:\LEON\ONEDRIVE\SCH_CADENCE\LEON.OLB")
+      (DeviceIndex "0"))
+    (Thermocouple
+      (FullPartName "Thermocouple.Normal")
+      (LibraryName "D:\LEON\ONEDRIVE\SCH_CADENCE\2022.OLB")
+      (DeviceIndex "0"))
+    (SH1107
+      (FullPartName "SH1107.Normal")
+      (LibraryName "D:\LEON\ONEDRIVE\SCH_CADENCE\2022.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName
+         "D:\PROGRAM\CADENCE\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (LIS2DW12
+      (FullPartName "LIS2DW12.Normal")
+      (LibraryName "D:\LEON\ONEDRIVE\SCH_CADENCE\2022.OLB")
+      (DeviceIndex "0"))
+    (LED_RGB
+      (FullPartName "LED_RGB.Normal")
+      (LibraryName "D:\LEON\ONEDRIVE\SCH_CADENCE\2022.OLB")
+      (DeviceIndex "0"))
+    (LED
+      (FullPartName "LED.Normal")
+      (LibraryName
+         "D:\PROGRAM\CADENCE\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-R
+      (LibraryName
+         "D:\PROGRAM\CADENCE\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    ("T POINT R"
+      (FullPartName "T POINT R.Normal")
+      (LibraryName
+         "D:\PROGRAM\CADENCE\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\PROGRAM\CADENCE\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (CRYSTAL
+      (FullPartName "CRYSTAL.Normal")
+      (LibraryName "D:\LEON\ONEDRIVE\SCH_CADENCE\2022.OLB")
+      (DeviceIndex "0"))
+    (CRYSTAL1-4/SM
+      (FullPartName "CRYSTAL1-4/SM.Normal")
+      (LibraryName
+         "D:\PROGRAM\CADENCE\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (VCC_BAR
+      (LibraryName
+         "D:\PROGRAM\CADENCE\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    ("CAP NP"
+      (FullPartName "CAP NP.Normal")
+      (LibraryName
+         "D:\PROGRAM\CADENCE\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (STM32F103CBT6
+      (FullPartName "STM32F103CBT6.Normal")
+      (LibraryName "D:\LEON\ONEDRIVE\SCH_CADENCE\2022.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName
+         "D:\PROGRAM\CADENCE\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\st1x.dsn")
+      (Path "Design Resources" ".\st1x.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "PSpice Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 345 0 655"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 888 28 677")
+        (Scroll "96 -3")
+        (Zoom "63")
+        (Occurrence "/"))
+      (Path "D:\LEON\ONEDRIVE\LEON\ST1X\ELECTRONICS\CADENCE\ST1X.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "St1x_V02")))
+  (MPSSessionName "Leon")
+  (LastUsedLibraryBrowseDirectory
+     "D:\Program\Cadence\Cadence\SPB_17.4\tools\capture\library")
+  (ISPCBBASICLICENSE "false"))

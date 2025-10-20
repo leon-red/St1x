@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [St1x.PrjPcb]
+   Generated File[St1x-RoundHoles.TXT]
+   Generated File[St1x-SlotHoles.TXT]
+   Generated File[St1x.LDP]
+   Generated File[St1x.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 18:47:39 On 2024/3/15

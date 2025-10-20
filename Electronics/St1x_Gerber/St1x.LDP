@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: D:\Leon\OneDrive\Leon\St1x\Electronics\St1x.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=st1x-roundholes.txt|DrillLayers=gtl,g1,g2,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=st1x-slotholes.txt|DrillLayers=gtl,g1,g2,gbl

@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: St1x.PcbDoc   2024/3/15  18:47:39
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer 1 to Bottom Layer 1
+ASCII RoundHoles File : St1x-RoundHoles.TXT
+ASCII SlotHoles File : St1x-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.305mm (12mil)                                           Round             178       PTH        399.18mm (15.72inch)
+T2      0.5mm (20mil)                                             Round             24        PTH        69.56mm (2.74inch)
+T3      0.6mm (24mil)                                             Slot              4         PTH        38.17mm (1.50inch)
+T4      0.762mm (30mil)                                           Round             2         PTH        4.80mm (0.19inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              208
+
+Total Processing Time (hh:mm:ss) : 00:00:00
