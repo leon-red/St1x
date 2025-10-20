@@ -4,6 +4,7 @@
 #include "u8g2.h"
 #include "tim.h"
 
+
 uint8_t adc_sampling_flag = 0;
 uint16_t DMA_ADC[2] = {0};
 
@@ -68,7 +69,7 @@ void drawOnOLED(u8g2_t *u8g2) {
     // 绘制烙铁头电压
 //    u8g2_SetFont(u8g2, u8g2_font_spleen6x12_mf);    //小字体调试使用
     u8g2_SetFont(u8g2, u8g2_font_spleen32x64_mf); //大字体
-    sprintf(iron, " %0.0f", (DMA_ADC[0] * 3.3) / (4095 * 0.0041) + 25);
+    sprintf(iron, " %0.0f", (DMA_ADC[0] * 3.3) / (4096 * 0.00256) + 25);
 //    u8g2_DrawStr(u8g2, 35, 46, iron);    //调试用
     u8g2_DrawStr(u8g2, 3, 60, iron);
 

@@ -29,18 +29,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "St1x_LED.h"
 #include "u8g2.h"
 #include "u8g2_oled.h"
 #include "St1xADC.h"
-#include "St1x_key.h"
-#include "St1x_oled.h"
 #include "bmp.h"
-#include "ws2812.h"
-#include "multi_button.h"
-#include "St1x_menu.h"
-#include "u8g2Menu.h"
-#include "lis2dw12_reg.h"
 #include "lis2dw12.h"
 /* USER CODE END Includes */
 
@@ -61,7 +53,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+// 定义u8g2全局变量
+u8g2_t u8g2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,7 +65,15 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+/*********开机时不让LED亮*********/
+void LED_Init() {
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+            __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, 0);//红色LED灯
+            __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 0);//绿色LED灯
+            __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 0);//蓝色LED灯
+}
 /* USER CODE END 0 */
 
 /**
@@ -116,23 +117,18 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
     LED_Init();             //初始化RGB灯(防止初始化失败)
-//    HAL_TIM_Base_Start_IT(&htim3);
-//    I2C_oled_Init(&u8g2);   //初始化OLED(i2c驱动)
     spi_oled_Init(&u8g2);   //初始化OLED(SPI驱动)
     u8g2_DrawXBMP(&u8g2,0,0,128,80,Logo);   //显示开机LOGO
     u8g2_SendBuffer(&u8g2);
-    HAL_Delay(3000);
+    HAL_Delay(30000);
     u8g2_ClearBuffer(&u8g2);
     
-    // 开机后设置目标温度为150度
-    setT12Temperature(200.0);
+    // 开机后设置目标温度
+    setT12Temperature(200);
     
-//    spi_oled_Init(&u8g2);   //初始化OLED(SPI驱动)
 //    Show_Menu_Config();
     HAL_ADCEx_Calibration_Start(&hadc1);  //ADC自动校准
-//    controlADCSampling(&htim2);
     HAL_TIM_Base_Start_IT(&htim2);
-//    applyMeanFilterAndRemoveOutliers();
 //    lis2dw12_read_data_polling();
   /* USER CODE END 2 */
 
@@ -142,11 +138,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//        Test_ws2812();
-//        WS2812_Test2();
         drawOnOLED(&u8g2);
-//        Show_All_Colors();
-//        applyMeanFilterAndRemoveOutliers();
 //    Show_Menu(fast_speed);
     }
   /* USER CODE END 3 */
