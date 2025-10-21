@@ -156,7 +156,7 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
     /* ADC1 interrupt Deinit */
     HAL_NVIC_DisableIRQ(ADC1_2_IRQn);
   /* USER CODE BEGIN ADC1_MspDeInit 1 */
-// ÔÚADC³õÊ¼»¯º¯ÊýÖÐ
+// ï¿½ï¿½ADCï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
       HAL_ADCEx_Calibration_Start(&hadc1);
 
       ADC_AnalogWDGConfTypeDef analogWDGConfig = {

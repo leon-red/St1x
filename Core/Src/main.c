@@ -120,11 +120,11 @@ int main(void)
     spi_oled_Init(&u8g2);   //初始化OLED(SPI驱动)
     u8g2_DrawXBMP(&u8g2,0,0,128,80,Logo);   //显示开机LOGO
     u8g2_SendBuffer(&u8g2);
-    HAL_Delay(30000);
+    HAL_Delay(1500);
     u8g2_ClearBuffer(&u8g2);
     
-    // 开机后设置目标温度
-    setT12Temperature(200);
+    // 开机后设置目标温度为0度（不加热）
+    setT12Temperature(0.0);
     
 //    Show_Menu_Config();
     HAL_ADCEx_Calibration_Start(&hadc1);  //ADC自动校准
@@ -138,8 +138,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+//        t12TemperatureControlLoop();
         drawOnOLED(&u8g2);
-//    Show_Menu(fast_speed);
     }
   /* USER CODE END 3 */
 }

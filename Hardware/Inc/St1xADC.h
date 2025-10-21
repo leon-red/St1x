@@ -31,15 +31,15 @@ void setT12Temperature(float temperature);
 void t12TemperatureControlLoop(void);
 
 
-// PID控制器结构体定义
+// 修复PID控制器结构体定义
 typedef struct {
-    float kp;
-    float ki;  
-    float kd;
-    float setpoint;
-    float integral;
-    float prev_error;
-    uint32_t last_time;
+    float kp;           // 比例系数
+    float ki;           // 积分系数
+    float kd;           // 微分系数
+    float setpoint;     // 目标温度
+    float integral;     // 积分项
+    float prev_error;   // 上一次误差
+    uint32_t last_time; // 上一次计算时间
 } PID_Controller;
 
 extern PID_Controller t12_pid;

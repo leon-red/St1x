@@ -11,7 +11,7 @@ int16_t display = 48;
 int16_t diaplay_trg = 1;
 uint8_t circle_num;
 extern uint8_t KeyNum;
-static uint8_t Picture_Flag = 0;//¹¦ÄÜÑ¡Ôñ±êÖ¾Î»
+static uint8_t Picture_Flag = 0;//å›¾ç‰‡é€‰æ‹©æ ‡å¿—ä½
 const char words[][10] = {{"GAME\0"},
                           {"MESSAGE\0"},
                           {"SETTING\0"}};
@@ -20,12 +20,12 @@ uint8_t Game_Menu_Flag = 0;
 void ui_run(char *a, char *a_trg, int b) {
     if (*a < *a_trg) {
         *a += b;
-        if (*a > *a_trg)    //·ÀÖ¹¼Ó¹ıÍ·
+        if (*a > *a_trg)    //é˜²æ­¢åŠ è¿‡å¤´
             *a = *a_trg;
     }
     if (*a > *a_trg) {
         *a -= b;
-        if (*a < *a_trg)//·ÀÖ¹¼õ¹ıÍ·
+        if (*a < *a_trg)//é˜²æ­¢å‡è¿‡å¤´
             *a = *a_trg;
     }
 }
@@ -47,27 +47,27 @@ void ui_left_one_Picture(int16_t *a, int b) {
 }
 
 void Show_Menu_Config(void) {
-    u8g2_SetFontMode(&u8g2, 1);//ÉèÖÃ×ÖÌåÄ£Ê½£¬mode×ÖÌåÄ£Ê½£¬ÆôÓÃ£¨1£©»ò½ûÓÃ£¨0£©Í¸Ã÷Ä£Ê½
-    u8g2_SetFontDirection(&u8g2, 0);//ÉèÖÃ×ÖÌå·½Ïò
-    u8g2_SetFont(&u8g2, u8g2_font_spleen6x12_mf);//ÉèÖÃ×ÖÌå¸ñÊ½
+    u8g2_SetFontMode(&u8g2, 1);//è®¾ç½®å­—ä½“æ¨¡å¼ï¼šmodeé€æ˜æ¨¡å¼ï¼Œè®¾ç½®1ä¸ºä¸é€æ˜ï¼Œ0ä¸ºé€æ˜æ¨¡å¼
+    u8g2_SetFontDirection(&u8g2, 0);//è®¾ç½®å­—ä½“æ–¹å‘
+    u8g2_SetFont(&u8g2, u8g2_font_spleen6x12_mf);//è®¾ç½®å­—ä½“æ ¼å¼
 
-    u8g2_DrawXBM(&u8g2, 44, 36, 40, 40, arrowhead);//´«Èë¼ıÍ·±êÖ¾Í¼Æ¬
-    u8g2_DrawXBM(&u8g2, display, 16, 32, 32, game);//´«ÈëÓÎÏ·Í¼±êÍ¼Æ¬
-    u8g2_DrawXBM(&u8g2, display + 48, 16, 32, 32, wechat);//´«ÈëĞÅÏ¢Í¼±êÍ¼Æ¬
-    u8g2_DrawXBM(&u8g2, display + 96, 16, 32, 32, setting);//´«ÈëÉèÖÃÍ¼±êÍ¼Æ¬
-    u8g2_SendBuffer(&u8g2);//°ÑÒªÏÔÊ¾µÄĞÅÏ¢Ğ´Èë»º´æ
+    u8g2_DrawXBM(&u8g2, 44, 36, 40, 40, arrowhead);//ç»˜åˆ¶ç®­å¤´æ ‡å¿—å›¾ç‰‡
+    u8g2_DrawXBM(&u8g2, display, 16, 32, 32, game);//ç»˜åˆ¶æ¸¸æˆå›¾æ ‡å›¾ç‰‡
+    u8g2_DrawXBM(&u8g2, display + 48, 16, 32, 32, wechat);//ç»˜åˆ¶ä¿¡æ¯å›¾æ ‡å›¾ç‰‡
+    u8g2_DrawXBM(&u8g2, display + 96, 16, 32, 32, setting);//ç»˜åˆ¶è®¾ç½®å›¾æ ‡å›¾ç‰‡
+    u8g2_SendBuffer(&u8g2);//å°†è¦æ˜¾ç¤ºä¿¡æ¯å†™å…¥ç¼“å­˜
 }
 
-void Show_Menu(Speed_ENUM Speed_choose)//ÏÔÊ¾²Ëµ¥
+void Show_Menu(Speed_ENUM Speed_choose)//æ˜¾ç¤ºèœå•
 {
     KeyNum = Key_GetNum();
     Game_Menu_Flag = KeyNum;
 
     if ((KeyNum == 2) && (display > -48)) {
-        Picture_Flag++;//Í¼Æ¬±êÖ¾Î»£¬ÏÔÊ¾"GAME","MESSAGE","SETTING"
-        circle_num = 48 / Speed_choose;//Ñ­»·¶àÉÙ´Î£¬Óë¶¯Ì¬ËÙ¶ÈÓĞ¹ØÏµ£¬ËÙ¶ÈÔ½ÂıÔ¼Ë¿»¬
+        Picture_Flag++;//å›¾ç‰‡æ ‡å¿—ä½é€’å¢æ˜¾ç¤º"GAME","MESSAGE","SETTING"
+        circle_num = 48 / Speed_choose;//å¾ªç¯å¤šå°‘æ¬¡ï¼Œä¸åŠ¨æ€é€Ÿåº¦æœ‰å…³ç³»ï¼Œé€Ÿåº¦è¶Šå¿«çº¦ä¸æ»‘
         while (circle_num) {
-            u8g2_ClearBuffer(&u8g2);//Çå³ı»º´æ±ØĞëÔÚ´ËÎ»ÖÃ£¬²Å²»»áµ¼ÖÂ»­Ãæ±»Çå¿Õ£¡
+            u8g2_ClearBuffer(&u8g2);//æ¸…é™¤ç¼“å­˜åŒºå†…å­˜ä½ç½®ï¼Œæ‰ä¸ä¼šå¯¼è‡´ç”»é¢è¢«æ¸…ç©º
             ui_left_one_Picture(&display, Speed_choose);
             u8g2_DrawXBM(&u8g2, 44, 36, 40, 40, arrowhead);
             u8g2_DrawXBM(&u8g2, display, 16, 32, 32, game);
@@ -102,7 +102,7 @@ void Show_Menu(Speed_ENUM Speed_choose)//ÏÔÊ¾²Ëµ¥
     switch (Picture_Flag) {
         case 0:
             u8g2_DrawStr(&u8g2, 22, 10, "MENU:");
-            u8g2_DrawStr(&u8g2, 52, 10, &words[0][0]);//ÏÔÊ¾"¹¦ÄÜ²Ëµ¥"ÀïµÄÎÄ×ÖËµÃ÷
+            u8g2_DrawStr(&u8g2, 52, 10, &words[0][0]);//æ˜¾ç¤º"åŠŸèƒ½èœå•"ï¼Œå¯¹åº”ä¸»èœå•
             u8g2_SendBuffer(&u8g2);
             Game_Menu();
             break;
@@ -121,16 +121,16 @@ void Show_Menu(Speed_ENUM Speed_choose)//ÏÔÊ¾²Ëµ¥
     }
 }
 
-void First_Page(Speed_ENUM Speed_choose)//ÏÔÊ¾²Ëµ¥
+void First_Page(Speed_ENUM Speed_choose)//æ˜¾ç¤ºèœå•
 {
     KeyNum = Key_GetNum();
     Game_Menu_Flag = KeyNum;
 
     if ((KeyNum == 2) && (display > -48)) {
-        Picture_Flag++;//Í¼Æ¬±êÖ¾Î»£¬ÏÔÊ¾"GAME","MESSAGE","SETTING"
-        circle_num = 48 / Speed_choose;//Ñ­»·¶àÉÙ´Î£¬Óë¶¯Ì¬ËÙ¶ÈÓĞ¹ØÏµ£¬ËÙ¶ÈÔ½ÂıÔ¼Ë¿»¬
+        Picture_Flag++;//å›¾ç‰‡æ ‡å¿—ä½é€’å¢æ˜¾ç¤º"GAME","MESSAGE","SETTING"
+        circle_num = 48 / Speed_choose;//å¾ªç¯å¤šå°‘æ¬¡ï¼Œä¸åŠ¨æ€é€Ÿåº¦æœ‰å…³ç³»ï¼Œé€Ÿåº¦è¶Šå¿«çº¦ä¸æ»‘
         while (circle_num) {
-            u8g2_ClearBuffer(&u8g2);//Çå³ı»º´æ±ØĞëÔÚ´ËÎ»ÖÃ£¬²Å²»»áµ¼ÖÂ»­Ãæ±»Çå¿Õ£¡
+            u8g2_ClearBuffer(&u8g2);//æ¸…é™¤ç¼“å­˜åŒºå†…å­˜ä½ç½®ï¼Œæ‰ä¸ä¼šå¯¼è‡´ç”»é¢è¢«æ¸…ç©º
             ui_left_one_Picture(&display, Speed_choose);
             u8g2_DrawXBM(&u8g2, 44, 36, 40, 40, arrowhead);
             u8g2_DrawXBM(&u8g2, display, 16, 32, 32, game);
@@ -165,7 +165,7 @@ void First_Page(Speed_ENUM Speed_choose)//ÏÔÊ¾²Ëµ¥
     switch (Picture_Flag) {
         case 0:
             u8g2_DrawStr(&u8g2, 22, 10, "MENU:");
-            u8g2_DrawStr(&u8g2, 52, 10, &words[0][0]);//ÏÔÊ¾"¹¦ÄÜ²Ëµ¥"ÀïµÄÎÄ×ÖËµÃ÷
+            u8g2_DrawStr(&u8g2, 52, 10, &words[0][0]);//æ˜¾ç¤º"åŠŸèƒ½èœå•"ï¼Œå¯¹åº”ä¸»èœå•
             u8g2_SendBuffer(&u8g2);
             Game_Menu();
             break;
@@ -185,19 +185,19 @@ void First_Page(Speed_ENUM Speed_choose)//ÏÔÊ¾²Ëµ¥
 }
 
 void Game_Menu(void) {
-    static char Box_x = 1;//ÉèÖÃĞ¡·½¿ò¸÷ÖÖ²ÎÊı³õÊ¼Öµ
+    static char Box_x = 1;//ç»˜åˆ¶å°æ–¹æ¡†å±€éƒ¨å˜é‡åˆå§‹å€¼
     static char Box_y = 14;
     static char Box_w = 84;
     static char Box_h = 13;
 
-    static char Box_x_trg;//ÉèÖÃĞ¡·½¿òÄ¿±êÖµ
+    static char Box_x_trg;//ç»˜åˆ¶å°æ–¹æ¡†çš„ç›®æ ‡å€¼
     static char Box_y_trg;
     static char Box_w_trg;
     static char Box_h_trg;
 
     static int8_t Box_Flag = 0;
 
-    if (Game_Menu_Flag == 3)//È·ÈÏ¼ü
+    if (Game_Menu_Flag == 3)//ç¡®è®¤é”®
     {
         To_Game_Menu_Display();
         while (1) {
@@ -235,7 +235,7 @@ void Game_Menu(void) {
                 break;
             }
 
-            switch (Box_Flag)//»ñÈ¡·½¿ò²ÎÊıÄ¿±êÖµ
+            switch (Box_Flag)//è·å–æ–¹æ¡†ä½ç½®çš„ç›®æ ‡å€¼
             {
                 case 0:
                     Box_x_trg = 1;
@@ -264,58 +264,58 @@ void Game_Menu(void) {
             }
         }
     }
-    Game_Menu_Flag = 0;//ÖØÖÃ
-    Show_Menu_Config();//»Øµ½Ö÷ÏÔÊ¾Ò³Ãæ
+    Game_Menu_Flag = 0;//æ¸…é›¶
+    Show_Menu_Config();//å›åˆ°ä¸»æ˜¾ç¤ºé¡µé¢
     display = 48;
     Picture_Flag = 0;
 }
 
-void To_Game_Menu_Display(void)//²Ëµ¥¡úÓÎÏ·²Ëµ¥¹ı¶É¶¯»­
+void To_Game_Menu_Display(void)//ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½Ëµï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½ï¿½
 {
     char Game_Menu_Display = 10;
     char Game_Menu_Display_trg = 74;
 
     while (Game_Menu_Display != Game_Menu_Display_trg) {
         u8g2_ClearBuffer(&u8g2);
-        u8g2_DrawStr(&u8g2, 22, Game_Menu_Display, "MENU:");//YÒª±äÎª0»ò72¡°MENU¡±²Å»áÍêÈ«ÏûÊ§
-        u8g2_DrawXBM(&u8g2, 44, Game_Menu_Display + 26, 40, 40, arrowhead);//´«Èë¼ıÍ·±êÖ¾Í¼Æ¬
-        u8g2_DrawXBM(&u8g2, display, Game_Menu_Display + 6, 32, 32, game);//´«ÈëÓÎÏ·Í¼±êÍ¼Æ¬
-        u8g2_DrawXBM(&u8g2, display + 48, Game_Menu_Display + 6, 40, 40, wechat);//´«ÈëĞÅÏ¢Í¼±êÍ¼Æ¬
-        u8g2_DrawXBM(&u8g2, display + 96, Game_Menu_Display + 6, 32, 32, setting);//´«ÈëÉèÖÃÍ¼±êÍ¼Æ¬
+        u8g2_DrawStr(&u8g2, 22, Game_Menu_Display, "MENU:");//YÒªï¿½ï¿½Îª0ï¿½ï¿½72ï¿½ï¿½MENUï¿½ï¿½ï¿½Å»ï¿½ï¿½ï¿½È«ï¿½ï¿½Ê§
+        u8g2_DrawXBM(&u8g2, 44, Game_Menu_Display + 26, 40, 40, arrowhead);//ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ö¾Í¼Æ¬
+        u8g2_DrawXBM(&u8g2, display, Game_Menu_Display + 6, 32, 32, game);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·Í¼ï¿½ï¿½Í¼Æ¬
+        u8g2_DrawXBM(&u8g2, display + 48, Game_Menu_Display + 6, 40, 40, wechat);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢Í¼ï¿½ï¿½Í¼Æ¬
+        u8g2_DrawXBM(&u8g2, display + 96, Game_Menu_Display + 6, 32, 32, setting);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Í¼Æ¬
         ui_run(&Game_Menu_Display, &Game_Menu_Display_trg, 8);
-        u8g2_SendBuffer(&u8g2);//°ÑÒªÏÔÊ¾µÄĞÅÏ¢Ğ´Èë»º´æ
+        u8g2_SendBuffer(&u8g2);//ï¿½ï¿½Òªï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ï¢Ğ´ï¿½ë»ºï¿½ï¿½
     }
     Game_Menu_Display = 74;
     Game_Menu_Display_trg = 10;
 
     while (Game_Menu_Display != Game_Menu_Display_trg) {
         u8g2_ClearBuffer(&u8g2);
-        u8g2_DrawStr(&u8g2, 52, Game_Menu_Display, "GAME");//Game_Menu_Display+16+62Îª72£¬´ËÊ±¡°Game¡±ÏûÊ§
+        u8g2_DrawStr(&u8g2, 52, Game_Menu_Display, "GAME");//Game_Menu_Display+16+62Îª72ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Gameï¿½ï¿½ï¿½ï¿½Ê§
         u8g2_DrawLine(&u8g2, 1, Game_Menu_Display + 3, 128, Game_Menu_Display + 3);
         u8g2_DrawStr(&u8g2, 3, Game_Menu_Display + 14, "GAME1:FlyBird");
         u8g2_DrawStr(&u8g2, 3, Game_Menu_Display + 26, "GAME1:Dinosaur Rex");
         u8g2_DrawStr(&u8g2, 3, Game_Menu_Display + 38, "GAME3:Stick Fight");
         u8g2_DrawStr(&u8g2, 3, Game_Menu_Display + 50, "GAME4:Tetris");
         ui_run(&Game_Menu_Display, &Game_Menu_Display_trg, 8);
-        u8g2_SendBuffer(&u8g2);//°ÑÒªÏÔÊ¾µÄĞÅÏ¢Ğ´Èë»º´æ
+        u8g2_SendBuffer(&u8g2);//ï¿½ï¿½Òªï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ï¢Ğ´ï¿½ë»ºï¿½ï¿½
     }
 }
 
-void Game_To_Menu_Display(void)//ÓÎÏ·²Ëµ¥¡ú²Ëµ¥¹ı¶É¶¯»­
+void Game_To_Menu_Display(void)//ï¿½ï¿½Ï·ï¿½Ëµï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½ï¿½
 {
     char Game_Menu_Display = 10;
     char Game_Menu_Display_trg = 74;
 
     while (Game_Menu_Display != Game_Menu_Display_trg) {
         u8g2_ClearBuffer(&u8g2);
-        u8g2_DrawStr(&u8g2, 52, Game_Menu_Display, "GAME");//Game_Menu_Display+16+62Îª72£¬´ËÊ±¡°Game¡±ÏûÊ§
+        u8g2_DrawStr(&u8g2, 52, Game_Menu_Display, "GAME");//Game_Menu_Display+16+62Îª72ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Gameï¿½ï¿½ï¿½ï¿½Ê§
         u8g2_DrawLine(&u8g2, 1, Game_Menu_Display + 3, 128, Game_Menu_Display + 3);
         u8g2_DrawStr(&u8g2, 3, Game_Menu_Display + 14, "GAME1:FlyBird");
         u8g2_DrawStr(&u8g2, 3, Game_Menu_Display + 26, "GAME2:Dinosaur Rex");
         u8g2_DrawStr(&u8g2, 3, Game_Menu_Display + 38, "GAME3:Stick Fight");
         u8g2_DrawStr(&u8g2, 3, Game_Menu_Display + 50, "GAME4:Tetris");
         ui_run(&Game_Menu_Display, &Game_Menu_Display_trg, 8);
-        u8g2_SendBuffer(&u8g2);//°ÑÒªÏÔÊ¾µÄĞÅÏ¢Ğ´Èë»º´æ
+        u8g2_SendBuffer(&u8g2);//ï¿½ï¿½Òªï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ï¢Ğ´ï¿½ë»ºï¿½ï¿½
     }
     Game_Menu_Display = 74;
     Game_Menu_Display_trg = 10;
@@ -323,11 +323,11 @@ void Game_To_Menu_Display(void)//ÓÎÏ·²Ëµ¥¡ú²Ëµ¥¹ı¶É¶¯»­
     while (Game_Menu_Display != Game_Menu_Display_trg) {
         u8g2_ClearBuffer(&u8g2);
         ui_run(&Game_Menu_Display, &Game_Menu_Display_trg, 8);
-        u8g2_DrawStr(&u8g2, 22, Game_Menu_Display, "MENU:");//YÒª±äÎª0»ò>=72¡°MENU¡±²Å»áÍêÈ«ÏûÊ§
-        u8g2_DrawXBM(&u8g2, 44, Game_Menu_Display + 26, 40, 40, arrowhead);//´«Èë¼ıÍ·±êÖ¾Í¼Æ¬
-        u8g2_DrawXBM(&u8g2, display, Game_Menu_Display + 6, 32, 32, game);//´«ÈëÓÎÏ·Í¼±êÍ¼Æ¬
-        u8g2_DrawXBM(&u8g2, display + 48, Game_Menu_Display + 6, 40, 40, wechat);//´«ÈëĞÅÏ¢Í¼±êÍ¼Æ¬
-        u8g2_DrawXBM(&u8g2, display + 96, Game_Menu_Display + 6, 32, 32, setting);//´«ÈëÉèÖÃÍ¼±êÍ¼Æ¬
-        u8g2_SendBuffer(&u8g2);//°ÑÒªÏÔÊ¾µÄĞÅÏ¢Ğ´Èë»º´æ
+        u8g2_DrawStr(&u8g2, 22, Game_Menu_Display, "MENU:");//YÒªï¿½ï¿½Îª0ï¿½ï¿½>=72ï¿½ï¿½MENUï¿½ï¿½ï¿½Å»ï¿½ï¿½ï¿½È«ï¿½ï¿½Ê§
+        u8g2_DrawXBM(&u8g2, 44, Game_Menu_Display + 26, 40, 40, arrowhead);//ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ö¾Í¼Æ¬
+        u8g2_DrawXBM(&u8g2, display, Game_Menu_Display + 6, 32, 32, game);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·Í¼ï¿½ï¿½Í¼Æ¬
+        u8g2_DrawXBM(&u8g2, display + 48, Game_Menu_Display + 6, 40, 40, wechat);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢Í¼ï¿½ï¿½Í¼Æ¬
+        u8g2_DrawXBM(&u8g2, display + 96, Game_Menu_Display + 6, 32, 32, setting);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Í¼Æ¬
+        u8g2_SendBuffer(&u8g2);//ï¿½ï¿½Òªï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ï¢Ğ´ï¿½ë»ºï¿½ï¿½
     }
 }
