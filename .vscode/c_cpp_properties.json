@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "d:/Leon/OneDrive/Leon/St1x/libRich",
+                "c:/Users/Leon/.vscode/extensions/richintelligent.richextension-3.1.12/include",
+                "c:/Users/Leon/.vscode/extensions/richintelligent.richextension-3.1.12/include/Atmel"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "interrupt=",
+                "code=",
+                "xdata="
+            ],
+            "cStandard": "c89",
+            "forcedInclude": [
+                "c:/Users/Leon/.vscode/extensions/richintelligent.richextension-3.1.12/include/libRichForced.h"
+            ]
+        }
+    ],
+    "version": 4
+}

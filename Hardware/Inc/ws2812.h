@@ -17,7 +17,7 @@ struct RGB_24bits                    //½á¹¹Ìå
 
 
 void Send_A_bit(unsigned char VAL);
-void Reset_WS2812();
+void Reset_LED();
 void Send_24bits(struct RGB_24bits RGB_VAL);
 void Test_ws2812(void);
 void WS2812_Test2(void);

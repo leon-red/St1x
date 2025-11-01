@@ -34,6 +34,7 @@
 #include "St1xADC.h"
 #include "bmp.h"
 #include "lis2dw12.h"
+#include "ws2812.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -73,6 +74,13 @@ void LED_Init() {
             __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, 0);//红色LED灯
             __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 0);//绿色LED灯
             __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 0);//蓝色LED灯
+}
+
+// 添加TIM2定时器中断回调函数
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+    if (htim->Instance == TIM2) {
+        heatingControlTimerCallback();  // 调用加热控制逻辑
+    }
 }
 /* USER CODE END 0 */
 
@@ -116,17 +124,14 @@ int main(void)
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 
+//    Reset_LED();          //复位RGB灯
     LED_Init();             //初始化RGB灯(防止初始化失败)
     spi_oled_Init(&u8g2);   //初始化OLED(SPI驱动)
     u8g2_DrawXBMP(&u8g2,0,0,128,80,Logo);   //显示开机LOGO
     u8g2_SendBuffer(&u8g2);
-    HAL_Delay(1500);
+    HAL_Delay(1000);
     u8g2_ClearBuffer(&u8g2);
-    
-    // 开机后设置目标温度为0度（不加热）
-    setT12Temperature(0.0);
-    
-//    Show_Menu_Config();
+
     HAL_ADCEx_Calibration_Start(&hadc1);  //ADC自动校准
     HAL_TIM_Base_Start_IT(&htim2);
 //    lis2dw12_read_data_polling();
@@ -138,7 +143,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//        t12TemperatureControlLoop();
         drawOnOLED(&u8g2);
     }
   /* USER CODE END 3 */
