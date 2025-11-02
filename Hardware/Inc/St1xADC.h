@@ -57,7 +57,9 @@ void heatingControlTimerCallback(void); // 定时器中断处理函数
 // ==================== 数据处理功能函数声明 ====================
 
 // 移动平均滤波函数 - 让温度读数更稳定
-float getFilteredTemperature(void);               // 获取滤波后的温度
+// 在现有声明后添加
+float getFilteredTemperature(void);  // 确保这个函数有声明
+
 void updateTemperatureFilter(uint16_t adcValue);  // 更新温度滤波器
 
 // ==================== 辅助功能函数声明 ====================

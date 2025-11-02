@@ -139,13 +139,17 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-    while (1) {
-    /* USER CODE END WHILE */
+while (1) {
+/* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
-        drawOnOLED(&u8g2);
-    }
-  /* USER CODE END 3 */
+/* USER CODE BEGIN 3 */
+    // 只保留显示功能，确保温度控制不受影响
+    drawOnOLED(&u8g2);
+
+    // 添加适当延时，避免显示刷新过快
+    HAL_Delay(500);  // 2Hz刷新率
+}
+/* USER CODE END 3 */
 }
 
 /**
