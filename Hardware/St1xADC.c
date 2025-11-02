@@ -15,8 +15,8 @@
 // 温度传感器校准参数（必须在最前面，因为其他函数依赖这些参数）
 // ATemp: 环境温度补偿（比如室温25度）
 // Thermal_Voltage: 热电偶灵敏度（每度温度变化对应的电压变化）
-double ATemp = 0;
-double Thermal_Voltage = 0.0041;
+#define ATemp   0;
+#define Thermal_Voltage 0.0041f;
 
 // 默认温度校准参数（未校准状态）
 TemperatureCalibration t12_cal = {0.0, 1.0, 0, 4095};
@@ -53,6 +53,9 @@ uint8_t adc_sampling_flag = 0;   // 这个标志告诉程序ADC是否正在采�
 // PID控制器参数 - 这是温度控制的核心参数
 // KP=比例系数（响应速度），KI=积分系数（消除误差），KD=微分系数（抑制振荡）
 PID_Controller t12_pid = {0.8, 0.02, 0.5, 0.0, 0.0, 0.0, 0};
+
+// USB电压检测相关变量
+#define USB_VOLTAGE_THRESHOLD 15.0f  // USB电压阈值，低于15V时禁止加热
 
 // ==================== 核心功能：温度计算和PID控制 ====================
 
@@ -203,6 +206,18 @@ void stopHeatingControlTimer(void) {
 }
 
 /**
+ * 检查USB电压是否足够（高于18V）
+ * 输出：1=电压足够可以加热，0=电压不足禁止加热
+ */
+uint8_t isUSBVoltageSufficient(void) {
+    // 计算USB电压（ADC值转电压，考虑分压电阻）
+    float usb_voltage = DMA_ADC[1] * 3.3f / 4095.0f / 0.1515f;
+    return (usb_voltage >= USB_VOLTAGE_THRESHOLD);
+}
+
+// ==================== 核心功能：温度计算和PID控制 ====================
+
+/**
  * 定时器中断回调函数 - 自动温度控制逻辑
  * 这个函数由定时器硬件自动调用，每隔一段时间执行一次
  * 这是整个温度控制系统的核心逻辑
@@ -223,18 +238,26 @@ void heatingControlTimerCallback(void) {
     // 1. 控制ADC采样时机，确保温度测量准确
     controlADCSampling(&htim2);
     
-    // 2. 更新温度滤波器并获取滤波后的温度
+    // 2. 检查USB电压是否足够，如果不足则停止加热
+    if (!isUSBVoltageSufficient()) {
+        __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);  // 紧急停止加热
+        stopHeatingControlTimer();  // 停止自动温度控制
+        heating_status = 0;         // 更新状态为"停止加热"
+        return;  // 直接返回，不执行后续控制逻辑
+    }
+    
+    // 3. 更新温度滤波器并获取滤波后的温度
     updateTemperatureFilter(DMA_ADC[0]);
     float current_temp = getFilteredTemperature();
     
-    // 3. 使用PID算法计算合适的加热功率（0-100%）
+    // 4. 使用PID算法计算合适的加热功率（0-100%）
     float pwm_duty_percent = pidTemperatureControl(current_temp);
     
-    // 4. 设置PWM占空比来控制加热功率
+    // 5. 设置PWM占空比来控制加热功率
     uint16_t pwm_value = (uint16_t)(pwm_duty_percent * 10000 / 100);
     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, pwm_value);
     
-    // 5. 过热保护：如果温度超过460度，自动停止加热
+    // 6. 过热保护：如果温度超过460度，自动停止加热
     if (current_temp > 460.0) {
         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);  // 紧急停止加热
         stopHeatingControlTimer();  // 停止自动温度控制
@@ -290,6 +313,15 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
     
     // 如果按下的是"模式"按键（切换加热状态）
     if (GPIO_Pin == KEY_MODE_Pin) {
+        // 检查USB电压是否足够
+        if (!isUSBVoltageSufficient()) {
+            // USB电压低于15V，禁止加热
+            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);  // 确保停止加热
+            stopHeatingControlTimer();           // 停止温度自动控制
+            heating_status = 0;                  // 更新状态为"停止加热"
+            return;  // 直接返回，不执行加热操作
+        }
+        
         // 切换加热状态
         if (heating_status == 0) {
             // 当前是停止状态，开始加热
@@ -374,11 +406,19 @@ void drawOnOLED(u8g2_t *u8g2) {
     // 7. 显示USB电压（经过分压电阻计算后的实际电压）
     sprintf(display_buffer, "USB:%0.2fV", usb_voltage);
     u8g2_DrawStr(u8g2, 67, 12, display_buffer);
-    // 8. 显示目标温度
+    
+    // 8. 显示电压状态指示（电压足够/不足）
+    if (usb_voltage >= USB_VOLTAGE_THRESHOLD) {
+        u8g2_DrawStr(u8g2, 114, 25, "OK");  // 电压足够显示"OK"
+    } else {
+        u8g2_DrawStr(u8g2, 108, 25, "LOW"); // 电压不足显示"LOW"
+    }
+    
+    // 9. 显示目标温度
     sprintf(display_buffer, "TEMP:%0.0f", target_temperature);
     u8g2_DrawStr(u8g2, 66, 76, display_buffer);
     
-    // 8. 绘制屏幕边框和分割线，让界面更美观
+    // 10. 绘制屏幕边框和分割线，让界面更美观
     u8g2_DrawFrame(u8g2, 0, 0, 128, 16);    // 顶部状态栏边框
     u8g2_DrawFrame(u8g2, 0, 64, 128, 16);   // 底部状态栏边框
     u8g2_DrawFrame(u8g2, 0, 15, 32, 50);    // 左侧温度框
@@ -386,6 +426,6 @@ void drawOnOLED(u8g2_t *u8g2) {
     u8g2_DrawLine(u8g2, 64, 0, 64, 15);     // 顶部中间分割线
     u8g2_DrawLine(u8g2, 64, 64, 64, 80);     // 底部中间分割线
 
-    // 9. 把绘制好的内容发送到OLED屏幕显示
+    // 11. 把绘制好的内容发送到OLED屏幕显示
     u8g2_SendBuffer(u8g2);
 }
