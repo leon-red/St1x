@@ -1,219 +1,191 @@
 // ====================================================
-// T12烙铁控制器 - 温度测量和控制系统
-// 功能：测量烙铁头温度、控制加热功率、显示信息
-// 适合初学者学习的嵌入式系统示例
 // 开源地址：https://github.com/leon-red/St1x
 // 作者：Leon Red
-// 项目启动时间：2023/2/13.
+// 项目启动时间：2023/2/13
+// ====================================================
+// T12 烙铁控制器 - 温度测量部分（注释已简化、便于初学者理解）
+// 这个文件负责处理与温度测量相关的所有功能：
+// - 读取温度传感器的数据
+// - 把传感器数据转换成我们可以理解的温度值
+// - 让温度读数更稳定，不会跳来跳去
+// - 检查是否安全（电压够不够，温度会不会太高）
+// - 显示相关信息给用户
+//
+// 小白须知：
+// - ADC（模数转换器）就像一个翻译官，把传感器的电压信号翻译成数字(0-4095)
+// - 我们再把数字翻译回电压，最后换算成摄氏度
 // ====================================================
 
-// ==================== 第一步：包含必要的头文件 ====================
-// 这些头文件就像是工具箱，告诉编译器我们需要使用哪些功能
-#include "St1xADC.h"    // 项目自己的头文件，包含自定义的结构体定义
-#include "adc.h"        // ADC（模数转换器）相关功能
-#include "stdio.h"      // 标准输入输出，用于格式化字符串显示
-#include "u8g2.h"       // OLED屏幕显示库
-#include "tim.h"        // 定时器相关功能
-#include <math.h>       // 数学函数库，支持fabs等函数
+// ==================== 第一步：包含必要的工具箱 ====================
+// 这些头文件就像工具箱，告诉电脑这个程序需要用到哪些功能
+#include "St1xADC.h"    // 我们自己写的温度测量功能
+#include "St1xPID.h"    // 温度控制功能
+#include "adc.h"        // 读取传感器数据的功能
+#include "stdio.h"      // 处理文字和数字转换的功能
+#include "u8g2.h"       // 控制屏幕显示的功能
+#include "tim.h"        // 定时器功能（用来定时做事情）
+#include <math.h>       // 数学计算功能（比如求绝对值）
 
-// ==================== 第二步：系统常量定义（最重要的设置） ====================
-// 这些常量就像是系统的"身份证"，定义了整个系统的基本参数
+// ==================== 第二步：设置一些常量参数 ====================
+// 这些是我们提前设定好的数值，程序运行时不会改变
 
-// 温度传感器校准参数（需要根据实际传感器调整）
-#define ATemp   0;              // 环境温度补偿，比如室温25度
-#define Thermal_Voltage 0.0041f; // 热电偶灵敏度，每度对应的电压变化
+// 温度传感器的参数（不同传感器可能需要调整）
+#define ATemp   0;              // 环境温度补偿（修正环境温度对测量的影响）
+#define Thermal_Voltage 0.0041f; // 热电偶灵敏度（每摄氏度产生的电压）
 
-// 滤波器窗口大小（用于平滑温度读数）
-#define TEMP_FILTER_SIZE 4      // PID温度滤波器窗口大小（4个采样点）
-#define DISPLAY_FILTER_SIZE 2   // 显示温度滤波器窗口大小（2个采样点，响应更快）
+// 滤波器设置（让温度读数更稳定）
+#define TEMP_FILTER_SIZE 4      // 控制用滤波器大小（用4个数平均，更稳定但反应慢一点）
+#define DISPLAY_FILTER_SIZE 8   // 显示用滤波器大小（增加滤波器大小让显示更平滑）
 
-// 安全保护参数（保护系统和用户安全）
-#define USB_VOLTAGE_THRESHOLD 15.0f  // USB电压阈值，低于15V时禁止加热（防止电压不足）
-#define DEBOUNCE_DELAY 50            // 按键防抖延时50毫秒（防止按键抖动误触发）
-#define PWM_PERIOD 10000             // PWM周期（10kHz频率，控制加热功率）
+// 安全和控制参数
+#define USB_VOLTAGE_THRESHOLD 15.0f  // 最低工作电压：低于15伏就不能加热
+#define DEBOUNCE_DELAY 50            // 按键防抖时间：防止按键抖动误触发
+#define PWM_PERIOD 10000             // PWM周期：控制加热功率的基准
+// 保持与PID文件一致的控制间隔
+#define CONTROL_INTERVAL 50          // 控制间隔：每隔50毫秒检查一次温度
+#define SAMPLING_DELAY 1             // 采样延时：等待信号稳定的时间
+#define INITIAL_HEATING_DURATION 3000 // 初始加热持续时间：3秒
+#define INITIAL_HEATING_TEMP_DIFF 50.0f // 初始加热温度差阈值（只有温差大于此值时才启用初始全功率加热）
 
-// ==================== 第三步：全局变量定义（系统核心状态） ====================
-// 这些变量记录系统的当前状态，就像汽车的仪表盘
+// ==================== 第三步：定义全局变量 ====================
+// 这些变量用来保存程序运行过程中的各种状态和数据
 
-// 用户设置的核心参数
-float target_temperature = 300;      // 目标温度设置（默认300度）
-uint8_t heating_status = 0;          // 加热状态：0=停止加热，1=正在加热
+// 用户设置和运行状态
+float target_temperature = 300.0;  // 目标温度：想要加热到多少度（默认300°C）
+uint8_t heating_status = 0;       // 加热状态：0=不加热，1=正在加热
 
-// ADC采样相关变量（温度测量的"眼睛"）
-uint16_t DMA_ADC[2] = {0};           // 存储ADC采样数据（通道0：温度，通道1：电压）
-uint8_t adc_sampling_flag = 0;       // ADC采样状态：0=停止采样，1=正在采样
+// 传感器数据存储
+uint16_t DMA_ADC[2] = {0};        // 传感器读数：存放从传感器读到的原始数据
 
-// PID控制器参数（温度控制的"大脑"）
-PID_Controller t12_pid = {0.5, 0.01, 1.2, 0.0, 0.0, 0.0, 0};
-// 参数说明：KP=0.5（比例系数），KI=0.01（积分系数），KD=1.2（微分系数）
+// 时间和按键相关
+uint32_t last_control_time = 0;   // 上次控制时间：记录上次调整温度的时间
+uint32_t last_key_press_time = 0; // 上次按键时间：记录上次按按键的时间
+uint16_t last_key_pin = 0;        // 按键引脚：记录按的是哪个按键
 
-// 温度校准参数（确保温度测量准确）
-TemperatureCalibration t12_cal = {0.0, 1.0, 0, 4095};
+// 标志位
+uint8_t adc_sampling_flag = 0;    // 采样标志：标记是否正在读取传感器数据
+uint8_t heating_control_enabled = 0; // 控制标志：标记是否启用了温度控制
 
-// ==================== 第四步：静态变量定义（内部使用的变量） ====================
-// 这些变量只在当前文件内部使用，不对外暴露
+static uint8_t first_draw = 1;    // 首次绘制：标记是否第一次显示屏幕内容
 
-// 温度移动平均滤波相关变量（让温度读数更稳定）
-static float temperature_buffer[TEMP_FILTER_SIZE] = {0};  // 温度缓冲区
-static uint8_t filter_index = 0;                          // 当前缓冲区位置
-static uint8_t filter_initialized = 0;                    // 滤波器初始化标志
-static float filtered_temperature = 0;                     // 滤波后的温度值
+// 加热相关时间记录
+uint32_t heating_start_time = 0;  // 开始加热时间：记录什么时候开始加热的
+uint32_t initial_heating_end_time = 0; // 初始加热结束时间
 
-// 显示专用温度滤波器变量（让屏幕显示更流畅）
-static float display_temperature_buffer[DISPLAY_FILTER_SIZE] = {0};
-static uint8_t display_filter_index = 0;
-static uint8_t display_filter_initialized = 0;
-static float display_filtered_temperature = 0;
+// 温度校准参数
+TemperatureCalibration t12_cal = {0.0, 1.0, 0, 4095}; // 温度校准参数
 
-// 加热控制状态变量（控制系统的"心跳"）
-static uint8_t heating_control_enabled = 0;      // 0=禁用自动控制，1=启用自动控制
-static uint32_t heating_control_interval = 100;  // 控制间隔100毫秒（10次/秒）
+// ==================== 第四步：定义内部使用的变量 ====================
+// 这些变量只在这个文件内部使用，不会被其他文件访问
 
-// PWM控制相关变量（精确控制加热功率）
-static uint32_t pwm_falling_edge_time = 0;      // 记录PWM下降的时间
-static uint8_t waiting_for_delay = 0;           // 等待延迟采样的标志
+// 温度滤波器（用于控制逻辑，让温度更稳定）
+static float temperature_buffer[TEMP_FILTER_SIZE] = {0};  // 温度数据缓冲区
+static uint8_t filter_index = 0;                          // 当前写入位置
+static uint8_t filter_initialized = 0;                    // 是否已初始化
+static float filtered_temperature = 0;                    // 滤波后的温度
 
-// 按键防抖相关变量（防止误操作）
-static uint32_t last_key_press_time = 0;        // 上次按键时间戳
-static uint16_t last_key_pin = 0;               // 上次按下的按键引脚
+// 显示用滤波器（用于屏幕显示，反应更平滑）
+static float display_temperature_buffer[DISPLAY_FILTER_SIZE] = {0}; // 显示缓冲区
+static uint8_t display_filter_index = 0;                            // 显示写入位置
+static uint8_t display_filter_initialized = 0;                      // 显示是否初始化
+static float display_filtered_temperature = 0;                      // 显示用温度
 
-// ==================== 第五步：函数声明（告诉编译器有哪些函数） ====================
-// 就像书的目录，先告诉编译器后面会定义这些函数
+// 用于显示动画效果的变量
+static float displayed_temperature = 0;                    // 实际显示的温度（带动画效果）
+static uint32_t last_display_update = 0;                  // 上次显示更新时间
 
-// 显示专用滤波器函数声明
+// 控制和PWM相关变量
+static uint32_t heating_control_interval = 50;  // 加热控制间隔（与PID文件保持一致）
+static uint32_t pwm_falling_edge_time = 0;      // PWM下降沿时间
+static uint8_t waiting_for_delay = 0;           // 等待延时标志
+
+// 采样状态机（分步骤进行采样）
+uint8_t sampling_phase = 0;              // 采样阶段
+uint32_t sample_start_time = 0;          // 阶段开始时间
+uint16_t saved_pwm_value = 0;            // 保存的PWM值
+
+// ==================== 第五步：声明内部函数 ====================
+// 提前告诉电脑我们会用到哪些函数
+
+// 用于屏幕显示的温度滤波函数
 void updateDisplayTemperatureFilter(uint16_t adcValue);
 float getDisplayFilteredTemperature(void);
 
-// ==================== 第六步：核心功能实现（最重要的部分） ====================
+// ==================== 第六步：实现各种功能 ====================
 
 /**
- * 【核心功能1】把ADC采样值转换成实际温度值
- * 作用：将ADC读取的数字信号转换成我们能理解的温度值
- * 原理：ADC值 → 电压值 → 温度值（三步转换）
- * 输入：ADC采样值（0-4095之间的数字）
- * 输出：实际的摄氏度温度
+ * calculateT12Temperature - 把传感器读数转换成温度值
+ * 
+ * 功能：把传感器的数字信号（0-4095）转换成摄氏度温度
+ * 原理：
+ *  1) 把数字信号转换成电压值
+ *  2) 根据传感器特性把电压换算成温度
+ *  3) 加上环境温度补偿得到最终温度
+ * 安全：如果计算结果不合理，会限制在0-460°C范围内
+ * 
+ * @param adcValue 传感器读数（0-4095）
+ * @return 温度值（摄氏度）
  */
 float calculateT12Temperature(uint16_t adcValue) {
-    // 传感器参数（这些值需要根据实际传感器校准）
-    const float mV_per_degree = Thermal_Voltage;  // 热电偶灵敏度（每度对应的电压变化）
-    const float cold_junction_temp = ATemp;       // 环境温度补偿（比如室温25度）
-    const float adc_ref_voltage = 3.3;           // ADC参考电压（STM32是3.3V）
-    const uint16_t adc_max = 4095;               // 12位ADC的最大值（2^12-1=4095）
+    // 传感器参数
+    const float mV_per_degree = Thermal_Voltage;  // 每摄氏度对应的电压
+    const float cold_junction_temp = ATemp;       // 环境温度补偿
+    const float adc_ref_voltage = 3.3;            // ADC参考电压
+    const uint16_t adc_max = 4095;                // ADC最大值
     
-    // 安全检查：确保ADC值不会超过最大值（防止异常情况）
+    // 防止读数异常
     if (adcValue > adc_max) adcValue = adc_max;
     
-    // 第一步：ADC值转成电压（ADC读数 × 3.3V ÷ 4095）
-    // 就像把数字信号转换成实际的电压值
+    // 数字信号转电压值
     float voltage = (adcValue * adc_ref_voltage) / adc_max;
     
-    // 第二步：电压转成温度（电压 ÷ 灵敏度 + 环境温度）
-    // 根据热电偶特性，将电压值转换成温度值
+    // 电压值转温度值
     float temperature = voltage / mV_per_degree + cold_junction_temp;
     
-    // 温度安全限制：防止温度过高或过低（保护系统和用户）
-    if (temperature < 0) temperature = 0;     // 最低0度（不能低于0度）
-    if (temperature > 460) temperature = 460; // 最高460度（安全上限）
+    // 温度范围限制
+    if (temperature < 0) temperature = 0;
+    if (temperature > 460) temperature = 460;
     
     return temperature;
 }
 
 /**
- * 【核心功能2】PID温度控制算法 - 让温度稳定在目标值
- * 作用：根据当前温度和目标温度的差异，计算合适的加热功率
- * 原理：P（比例）+ I（积分）+ D（微分）= 合适的加热功率
- * 就像开车时根据距离目的地的远近调整油门大小
+ * getFilteredTemperature - 获取稳定的温度值
+ * 
+ * 功能：返回经过滤波处理的稳定温度值
+ * 原理：使用多个温度读数的平均值，减少随机波动
+ * 
+ * @return 稳定的温度值（摄氏度）
  */
-float pidTemperatureControl(float current_temp) {
-    uint32_t current_time = HAL_GetTick();  // 获取当前时间（毫秒）
-    float dt = (current_time - t12_pid.last_time) / 1000.0;  // 计算时间间隔（秒）
-    
-    if (dt <= 0) dt = 0.01;  // 防止时间间隔为0导致计算错误
-    
-    // 计算温度误差：目标温度 - 当前温度（还差多少度）
-    float error = t12_pid.setpoint - current_temp;
-    
-    // PID三部分计算（就像三个助手一起工作）：
-    
-    // P项（比例控制）：误差越大，加热功率越大（快速响应）
-    // 就像看到目标还很远，就猛踩油门
-    float proportional = t12_pid.kp * error;
-    
-    // I项（积分控制）：累计误差，消除稳态误差（比如始终差几度）
-    // 就像发现总是差一点，就慢慢补上
-    t12_pid.integral += error * dt;
-    
-    // 【重要优化】积分衰减：当温度接近目标温度时（误差小于5度），对积分项进行衰减
-    // 防止在目标温度附近积分项过大导致温度过冲
-    float integral_decay_factor = 1.0f;
-    if (fabs(error) < 5.0f) {
-        // 误差越小，积分衰减越强（防止在目标温度附近积分项过大）
-        integral_decay_factor = fabs(error) / 5.0f;
-        if (integral_decay_factor < 0.1f) integral_decay_factor = 0.1f;  // 最小衰减到10%
-    }
-    t12_pid.integral *= integral_decay_factor;
-    
-    // 积分限幅：进一步减小积分限幅，防止积分过大导致温度过冲
-    if (t12_pid.integral > 10) t12_pid.integral = 10;    // 减小积分限幅
-    if (t12_pid.integral < -10) t12_pid.integral = -10;  // 减小积分限幅
-    float integral = t12_pid.ki * t12_pid.integral;
-    
-    // D项（微分控制）：根据温度变化速度调整，抑制振荡
-    // 就像看到温度变化太快，就适当刹车防止冲过头
-    float derivative = t12_pid.kd * (error - t12_pid.prev_error) / dt;
-    
-    // PID输出 = 比例项 + 积分项 + 微分项（三个助手的结果加起来）
-    float output = proportional + integral + derivative;
-    
-    // 输出功率限制在0-95%范围内（安全保护）
-    if (output > 95.0) output = 95.0;  // 最大95%功率（留有余量防止过冲）
-    if (output < 0.0) output = 0.0;      // 最小0%功率（停止加热）
-    
-    // 保存状态用于下次计算（记住这次的情况）
-    t12_pid.prev_error = error;      // 保存当前误差
-    t12_pid.last_time = current_time; // 保存当前时间
-    
-    return output;
+float getFilteredTemperature(void) {
+    return filtered_temperature;
 }
 
 /**
- * 【核心功能3】设置目标温度
- * 作用：当用户改变目标温度时，需要重置PID控制器的状态
- * 原理：防止温度突变时PID控制器反应过度
- * 就像换了一个目的地，要重新规划路线
- */
-void setT12Temperature(float temperature) {
-    t12_pid.setpoint = temperature;  // 设置新的目标温度
-    t12_pid.integral = 0.0;           // 重置积分项（重新开始积累误差）
-    t12_pid.prev_error = 0.0;         // 重置上次误差
-    t12_pid.last_time = HAL_GetTick(); // 重置时间戳
-}
-
-// ==================== 第七步：数据处理功能（让数据更准确） ====================
-
-/**
- * 【数据处理1】更新温度移动平均滤波器
- * 作用：将新温度值加入滤波器，计算移动平均值
- * 原理：用最近4个温度值的平均值作为当前温度，减少噪声干扰
- * 就像取多次测量的平均值，让结果更稳定
+ * updateTemperatureFilter - 更新温度滤波器
+ * 
+ * 功能：把新的温度读数加入滤波器并计算平均值
+ * 原理：维护一个固定大小的缓冲区，循环存储最新的几个温度值并求平均
+ * 
+ * @param adcValue 新的传感器读数
  */
 void updateTemperatureFilter(uint16_t adcValue) {
-    // 计算当前温度
+    // 把传感器读数转换成温度值
     float current_temp = calculateT12Temperature(adcValue);
     
-    // 将新温度值加入缓冲区（循环使用4个位置）
+    // 把新温度值存入缓冲区
     temperature_buffer[filter_index] = current_temp;
-    filter_index = (filter_index + 1) % TEMP_FILTER_SIZE;
+filter_index = (filter_index + 1) % TEMP_FILTER_SIZE;
     
-    // 如果滤波器未初始化，用当前温度填充整个缓冲区
+    // 如果是第一次使用，用当前值填满整个缓冲区
     if (!filter_initialized) {
         for (uint8_t i = 0; i < TEMP_FILTER_SIZE; i++) {
             temperature_buffer[i] = current_temp;
         }
-        filter_initialized = 1;
+filter_initialized = 1;
     }
     
-    // 计算移动平均值（4个温度值的平均数）
+    // 计算平均温度值
     float sum = 0;
     for (uint8_t i = 0; i < TEMP_FILTER_SIZE; i++) {
         sum += temperature_buffer[i];
@@ -221,193 +193,182 @@ void updateTemperatureFilter(uint16_t adcValue) {
     filtered_temperature = sum / TEMP_FILTER_SIZE;
 }
 
-/**
- * 【数据处理2】获取滤波后的温度值
- * 作用：提供稳定的温度读数，减少跳动
- * 输出：经过移动平均滤波的温度值
- */
-float getFilteredTemperature(void) {
-    return filtered_temperature;
-}
-
-// ==================== 第八步：定时器控制功能（系统的心跳） ====================
+// ==================== 第七步：安全检测功能 ====================
 
 /**
- * 【定时器控制1】启动加热控制定时器
- * 作用：启用后，系统会每隔一段时间自动调整加热功率
- * 原理：实现自动温度控制，让温度稳定在目标值
- */
-void startHeatingControlTimer(void) {
-    heating_control_enabled = 1;
-    HAL_TIM_Base_Start_IT(&htim2);  // 启动TIM2定时器中断
-}
-
-/**
- * 【定时器控制2】停止加热控制定时器
- * 作用：停止自动温度控制，加热功率保持不变
- * 原理：手动控制加热或停止加热时使用
- */
-void stopHeatingControlTimer(void) {
-    heating_control_enabled = 0;
-    HAL_TIM_Base_Stop_IT(&htim2);  // 停止TIM2定时器中断
-}
-
-/**
- * 【安全检测】检查USB电压是否足够（高于15V）
- * 作用：防止电压不足时加热，保护系统安全
- * 输出：1=电压足够可以加热，0=电压不足禁止加热
+ * isUSBVoltageSufficient - 检查USB电压是否足够
+ * 
+ * 功能：检查供电电压是否满足加热要求
+ * 原理：读取电压传感器数据，换算成实际电压值，判断是否高于阈值
+ * 
+ * @return 1=电压足够，0=电压不足
  */
 uint8_t isUSBVoltageSufficient(void) {
-    // 计算USB电压（ADC值转电压，考虑分压电阻）
+    // 计算实际USB电压值
     float usb_voltage = DMA_ADC[1] * 3.3f / 4095.0f / 0.1515f;
     return (usb_voltage >= USB_VOLTAGE_THRESHOLD);
 }
 
-// ==================== 第九步：核心控制逻辑（系统的大脑） ====================
+/**
+ * checkUSBVoltage - 检查并处理USB电压异常
+ * 
+ * 功能：检测电压异常并自动保护设备
+ * 原理：如果电压不足，自动停止加热并关闭温度控制
+ * 
+ * @return 1=电压正常，0=电压异常
+ */
+uint8_t checkUSBVoltage(void) {
+    // 如果电压不足
+    if (!isUSBVoltageSufficient()) {
+        // 停止加热
+        __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
+        stopHeatingControlTimer();
+        heating_status = 0;
+        return 0;
+    }
+    return 1;
+}
 
 /**
- * 【核心控制】定时器中断回调函数 - 自动温度控制逻辑
- * 作用：这个函数由定时器硬件自动调用，每隔一段时间执行一次
- * 原理：这是整个温度控制系统的核心逻辑，就像系统的心跳
+ * checkTemperatureSafety - 检查温度安全
+ * 
+ * 功能：监控温度是否在安全范围内
+ * 原理：检查温度是否超过限制或传感器是否异常
+ * 
+ * @return 1=温度安全，0=温度异常
  */
-void heatingControlTimerCallback(void) {
-    if (!heating_control_enabled) return;  // 如果自动控制被禁用，直接返回
-    
-    static uint32_t last_control_time = 0;
-    uint32_t current_time = HAL_GetTick();
-    
-    // 检查是否达到控制间隔（100毫秒执行一次）
-    if ((current_time - last_control_time) < heating_control_interval) {
-        return;  // 未达到间隔时间，跳过本次控制
-    }
-    
-    last_control_time = current_time;
-    
-    // 1. 控制ADC采样时机，确保温度测量准确
-    controlADCSampling(&htim2);
-    
-    // 2. 检查USB电压是否足够，如果不足则停止加热（安全第一）
-    if (!isUSBVoltageSufficient()) {
-        __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);  // 紧急停止加热
-        stopHeatingControlTimer();  // 停止自动温度控制
-        heating_status = 0;         // 更新状态为"停止加热"
-        return;  // 直接返回，不执行后续控制逻辑
-    }
-    
-    // 3. 更新温度滤波器并获取滤波后的温度
-    updateTemperatureFilter(DMA_ADC[0]);
+uint8_t checkTemperatureSafety(void) {
     float current_temp = getFilteredTemperature();
     
-    // 4. 使用PID算法计算合适的加热功率（0-100%）
-    float pwm_duty_percent = pidTemperatureControl(current_temp);
-    
-    // 5. 设置PWM占空比来控制加热功率
-    uint16_t pwm_value = (uint16_t)(pwm_duty_percent * PWM_PERIOD / 100);
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, pwm_value);
-    
-    // 6. 过热保护：如果温度超过460度，自动停止加热（安全保护）
-    if (current_temp > 460.0) {
-        __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);  // 紧急停止加热
-        stopHeatingControlTimer();  // 停止自动温度控制
+    // 温度过高保护
+    if (current_temp > 460.0f) {
+        // 停止加热
+        __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
+        stopHeatingControlTimer();
+        heating_status = 0;
+        return 0;
     }
+    
+    // 传感器异常检测
+    if (current_temp < 0.0f || current_temp > 500.0f) {
+        // 停止加热
+        __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
+        stopHeatingControlTimer();
+        heating_status = 0;
+        return 0;
+    }
+    
+    return 1;
 }
 
-// ==================== 第十步：ADC采样控制（精确测量） ====================
+// ==================== 第八步：ADC采样控制 ====================
 
 /**
- * 【ADC控制】控制ADC采样时机 - 避免PWM加热信号干扰温度测量
- * 作用：提高温度测量精度，避免PWM干扰
- * 原理：在PWM高电平（加热时）采样，低电平（不加热时）停止采样
+ * controlADCSampling - 控制ADC采样时机
+ * 
+ * 功能：选择合适的时间读取传感器数据
+ * 原理：避免在加热器工作时读取数据，减少干扰
+ * 
+ * @param htim 定时器句柄
  */
 void controlADCSampling(TIM_HandleTypeDef *htim) {
-    if (htim->Instance == TIM2) {  // 只处理加热用的TIM2定时器
-        
-        // PWM低电平时（不加热）：停止ADC采样，避免干扰
-        if (htim->Instance->CNT < htim->Instance->CCR4) {
-            HAL_ADC_Stop_DMA(&hadc1);  // 停止ADC采样
-            adc_sampling_flag = 0;      // 更新状态为"停止采样"
-        } 
-        // PWM高电平时（加热）：开始ADC采样
-        else {
-            if (adc_sampling_flag == 0) {  // 如果当前没有在采样
-                HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&DMA_ADC, 2);  // 启动两个通道的采样
-                adc_sampling_flag = 1;      // 更新状态为"正在采样"
-            }
-        }
-    }
+    // 这个函数由定时器中断调用，不包含阻塞延时
+    // 采样逻辑在定时器回调中处理，避免阻塞系统
+    // PWM状态由调用者控制
 }
 
-// ==================== 第十一步：用户交互功能（人机界面） ====================
+// ==================== 第九步：用户交互功能 ====================
 
 /**
- * 【用户交互1】按键中断处理函数 - 当用户按下按键时自动执行
- * 作用：处理用户的按键操作，实现温度设置和加热控制
- * 原理：这个函数由STM32硬件自动调用，不需要手动调用
+ * HAL_GPIO_EXTI_Callback - 按键中断处理函数
+ * 
+ * 功能：处理用户按键操作
+ * 原理：根据按下的按键执行相应操作（开始/停止加热，调整温度）
+ * 
+ * @param GPIO_Pin 按键对应的引脚
  */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-    uint32_t current_time = HAL_GetTick();  // 获取当前时间（毫秒）
+    uint32_t current_time = HAL_GetTick();
     
-    // 按键防抖检查：如果两次按键间隔太短，认为是抖动，忽略这次按键
+    // 按键防抖：避免按键抖动引起的误操作
     if ((current_time - last_key_press_time) < DEBOUNCE_DELAY) {
-        return;  // 防抖：忽略短时间内重复的按键
+        return;
     }
     
-    // 记录这次按键的时间和引脚
     last_key_press_time = current_time;
     last_key_pin = GPIO_Pin;
     
-    // 如果按下的是"模式"按键（切换加热状态）
+    // 模式键（开始/停止加热）
     if (GPIO_Pin == KEY_MODE_Pin) {
-        // 检查USB电压是否足够
+        // 先检查电压是否足够
         if (!isUSBVoltageSufficient()) {
-            // USB电压低于15V，禁止加热（安全保护）
-            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);  // 确保停止加热
-            stopHeatingControlTimer();           // 停止温度自动控制
-            heating_status = 0;                  // 更新状态为"停止加热"
-            return;  // 直接返回，不执行加热操作
+            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
+            stopHeatingControlTimer();
+            heating_status = 0;
+            return;
         }
         
-        // 切换加热状态
+        // 如果当前没有加热
         if (heating_status == 0) {
-            // 当前是停止状态，开始加热
-            setT12Temperature(target_temperature);          // 设置目标温度
-            HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);   // 启动PWM加热
-            startHeatingControlTimer();          // 开始温度自动控制
-            heating_status = 1;                  // 更新状态为"正在加热"
+            // 开始加热
+            setT12Temperature(target_temperature);
+            HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+            
+            // 记录开始加热时间
+            heating_start_time = current_time;
+            
+            // 设置初始功率为100%
+            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
+            
+            startHeatingControlTimer();
+            heating_status = 1;
+            
+            // 重置采样状态机
+            sampling_phase = 0;
+            sample_start_time = 0;
+            saved_pwm_value = 0;
+            
+            // 初始化显示温度
+            float current_temp = getFilteredTemperature();
+            displayed_temperature = current_temp;
         } else {
-            // 当前是加热状态，停止加热
-            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);  // 停止加热（功率设为0%）
-            setT12Temperature(0.0);              // 目标温度设为0度
-            stopHeatingControlTimer();           // 停止温度自动控制
-            heating_status = 0;                  // 更新状态为"停止加热"
+            // 停止加热
+            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
+            setT12Temperature(target_temperature); // 重新设置目标温度以重置PID状态
+            stopHeatingControlTimer();
+            heating_status = 0;
+            
+            sampling_phase = 0;
+            sample_start_time = 0;
+            saved_pwm_value = 0;
         }
     }
-    // 如果按下的是"增加温度"按键
+    // 温度增加键
     else if (GPIO_Pin == KEY_UP_Pin) {
-        // 增加目标温度5度
+        // 增加5度
         target_temperature += 5.0;
         
-        // 温度安全限制：最高不超过460度（安全上限）
+        // 温度上限保护
         if (target_temperature > 460.0) {
             target_temperature = 460.0;
         }
         
-        // 如果当前正在加热，更新PID控制器的目标温度
+        // 如果正在加热，更新目标温度
         if (heating_status == 1) {
             setT12Temperature(target_temperature);
         }
     }
-    // 如果按下的是"减少温度"按键
+    // 温度减少键
     else if (GPIO_Pin == KEY_DOWN_Pin) {
-        // 减少目标温度5度
+        // 减少5度
         target_temperature -= 5.0;
         
-        // 温度安全限制：最低不低于0度
+        // 温度下限保护
         if (target_temperature < 0.0) {
             target_temperature = 0.0;
         }
         
-        // 如果当前正在加热，更新PID控制器的目标温度
+        // 如果正在加热，更新目标温度
         if (heating_status == 1) {
             setT12Temperature(target_temperature);
         }
@@ -415,55 +376,109 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 }
 
 /**
- * 【用户交互2】在OLED屏幕上显示温度、电压等信息
- * 作用：将系统状态信息显示给用户
+ * drawOnOLED - 在OLED屏幕上显示信息
+ * 
+ * 功能：在屏幕上显示温度、电压等信息
  * 原理：使用u8g2库在OLED屏幕上绘制各种信息
+ * 
+ * @param u8g2 OLED显示对象
  */
 void drawOnOLED(u8g2_t *u8g2) {
     char display_buffer[32];
     
-    // 1. 确保ADC采样正在进行
+    // 确保传感器数据正在更新
     if (adc_sampling_flag == 0) {
         HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&DMA_ADC, 2);
-        HAL_Delay(1);
+    }
+
+    // 获取要显示的数据
+    float usb_voltage = DMA_ADC[1] * 3.3f / 4095.0f / 0.152f;
+
+    // 直接使用传感器数据计算显示温度
+    float raw_temp = calculateT12Temperature(DMA_ADC[0]);
+
+    // 更新显示用滤波器
+    updateDisplayTemperatureFilter(DMA_ADC[0]);
+    // 使用滤波后的显示温度
+    float filtered_temp = getDisplayFilteredTemperature();
+
+    // 获取控制用的滤波温度
+    float pid_temp = getFilteredTemperature();
+    
+    // 实现平滑的温度显示动画效果
+    uint32_t current_time = HAL_GetTick();
+    if (last_display_update == 0) {
+        last_display_update = current_time;
+        displayed_temperature = raw_temp;
     }
     
-    // 2. 更新显示专用温度滤波器
-    updateDisplayTemperatureFilter(DMA_ADC[0]);
+    // 计算时间差（秒）
+    float time_delta = (current_time - last_display_update) / 1000.0f;
+    last_display_update = current_time;
     
-    // 3. 清空屏幕缓存
+    // 限制时间差，防止异常值
+    if (time_delta > 0.5f) time_delta = 0.1f;
+    
+    // 使用指数平滑算法实现更丝滑的温度显示
+    // 平滑因子根据温度变化速度动态调整
+    float temp_diff = fabs(filtered_temp - displayed_temperature);
+    float smoothing_factor = 0.1f; // 基础平滑因子
+    
+    // 温度变化越大，平滑因子越小（变化越慢），让显示更稳定
+    if (temp_diff > 10.0f) {
+        smoothing_factor = 0.02f;
+    } else if (temp_diff > 5.0f) {
+        smoothing_factor = 0.05f;
+    } else if (temp_diff > 2.0f) {
+        smoothing_factor = 0.08f;
+    }
+    
+    // 更新显示温度
+    displayed_temperature = displayed_temperature + smoothing_factor * (filtered_temp - displayed_temperature);
+    
+    // 清空屏幕缓冲区
     u8g2_ClearBuffer(u8g2);
     
-    // 4. 获取显示数据 - 分开获取不同用途的温度
-    float raw_temp = getDisplayFilteredTemperature();  // 原始温度（显示专用）
-    float pid_temp = getFilteredTemperature();         // PID实际温度
-    float usb_voltage = DMA_ADC[1] * 3.3f / 4095.0f / 0.1515f;  // USB电压
-    
-    // 5. 显示内容 - 按照需求分开显示
+    // 显示当前温度（大字体）
     u8g2_SetFont(u8g2, u8g2_font_fur30_tf);
-    sprintf(display_buffer, "C %0.0f", raw_temp);  // 显示原始温度
-    u8g2_DrawStr(u8g2, 2, 56, display_buffer);
+//    u8g2_SetFontPosTop(u8g2);
+    sprintf(display_buffer, "%0.0f", displayed_temperature);
+    u8g2_DrawStr(u8g2, 33, 56, display_buffer);
+    u8g2_DrawStr(u8g2, 3, 56, "C");
     
+    // 显示其他信息（小字体）
     u8g2_SetFont(u8g2, u8g2_font_spleen6x12_mf);
-    sprintf(display_buffer, "PID:%0.0f", pid_temp);  // 显示PID温度
+    
+    // 显示控制用温度
+    sprintf(display_buffer, "PID:%0.0f", pid_temp);
     u8g2_DrawStr(u8g2, 3, 76, display_buffer);
     
-    sprintf(display_buffer, "PEN:%d", DMA_ADC[0]);
+    // 显示传感器原始数据
+    sprintf(display_buffer, "ADC0:%d", DMA_ADC[0]);
     u8g2_DrawStr(u8g2, 4, 12, display_buffer);
     
-    sprintf(display_buffer, "USB:%0.2fV", usb_voltage);  // 显示USB电压
+    // 显示USB电压
+    sprintf(display_buffer, "USB:%0.1f V", usb_voltage);
     u8g2_DrawStr(u8g2, 67, 12, display_buffer);
     
+    // 显示电压状态
     if (usb_voltage >= USB_VOLTAGE_THRESHOLD) {
-        u8g2_DrawStr(u8g2, 114, 25, "OK");
+        u8g2_DrawStr(u8g2, 114, 26, "OK");
     } else {
-        u8g2_DrawStr(u8g2, 108, 25, "LOW");
+        u8g2_DrawStr(u8g2, 108, 26, "LOW");
     }
     
-    sprintf(display_buffer, "TEMP:%0.0f", target_temperature);
-    u8g2_DrawStr(u8g2, 66, 76, display_buffer);
+    // 显示目标温度
+    sprintf(display_buffer, "SET:%0.0f", target_temperature);
+    u8g2_DrawStr(u8g2, 68, 76, display_buffer);
     
-    // 绘制界面框架
+    // 显示加热状态（当处于专注加热模式时显示）
+    extern uint8_t focused_heating_mode;
+    if (heating_status && focused_heating_mode) {
+        u8g2_DrawStr(u8g2, 80, 62, "Heating");  // 显示加热状态
+    }
+    
+    // 绘制界面边框
     u8g2_DrawFrame(u8g2, 0, 0, 128, 16);
     u8g2_DrawFrame(u8g2, 0, 64, 128, 16);
     u8g2_DrawFrame(u8g2, 0, 15, 32, 50);
@@ -471,21 +486,24 @@ void drawOnOLED(u8g2_t *u8g2) {
     u8g2_DrawLine(u8g2, 64, 0, 64, 15);
     u8g2_DrawLine(u8g2, 64, 64, 64, 80);
 
-    // 发送到屏幕
+    // 把缓冲区内容发送到屏幕显示
     u8g2_SendBuffer(u8g2);
 }
 
-// ==================== 第十二步：显示专用功能（优化显示效果） ====================
+// ==================== 第十步：显示专用功能 ====================
 
 /**
- * 【显示优化1】更新显示专用温度滤波器
- * 作用：为屏幕显示提供更流畅的温度读数
- * 原理：使用较小的滤波器窗口，让显示响应更快
+ * updateDisplayTemperatureFilter - 更新显示用温度滤波器
+ * 
+ * 功能：为屏幕显示提供更平滑的温度读数
+ * 原理：使用较大的滤波窗口，让显示响应更平滑
+ * 
+ * @param adcValue 传感器读数
  */
 void updateDisplayTemperatureFilter(uint16_t adcValue) {
-    // 量程检查：如果ADC值超过4095（量程上限），不更新滤波器
-    if (adcValue > 4095) {
-        return;  // 超过量程，直接返回，不更新温度值
+    // 防止传感器读数异常
+    if (adcValue > 4000) {
+        return;
     }
     
     float current_temp = calculateT12Temperature(adcValue);
@@ -493,6 +511,7 @@ void updateDisplayTemperatureFilter(uint16_t adcValue) {
     display_temperature_buffer[display_filter_index] = current_temp;
     display_filter_index = (display_filter_index + 1) % DISPLAY_FILTER_SIZE;
     
+    // 如果是第一次使用，初始化缓冲区
     if (!display_filter_initialized) {
         for (uint8_t i = 0; i < DISPLAY_FILTER_SIZE; i++) {
             display_temperature_buffer[i] = current_temp;
@@ -500,6 +519,7 @@ void updateDisplayTemperatureFilter(uint16_t adcValue) {
         display_filter_initialized = 1;
     }
     
+    // 计算平均值
     float sum = 0;
     for (uint8_t i = 0; i < DISPLAY_FILTER_SIZE; i++) {
         sum += display_temperature_buffer[i];
@@ -508,9 +528,11 @@ void updateDisplayTemperatureFilter(uint16_t adcValue) {
 }
 
 /**
- * 【显示优化2】获取显示用滤波温度
- * 作用：提供专门用于显示的温度值
- * 输出：经过显示专用滤波器处理的温度值
+ * getDisplayFilteredTemperature - 获取显示用滤波温度
+ * 
+ * 功能：返回用于屏幕显示的温度值
+ * 
+ * @return 显示用温度值
  */
 float getDisplayFilteredTemperature(void) {
     return display_filtered_temperature;

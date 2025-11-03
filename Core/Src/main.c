@@ -34,6 +34,7 @@
 #include "St1xADC.h"
 #include "bmp.h"
 #include "lis2dw12.h"
+#include "St1xPID.h"
 #include "ws2812.h"
 /* USER CODE END Includes */
 
@@ -82,6 +83,24 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
         heatingControlTimerCallback();  // 调用加热控制逻辑
     }
 }
+
+// 系统状态监控函数
+void systemStatusMonitor(void) {
+    static uint32_t last_status_check = 0;
+    uint32_t current_time = HAL_GetTick();
+
+    // 提高系统状态检查频率到每100ms一次，以确保安全
+    if ((current_time - last_status_check) >= 100) {
+        // 检查系统状态
+        checkUSBVoltage();
+        checkTemperatureSafety();
+        last_status_check = current_time;
+    }
+}
+
+// 声明外部变量
+extern uint32_t initial_heating_end_time;
+extern uint8_t heating_status;
 /* USER CODE END 0 */
 
 /**
@@ -134,6 +153,8 @@ int main(void)
 
     HAL_ADCEx_Calibration_Start(&hadc1);  //ADC自动校准
     HAL_TIM_Base_Start_IT(&htim2);
+
+
 //    lis2dw12_read_data_polling();
   /* USER CODE END 2 */
 
@@ -143,11 +164,19 @@ while (1) {
 /* USER CODE END WHILE */
 
 /* USER CODE BEGIN 3 */
-    // 只保留显示功能，确保温度控制不受影响
-    drawOnOLED(&u8g2);
-
-    // 添加适当延时，避免显示刷新过快
-    HAL_Delay(500);  // 2Hz刷新率
+    systemStatusMonitor();
+    static uint32_t last_oled_update = 0;
+    uint32_t current_time = HAL_GetTick();
+    
+    // 在初始加热阶段也更新OLED显示，以便显示加热状态
+    // 提高OLED更新频率到每20ms一次，使显示更流畅
+    if ((current_time - last_oled_update) >= 20) {
+        drawOnOLED(&u8g2);
+        last_oled_update = current_time;
+    }
+    
+    // 减少主循环延时到1ms，提高系统整体响应速度
+    HAL_Delay(1);
 }
 /* USER CODE END 3 */
 }
