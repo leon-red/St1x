@@ -30,20 +30,15 @@ extern float display_filtered_temperature; // 显示用温度
 
 // ==================== 定义常量参数 ====================
 // PID控制参数（参考Arduino示例，优化响应特性）
-#define PID_AGGRESSIVE_KP 18.0f   // 激进模式比例系数（提高响应速度）
-#define PID_AGGRESSIVE_KI 1.2f    // 激进模式积分系数
-#define PID_AGGRESSIVE_KD 2.0f    // 激进模式微分系数
-
 #define PID_CONSERVATIVE_KP 15.0f // 保守模式比例系数
 #define PID_CONSERVATIVE_KI 5.0f  // 保守模式积分系数
 #define PID_CONSERVATIVE_KD 8.0f  // 保守模式微分系数
 
 // 控制阈值
-#define DIRECT_CONTROL_THRESHOLD 1.0f // 直接控制阈值（增加阈值以减少频繁开关）
-#define FAST_HEATING_THRESHOLD 15.0f  // 快速加热阈值（降低阈值以更快进入全功率）
-#define QUICK_START_THRESHOLD 15.0f   // 快速启动阈值（降低阈值）
 #define CONTROL_INTERVAL 50           // 控制间隔（毫秒）（保持与ADC文件一致）
-#define INITIAL_HEATING_DURATION 3000  // 初始加热持续时间（毫秒）（3秒全功率加热）
+#define FOCUSED_HEATING_DURATION 2000 // 专注加热持续时间（毫秒）（2秒全功率加热）
+#define FOCUSED_HEATING_TEMP_DIFF 20.0f // 专注加热温度差阈值（温度低于目标值20度时启用）
+#define AGGRESSIVE_HEATING_TEMP_DIFF 3.0f // 激进加热温度差阈值（温度低于目标值3度时启用）
 
 // ==================== 定义全局变量 ====================
 // PID控制器实例，初始化参数：kp=0.5, ki=0.01, kd=1.2
@@ -83,8 +78,8 @@ float pidTemperatureControl(float current_temp) {
     // 计算温度误差
     float error = t12_pid.setpoint - current_temp;
     
-    // 检查是否应该启用专注加热模式（温度低于目标值30度）
-    if (error > 30.0f && !focused_heating_mode) {
+    // 检查是否应该启用专注加热模式（温度低于目标值）
+    if (error > FOCUSED_HEATING_TEMP_DIFF && !focused_heating_mode) {
         // 启动专注加热模式
         focused_heating_mode = 1;
         focused_heating_start_time = current_time;
@@ -98,8 +93,8 @@ float pidTemperatureControl(float current_temp) {
         return 100.0f;  // 返回值实际上不会被使用，因为专注加热在回调函数中处理
     }
     
-    // 策略2：激进模式（温度低于目标值20度时）
-    if (error > 20.0f) {
+    // 策略2：激进模式（温度低于目标值）
+    if (error > AGGRESSIVE_HEATING_TEMP_DIFF) {
         t12_pid.last_time = current_time;
         return 100.0f;  // 全功率加热
     }
@@ -202,8 +197,8 @@ void heatingControlTimerCallback(void) {
 
     // 检查是否在专注加热模式下
     if (focused_heating_mode) {
-        // 检查专注加热是否完成（3秒）
-        if ((current_time - focused_heating_start_time) >= 3000) {
+        // 检查专注加热是否完成
+        if ((current_time - focused_heating_start_time) >= FOCUSED_HEATING_DURATION) {
             // 专注加热完成，退出专注加热模式
             focused_heating_mode = 0;
         } else {
@@ -249,7 +244,7 @@ void heatingControlTimerCallback(void) {
                 
                 // 检查是否应该启动专注加热模式
                 float error = t12_pid.setpoint - control_temp;
-                if (error > 30.0f && !focused_heating_mode) {
+                if (error > FOCUSED_HEATING_TEMP_DIFF && !focused_heating_mode) {
                     // 启动专注加热模式
                     focused_heating_mode = 1;
                     focused_heating_start_time = current_time;

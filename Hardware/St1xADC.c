@@ -30,8 +30,8 @@
 // 这些是我们提前设定好的数值，程序运行时不会改变
 
 // 温度传感器的参数（不同传感器可能需要调整）
-#define ATemp   0;              // 环境温度补偿（修正环境温度对测量的影响）
-#define Thermal_Voltage 0.0041f; // 热电偶灵敏度（每摄氏度产生的电压）
+#define ATemp   0              // 环境温度补偿（修正环境温度对测量的影响）
+#define Thermal_Voltage 0.00263f // 热电偶灵敏度（每摄氏度产生的电压）
 
 // 滤波器设置（让温度读数更稳定）
 #define TEMP_FILTER_SIZE 4      // 控制用滤波器大小（用4个数平均，更稳定但反应慢一点）
@@ -40,18 +40,14 @@
 // 安全和控制参数
 #define USB_VOLTAGE_THRESHOLD 15.0f  // 最低工作电压：低于15伏就不能加热
 #define DEBOUNCE_DELAY 50            // 按键防抖时间：防止按键抖动误触发
-#define PWM_PERIOD 10000             // PWM周期：控制加热功率的基准
 // 保持与PID文件一致的控制间隔
 #define CONTROL_INTERVAL 50          // 控制间隔：每隔50毫秒检查一次温度
-#define SAMPLING_DELAY 1             // 采样延时：等待信号稳定的时间
-#define INITIAL_HEATING_DURATION 3000 // 初始加热持续时间：3秒
-#define INITIAL_HEATING_TEMP_DIFF 50.0f // 初始加热温度差阈值（只有温差大于此值时才启用初始全功率加热）
 
 // ==================== 第三步：定义全局变量 ====================
 // 这些变量用来保存程序运行过程中的各种状态和数据
 
 // 用户设置和运行状态
-float target_temperature = 300.0;  // 目标温度：想要加热到多少度（默认300°C）
+float target_temperature = 300.0f;  // 目标温度：想要加热到多少度（默认300°C）
 uint8_t heating_status = 0;       // 加热状态：0=不加热，1=正在加热
 
 // 传感器数据存储
@@ -70,7 +66,6 @@ static uint8_t first_draw = 1;    // 首次绘制：标记是否第一次显示�
 
 // 加热相关时间记录
 uint32_t heating_start_time = 0;  // 开始加热时间：记录什么时候开始加热的
-uint32_t initial_heating_end_time = 0; // 初始加热结束时间
 
 // 温度校准参数
 TemperatureCalibration t12_cal = {0.0, 1.0, 0, 4095}; // 温度校准参数
@@ -474,8 +469,13 @@ void drawOnOLED(u8g2_t *u8g2) {
     
     // 显示加热状态（当处于专注加热模式时显示）
     extern uint8_t focused_heating_mode;
-    if (heating_status && focused_heating_mode) {
-        u8g2_DrawStr(u8g2, 80, 62, "Heating");  // 显示加热状态
+    if (heating_status) {
+        if (focused_heating_mode) {
+            u8g2_DrawStr(u8g2, 83, 62, "Heating");  // 显示加热状态
+        }
+    } else {
+        // 当加热停止时显示"Stop"
+        u8g2_DrawStr(u8g2, 102, 62, "Stop");
     }
     
     // 绘制界面边框
