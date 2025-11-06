@@ -1,6 +1,7 @@
 #include "St1xMenu.h"
 #include "u8g2.h"
 #include "St1xKey.h"
+#include "St1xStatic.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -18,6 +19,10 @@ static uint32_t last_operation_time = 0;
 
 // 前向声明
 void Menu_DefaultAction(void);
+void Level1Item3Action(void);
+void Level1Item3Display(void);
+uint8_t is_static_display_mode(void);
+void exit_static_display_mode(void);
 
 // 示例子菜单项
 MenuItem subMenu1Items[] = {
@@ -50,7 +55,7 @@ MenuItem rootMenuItems[] = {
     {"Level1-Item1", Menu_DefaultAction, NULL, 0},
     {"Level1-Item2", Menu_DefaultAction, NULL, 0},
     {"Level2Menu", NULL, level2MenuItems, 3},
-    {"Level1-Item3", Menu_DefaultAction, NULL, 0}
+    {"Level1-Item3", Level1Item3Action, NULL, 0}
 };
 
 /**
@@ -71,6 +76,52 @@ void Menu_Init(MenuContext* ctx, MenuItem* rootMenu, uint8_t rootMenuCount) {
  */
 void Menu_DefaultAction(void) {
     // 默认动作，可以被具体实现替换
+}
+
+// 传感器显示模式标志
+static uint8_t static_display_mode = 0;
+static uint32_t last_static_display_time = 0;
+#define STATIC_DISPLAY_INTERVAL 50  // 50ms显示间隔
+
+/**
+ * @brief Level1-Item3 菜单项动作函数
+ */
+void Level1Item3Action(void) {
+    // 调用静态传感器显示初始化
+    St1xStatic_Action();
+    
+    // 设置为传感器显示模式
+    static_display_mode = 1;
+    last_static_display_time = HAL_GetTick();
+}
+
+/**
+ * @brief 检查是否处于静态显示模式
+ */
+uint8_t is_static_display_mode(void) {
+    return static_display_mode;
+}
+
+/**
+ * @brief 退出静态显示模式
+ */
+void exit_static_display_mode(void) {
+    static_display_mode = 0;
+}
+
+/**
+ * @brief 静态数据显示处理函数
+ */
+void Level1Item3Display(void) {
+    extern u8g2_t u8g2;
+    uint32_t current_time = HAL_GetTick();
+    
+    // 按设定间隔刷新显示
+    if ((current_time - last_static_display_time) >= STATIC_DISPLAY_INTERVAL) {
+        // 显示传感器数据
+        St1xStatic_DisplayData(&u8g2);
+        last_static_display_time = current_time;
+    }
 }
 
 /**
@@ -239,14 +290,29 @@ uint8_t Menu_Process(void) {
     
     switch (key) {
         case KEY_UP:
+            if (is_static_display_mode()) {
+                // 在静态显示模式下，UP键无操作
+                break;
+            }
             Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_DOWN); // 向下移动
             break;
             
         case KEY_DOWN:
+            if (is_static_display_mode()) {
+                // 在静态显示模式下，DOWN键无操作
+                break;
+            }
             Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_UP); // 向上移动
             break;
             
         case KEY_MODE:
+            if (is_static_display_mode()) {
+                // 在静态显示模式下，KEY_MODE键用于退出
+                exit_static_display_mode();
+                // 同时执行加热控制逻辑
+                handleHeatingControl();
+                break;
+            }
             // 在菜单中，KEY_MODE按键同时用于菜单导航和加热控制
             // 调用加热控制函数
             handleHeatingControl();
@@ -255,6 +321,11 @@ uint8_t Menu_Process(void) {
             break;
             
         case KEY_MODE_LONG:
+            if (is_static_display_mode()) {
+                // 在静态显示模式下，长按KEY_MODE键用于退出
+                exit_static_display_mode();
+                break;
+            }
             if (g_menuCtx.menuLevel > 0) {
                 Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_BACK);
             } else {
@@ -271,8 +342,14 @@ uint8_t Menu_Process(void) {
     // 获取U8G2对象
     extern u8g2_t u8g2;
     
-    // 显示菜单
-    Menu_Display(&g_menuCtx, &u8g2);
+    // 检查是否处于静态显示模式
+    if (is_static_display_mode()) {
+        // 处理静态数据显示
+        Level1Item3Display();
+    } else {
+        // 显示菜单
+        Menu_Display(&g_menuCtx, &u8g2);
+    }
     
     return 1; // 菜单仍在运行
 }

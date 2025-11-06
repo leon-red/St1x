@@ -38,6 +38,7 @@
 #include "ws2812.h"
 #include "St1xMenu.h"
 #include "St1xKey.h"
+#include "St1xStatic.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -144,6 +145,9 @@ int main(void)
 
     // 初始化按键处理模块
     Key_Init();
+    
+    // 初始化静态传感器显示模块
+    St1xStatic_Init();
 
 //    lis2dw12_read_data_polling();
   /* USER CODE END 2 */
@@ -167,8 +171,6 @@ int main(void)
             // 菜单已退出
             menu_active = 0;
         }
-        // 短暂延时以控制菜单刷新率
-        HAL_Delay(50);
     } else {
         // 处理所有按键
         KeyType key = Key_Scan();
@@ -187,7 +189,7 @@ int main(void)
         }
         
         // 减少主循环延时到1ms，提高系统整体响应速度
-        HAL_Delay(1);
+        HAL_Delay(10);
     }
   }
   /* USER CODE END 3 */
