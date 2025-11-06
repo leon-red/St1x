@@ -20,13 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xStatic.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xStatic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" afterDir="false" />
-    </list>
+    <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +140,7 @@
       <workItem from="1762439101954" duration="79000" />
       <workItem from="1762439227859" duration="431000" />
       <workItem from="1762439721047" duration="9460000" />
-      <workItem from="1762449443052" duration="9361000" />
+      <workItem from="1762449443052" duration="9431000" />
     </task>
     <task id="LOCAL-00001" summary="2025/10/20">
       <option name="closed" value="true" />
