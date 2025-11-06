@@ -477,13 +477,16 @@ void drawOnOLED(u8g2_t *u8g2) {
         // 当加热停止时显示"Stop"
         u8g2_DrawStr(u8g2, 102, 62, "Stop");
     }
-    
+
     // 绘制界面边框
-    u8g2_DrawFrame(u8g2, 0, 0, 128, 16);
-    u8g2_DrawFrame(u8g2, 0, 64, 128, 16);
-    u8g2_DrawFrame(u8g2, 0, 15, 32, 50);
-    u8g2_DrawFrame(u8g2, 31, 15, 97, 50);
-    u8g2_DrawLine(u8g2, 64, 0, 64, 15);
+    // 绘制屏幕外边框
+    u8g2_DrawFrame(u8g2, 0, 0, 128, 80);
+// 绘制内部水平分隔线
+    u8g2_DrawLine(u8g2, 0, 15, 127, 15);   // 中间顶部水平线
+    u8g2_DrawLine(u8g2, 0, 64, 127, 64);   // 中间底部水平线
+// 绘制内部垂直分隔线
+    u8g2_DrawLine(u8g2, 31, 15, 31, 64);   // 左侧面板右侧垂直线
+    u8g2_DrawLine(u8g2, 64, 0, 64, 15);    // 顶部中间垂直线
     u8g2_DrawLine(u8g2, 64, 64, 64, 80);
 
     // 把缓冲区内容发送到屏幕显示

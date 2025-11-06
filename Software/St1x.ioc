@@ -154,7 +154,6 @@ PA10.Mode=Asynchronous
 PA10.Signal=USART1_RX
 PA11.Mode=Device
 PA11.Signal=USB_DM
-PA12.Locked=true
 PA12.Mode=Device
 PA12.Signal=USB_DP
 PA13.Mode=Serial_Wire
