@@ -39,6 +39,9 @@
 #include "St1xMenu.h"
 #include "St1xKey.h"
 #include "St1xStatic.h"
+
+// 声明外部变量
+extern uint8_t heating_status;
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,6 +66,9 @@ u8g2_t u8g2;
 
 // 菜单活动状态变量
 uint8_t menu_active = 0;
+
+// 调试显示标志
+static uint8_t debug_display_enabled = 0;  // 默认关闭调试显示 0关闭 1开启
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -148,6 +154,10 @@ int main(void)
     
     // 初始化静态传感器显示模块
     St1xStatic_Init();
+    
+    // 使用默认参数设置静置时间控制参数
+    // 可以在St1xStatic.h文件中修改DEFAULT_STANDBY_TIME_REDUCE_TEMP和DEFAULT_STANDBY_TIME_TURN_OFF宏定义来调整参数
+    St1xStatic_SetDefaultStandbyParameters();
 
 //    lis2dw12_read_data_polling();
   /* USER CODE END 2 */
@@ -162,8 +172,16 @@ int main(void)
     // 系统状态监控
     systemStatusMonitor();
     
-    static uint32_t last_oled_update = 0;
+    // 定期检查静置状态（始终检查，即使在不加热状态下也要检查运动以恢复加热）
+    static uint32_t last_standby_check = 0;
     uint32_t current_time = HAL_GetTick();
+    if ((current_time - last_standby_check) >= 1000) { // 每秒检查一次
+        // 调用静置控制检查函数（通过公共接口）
+        St1xStatic_DisplayData(NULL); // 传入NULL因为我们只关心检查逻辑，不关心显示
+        last_standby_check = current_time;
+    }
+    
+    static uint32_t last_oled_update = 0;
     
     // 如果菜单处于活动状态，处理菜单逻辑
     if (menu_active) {
@@ -185,6 +203,13 @@ int main(void)
         // 提高OLED更新频率到每50ms一次，使显示更流畅
         if ((current_time - last_oled_update) >= 50) {
             drawOnOLED(&u8g2);
+            
+            // 如果启用了调试显示，则显示调试信息
+            if (debug_display_enabled) {
+                St1xStatic_DisplayDebugInfo(&u8g2);
+            }
+            
+            u8g2_SendBuffer(&u8g2);
             last_oled_update = current_time;
         }
         

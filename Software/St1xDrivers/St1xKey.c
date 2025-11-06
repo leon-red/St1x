@@ -33,6 +33,9 @@ static KeyState key_mode_state = {KEY_STATE_RELEASE, 0, 0};
 extern uint8_t heating_status;
 extern TIM_HandleTypeDef htim2;
 
+// 声明静置控制模块中的手动停止标记设置函数
+extern void St1xStatic_SetManuallyStopped(uint8_t stopped);
+
 // 菜单活动状态变量（从main.c中声明的变量）
 extern uint8_t menu_active;
 
@@ -68,6 +71,7 @@ void handleHeatingControl(void) {
         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
         stopHeatingControlTimer();
         heating_status = 0;
+        St1xStatic_SetManuallyStopped(1);  // 手动停止加热
         return;
     }
     
@@ -86,6 +90,7 @@ void handleHeatingControl(void) {
         
         startHeatingControlTimer();
         heating_status = 1;
+        St1xStatic_SetManuallyStopped(0);  // 开始加热，重置手动停止标记
         
         // 重置采样状态机
         extern uint8_t sampling_phase;
@@ -100,6 +105,7 @@ void handleHeatingControl(void) {
         setT12Temperature(target_temperature); // 重新设置目标温度以重置PID状态
         stopHeatingControlTimer();
         heating_status = 0;
+        St1xStatic_SetManuallyStopped(1);  // 手动停止加热
         
         extern uint8_t sampling_phase;
         extern uint32_t sample_start_time;

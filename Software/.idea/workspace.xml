@@ -23,7 +23,9 @@
     <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xMenu.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xMenu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xStatic.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xStatic.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +84,8 @@
       <recent name="D:\Leon\OneDrive\Leon\St1x\Hardware\Inc" />
     </key>
   </component>
-  <component name="RunManager" selected="OpenOCD 下载并运行.St1x.elf">
-    <configuration name="St1x.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="St1x" TARGET_NAME="St1x.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="St1x" RUN_TARGET_NAME="St1x.elf">
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -96,10 +98,6 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="CMake 应用程序.St1x.elf" />
-      <item itemvalue="OpenOCD 下载并运行.St1x.elf" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -148,7 +146,7 @@
       <workItem from="1762439101954" duration="79000" />
       <workItem from="1762439227859" duration="431000" />
       <workItem from="1762439721047" duration="9460000" />
-      <workItem from="1762449443052" duration="5000" />
+      <workItem from="1762449443052" duration="9361000" />
     </task>
     <task id="LOCAL-00001" summary="2025/10/20">
       <option name="closed" value="true" />
