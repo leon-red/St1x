@@ -5,7 +5,7 @@
 ### 基于SMT32F103自动调温烙铁, 使用T12 & T13 & T16 烙铁头实现
 ***
 # 非常感谢以下开源的作者与项目
-- 硬件电路参考：[Eddddddddy](https://github.com/Eddddddddy/T12-PD-SolderingPen)
+- 项目参考：[Eddddddddy](https://github.com/Eddddddddy/T12-PD-SolderingPen)
 - AI编码助手：[北京引力弹弓科技有限公司](https://www.trae.cn/)
 - OLED驱动： [U8G2](https://github.com/olikraus/u8g2) 库, 具体使用方法参考 [U8G2官方WiKi](https://github.com/olikraus/u8g2)
 - 下载&调试工具： [PowerWriter PWLINK2](https://item.taobao.com/item.htm?id=675067753017&mi_id=0000kcOF0EfjT0zOQPjCa-2Qonzzei_QfJZvz_5v8zdkguU&spm=tbpc.boughtlist.suborder_itemtitle.1.51e22e8dHyS53r)
@@ -52,18 +52,19 @@
 - [ ] 蜂鸣器事件
 ***
 # 图片展示
-![T12.png](HardwarDesign%2FImage%2FT12.png)
+![T12.png](..%2FHardwarDesign%2FImage%2FT12.png)
 
-![St1x_TOP.png](HardwarDesign%2FImage%2FSt1x_TOP.png)
+![St1x_TOP.png](..%2FHardwarDesign%2FImage%2FSt1x_TOP.png)
 
-![St1x_BOT.png](HardwarDesign%2FImage%2FSt1x_BOT.png)
+![St1x_BOT.png](..%2FHardwarDesign%2FImage%2FSt1x_BOT.png)
 
-![St1x_MB.png](HardwarDesign%2FImage%2FSt1x_MB.png)
+![St1x_MB.png](..%2FHardwarDesign%2FImage%2FSt1x_MB.png)
 
-![1.jpg](HardwarDesign%2FImage%2F1.jpg)
+![1.jpg](..%2FHardwarDesign%2FImage%2F1.jpg)
 
-![2.jpg](HardwarDesign%2FImage%2F2.jpg)
+![2.jpg](..%2FHardwarDesign%2FImage%2F2.jpg)
 
-![SCH.png](HardwarDesign%2FImage%2FSCH.png)
+![SCH.png](..%2FHardwarDesign%2FImage%2FSCH.png)
 
-[SCH.pdf](HardwarDesign%2FSCH.pdf)
+# 原理图
+[SCH.pdf](..%2FHardwarDesign%2FSCH.pdf)

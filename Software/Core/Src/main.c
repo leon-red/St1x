@@ -24,7 +24,7 @@
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
-#include "usb.h"
+#include "usb_device.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -36,6 +36,8 @@
 #include "lis2dw12.h"
 #include "St1xPID.h"
 #include "ws2812.h"
+#include "St1xMenu.h"
+#include "St1xKey.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,6 +59,9 @@
 /* USER CODE BEGIN PV */
 // 定义u8g2全局变量
 u8g2_t u8g2;
+
+// 菜单活动状态变量
+uint8_t menu_active = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -84,23 +89,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
     }
 }
 
-// 系统状态监控函数
-void systemStatusMonitor(void) {
-    static uint32_t last_status_check = 0;
-    uint32_t current_time = HAL_GetTick();
-
-    // 提高系统状态检查频率到每100ms一次，以确保安全
-    if ((current_time - last_status_check) >= 100) {
-        // 检查系统状态
-        checkUSBVoltage();
-        checkTemperatureSafety();
-        last_status_check = current_time;
-    }
-}
-
-// 声明外部变量
-extern uint32_t initial_heating_end_time;
-extern uint8_t heating_status;
 /* USER CODE END 0 */
 
 /**
@@ -140,7 +128,7 @@ int main(void)
   MX_TIM4_Init();
   MX_TIM1_Init();
   MX_I2C1_Init();
-  MX_USB_PCD_Init();
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 
 //    Reset_LED();          //复位RGB灯
@@ -154,30 +142,54 @@ int main(void)
     HAL_ADCEx_Calibration_Start(&hadc1);  //ADC自动校准
     HAL_TIM_Base_Start_IT(&htim2);
 
+    // 初始化按键处理模块
+    Key_Init();
 
 //    lis2dw12_read_data_polling();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-while (1) {
+  while (1)
+  {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    // 系统状态监控
     systemStatusMonitor();
+    
     static uint32_t last_oled_update = 0;
     uint32_t current_time = HAL_GetTick();
     
-    // 在初始加热阶段也更新OLED显示，以便显示加热状态
-    // 提高OLED更新频率到每100ms一次，使显示更流畅
-    if ((current_time - last_oled_update) >= 100) {
-        drawOnOLED(&u8g2);
-        last_oled_update = current_time;
+    // 如果菜单处于活动状态，处理菜单逻辑
+    if (menu_active) {
+        if (!Menu_Process()) {
+            // 菜单已退出
+            menu_active = 0;
+        }
+        // 短暂延时以控制菜单刷新率
+        HAL_Delay(50);
+    } else {
+        // 处理所有按键
+        KeyType key = Key_Scan();
+        
+        // 处理主界面温度调节按键
+        handleMainTemperatureAdjust(key);
+        
+        // 处理菜单键（保持原有的长按进入菜单功能）
+        handleMenuKey();
+        
+        // 在初始加热阶段也更新OLED显示，以便显示加热状态
+        // 提高OLED更新频率到每50ms一次，使显示更流畅
+        if ((current_time - last_oled_update) >= 50) {
+            drawOnOLED(&u8g2);
+            last_oled_update = current_time;
+        }
+        
+        // 减少主循环延时到1ms，提高系统整体响应速度
+        HAL_Delay(1);
     }
-    
-    // 减少主循环延时到1ms，提高系统整体响应速度
-    HAL_Delay(1);
-}
+  }
   /* USER CODE END 3 */
 }
 
@@ -248,7 +260,6 @@ void Error_Handler(void)
 #ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
   * @param  file: pointer to the source file name
   * @param  line: assert_param error line source number
   * @retval None

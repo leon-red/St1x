@@ -27,6 +27,7 @@ extern uint32_t last_control_time;        // 上次控制时间
 extern uint32_t heating_start_time;       // 开始加热时间
 extern uint8_t heating_control_enabled;   // 控制使能标志
 extern float display_filtered_temperature; // 显示用温度
+extern uint8_t heating_status;            // 加热状态
 
 // ==================== 定义常量参数 ====================
 // PID控制参数（参考Arduino示例，优化响应特性）
@@ -36,7 +37,7 @@ extern float display_filtered_temperature; // 显示用温度
 
 // 控制阈值
 #define CONTROL_INTERVAL 50           // 控制间隔（毫秒）（保持与ADC文件一致）
-#define FOCUSED_HEATING_DURATION 2000 // 专注加热持续时间（毫秒）（2秒全功率加热）
+#define FOCUSED_HEATING_DURATION 1500 // 专注加热持续时间（毫秒）（1.5秒全功率加热）
 #define FOCUSED_HEATING_TEMP_DIFF 20.0f // 专注加热温度差阈值（温度低于目标值20度时启用）
 #define AGGRESSIVE_HEATING_TEMP_DIFF 3.0f // 激进加热温度差阈值（温度低于目标值3度时启用）
 

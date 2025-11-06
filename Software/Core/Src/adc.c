@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2025 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -156,16 +156,7 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
     /* ADC1 interrupt Deinit */
     HAL_NVIC_DisableIRQ(ADC1_2_IRQn);
   /* USER CODE BEGIN ADC1_MspDeInit 1 */
-// ��ADC��ʼ��������
-      HAL_ADCEx_Calibration_Start(&hadc1);
 
-      ADC_AnalogWDGConfTypeDef analogWDGConfig = {
-              .WatchdogMode = ADC_ANALOGWATCHDOG_ALL_REG,
-              .HighThreshold = 0x0FFF,
-              .LowThreshold = 0x0000,
-              .ITMode = ENABLE
-      };
-      HAL_ADC_AnalogWDGConfig(&hadc1, &analogWDGConfig);
   /* USER CODE END ADC1_MspDeInit 1 */
   }
 }

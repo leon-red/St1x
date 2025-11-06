@@ -1,4 +1,4 @@
-#此文件从模板自动生成! 请勿更改!
+#姝ゆ枃浠朵粠妯℃澘鑷姩鐢熸垚! 璇峰嬁鏇存敼!
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_VERSION 1)
 cmake_minimum_required(VERSION 3.27)
@@ -49,11 +49,11 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(St1xDrivers St1xDrivers/Inc St1xDrivers/u8g2Lib Core/Inc Drivers/STM32F1xx_HAL_Driver/Inc Drivers/STM32F1xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include USB_DEVICE/App USB_DEVICE/Target Middlewares/ST/STM32_USB_Device_Library/Core/Inc Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc)
+include_directories(St1xDrivers St1xDrivers/Inc St1xDrivers/u8g2Lib Core/Inc USB_DEVICE/App USB_DEVICE/Target Drivers/STM32F1xx_HAL_Driver/Inc Drivers/STM32F1xx_HAL_Driver/Inc/Legacy Middlewares/ST/STM32_USB_Device_Library/Core/Inc Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include)
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
-file(GLOB_RECURSE SOURCES "St1xDrivers/*.*" "St1xDrivers/Inc/*.*" "St1xDrivers/u8g2Lib/*.*" "Core/*.*" "Middlewares/*.*" "Drivers/*.*" "USB_DEVICE/*.*")
+file(GLOB_RECURSE SOURCES "St1xDrivers/*.*" "St1xDrivers/Inc/*.*" "St1xDrivers/u8g2Lib/*.*" "Core/*.*" "Middlewares/*.*" "USB_DEVICE/*.*" "Drivers/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103CBTX_FLASH.ld)
 

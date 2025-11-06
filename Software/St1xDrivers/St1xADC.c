@@ -278,96 +278,14 @@ void controlADCSampling(TIM_HandleTypeDef *htim) {
  * HAL_GPIO_EXTI_Callback - 按键中断处理函数
  * 
  * 功能：处理用户按键操作
- * 原理：根据按下的按键执行相应操作（开始/停止加热，调整温度）
+ * 原理：按键处理已移至St1xKey模块中通过轮询方式处理
  * 
  * @param GPIO_Pin 按键对应的引脚
  */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-    uint32_t current_time = HAL_GetTick();
-    
-    // 按键防抖：避免按键抖动引起的误操作
-    if ((current_time - last_key_press_time) < DEBOUNCE_DELAY) {
-        return;
-    }
-    
-    last_key_press_time = current_time;
-    last_key_pin = GPIO_Pin;
-    
-    // 模式键（开始/停止加热）
-    if (GPIO_Pin == KEY_MODE_Pin) {
-        // 先检查电压是否足够
-        if (!isUSBVoltageSufficient()) {
-            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
-            stopHeatingControlTimer();
-            heating_status = 0;
-            return;
-        }
-        
-        // 如果当前没有加热
-        if (heating_status == 0) {
-            // 开始加热
-            setT12Temperature(target_temperature);
-            HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-            
-            // 记录开始加热时间
-            heating_start_time = current_time;
-            
-            // 设置初始功率为100%
-            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
-            
-            startHeatingControlTimer();
-            heating_status = 1;
-            
-            // 重置采样状态机
-            sampling_phase = 0;
-            sample_start_time = 0;
-            saved_pwm_value = 0;
-            
-            // 初始化显示温度
-            float current_temp = getFilteredTemperature();
-            displayed_temperature = current_temp;
-        } else {
-            // 停止加热
-            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
-            setT12Temperature(target_temperature); // 重新设置目标温度以重置PID状态
-            stopHeatingControlTimer();
-            heating_status = 0;
-            
-            sampling_phase = 0;
-            sample_start_time = 0;
-            saved_pwm_value = 0;
-        }
-    }
-    // 温度增加键
-    else if (GPIO_Pin == KEY_UP_Pin) {
-        // 增加5度
-        target_temperature += 5.0;
-        
-        // 温度上限保护
-        if (target_temperature > 460.0) {
-            target_temperature = 460.0;
-        }
-        
-        // 如果正在加热，更新目标温度
-        if (heating_status == 1) {
-            setT12Temperature(target_temperature);
-        }
-    }
-    // 温度减少键
-    else if (GPIO_Pin == KEY_DOWN_Pin) {
-        // 减少5度
-        target_temperature -= 5.0;
-        
-        // 温度下限保护
-        if (target_temperature < 0.0) {
-            target_temperature = 0.0;
-        }
-        
-        // 如果正在加热，更新目标温度
-        if (heating_status == 1) {
-            setT12Temperature(target_temperature);
-        }
-    }
+    // 按键处理已移至St1xKey模块中，此处不进行任何操作
+    // 保留此函数以防止编译错误
+    (void)GPIO_Pin; // 避免未使用参数警告
 }
 
 /**
@@ -539,4 +457,20 @@ void updateDisplayTemperatureFilter(uint16_t adcValue) {
  */
 float getDisplayFilteredTemperature(void) {
     return display_filtered_temperature;
+}
+
+/**
+ * @brief 系统状态监控函数
+ */
+void systemStatusMonitor(void) {
+    static uint32_t last_status_check = 0;
+    uint32_t current_time = HAL_GetTick();
+
+    // 提高系统状态检查频率到每100ms一次，以确保安全
+    if ((current_time - last_status_check) >= 100) {
+        // 检查系统状态
+        checkUSBVoltage();
+        checkTemperatureSafety();
+        last_status_check = current_time;
+    }
 }
