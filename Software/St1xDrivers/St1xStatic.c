@@ -26,10 +26,13 @@ extern void startHeatingControlTimer(void);
 extern void stopHeatingControlTimer(void);
 extern void setT12Temperature(float temperature);
 
-// 静置时间控制参数（可配置，单位：秒）
-#define DEFAULT_STANDBY_TIME_REDUCE_TEMP 15    // 15分钟开始降低温度
+// 静置时间控制参数（可配置，单位：分钟）
+#define DEFAULT_STANDBY_TIME_REDUCE_TEMP 15    // 15分钟后进入休眠状态
 #define DEFAULT_STANDBY_TIME_TURN_OFF 30       // 30分钟停止加热
-#define DEFAULT_REDUCED_TEMPERATURE 160.0f     // 降低后的温度
+#define DEFAULT_REDUCED_TEMPERATURE 160.0f     // 休眠状态下的温度维持
+
+// 时间单位转换宏
+#define MINUTES_TO_MILLISECONDS(minutes) ((minutes) * 60 * 1000)
 
 // 静置时间控制变量
 static uint32_t last_movement_time = 0;               // 上次检测到运动的时间
@@ -46,8 +49,8 @@ static uint8_t manually_stopped = 0;                  // 是否手动停止加�
 #define STANDBY_TIME_THRESHOLD 5000                   // 静置时间阈值 (ms)
 
 // 静置时间控制参数（可配置，单位：毫秒）
-static uint32_t standby_time_reduce_temp = DEFAULT_STANDBY_TIME_REDUCE_TEMP * 60 * 1000;
-static uint32_t standby_time_turn_off = DEFAULT_STANDBY_TIME_TURN_OFF * 60 * 1000;
+static uint32_t standby_time_reduce_temp = MINUTES_TO_MILLISECONDS(DEFAULT_STANDBY_TIME_REDUCE_TEMP);
+static uint32_t standby_time_turn_off = MINUTES_TO_MILLISECONDS(DEFAULT_STANDBY_TIME_TURN_OFF);
 static float reduced_temperature = DEFAULT_REDUCED_TEMPERATURE;
 
 // SPI读写函数声明
@@ -56,14 +59,14 @@ static int32_t platform_read(void *handle, uint8_t reg, uint8_t *bufp, uint16_t 
 static void platform_delay(uint32_t ms);
 
 /**
- * @brief 设置静置时间控制参数（单位：秒）
- * @param time_to_reduce_temp 静置多长时间后开始降低温度（秒）
- * @param time_to_turn_off    静置多长时间后停止加热（秒）
+ * @brief 设置静置时间控制参数（单位：分钟）
+ * @param time_to_reduce_temp 静置多长时间后开始降低温度（分钟）
+ * @param time_to_turn_off    静置多长时间后停止加热（分钟）
  * @param reduced_temp        降低后的温度值
  */
 void St1xStatic_SetStandbyParameters(uint32_t time_to_reduce_temp, uint32_t time_to_turn_off, float reduced_temp) {
-    standby_time_reduce_temp = time_to_reduce_temp * 1000;
-    standby_time_turn_off = time_to_turn_off * 1000;
+    standby_time_reduce_temp = MINUTES_TO_MILLISECONDS(time_to_reduce_temp);
+    standby_time_turn_off = MINUTES_TO_MILLISECONDS(time_to_turn_off);
     reduced_temperature = reduced_temp;
     
     // 确保参数在合理范围内
