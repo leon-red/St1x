@@ -24,7 +24,7 @@
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
-#include "usb_device.h"
+#include "usb.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -140,7 +140,7 @@ int main(void)
   MX_TIM4_Init();
   MX_TIM1_Init();
   MX_I2C1_Init();
-  MX_USB_DEVICE_Init();
+  MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
 
 //    Reset_LED();          //复位RGB灯
@@ -161,16 +161,16 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 while (1) {
-/* USER CODE END WHILE */
+    /* USER CODE END WHILE */
 
-/* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
     systemStatusMonitor();
     static uint32_t last_oled_update = 0;
     uint32_t current_time = HAL_GetTick();
     
     // 在初始加热阶段也更新OLED显示，以便显示加热状态
-    // 提高OLED更新频率到每20ms一次，使显示更流畅
-    if ((current_time - last_oled_update) >= 20) {
+    // 提高OLED更新频率到每100ms一次，使显示更流畅
+    if ((current_time - last_oled_update) >= 100) {
         drawOnOLED(&u8g2);
         last_oled_update = current_time;
     }
@@ -178,7 +178,7 @@ while (1) {
     // 减少主循环延时到1ms，提高系统整体响应速度
     HAL_Delay(1);
 }
-/* USER CODE END 3 */
+  /* USER CODE END 3 */
 }
 
 /**

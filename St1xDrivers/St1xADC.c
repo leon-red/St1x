@@ -47,7 +47,7 @@
 // 这些变量用来保存程序运行过程中的各种状态和数据
 
 // 用户设置和运行状态
-float target_temperature = 300.0f;  // 目标温度：想要加热到多少度（默认300°C）
+float target_temperature = 360.0f;  // 目标温度：想要加热到多少度（默认300°C）
 uint8_t heating_status = 0;       // 加热状态：0=不加热，1=正在加热
 
 // 传感器数据存储
@@ -387,7 +387,7 @@ void drawOnOLED(u8g2_t *u8g2) {
     }
 
     // 获取要显示的数据
-    float usb_voltage = DMA_ADC[1] * 3.3f / 4095.0f / 0.152f;
+    float usb_voltage = DMA_ADC[1] * 3.3f / 4095.0f / 0.151f;
 
     // 直接使用传感器数据计算显示温度
     float raw_temp = calculateT12Temperature(DMA_ADC[0]);
