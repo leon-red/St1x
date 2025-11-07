@@ -71,7 +71,8 @@ void St1xStatic_SetStandbyParameters(uint32_t time_to_reduce_temp, uint32_t time
     
     // 确保参数在合理范围内
     if (reduced_temperature < 50.0f) reduced_temperature = 50.0f;
-    if (reduced_temperature > 460.0f) reduced_temperature = 460.0f;
+    extern float max_temperature_limit;
+    if (reduced_temperature > max_temperature_limit) reduced_temperature = max_temperature_limit;
     
     if (standby_time_reduce_temp > standby_time_turn_off) {
         standby_time_reduce_temp = standby_time_turn_off;

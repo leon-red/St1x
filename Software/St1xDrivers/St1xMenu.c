@@ -2,6 +2,7 @@
 #include "u8g2.h"
 #include "St1xKey.h"
 #include "St1xStatic.h"
+#include "St1xCalibrationSystem.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -11,8 +12,11 @@ static MenuContext g_menuCtx;
 // 菜单状态变量
 extern uint8_t menu_active;  // 菜单是否处于活动状态
 
-// 自动返回主菜单时间（15秒）
-#define AUTO_RETURN_TIME 15000
+// 校准准备状态
+static uint8_t calibration_ready = 0;  // 是否处于校准准备状态
+
+// 自动返回主菜单时间（55秒）
+#define AUTO_RETURN_TIME 55000
 
 // 上次操作时间
 static uint32_t last_operation_time = 0;
@@ -23,6 +27,7 @@ void Level1Item3Action(void);
 void Level1Item3Display(void);
 uint8_t is_static_display_mode(void);
 void exit_static_display_mode(void);
+void SubMenu3CalibrationAction(void);
 
 // 示例子菜单项
 MenuItem subMenu1Items[] = {
@@ -37,7 +42,7 @@ MenuItem subMenu2Items[] = {
 };
 
 MenuItem subMenu3Items[] = {
-    {"Sub3-Item1", Menu_DefaultAction, NULL, 0},
+    {"Temperature Calib", SubMenu3CalibrationAction, NULL, 0},
     {"Sub3-Item2", Menu_DefaultAction, NULL, 0},
     {"Sub3-Item3", Menu_DefaultAction, NULL, 0},
     {"Sub3-Item4", Menu_DefaultAction, NULL, 0}
@@ -47,7 +52,7 @@ MenuItem subMenu3Items[] = {
 MenuItem level2MenuItems[] = {
     {"SubMenu1", NULL, subMenu1Items, 3},
     {"SubMenu2", NULL, subMenu2Items, 2},
-    {"SubMenu3", NULL, subMenu3Items, 4}
+    {"Temperature Calib", SubMenu3CalibrationAction, NULL, 0}
 };
 
 // 一级菜单项
@@ -76,6 +81,15 @@ void Menu_Init(MenuContext* ctx, MenuItem* rootMenu, uint8_t rootMenuCount) {
  */
 void Menu_DefaultAction(void) {
     // 默认动作，可以被具体实现替换
+}
+
+/**
+ * @brief 温度校准菜单项动作函数
+ */
+void SubMenu3CalibrationAction(void) {
+    // 使用新的状态机模式进入校准模式
+    // 电压检查由校准系统内部处理，这里不需要重复检查
+    CalibrationSystem_Start();
 }
 
 // 传感器显示模式标志
@@ -288,62 +302,75 @@ uint8_t Menu_Process(void) {
         last_operation_time = HAL_GetTick();
     }
     
-    switch (key) {
-        case KEY_UP:
-            if (is_static_display_mode()) {
-                // 在静态显示模式下，UP键无操作
+    // 检查是否处于校准模式
+    if (St1xCalibration_IsInProgress()) {
+        // 在校准模式下，按键由校准模块处理
+        St1xCalibration_HandleKey(key);
+    } else {
+        // 正常菜单模式下的按键处理
+        switch (key) {
+            case KEY_UP:
+                if (is_static_display_mode()) {
+                    // 在静态显示模式下，UP键无操作
+                    break;
+                }
+                Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_DOWN); // 向下移动
                 break;
-            }
-            Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_DOWN); // 向下移动
-            break;
-            
-        case KEY_DOWN:
-            if (is_static_display_mode()) {
-                // 在静态显示模式下，DOWN键无操作
+                
+            case KEY_DOWN:
+                if (is_static_display_mode()) {
+                    // 在静态显示模式下，DOWN键无操作
+                    break;
+                }
+                Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_UP); // 向上移动
                 break;
-            }
-            Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_UP); // 向上移动
-            break;
-            
-        case KEY_MODE:
-            if (is_static_display_mode()) {
-                // 在静态显示模式下，KEY_MODE键用于退出
-                exit_static_display_mode();
-                // 同时执行加热控制逻辑
+                
+            case KEY_MODE:
+                if (is_static_display_mode()) {
+                    // 在静态显示模式下，KEY_MODE键用于退出
+                    exit_static_display_mode();
+                    // 同时执行加热控制逻辑
+                    handleHeatingControl();
+                    break;
+                }
+                // 在菜单中，KEY_MODE按键同时用于菜单导航和加热控制
+                // 调用加热控制函数
                 handleHeatingControl();
+                // 执行菜单导航
+                Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_ENTER);
                 break;
-            }
-            // 在菜单中，KEY_MODE按键同时用于菜单导航和加热控制
-            // 调用加热控制函数
-            handleHeatingControl();
-            // 执行菜单导航
-            Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_ENTER);
-            break;
-            
-        case KEY_MODE_LONG:
-            if (is_static_display_mode()) {
-                // 在静态显示模式下，长按KEY_MODE键用于退出
-                exit_static_display_mode();
+                
+            case KEY_MODE_LONG:
+                if (is_static_display_mode()) {
+                    // 在静态显示模式下，长按KEY_MODE键用于退出
+                    exit_static_display_mode();
+                    break;
+                }
+                if (g_menuCtx.menuLevel > 0) {
+                    Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_BACK);
+                } else {
+                    // 已经在根菜单，退出菜单系统
+                    menu_active = 0;
+                    return 0;
+                }
                 break;
-            }
-            if (g_menuCtx.menuLevel > 0) {
-                Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_BACK);
-            } else {
-                // 已经在根菜单，退出菜单系统
-                menu_active = 0;
-                return 0;
-            }
-            break;
-            
-        default:
-            break;
+                
+            default:
+                break;
+        }
     }
     
     // 获取U8G2对象
     extern u8g2_t u8g2;
     
-    // 检查是否处于静态显示模式
-    if (is_static_display_mode()) {
+    // 检查是否处于校准模式
+    if (St1xCalibration_IsInProgress()) {
+        // 在校准模式下，显示校准界面
+        St1xCalibration_MainLoop(&u8g2);
+    } else if (St1xCalibration_IsInProgress()) {
+        // 显示校准界面（由校准模块处理）
+        St1xCalibration_MainLoop(&u8g2);
+    } else if (is_static_display_mode()) {
         // 处理静态数据显示
         Level1Item3Display();
     } else {

@@ -39,4 +39,11 @@ float getDisplayFilteredTemperature(void);
 // 系统状态监控函数
 void systemStatusMonitor(void);
 
+// 温度限制常量定义
+#define NORMAL_TEMPERATURE_LIMIT 460.0f  // 正常模式下的温度限制
+#define CALIBRATION_TEMPERATURE_LIMIT 500.0f  // 校准模式下的温度限制
+
+// 全局温度限制变量（可在校准模式下临时修改）
+extern float max_temperature_limit;
+
 #endif /* ST1XADC_H_ */

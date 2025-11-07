@@ -39,6 +39,7 @@
 #include "St1xMenu.h"
 #include "St1xKey.h"
 #include "St1xStatic.h"
+#include "St1xCalibrationSystem.h"
 
 // 声明外部变量
 extern uint8_t heating_status;
@@ -67,29 +68,57 @@ u8g2_t u8g2;
 // 菜单活动状态变量
 uint8_t menu_active = 0;
 
+// OLED更新计时
+static uint32_t last_oled_update = 0;
+
 // 调试显示标志
 static uint8_t debug_display_enabled = 0;  // 默认关闭调试显示 0关闭 1开启
+
+// 系统运行模式
+typedef enum {
+    SYSTEM_MODE_NORMAL,     // 正常运行模式
+    SYSTEM_MODE_MENU,       // 菜单模式
+    SYSTEM_MODE_CALIBRATION // 校准模式
+} SystemMode;
+
+static SystemMode current_system_mode = SYSTEM_MODE_NORMAL;  // 当前系统模式
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 
+// 系统模式管理函数
+void enterMenuMode(void);
+void enterCalibrationMode(void);
+void exitCalibrationMode(void);
+
+// 系统初始化函数
+void System_Init(void);
+void LED_Init(void);
+void Display_Init(void);
+void ADC_Init(void);
+void Timer_Init(void);
+void AppModules_Init(void);
+
+// 系统状态处理函数
+void System_ModeHandler(uint32_t current_time);
+void System_NormalModeHandler(uint32_t current_time);
+void System_MenuModeHandler(void);
+void System_CalibrationModeHandler(uint32_t current_time);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-/*********开机时不让LED亮*********/
-void LED_Init() {
-    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
-    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
-    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
-            __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, 0);//红色LED灯
-            __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 0);//绿色LED灯
-            __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 0);//蓝色LED灯
-}
 
-// 添加TIM2定时器中断回调函数
+//===========================
+// 中断回调函数
+//===========================
+
+/**
+ * @brief TIM2定时器中断回调函数
+ */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
     if (htim->Instance == TIM2) {
         heatingControlTimerCallback();  // 调用加热控制逻辑
@@ -137,29 +166,8 @@ int main(void)
   MX_I2C1_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-
-//    Reset_LED();          //复位RGB灯
-    LED_Init();             //初始化RGB灯(防止初始化失败)
-    spi_oled_Init(&u8g2);   //初始化OLED(SPI驱动)
-    u8g2_DrawXBMP(&u8g2,0,0,128,80,Logo);   //显示开机LOGO
-    u8g2_SendBuffer(&u8g2);
-    HAL_Delay(1000);
-    u8g2_ClearBuffer(&u8g2);
-
-    HAL_ADCEx_Calibration_Start(&hadc1);  //ADC自动校准
-    HAL_TIM_Base_Start_IT(&htim2);
-
-    // 初始化按键处理模块
-    Key_Init();
-    
-    // 初始化静态传感器显示模块
-    St1xStatic_Init();
-    
-    // 使用默认参数设置静置时间控制参数
-    // 可以在St1xStatic.h文件中修改DEFAULT_STANDBY_TIME_REDUCE_TEMP和DEFAULT_STANDBY_TIME_TURN_OFF宏定义来调整参数
-    St1xStatic_SetDefaultStandbyParameters();
-
-//    lis2dw12_read_data_polling();
+    // 系统初始化
+    System_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -169,7 +177,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    // 系统状态监控
+    // 系统状态监控（始终运行）
     systemStatusMonitor();
     
     // 定期检查静置状态（始终检查，即使在不加热状态下也要检查运动以恢复加热）
@@ -181,41 +189,11 @@ int main(void)
         last_standby_check = current_time;
     }
     
-    static uint32_t last_oled_update = 0;
+    // 根据当前系统模式处理不同的逻辑
+    System_ModeHandler(current_time);
     
-    // 如果菜单处于活动状态，处理菜单逻辑
-    if (menu_active) {
-        if (!Menu_Process()) {
-            // 菜单已退出
-            menu_active = 0;
-        }
-    } else {
-        // 处理所有按键
-        KeyType key = Key_Scan();
-        
-        // 处理主界面温度调节按键
-        handleMainTemperatureAdjust(key);
-        
-        // 处理菜单键（保持原有的长按进入菜单功能）
-        handleMenuKey();
-        
-        // 在初始加热阶段也更新OLED显示，以便显示加热状态
-        // 提高OLED更新频率到每50ms一次，使显示更流畅
-        if ((current_time - last_oled_update) >= 50) {
-            drawOnOLED(&u8g2);
-            
-            // 如果启用了调试显示，则显示调试信息
-            if (debug_display_enabled) {
-                St1xStatic_DisplayDebugInfo(&u8g2);
-            }
-            
-            u8g2_SendBuffer(&u8g2);
-            last_oled_update = current_time;
-        }
-        
-        // 减少主循环延时到1ms，提高系统整体响应速度
-        HAL_Delay(10);
-    }
+    // 减少主循环延时到1ms，提高系统整体响应速度
+    HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
@@ -268,6 +246,233 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+//===========================
+// 系统初始化函数
+//===========================
+
+/**
+ * @brief 系统初始化 - 负责所有外设和模块的初始化
+ */
+void System_Init(void) {
+    // 初始化LED
+    LED_Init();
+    
+    // 初始化OLED显示
+    Display_Init();
+    
+    // 初始化ADC
+    ADC_Init();
+    
+    // 初始化定时器
+    Timer_Init();
+    
+    // 初始化应用模块
+    AppModules_Init();
+}
+
+/**
+ * @brief LED初始化
+ */
+void LED_Init(void) {
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, 0);  // 红色LED
+    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, 0);  // 绿色LED
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 0);  // 蓝色LED
+}
+
+/**
+ * @brief 显示初始化
+ */
+void Display_Init(void) {
+    spi_oled_Init(&u8g2);           // 初始化OLED
+    u8g2_DrawXBMP(&u8g2,0,0,128,80,Logo);  // 显示开机LOGO
+    u8g2_SendBuffer(&u8g2);
+    HAL_Delay(1000);
+    u8g2_ClearBuffer(&u8g2);
+}
+
+/**
+ * @brief ADC初始化
+ */
+void ADC_Init(void) {
+    HAL_ADCEx_Calibration_Start(&hadc1);  // ADC自动校准
+}
+
+/**
+ * @brief 定时器初始化
+ */
+void Timer_Init(void) {
+    HAL_TIM_Base_Start_IT(&htim2);  // 启动TIM2中断
+}
+
+/**
+ * @brief 应用模块初始化
+ */
+void AppModules_Init(void) {
+    Key_Init();                     // 初始化按键处理
+    St1xStatic_Init();             // 初始化静态传感器显示
+    CalibrationHardware_Init();    // 初始化校准系统硬件抽象层
+    CalibrationSystem_Init(GetCalibrationHardwareInterface());  // 初始化独立校准系统
+    St1xStatic_SetDefaultStandbyParameters();  // 设置默认参数
+}
+
+//===========================
+// 按键处理函数
+//===========================
+// handleMainTemperatureAdjust和handleMenuKey函数已在St1xKey.c中定义
+
+//===========================
+// 系统模式管理函数
+//===========================
+
+void enterMenuMode(void) {
+    current_system_mode = SYSTEM_MODE_MENU;
+    menu_active = 1;
+    Menu_InitSystem();  // 初始化菜单系统
+}
+
+void enterCalibrationMode(void) {
+    current_system_mode = SYSTEM_MODE_CALIBRATION;
+    CalibrationSystem_Start();
+}
+
+// 退出校准模式
+void exitCalibrationMode(void) {
+    CalibrationSystem_Stop();
+    current_system_mode = SYSTEM_MODE_NORMAL;
+}
+
+//===========================
+// 系统状态处理函数
+//===========================
+
+/**
+ * @brief 系统模式处理主函数
+ * @param current_time 当前系统时间(ms)
+ */
+void System_ModeHandler(uint32_t current_time) {
+    switch (current_system_mode) {
+        case SYSTEM_MODE_NORMAL:
+            System_NormalModeHandler(current_time);
+            break;
+            
+        case SYSTEM_MODE_MENU:
+            System_MenuModeHandler();
+            break;
+            
+        case SYSTEM_MODE_CALIBRATION:
+            System_CalibrationModeHandler(current_time);
+            break;
+    }
+}
+
+/**
+ * @brief 正常运行模式处理
+ * @param current_time 当前系统时间(ms)
+ */
+void System_NormalModeHandler(uint32_t current_time) {
+    KeyType key = Key_Scan();
+    static uint8_t key_debug_display = 0;
+    static uint32_t key_debug_time = 0;
+    static uint32_t menu_enter_delay = 0;
+    
+    // 处理按键输入
+    if (key != KEY_NONE) {
+        // 处理温度调节按键
+        if (key == KEY_UP || key == KEY_DOWN) {
+            handleMainTemperatureAdjust(key);
+        }
+        
+        // 处理MODE键短按 - 加热控制
+        if (key == KEY_MODE) {
+            handleHeatingControl();
+        }
+        
+        // 显示按键状态（用于调试）
+        key_debug_display = 1;
+        key_debug_time = current_time;
+        
+        // 处理菜单键 - 如果检测到长按，进入菜单模式
+        if (key == KEY_MODE_LONG) {
+            // 延迟进入菜单，避免屏幕刷新冲突
+            menu_enter_delay = current_time + 200;
+        }
+    }
+    
+    // 延迟进入菜单模式
+    if (menu_enter_delay > 0 && current_time >= menu_enter_delay) {
+        menu_enter_delay = 0;
+        enterMenuMode();
+    }
+    
+    // 更新OLED显示（每50ms一次）
+    if ((current_time - last_oled_update) >= 50) {
+        drawOnOLED(&u8g2);
+        
+        // 显示按键调试信息（按键触发后显示1秒）
+        if (key_debug_display && (current_time - key_debug_time) < 1000) {
+            u8g2_SetFont(&u8g2, u8g2_font_6x10_tf);
+            u8g2_DrawStr(&u8g2, 0, 63, "KEY:");
+            
+            switch (key) {
+                case KEY_UP:
+                    u8g2_DrawStr(&u8g2, 25, 63, "UP");
+                    break;
+                case KEY_DOWN:
+                    u8g2_DrawStr(&u8g2, 25, 63, "DOWN");
+                    break;
+                case KEY_MODE:
+                    u8g2_DrawStr(&u8g2, 25, 63, "MODE");
+                    break;
+                case KEY_MODE_LONG:
+                    u8g2_DrawStr(&u8g2, 25, 63, "MODE_LONG");
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            key_debug_display = 0;  // 清除显示标志
+        }
+        
+        // 如果启用了调试显示，则显示调试信息
+        if (debug_display_enabled) {
+            St1xStatic_DisplayDebugInfo(&u8g2);
+        }
+        
+        u8g2_SendBuffer(&u8g2);
+        last_oled_update = current_time;
+    }
+}
+
+/**
+ * @brief 菜单模式处理
+ */
+void System_MenuModeHandler(void) {
+    if (!Menu_Process()) {
+        // 菜单已退出，返回正常模式
+        current_system_mode = SYSTEM_MODE_NORMAL;
+        menu_active = 0;
+    }
+}
+
+/**
+ * @brief 校准模式处理
+ * @param current_time 当前系统时间(ms)
+ */
+void System_CalibrationModeHandler(uint32_t current_time) {
+    KeyType key = Key_Scan();
+    
+    // 处理校准模式下的按键
+    if (key != KEY_NONE) {
+        // 将按键传递给校准系统处理
+        St1xCalibration_HandleKey(key);
+    }
+    
+    CalibrationSystem_Update(&u8g2);
+}
 
 /* USER CODE END 4 */
 

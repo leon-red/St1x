@@ -32,4 +32,7 @@ void handleTemperatureAdjust(int direction);
 void handleMainTemperatureAdjust(KeyType key);
 void handleMenuKey(void);
 
+// 校准系统专用温度设置函数
+void setTemperatureForCalibration(float temperature);
+
 #endif

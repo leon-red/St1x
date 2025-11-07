@@ -43,6 +43,9 @@
 // 保持与PID文件一致的控制间隔
 #define CONTROL_INTERVAL 50          // 控制间隔：每隔50毫秒检查一次温度
 
+// 温度安全限制（全局可修改）
+float max_temperature_limit = NORMAL_TEMPERATURE_LIMIT;  // 最大温度限制，可在校准模式下临时提高
+
 // ==================== 第三步：定义全局变量 ====================
 // 这些变量用来保存程序运行过程中的各种状态和数据
 
@@ -121,6 +124,20 @@ float getDisplayFilteredTemperature(void);
  * @param adcValue 传感器读数（0-4095）
  * @return 温度值（摄氏度）
  */
+// 添加反向计算函数，用于调试
+float calculateADCForTemperature(float target_temp) {
+    const float mV_per_degree = Thermal_Voltage;  // 每摄氏度对应的电压  
+    const float cold_junction_temp = ATemp;       // 环境温度补偿
+    const float adc_ref_voltage = 3.3;            // ADC参考电压
+    const uint16_t adc_max = 4095;                // ADC最大值
+    
+    // 反向计算：温度 -> 电压 -> ADC值
+    float voltage = (target_temp - cold_junction_temp) * mV_per_degree;
+    float adc_value = (voltage * adc_max) / adc_ref_voltage;
+    
+    return adc_value;
+}
+
 float calculateT12Temperature(uint16_t adcValue) {
     // 传感器参数
     const float mV_per_degree = Thermal_Voltage;  // 每摄氏度对应的电压
@@ -137,9 +154,21 @@ float calculateT12Temperature(uint16_t adcValue) {
     // 电压值转温度值
     float temperature = voltage / mV_per_degree + cold_junction_temp;
     
-    // 温度范围限制
+    // 添加调试：检查150°C和250°C对应的ADC值
+    if (fabs(temperature - 150.0f) < 1.0f) {
+        float expected_adc_150 = calculateADCForTemperature(150.0f);
+        printf("DEBUG 150°C: Temp=%.2f, ADC=%d, Voltage=%.4f, Expected ADC=%.1f\n", 
+               temperature, adcValue, voltage, expected_adc_150);
+    }
+    if (fabs(temperature - 250.0f) < 1.0f) {
+        float expected_adc_250 = calculateADCForTemperature(250.0f);
+        printf("DEBUG 250°C: Temp=%.2f, ADC=%d, Voltage=%.4f, Expected ADC=%.1f\n", 
+               temperature, adcValue, voltage, expected_adc_250);
+    }
+    
+    // 温度范围限制（使用全局温度限制）
     if (temperature < 0) temperature = 0;
-    if (temperature > 460) temperature = 460;
+    if (temperature > max_temperature_limit) temperature = max_temperature_limit;
     
     return temperature;
 }
@@ -168,16 +197,22 @@ void updateTemperatureFilter(uint16_t adcValue) {
     // 把传感器读数转换成温度值
     float current_temp = calculateT12Temperature(adcValue);
     
+    // 添加调试：检查滤波器输入
+    if (fabs(current_temp - 150.0f) < 5.0f || fabs(current_temp - 250.0f) < 5.0f) {
+        printf("FILTER IN: temp=%.2f, adc=%d\n", current_temp, adcValue);
+    }
+    
     // 把新温度值存入缓冲区
     temperature_buffer[filter_index] = current_temp;
-filter_index = (filter_index + 1) % TEMP_FILTER_SIZE;
+    filter_index = (filter_index + 1) % TEMP_FILTER_SIZE;
     
     // 如果是第一次使用，用当前值填满整个缓冲区
     if (!filter_initialized) {
         for (uint8_t i = 0; i < TEMP_FILTER_SIZE; i++) {
             temperature_buffer[i] = current_temp;
         }
-filter_initialized = 1;
+        filter_initialized = 1;
+        printf("FILTER INIT: temp=%.2f\n", current_temp);
     }
     
     // 计算平均温度值
@@ -185,7 +220,14 @@ filter_initialized = 1;
     for (uint8_t i = 0; i < TEMP_FILTER_SIZE; i++) {
         sum += temperature_buffer[i];
     }
-    filtered_temperature = sum / TEMP_FILTER_SIZE;
+    float new_filtered_temp = sum / TEMP_FILTER_SIZE;
+    
+    // 添加调试：检查滤波器输出
+    if (fabs(new_filtered_temp - 150.0f) < 5.0f || fabs(new_filtered_temp - 250.0f) < 5.0f) {
+        printf("FILTER OUT: temp=%.2f, old=%.2f\n", new_filtered_temp, filtered_temperature);
+    }
+    
+    filtered_temperature = new_filtered_temp;
 }
 
 // ==================== 第七步：安全检测功能 ====================
@@ -235,12 +277,14 @@ uint8_t checkUSBVoltage(void) {
 uint8_t checkTemperatureSafety(void) {
     float current_temp = getFilteredTemperature();
     
-    // 温度过高保护
-    if (current_temp > 460.0f) {
+    // 温度过高保护（使用全局可配置的温度限制）
+    if (current_temp > max_temperature_limit) {
         // 停止加热
         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
         stopHeatingControlTimer();
         heating_status = 0;
+        printf("[TemperatureSafety] Temperature exceeded limit: %.1f°C > %.1f°C\n", 
+               current_temp, max_temperature_limit);
         return 0;
     }
     
@@ -250,6 +294,7 @@ uint8_t checkTemperatureSafety(void) {
         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
         stopHeatingControlTimer();
         heating_status = 0;
+        printf("[TemperatureSafety] Sensor abnormal: %.1f°C\n", current_temp);
         return 0;
     }
     
@@ -314,7 +359,7 @@ void drawOnOLED(u8g2_t *u8g2) {
     updateDisplayTemperatureFilter(DMA_ADC[0]);
     // 使用滤波后的显示温度
     float filtered_temp = getDisplayFilteredTemperature();
-
+    
     // 获取控制用的滤波温度
     float pid_temp = getFilteredTemperature();
     
@@ -348,6 +393,12 @@ void drawOnOLED(u8g2_t *u8g2) {
     
     // 更新显示温度
     displayed_temperature = displayed_temperature + smoothing_factor * (filtered_temp - displayed_temperature);
+    
+    // 添加调试：检查显示温度计算
+    if (fabs(displayed_temperature - 150.0f) < 2.0f || fabs(displayed_temperature - 250.0f) < 2.0f) {
+        printf("DISPLAY: raw=%.2f, filtered=%.2f, displayed=%.2f, diff=%.2f, factor=%.4f\n", 
+               raw_temp, filtered_temp, displayed_temperature, temp_diff, smoothing_factor);
+    }
     
     // 清空屏幕缓冲区
     u8g2_ClearBuffer(u8g2);

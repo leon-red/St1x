@@ -46,25 +46,25 @@
 - [x] ADC温度读取
 - [x] USB输入电压检测
 - [x] 自动温度控制
-- [ ] 静置检测
+- [x] 静置检测
 - [ ] RGB_LED指示
 - [ ] WS2812B_RGB指示
 - [ ] 蜂鸣器事件
 ***
 # 图片展示
-![T12.png](..%2FHardwarDesign%2FImage%2FT12.png)
+![T12.png](T12.png)
 
-![St1x_TOP.png](..%2FHardwarDesign%2FImage%2FSt1x_TOP.png)
+![St1x_TOP](St1x_TOP.png)
 
-![St1x_BOT.png](..%2FHardwarDesign%2FImage%2FSt1x_BOT.png)
+![St1x_BOT](St1x_BOT.png)
 
-![St1x_MB.png](..%2FHardwarDesign%2FImage%2FSt1x_MB.png)
+![St1x_MB](St1x_MB.png)
 
-![1.jpg](..%2FHardwarDesign%2FImage%2F1.jpg)
+![1.jpg](1.jpg)
 
-![2.jpg](..%2FHardwarDesign%2FImage%2F2.jpg)
 
-![SCH.png](..%2FHardwarDesign%2FImage%2FSCH.png)
+![2](2.jpg)
 
 # 原理图
-[SCH.pdf](..%2FHardwarDesign%2FSCH.pdf)
+![SCH](SCH.png)
+[点击打开PDF原理图](HardwarDesign/SCH.pdf)

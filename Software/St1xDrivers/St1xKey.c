@@ -6,13 +6,12 @@
 #define KEY_STATE_PRESS 1
 
 // 长按时间定义（毫秒）
-#define LONG_PRESS_TIME 1000
+#define LONG_PRESS_TIME 1000  // 长按1秒进入菜单
 
 // 按键去抖动时间
 #define DEBOUNCE_TIME 50
 
 // 菜单键长按检测变量
-#define MENU_KEY_LONG_PRESS_TIME 2000  // 长按2秒进入菜单
 static uint32_t menu_key_press_time = 0;
 static uint8_t menu_key_pressed = 0;
 static uint8_t menu_key_handled = 0; // 标记菜单键是否已处理
@@ -126,8 +125,9 @@ void handleTemperatureAdjust(int direction) {
         target_temperature += 5.0;
         
         // 温度上限保护
-        if (target_temperature > 460.0) {
-            target_temperature = 460.0;
+        extern float max_temperature_limit;
+        if (target_temperature > max_temperature_limit) {
+            target_temperature = max_temperature_limit;
         }
     } else {
         // 减少5度
@@ -154,8 +154,9 @@ void handleMainTemperatureAdjust(KeyType key) {
         case KEY_UP:
             // 增加目标温度
             target_temperature += 5.0;
-            if (target_temperature > 460.0) {
-                target_temperature = 460.0;
+            extern float max_temperature_limit;
+            if (target_temperature > max_temperature_limit) {
+                target_temperature = max_temperature_limit;
             }
             break;
             
@@ -172,37 +173,18 @@ void handleMainTemperatureAdjust(KeyType key) {
     }
 }
 
+
+
 /**
- * @brief 菜单键处理函数
+ * @brief 菜单键处理函数（已废弃 - 主循环直接处理长按）
  */
 void handleMenuKey(void) {
-    uint32_t current_time = HAL_GetTick();
-    
-    // 检查菜单键状态
-    if (HAL_GPIO_ReadPin(KEY_MODE_GPIO_Port, KEY_MODE_Pin) == GPIO_PIN_RESET) {
-        // 按键按下
-        if (!menu_key_pressed) {
-            // 首次按下，记录时间
-            menu_key_press_time = current_time;
-            menu_key_pressed = 1;
-            menu_key_handled = 0; // 重置处理标志
-        } else if (!menu_key_handled) {
-            // 持续按下，检查是否超过长按时间
-            if ((current_time - menu_key_press_time) >= MENU_KEY_LONG_PRESS_TIME) {
-                // 长按2秒，立即进入菜单，无需等待按键释放
-                Menu_InitSystem();
-                menu_active = 1;
-                menu_key_handled = 1; // 标记已处理
-            }
-        }
-    } else {
-        // 按键释放
-        menu_key_pressed = 0;
-    }
+    // 此函数已废弃，主循环直接通过Key_Scan返回的KEY_MODE_LONG处理长按进入菜单
+    // 保留空函数以保持兼容性
 }
 
 /**
- * @brief 按键扫描函数
+ * @brief 按键扫描函数（不自动处理加热控制）
  * @return 按键类型
  */
 KeyType Key_Scan(void) {
@@ -272,8 +254,7 @@ KeyType Key_Scan(void) {
             // 按键刚释放
             key_mode_state.state = KEY_STATE_RELEASE;
             if (!key_mode_state.handled) {
-                // 短按，处理加热控制
-                handleHeatingControl();
+                // 短按，只返回按键类型，不自动处理加热控制
                 key_pressed = KEY_MODE;
                 key_mode_state.handled = 1;
             }

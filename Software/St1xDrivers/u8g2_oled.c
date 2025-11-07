@@ -547,4 +547,3 @@ void u8g2DrawTest(u8g2_t *u8g2)
     testShowFont(u8g2);           // 字体显示测试
     testDrawMulti(u8g2);          // 多图形绘制测试
 }
-

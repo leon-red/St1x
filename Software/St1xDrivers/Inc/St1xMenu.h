@@ -48,6 +48,7 @@ void Menu_Init(MenuContext* ctx, MenuItem* rootMenu, uint8_t rootMenuCount);
 void Menu_HandleInput(MenuContext* ctx, MenuDirection direction);
 void Menu_Display(MenuContext* ctx, u8g2_t* u8g2);
 void Menu_DefaultAction(void);
+void SubMenu3CalibrationAction(void);  // 温度校准动作函数
 
 // 新增的非阻塞式菜单函数
 void Menu_InitSystem(void);
