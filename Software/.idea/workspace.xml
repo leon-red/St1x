@@ -21,17 +21,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20">
-      <change beforePath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xADC.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xADC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xCalibrationSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xCalibrationSystem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xKey.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xKey.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationSystem.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationSystem.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xPID.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xPID.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +151,7 @@
       <workItem from="1762459315622" duration="1560000" />
       <workItem from="1762506885653" duration="297000" />
       <workItem from="1762507193503" duration="41077000" />
-      <workItem from="1762594593671" duration="12555000" />
+      <workItem from="1762594593671" duration="31267000" />
     </task>
     <task id="LOCAL-00001" summary="2025/10/20">
       <option name="closed" value="true" />

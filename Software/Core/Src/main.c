@@ -193,8 +193,7 @@ int main(void)
     // 根据当前系统模式处理不同的逻辑
     System_ModeHandler(current_time);
     
-    // 减少主循环延时到1ms，提高系统整体响应速度
-    HAL_Delay(10);
+    // 各模块有独立的定时刷新机制，无需主循环延时
   }
   /* USER CODE END 3 */
 }
@@ -306,7 +305,8 @@ void ADC_Init(void) {
  * @brief 定时器初始化
  */
 void Timer_Init(void) {
-    HAL_TIM_Base_Start_IT(&htim2);  // 启动TIM2中断
+    // 注意：暂时不启动TIM2中断，避免过早启动PID控制
+    // 首次显示更新完成后，在System_NormalModeHandler中再启动定时器
 }
 
 /**
@@ -426,8 +426,8 @@ void System_NormalModeHandler(uint32_t current_time) {
         last_displayed_temp = current_temp;
     }
     
-    // 定期更新显示（每200ms一次，减少刷新频率）
-    if ((current_time - last_oled_update) >= 200) {
+    // 定期更新显示（每100ms一次，减少刷新频率）
+    if ((current_time - last_oled_update) >= 100) {
         need_display_update = 1;
     }
     
@@ -443,6 +443,13 @@ void System_NormalModeHandler(uint32_t current_time) {
         u8g2_SendBuffer(&u8g2);
         last_oled_update = current_time;
         need_display_update = 0;  // 重置更新标志
+        
+        // 首次显示更新完成后，启动TIM2中断（PID控制）
+        static uint8_t timer_started = 0;
+        if (!timer_started) {
+            HAL_TIM_Base_Start_IT(&htim2);  // 启动TIM2中断
+            timer_started = 1;
+        }
     }
 }
 
