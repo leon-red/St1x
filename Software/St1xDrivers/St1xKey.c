@@ -123,7 +123,7 @@ void handleTemperatureAdjust(int direction) {
     if (direction > 0) {
         // 增加5度
         target_temperature += 5.0;
-        
+
         // 温度上限保护
         extern float max_temperature_limit;
         if (target_temperature > max_temperature_limit) {
@@ -132,16 +132,17 @@ void handleTemperatureAdjust(int direction) {
     } else {
         // 减少5度
         target_temperature -= 5.0;
-        
+
         // 温度下限保护
         if (target_temperature < 0.0) {
             target_temperature = 0.0;
         }
     }
-    
+
     // 如果正在加热，更新目标温度
     if (heating_status == 1) {
-        // 这里可以添加更新温度控制逻辑的代码
+        // 更新PID控制器的目标温度
+        setT12Temperature(target_temperature);
     }
 }
 
@@ -158,16 +159,20 @@ void handleMainTemperatureAdjust(KeyType key) {
             if (target_temperature > max_temperature_limit) {
                 target_temperature = max_temperature_limit;
             }
+            // 更新PID控制器的目标温度
+            setT12Temperature(target_temperature);
             break;
-            
+
         case KEY_DOWN:
             // 减少目标温度
             target_temperature -= 5.0;
             if (target_temperature < 0.0) {
                 target_temperature = 0.0;
             }
+            // 更新PID控制器的目标温度
+            setT12Temperature(target_temperature);
             break;
-            
+
         default:
             break;
     }
@@ -176,15 +181,7 @@ void handleMainTemperatureAdjust(KeyType key) {
 
 
 /**
- * @brief 菜单键处理函数（已废弃 - 主循环直接处理长按）
- */
-void handleMenuKey(void) {
-    // 此函数已废弃，主循环直接通过Key_Scan返回的KEY_MODE_LONG处理长按进入菜单
-    // 保留空函数以保持兼容性
-}
-
-/**
- * @brief 按键扫描函数（不自动处理加热控制）
+ * @brief 按键扫描函数（改进版 - 支持防抖和长按）
  * @return 按键类型
  */
 KeyType Key_Scan(void) {
@@ -194,70 +191,71 @@ KeyType Key_Scan(void) {
     // 扫描向上按键 KEY_UP_Pin
     if (HAL_GPIO_ReadPin(KEY_UP_GPIO_Port, KEY_UP_Pin) == GPIO_PIN_RESET) {
         if (key_up_state.state == KEY_STATE_RELEASE) {
-            // 按键刚按下
-            HAL_Delay(DEBOUNCE_TIME); // 简单去抖动
-            if (HAL_GPIO_ReadPin(KEY_UP_GPIO_Port, KEY_UP_Pin) == GPIO_PIN_RESET) {
-                key_up_state.state = KEY_STATE_PRESS;
-                key_up_state.press_time = current_time;
-                key_up_state.handled = 0;
+            // 按键刚按下，记录时间
+            key_up_state.state = KEY_STATE_PRESS;
+            key_up_state.press_time = current_time;
+            key_up_state.handled = 0;
+        } else if (key_up_state.state == KEY_STATE_PRESS && !key_up_state.handled) {
+            // 按键持续按下，检查是否达到防抖时间
+            if ((current_time - key_up_state.press_time) >= DEBOUNCE_TIME) {
+                key_pressed = KEY_UP;
+                key_up_state.handled = 1;  // 标记为已处理
             }
         }
     } else {
         if (key_up_state.state == KEY_STATE_PRESS) {
-            // 按键刚释放
+            // 按键释放，重置状态
             key_up_state.state = KEY_STATE_RELEASE;
-            if (!key_up_state.handled) {
-                key_pressed = KEY_UP;
-                key_up_state.handled = 1;
-            }
+            key_up_state.handled = 0;
         }
     }
     
     // 扫描向下按键 KEY_DOWN_Pin
     if (HAL_GPIO_ReadPin(KEY_DOWN_GPIO_Port, KEY_DOWN_Pin) == GPIO_PIN_RESET) {
         if (key_down_state.state == KEY_STATE_RELEASE) {
-            // 按键刚按下
-            HAL_Delay(DEBOUNCE_TIME); // 简单去抖动
-            if (HAL_GPIO_ReadPin(KEY_DOWN_GPIO_Port, KEY_DOWN_Pin) == GPIO_PIN_RESET) {
-                key_down_state.state = KEY_STATE_PRESS;
-                key_down_state.press_time = current_time;
-                key_down_state.handled = 0;
+            // 按键刚按下，记录时间
+            key_down_state.state = KEY_STATE_PRESS;
+            key_down_state.press_time = current_time;
+            key_down_state.handled = 0;
+        } else if (key_down_state.state == KEY_STATE_PRESS && !key_down_state.handled) {
+            // 按键持续按下，检查是否达到防抖时间
+            if ((current_time - key_down_state.press_time) >= DEBOUNCE_TIME) {
+                key_pressed = KEY_DOWN;
+                key_down_state.handled = 1;  // 标记为已处理
             }
         }
     } else {
         if (key_down_state.state == KEY_STATE_PRESS) {
-            // 按键刚释放
+            // 按键释放，重置状态
             key_down_state.state = KEY_STATE_RELEASE;
-            if (!key_down_state.handled) {
-                key_pressed = KEY_DOWN;
-                key_down_state.handled = 1;
-            }
+            key_down_state.handled = 0;
         }
     }
     
-    // 扫描模式按键 KEY_MODE_Pin
+    // 扫描模式按键 KEY_MODE_Pin（特殊处理：支持短按和长按）
     if (HAL_GPIO_ReadPin(KEY_MODE_GPIO_Port, KEY_MODE_Pin) == GPIO_PIN_RESET) {
         if (key_mode_state.state == KEY_STATE_RELEASE) {
-            // 按键刚按下
+            // 按键刚按下，记录时间
             key_mode_state.state = KEY_STATE_PRESS;
             key_mode_state.press_time = current_time;
             key_mode_state.handled = 0;
-        } else if (!key_mode_state.handled) {
-            // 按键持续按下，检查是否长按
+        } else if (key_mode_state.state == KEY_STATE_PRESS && !key_mode_state.handled) {
+            // 检查是否达到长按时间
             if ((current_time - key_mode_state.press_time) >= LONG_PRESS_TIME) {
                 key_pressed = KEY_MODE_LONG;
-                key_mode_state.handled = 1;
+                key_mode_state.handled = 1;  // 标记为已处理
+            }
+            // 检查是否达到防抖时间（短按）
+            else if ((current_time - key_mode_state.press_time) >= DEBOUNCE_TIME) {
+                key_pressed = KEY_MODE;
+                key_mode_state.handled = 1;  // 标记为已处理
             }
         }
     } else {
         if (key_mode_state.state == KEY_STATE_PRESS) {
-            // 按键刚释放
+            // 按键释放，重置状态
             key_mode_state.state = KEY_STATE_RELEASE;
-            if (!key_mode_state.handled) {
-                // 短按，只返回按键类型，不自动处理加热控制
-                key_pressed = KEY_MODE;
-                key_mode_state.handled = 1;
-            }
+            key_mode_state.handled = 0;
         }
     }
     

@@ -152,7 +152,8 @@ static void St1xStatic_CheckStandbyControl(void) {
             }
         }
         // 如果不是静置模式但加热已停止且不是手动停止的，说明是设备被拿起后需要恢复加热
-        else if (!heating_status && !manually_stopped) {
+        // 但只有在之前确实在加热的情况下才恢复加热
+        else if (!heating_status && !manually_stopped && is_in_standby_mode) {
             heating_status = 1;
             startHeatingControlTimer();
             setT12Temperature(original_target_temperature);
@@ -162,7 +163,11 @@ static void St1xStatic_CheckStandbyControl(void) {
     }
     
     // 只有在加热状态下才进行静置检测
-    if (!heating_status) return;
+    if (!heating_status) {
+        // 如果不在加热状态，重置静置模式初始化状态，确保下次加热时重新初始化
+        standby_mode_initialized = 0;
+        return;
+    }
     
     // 如果从未初始化过静置模式，则进行初始化
     if (!standby_mode_initialized) {

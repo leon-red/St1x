@@ -79,8 +79,8 @@ float pidTemperatureControl(float current_temp) {
     // 计算温度误差
     float error = t12_pid.setpoint - current_temp;
     
-    // 检查是否应该启用专注加热模式（温度低于目标值）
-    if (error > FOCUSED_HEATING_TEMP_DIFF && !focused_heating_mode) {
+    // 检查是否应该启用专注加热模式（仅在加热状态下且温度低于目标值且PID控制已启用）
+    if (heating_status && heating_control_enabled && error > FOCUSED_HEATING_TEMP_DIFF && !focused_heating_mode) {
         // 启动专注加热模式
         focused_heating_mode = 1;
         focused_heating_start_time = current_time;
@@ -191,8 +191,8 @@ void stopHeatingControlTimer(void) {
 void heatingControlTimerCallback(void) {
     uint32_t current_time = HAL_GetTick();
     
-    // 只有在加热状态下才执行控制逻辑
-    if (heating_status == 0) {
+    // 只有在加热状态下且PID控制已启用时才执行控制逻辑
+    if (heating_status == 0 || heating_control_enabled == 0) {
         return;
     }
 
@@ -202,6 +202,10 @@ void heatingControlTimerCallback(void) {
         if ((current_time - focused_heating_start_time) >= FOCUSED_HEATING_DURATION) {
             // 专注加热完成，退出专注加热模式
             focused_heating_mode = 0;
+            // 专注加热完成后，需要重新检查加热状态
+            if (heating_status == 0 || heating_control_enabled == 0) {
+                return;
+            }
         } else {
             // 仍在专注加热中，设置全功率
             __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
@@ -243,8 +247,8 @@ void heatingControlTimerCallback(void) {
             {
                 float control_temp = getFilteredTemperature();
                 
-                // 检查是否应该启动专注加热模式（仅在非专注加热模式下）
-                if (!focused_heating_mode) {
+                // 检查是否应该启动专注加热模式（仅在加热状态下且非专注加热模式下且PID控制已启用）
+                if (heating_status && !focused_heating_mode && heating_control_enabled) {
                     float error = t12_pid.setpoint - control_temp;
                     if (error > FOCUSED_HEATING_TEMP_DIFF) {
                         // 启动专注加热模式
@@ -257,9 +261,14 @@ void heatingControlTimerCallback(void) {
                         uint16_t pwm_value = (uint16_t)(pwm_duty * 10000 / 100);
                         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, pwm_value);
                     }
-                } else {
+                } else if (focused_heating_mode) {
                     // 已经在专注加热模式下，保持全功率
                     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
+                } else {
+                    // 专注加热模式已完成，使用PID控制计算加热功率
+                    float pwm_duty = pidTemperatureControl(control_temp);
+                    uint16_t pwm_value = (uint16_t)(pwm_duty * 10000 / 100);
+                    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, pwm_value);
                 }
                 sampling_phase = 0;  // 重置状态机
             }

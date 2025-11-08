@@ -16,6 +16,7 @@ typedef enum {
 // 独立校准系统状态
 typedef enum {
     CAL_STATE_IDLE,         // 空闲状态
+    CAL_STATE_VOLTAGE_CHECK, // 电压检测状态
     CAL_STATE_RUNNING,      // 校准运行中
     CAL_STATE_COMPLETE,     // 校准完成
     CAL_STATE_ERROR         // 校准错误

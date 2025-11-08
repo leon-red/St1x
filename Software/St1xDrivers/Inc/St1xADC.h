@@ -46,4 +46,7 @@ void systemStatusMonitor(void);
 // 全局温度限制变量（可在校准模式下临时修改）
 extern float max_temperature_limit;
 
+// 加热状态变量声明
+extern uint8_t heating_status;
+
 #endif /* ST1XADC_H_ */

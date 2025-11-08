@@ -3,18 +3,6 @@
 // 作者：Leon Red
 // 项目启动时间：2023/2/13
 // ====================================================
-// T12 烙铁控制器 - 温度测量部分（注释已简化、便于初学者理解）
-// 这个文件负责处理与温度测量相关的所有功能：
-// - 读取温度传感器的数据
-// - 把传感器数据转换成我们可以理解的温度值
-// - 让温度读数更稳定，不会跳来跳去
-// - 检查是否安全（电压够不够，温度会不会太高）
-// - 显示相关信息给用户
-//
-// 小白须知：
-// - ADC（模数转换器）就像一个翻译官，把传感器的电压信号翻译成数字(0-4095)
-// - 我们再把数字翻译回电压，最后换算成摄氏度
-// ====================================================
 
 // ==================== 第一步：包含必要的工具箱 ====================
 // 这些头文件就像工具箱，告诉电脑这个程序需要用到哪些功能
@@ -39,9 +27,18 @@
 
 // 安全和控制参数
 #define USB_VOLTAGE_THRESHOLD 15.0f  // 最低工作电压：低于15伏就不能加热
-#define DEBOUNCE_DELAY 50            // 按键防抖时间：防止按键抖动误触发
 // 保持与PID文件一致的控制间隔
 #define CONTROL_INTERVAL 50          // 控制间隔：每隔50毫秒检查一次温度
+
+// ADC调试开关控制
+#define ADC_DEBUG_ENABLED 0          // 1=启用调试输出，0=禁用调试输出
+
+// 条件编译的调试输出宏
+#if ADC_DEBUG_ENABLED
+    #define ADC_DEBUG_PRINTF(...) printf(__VA_ARGS__)
+#else
+    #define ADC_DEBUG_PRINTF(...) do {} while(0)
+#endif
 
 // 温度安全限制（全局可修改）
 float max_temperature_limit = NORMAL_TEMPERATURE_LIMIT;  // 最大温度限制，可在校准模式下临时提高
@@ -50,7 +47,7 @@ float max_temperature_limit = NORMAL_TEMPERATURE_LIMIT;  // 最大温度限制�
 // 这些变量用来保存程序运行过程中的各种状态和数据
 
 // 用户设置和运行状态
-float target_temperature = 360.0f;  // 目标温度：想要加热到多少度（默认300°C）
+float target_temperature = 360.0f;  // 目标温度：想要加热到多少度（默认360°C）
 uint8_t heating_status = 0;       // 加热状态：0=不加热，1=正在加热
 
 // 传感器数据存储
@@ -91,6 +88,7 @@ static float display_filtered_temperature = 0;                      // 显示用
 // 用于显示动画效果的变量
 static float displayed_temperature = 0;                    // 实际显示的温度（带动画效果）
 static uint32_t last_display_update = 0;                  // 上次显示更新时间
+static uint8_t first_display_update = 1;                 // 首次显示更新标志
 
 // 控制和PWM相关变量
 static uint32_t heating_control_interval = 50;  // 加热控制间隔（与PID文件保持一致）
@@ -157,12 +155,12 @@ float calculateT12Temperature(uint16_t adcValue) {
     // 添加调试：检查150°C和250°C对应的ADC值
     if (fabs(temperature - 150.0f) < 1.0f) {
         float expected_adc_150 = calculateADCForTemperature(150.0f);
-        printf("DEBUG 150°C: Temp=%.2f, ADC=%d, Voltage=%.4f, Expected ADC=%.1f\n", 
+        ADC_DEBUG_PRINTF("DEBUG 150°C: Temp=%.2f, ADC=%d, Voltage=%.4f, Expected ADC=%.1f\n", 
                temperature, adcValue, voltage, expected_adc_150);
     }
     if (fabs(temperature - 250.0f) < 1.0f) {
         float expected_adc_250 = calculateADCForTemperature(250.0f);
-        printf("DEBUG 250°C: Temp=%.2f, ADC=%d, Voltage=%.4f, Expected ADC=%.1f\n", 
+        ADC_DEBUG_PRINTF("DEBUG 250°C: Temp=%.2f, ADC=%d, Voltage=%.4f, Expected ADC=%.1f\n", 
                temperature, adcValue, voltage, expected_adc_250);
     }
     
@@ -199,7 +197,7 @@ void updateTemperatureFilter(uint16_t adcValue) {
     
     // 添加调试：检查滤波器输入
     if (fabs(current_temp - 150.0f) < 5.0f || fabs(current_temp - 250.0f) < 5.0f) {
-        printf("FILTER IN: temp=%.2f, adc=%d\n", current_temp, adcValue);
+        ADC_DEBUG_PRINTF("FILTER IN: temp=%.2f, adc=%d\n", current_temp, adcValue);
     }
     
     // 把新温度值存入缓冲区
@@ -212,7 +210,7 @@ void updateTemperatureFilter(uint16_t adcValue) {
             temperature_buffer[i] = current_temp;
         }
         filter_initialized = 1;
-        printf("FILTER INIT: temp=%.2f\n", current_temp);
+        ADC_DEBUG_PRINTF("FILTER INIT: temp=%.2f\n", current_temp);
     }
     
     // 计算平均温度值
@@ -224,7 +222,7 @@ void updateTemperatureFilter(uint16_t adcValue) {
     
     // 添加调试：检查滤波器输出
     if (fabs(new_filtered_temp - 150.0f) < 5.0f || fabs(new_filtered_temp - 250.0f) < 5.0f) {
-        printf("FILTER OUT: temp=%.2f, old=%.2f\n", new_filtered_temp, filtered_temperature);
+        ADC_DEBUG_PRINTF("FILTER OUT: temp=%.2f, old=%.2f\n", new_filtered_temp, filtered_temperature);
     }
     
     filtered_temperature = new_filtered_temp;
@@ -283,7 +281,7 @@ uint8_t checkTemperatureSafety(void) {
         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
         stopHeatingControlTimer();
         heating_status = 0;
-        printf("[TemperatureSafety] Temperature exceeded limit: %.1f°C > %.1f°C\n", 
+        ADC_DEBUG_PRINTF("[TemperatureSafety] Temperature exceeded limit: %.1f°C > %.1f°C\n", 
                current_temp, max_temperature_limit);
         return 0;
     }
@@ -294,7 +292,7 @@ uint8_t checkTemperatureSafety(void) {
         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
         stopHeatingControlTimer();
         heating_status = 0;
-        printf("[TemperatureSafety] Sensor abnormal: %.1f°C\n", current_temp);
+        ADC_DEBUG_PRINTF("[TemperatureSafety] Sensor abnormal: %.1f°C\n", current_temp);
         return 0;
     }
     
@@ -365,9 +363,11 @@ void drawOnOLED(u8g2_t *u8g2) {
     
     // 实现平滑的温度显示动画效果
     uint32_t current_time = HAL_GetTick();
-    if (last_display_update == 0) {
+    if (first_display_update) {
+        // 首次显示更新，直接使用当前温度，避免动画效果
         last_display_update = current_time;
-        displayed_temperature = raw_temp;
+        displayed_temperature = filtered_temp;
+        first_display_update = 0;
     }
     
     // 计算时间差（秒）
@@ -396,7 +396,7 @@ void drawOnOLED(u8g2_t *u8g2) {
     
     // 添加调试：检查显示温度计算
     if (fabs(displayed_temperature - 150.0f) < 2.0f || fabs(displayed_temperature - 250.0f) < 2.0f) {
-        printf("DISPLAY: raw=%.2f, filtered=%.2f, displayed=%.2f, diff=%.2f, factor=%.4f\n", 
+        ADC_DEBUG_PRINTF("DISPLAY: raw=%.2f, filtered=%.2f, displayed=%.2f, diff=%.2f, factor=%.4f\n", 
                raw_temp, filtered_temp, displayed_temperature, temp_diff, smoothing_factor);
     }
     
@@ -436,15 +436,23 @@ void drawOnOLED(u8g2_t *u8g2) {
     sprintf(display_buffer, "SET:%0.0f", target_temperature);
     u8g2_DrawStr(u8g2, 68, 76, display_buffer);
     
-    // 显示加热状态（当处于专注加热模式时显示）
+    // 显示加热状态
     extern uint8_t focused_heating_mode;
-    if (heating_status) {
-        if (focused_heating_mode) {
-            u8g2_DrawStr(u8g2, 83, 62, "Heating");  // 显示加热状态
-        }
-    } else {
-        // 当加热停止时显示"Stop"
+    extern uint8_t heating_control_enabled;
+    
+    // 更友好的状态显示逻辑
+    if (!heating_control_enabled) {
+        // 1. PID是否工作-否-不显示
+        // 不显示任何状态文字
+    } else if (!heating_status) {
+        // 2. PID是否工作-是-加热状态-否-显示"Stop"
         u8g2_DrawStr(u8g2, 102, 62, "Stop");
+    } else if (focused_heating_mode) {
+        // 3. PID是否工作-是-是否进入专注模式-是-显示"Heating"
+        u8g2_DrawStr(u8g2, 83, 62, "Heating");
+    } else {
+        // 4. PID是否工作-是-是否进入专注模式-否-PID是否在控制状态-是-显示"Work"
+        u8g2_DrawStr(u8g2, 102, 62, "Work");
     }
 
     // 绘制界面边框

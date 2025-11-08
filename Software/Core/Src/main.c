@@ -29,6 +29,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <math.h>
 #include "u8g2.h"
 #include "u8g2_oled.h"
 #include "St1xADC.h"
@@ -408,34 +409,31 @@ void System_NormalModeHandler(uint32_t current_time) {
         enterMenuMode();
     }
     
-    // 更新OLED显示（每50ms一次）
-    if ((current_time - last_oled_update) >= 50) {
+    // 更新OLED显示（只在特定条件下更新，避免频繁刷新）
+    static uint8_t need_display_update = 0;
+    
+    // 检测需要更新显示的条件
+    if (key != KEY_NONE) {
+        // 有按键按下时，需要更新显示
+        need_display_update = 1;
+    }
+    
+    // 温度变化超过阈值时也需要更新显示
+    static float last_displayed_temp = 0;
+    float current_temp = getDisplayFilteredTemperature();
+    if (fabs(current_temp - last_displayed_temp) > 0.5f) {
+        need_display_update = 1;
+        last_displayed_temp = current_temp;
+    }
+    
+    // 定期更新显示（每200ms一次，减少刷新频率）
+    if ((current_time - last_oled_update) >= 200) {
+        need_display_update = 1;
+    }
+    
+    // 如果需要更新显示，则执行显示操作
+    if (need_display_update) {
         drawOnOLED(&u8g2);
-        
-        // 显示按键调试信息（按键触发后显示1秒）
-        if (key_debug_display && (current_time - key_debug_time) < 1000) {
-            u8g2_SetFont(&u8g2, u8g2_font_6x10_tf);
-            u8g2_DrawStr(&u8g2, 0, 63, "KEY:");
-            
-            switch (key) {
-                case KEY_UP:
-                    u8g2_DrawStr(&u8g2, 25, 63, "UP");
-                    break;
-                case KEY_DOWN:
-                    u8g2_DrawStr(&u8g2, 25, 63, "DOWN");
-                    break;
-                case KEY_MODE:
-                    u8g2_DrawStr(&u8g2, 25, 63, "MODE");
-                    break;
-                case KEY_MODE_LONG:
-                    u8g2_DrawStr(&u8g2, 25, 63, "MODE_LONG");
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            key_debug_display = 0;  // 清除显示标志
-        }
         
         // 如果启用了调试显示，则显示调试信息
         if (debug_display_enabled) {
@@ -444,6 +442,7 @@ void System_NormalModeHandler(uint32_t current_time) {
         
         u8g2_SendBuffer(&u8g2);
         last_oled_update = current_time;
+        need_display_update = 0;  // 重置更新标志
     }
 }
 

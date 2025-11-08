@@ -10,11 +10,22 @@ static const CalibrationHardwareInterface* hw_interface = NULL;
 
 // 校准系统配置
 #define CALIBRATION_POINTS 9
-#define TEMPERATURE_TOLERANCE 3.0f
-#define TEMPERATURE_STABLE_TIME 2000
+#define TEMPERATURE_TOLERANCE 5.0f
+#define TEMPERATURE_STABLE_TIME 1000
 #define KEY_DEBOUNCE_TIME 10
 #define UPDATE_INTERVAL 50  // 50ms更新间隔
 #define TEMPERATURE_ADJUST_STEP 1.0f  // 温度调整步进值
+#define CALIBRATION_TEMPERATURE_LIMIT 500.0f  // 校准模式下的温度限制
+
+// 调试开关 - 设置为1启用调试输出，0禁用
+#define CALIBRATION_DEBUG_ENABLED 0
+
+// 调试宏定义
+#if CALIBRATION_DEBUG_ENABLED
+    #define CAL_DEBUG_PRINTF(...) printf(__VA_ARGS__)
+#else
+    #define CAL_DEBUG_PRINTF(...) ((void)0)
+#endif
 
 // 校准点温度定义
 static const float calibration_temperatures[CALIBRATION_POINTS] = {
@@ -69,6 +80,7 @@ static void InitializeCalibrationInterface(uint8_t point_index);
 static void SetPointTemperature(uint8_t point_index);
 static void SaveCalibrationData(void);
 static void RestoreOriginalSettings(void);
+static void ProcessVoltageCheckState(uint32_t current_time);
 static void ProcessCalibrationPoint(uint8_t point_index);
 static void DrawCalibrationInterface(u8g2_t *u8g2, uint8_t point_index);
 static const char* GetPointStateText(CalibrationPointState state);
@@ -78,11 +90,11 @@ static const char* GetPointHelpText(CalibrationPointState state);
  * @brief 初始化独立校准系统
  */
 void CalibrationSystem_Init(const CalibrationHardwareInterface* hw_interface_ptr) {
-    printf("[CalibrationSystem] Initializing independent calibration system...\n");
+    CAL_DEBUG_PRINTF("[CalibrationSystem] Initializing independent calibration system...\n");
     
     // 检查硬件接口是否有效
     if (hw_interface_ptr == NULL) {
-        printf("[CalibrationSystem] ERROR: Hardware interface is NULL!\n");
+        CAL_DEBUG_PRINTF("[CalibrationSystem] ERROR: Hardware interface is NULL!\n");
         return;
     }
     
@@ -106,7 +118,7 @@ void CalibrationSystem_Init(const CalibrationHardwareInterface* hw_interface_ptr
         InitializeCalibrationInterface(i);
     }
     
-    printf("[CalibrationSystem] Initialization completed successfully\n");
+    CAL_DEBUG_PRINTF("[CalibrationSystem] Initialization completed successfully\n");
 }
 
 /**
@@ -160,13 +172,13 @@ static const char* GetPointStateText(CalibrationPointState state) {
 }
 
 /**
- * @brief 获取帮助文本
+ * @brief 获取帮助文本（简洁版）
  */
 static const char* GetPointHelpText(CalibrationPointState state) {
     switch (state) {
-        case CAL_POINT_HEATING:  return "Heating... Wait for stable";
-        case CAL_POINT_STABLE:   return "UP/DOWN:Adjust MODE:Confirm";
-        case CAL_POINT_ADJUSTED: return "Point completed";
+        case CAL_POINT_HEATING:  return "Heating...Wait";
+        case CAL_POINT_STABLE:   return "UP/DN:Adj MODE:OK";
+        case CAL_POINT_ADJUSTED: return "Completed";
         default: return "";
     }
 }
@@ -176,51 +188,20 @@ static const char* GetPointHelpText(CalibrationPointState state) {
  */
 void CalibrationSystem_Start(void) {
     if (system_state != CAL_STATE_IDLE) {
-        printf("[CalibrationSystem] Cannot start: system is not idle\n");
+        CAL_DEBUG_PRINTF("[CalibrationSystem] Cannot start: system is not idle\n");
         return;
     }
     
     // 检查硬件接口是否已初始化
     if (hw_interface == NULL) {
-        printf("[CalibrationSystem] ERROR: Hardware interface not initialized!\n");
+        CAL_DEBUG_PRINTF("[CalibrationSystem] ERROR: Hardware interface not initialized!\n");
         return;
     }
     
-    // 检查电压是否足够
-    if (hw_interface->voltageCheck && !hw_interface->voltageCheck()) {
-        printf("[CalibrationSystem] Cannot start: voltage insufficient\n");
-        return;
-    }
-    
-    printf("[CalibrationSystem] Starting independent calibration system...\n");
-    
-    // 在校准模式下临时提高温度限制到500度
-    extern float max_temperature_limit;
-    max_temperature_limit = CALIBRATION_TEMPERATURE_LIMIT;
-    printf("[CalibrationSystem] Temperature limit temporarily increased to %.1f°C\n", max_temperature_limit);
-    
-    // 重置状态
-    current_point_index = 0;
-    save_result = 0;
-    system_state = CAL_STATE_RUNNING;
-    
-    // 重置所有校准点
-    for (int i = 0; i < CALIBRATION_POINTS; i++) {
-        InitializeCalibrationPoint(i);
-    }
-    
-    // 启动第一个校准点
-    SetPointTemperature(0);
-    calibration_points[0].state = CAL_POINT_HEATING;
-    calibration_points[0].heating_start_time = hw_interface->getTick();
-    calibration_points[0].heating_cycles = 1;
-    
-    // 启动加热控制
-    if (hw_interface->startHeating) {
-        hw_interface->startHeating();
-    }
-    
-    printf("[CalibrationSystem] Calibration started successfully\n");
+    // 进入电压检测状态
+    system_state = CAL_STATE_VOLTAGE_CHECK;
+    low_voltage_start_time = hw_interface->getTick();
+    CAL_DEBUG_PRINTF("[CalibrationSystem] Entering voltage check state\n");
 }
 
 /**
@@ -232,11 +213,11 @@ void CalibrationSystem_Stop(void) {
     }
     
     if (hw_interface == NULL) {
-        printf("[CalibrationSystem] ERROR: Hardware interface not initialized!\n");
+        CAL_DEBUG_PRINTF("[CalibrationSystem] ERROR: Hardware interface not initialized!\n");
         return;
     }
     
-    printf("[CalibrationSystem] Stopping calibration system...\n");
+    CAL_DEBUG_PRINTF("[CalibrationSystem] Stopping calibration system...\n");
     
     // 停止加热控制
     if (hw_interface->stopHeating) {
@@ -246,7 +227,7 @@ void CalibrationSystem_Stop(void) {
     // 恢复正常的温度限制
     extern float max_temperature_limit;
     max_temperature_limit = NORMAL_TEMPERATURE_LIMIT;
-    printf("[CalibrationSystem] Temperature limit restored to %.1f°C\n", max_temperature_limit);
+    CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit restored to %.1f°C\n", max_temperature_limit);
     
     // 重置系统状态
     system_state = CAL_STATE_IDLE;
@@ -256,7 +237,7 @@ void CalibrationSystem_Stop(void) {
     // 重置电压不足状态
     low_voltage_state = 0;
     
-    printf("[CalibrationSystem] Calibration system stopped\n");
+    CAL_DEBUG_PRINTF("[CalibrationSystem] Calibration system stopped\n");
 }
 
 /**
@@ -291,14 +272,65 @@ void CalibrationSystem_Update(u8g2_t *u8g2) {
     
     last_key = key;
     
+    // 处理电压检测状态
+    if (system_state == CAL_STATE_VOLTAGE_CHECK) {
+        ProcessVoltageCheckState(current_time);
+    }
+    
     // 处理当前校准点（使用新的结构体方式）
     if (system_state == CAL_STATE_RUNNING) {
         ProcessCalibrationPoint(current_point_index);
     }
     
-    // 绘制当前校准点界面（使用独立界面）
-    if (system_state == CAL_STATE_RUNNING || system_state == CAL_STATE_COMPLETE) {
-        DrawCalibrationInterface(u8g2, current_point_index);
+    // 绘制界面
+    DrawCalibrationInterface(u8g2, current_point_index);
+}
+
+/**
+ * @brief 处理电压检测状态
+ */
+static void ProcessVoltageCheckState(uint32_t current_time) {
+    if (hw_interface == NULL) return;
+    
+    // 检查电压是否足够
+    if (hw_interface->voltageCheck && hw_interface->voltageCheck()) {
+        // 电压足够，进入校准运行状态
+        CAL_DEBUG_PRINTF("[CalibrationSystem] Voltage sufficient, starting calibration...\n");
+        
+        // 在校准模式下临时提高温度限制到500度
+        extern float max_temperature_limit;
+        max_temperature_limit = CALIBRATION_TEMPERATURE_LIMIT;
+        CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit temporarily increased to %.1f°C\n", max_temperature_limit);
+        
+        // 重置状态
+        current_point_index = 0;
+        save_result = 0;
+        system_state = CAL_STATE_RUNNING;
+        
+        // 重置所有校准点
+        for (int i = 0; i < CALIBRATION_POINTS; i++) {
+            InitializeCalibrationPoint(i);
+        }
+        
+        // 启动第一个校准点
+        SetPointTemperature(0);
+        calibration_points[0].state = CAL_POINT_HEATING;
+        calibration_points[0].heating_start_time = current_time;
+        calibration_points[0].heating_cycles = 1;
+        
+        // 启动加热控制
+        if (hw_interface->startHeating) {
+            hw_interface->startHeating();
+        }
+        
+        CAL_DEBUG_PRINTF("[CalibrationSystem] Calibration started successfully\n");
+    } else {
+        // 电压不足，检查是否超过5秒显示时间
+        if ((current_time - low_voltage_start_time) >= LOW_VOLTAGE_DISPLAY_TIME) {
+            // 超过5秒，返回主界面
+            CAL_DEBUG_PRINTF("[CalibrationSystem] Low voltage timeout, returning to main menu\n");
+            CalibrationSystem_Stop();
+        }
     }
 }
 
@@ -332,7 +364,7 @@ static void ProcessCalibrationPoint(uint8_t point_index) {
                     // 更新界面状态文本
                     calibration_interfaces[point_index].status_text = GetPointStateText(CAL_POINT_STABLE);
                     calibration_interfaces[point_index].help_text = GetPointHelpText(CAL_POINT_STABLE);
-                    printf("[CalibrationSystem] Point %d reached stable state\n", point->point_id);
+                    CAL_DEBUG_PRINTF("[CalibrationSystem] Point %d reached stable state\n", point->point_id);
                 }
             } else {
                 // 温度不稳定，重置稳定计时器
@@ -347,7 +379,7 @@ static void ProcessCalibrationPoint(uint8_t point_index) {
             
         case CAL_POINT_ADJUSTED:
             // 当前点已完成，进入下一个点
-            printf("[CalibrationSystem] Point %d completed, moving to next point\n", point->point_id);
+            CAL_DEBUG_PRINTF("[CalibrationSystem] Point %d completed, moving to next point\n", point->point_id);
             
             // 如果有下一个点，启动下一个点
             if (point_index + 1 < CALIBRATION_POINTS) {
@@ -364,7 +396,7 @@ static void ProcessCalibrationPoint(uint8_t point_index) {
                 // 所有点完成
                 SaveCalibrationData();
                 system_state = CAL_STATE_COMPLETE;
-                printf("[CalibrationSystem] All calibration points completed\n");
+                CAL_DEBUG_PRINTF("[CalibrationSystem] All calibration points completed\n");
             }
             break;
             
@@ -381,7 +413,7 @@ static void DrawCalibrationInterface(u8g2_t *u8g2, uint8_t point_index) {
     
     CalibrationPoint* point = &calibration_points[point_index];
     CalibrationInterface* interface = &calibration_interfaces[point_index];
-    float current_temp = hw_interface->getTemperature();
+//    float current_temp = hw_interface->getTemperature();
     
     u8g2_ClearBuffer(u8g2);
     
@@ -411,7 +443,30 @@ static void DrawCalibrationInterface(u8g2_t *u8g2, uint8_t point_index) {
         low_voltage_state = 0;
     }
     
-    if (system_state == CAL_STATE_COMPLETE) {
+    if (system_state == CAL_STATE_VOLTAGE_CHECK) {
+        // 电压检测状态显示
+        u8g2_SetFont(u8g2, u8g2_font_6x10_tf);
+        
+        // 检查电压是否足够
+        if (hw_interface->voltageCheck && hw_interface->voltageCheck()) {
+            // 电压足够，显示准备进入校准
+            u8g2_DrawStr(u8g2, 0, 20, "Voltage OK");
+            u8g2_DrawStr(u8g2, 0, 32, "Starting Calibration...");
+        } else {
+            // 电压不足，显示低电压警告
+            u8g2_DrawStr(u8g2, 0, 20, "Low Voltage!");
+            u8g2_DrawStr(u8g2, 0, 32, "Please check power");
+            
+            // 显示倒计时
+            uint32_t current_time = hw_interface->getTick();
+            uint32_t remaining_time = LOW_VOLTAGE_DISPLAY_TIME - (current_time - low_voltage_start_time);
+            uint32_t seconds = remaining_time / 1000;
+            
+            char countdown_str[32];
+            sprintf(countdown_str, "Return in %lu sec", seconds);
+            u8g2_DrawStr(u8g2, 0, 44, countdown_str);
+        }
+    } else if (system_state == CAL_STATE_COMPLETE) {
         // 完成界面
         u8g2_SetFont(u8g2, u8g2_font_6x10_tf);
         u8g2_DrawStr(u8g2, 0, 20, "Calibration Complete!");
@@ -422,67 +477,74 @@ static void DrawCalibrationInterface(u8g2_t *u8g2, uint8_t point_index) {
         }
         u8g2_DrawStr(u8g2, 0, 44, "Press MODE to exit");
     } else if (system_state == CAL_STATE_RUNNING) {
-        // 独立校准点界面
+        // 独立校准点界面 - 紧凑布局（使用缩写）
         char buffer[32];
         
-        // 标题 - 显示校准点ID
+        // 标题栏 - 校准点信息
         u8g2_SetFont(u8g2, u8g2_font_6x10_tf);
-        sprintf(buffer, "Point %d/%d", point->point_id, CALIBRATION_POINTS);
+        sprintf(buffer, "P%d/%d", point->point_id, CALIBRATION_POINTS);
         u8g2_DrawStr(u8g2, 0, 10, buffer);
         
-        // 目标温度 vs 当前温度
-        sprintf(buffer, "T:%.1fC", point->adjusted_temperature);
-        u8g2_DrawStr(u8g2, 0, 22, buffer);
+        // 状态信息 - 右侧显示
+        interface->status_text = GetPointStateText(point->state);
+        u8g2_DrawStr(u8g2, 70, 10, interface->status_text);
+        
+        // 第一行：目标温度和实测温度
+        sprintf(buffer, "T:%.1fC", point->target_temperature);
+        u8g2_DrawStr(u8g2, 0, 24, buffer);
         
         float current_temp = hw_interface->getTemperature();
-        sprintf(buffer, "N:%.1fC", current_temp);
-        u8g2_DrawStr(u8g2, 60, 22, buffer);
+        sprintf(buffer, "A:%.1fC", current_temp);
+        u8g2_DrawStr(u8g2, 60, 24, buffer);
         
-        // 温度偏差
-        float temp_diff = current_temp - point->adjusted_temperature;
+        // 第二行：校准偏移量和温度偏差
+        if (point->calibration_offset >= 0) {
+            sprintf(buffer, "O:+%.1fC", point->calibration_offset);
+        } else {
+            sprintf(buffer, "O:%.1fC", point->calibration_offset);
+        }
+        u8g2_DrawStr(u8g2, 0, 36, buffer);
+        
+        // 温度偏差（实测-目标）
+        float temp_diff = current_temp - point->target_temperature;
         if (temp_diff >= 0) {
             sprintf(buffer, "D:+%.1fC", temp_diff);
         } else {
             sprintf(buffer, "D:%.1fC", temp_diff);
         }
-        u8g2_DrawStr(u8g2, 0, 34, buffer);
-        
-        // 状态信息 - 更明显的显示
-        interface->status_text = GetPointStateText(point->state);
-        u8g2_DrawStr(u8g2, 60, 34, interface->status_text);
+        u8g2_DrawStr(u8g2, 60, 36, buffer);
         
         // 详细模式下的额外信息
         if (interface->display_mode == 1) {
-            // 最大偏差
-            sprintf(buffer, "MaxD:%.1fC", point->max_temp_deviation);
-            u8g2_DrawStr(u8g2, 0, 46, buffer);
+            // 第三行：最大偏差和加热循环
+            sprintf(buffer, "M:%.1fC", point->max_temp_deviation);
+            u8g2_DrawStr(u8g2, 0, 48, buffer);
             
-            // 加热循环次数
-            sprintf(buffer, "Cyc:%d", point->heating_cycles);
-            u8g2_DrawStr(u8g2, 80, 46, buffer);
+            sprintf(buffer, "C:%d", point->heating_cycles);
+            u8g2_DrawStr(u8g2, 60, 48, buffer);
             
-            // 帮助文本 - 更清晰的操作提示
+            // 第四行：帮助文本（简化）
             interface->help_text = GetPointHelpText(point->state);
-            u8g2_DrawStr(u8g2, 0, 58, interface->help_text);
+            u8g2_DrawStr(u8g2, 0, 60, interface->help_text);
         } else {
-            // 简洁模式：只显示最重要的操作提示
+            // 简洁模式：只显示帮助文本
             interface->help_text = GetPointHelpText(point->state);
-            u8g2_DrawStr(u8g2, 0, 46, interface->help_text);
+            u8g2_DrawStr(u8g2, 0, 48, interface->help_text);
         }
         
-        // 按键调试信息
-        if (cal_key_debug_display && (hw_interface->getTick() - cal_key_debug_time) < 1000) {
-            char key_str[16];
-            switch (last_displayed_key) {
-                case CAL_KEY_UP:   sprintf(key_str, "KEY:UP"); break;
-                case CAL_KEY_DOWN: sprintf(key_str, "KEY:DOWN"); break;
-                case CAL_KEY_MODE: sprintf(key_str, "KEY:MODE"); break;
-                default: sprintf(key_str, "KEY:?"); break;
-            }
-            u8g2_DrawStr(u8g2, 80, 76, key_str);
-        } else {
-            cal_key_debug_display = 0;
-        }
+//        // 按键调试信息
+//        if (cal_key_debug_display && (hw_interface->getTick() - cal_key_debug_time) < 1000) {
+//            char key_str[16];
+//            switch (last_displayed_key) {
+//                case CAL_KEY_UP:   sprintf(key_str, "KEY:UP"); break;
+//                case CAL_KEY_DOWN: sprintf(key_str, "KEY:DOWN"); break;
+//                case CAL_KEY_MODE: sprintf(key_str, "KEY:MODE"); break;
+//                default: sprintf(key_str, "KEY:?"); break;
+//            }
+//            u8g2_DrawStr(u8g2, 80, 76, key_str);
+//        } else {
+//            cal_key_debug_display = 0;
+//        }
     }
     
     u8g2_SendBuffer(u8g2);
@@ -531,23 +593,23 @@ void CalibrationSystem_HandleKey(CalibrationKeyType key) {
     
     switch (key) {
         case CAL_KEY_UP:
-            if (current_point->adjusted_temperature < 500.0f) {  // 最高500度
-                current_point->adjusted_temperature += TEMPERATURE_ADJUST_STEP;
-                // 立即更新PID目标温度
-                SetPointTemperature(current_point_index);
-                printf("[CalibrationSystem] Point %d temperature adjusted to %.1f°C\n", 
-                       current_point->point_id, current_point->adjusted_temperature);
-            }
+            // 修正校准偏移量，而不是修改目标温度
+            current_point->calibration_offset += TEMPERATURE_ADJUST_STEP;
+            // 重新计算调整后的温度（目标温度 + 偏移量）
+            current_point->adjusted_temperature = current_point->target_temperature + current_point->calibration_offset;
+            printf("[CalibrationSystem] Point %d calibration offset adjusted to %.1f°C (Target:%.1f°C, Adjusted:%.1f°C)\n", 
+                   current_point->point_id, current_point->calibration_offset,
+                   current_point->target_temperature, current_point->adjusted_temperature);
             break;
             
         case CAL_KEY_DOWN:
-            if (current_point->adjusted_temperature > 50.0f) {  // 最低50度
-                current_point->adjusted_temperature -= TEMPERATURE_ADJUST_STEP;
-                // 立即更新PID目标温度
-                SetPointTemperature(current_point_index);
-                printf("[CalibrationSystem] Point %d temperature adjusted to %.1f°C\n", 
-                       current_point->point_id, current_point->adjusted_temperature);
-            }
+            // 修正校准偏移量，而不是修改目标温度
+            current_point->calibration_offset -= TEMPERATURE_ADJUST_STEP;
+            // 重新计算调整后的温度（目标温度 + 偏移量）
+            current_point->adjusted_temperature = current_point->target_temperature + current_point->calibration_offset;
+            printf("[CalibrationSystem] Point %d calibration offset adjusted to %.1f°C (Target:%.1f°C, Adjusted:%.1f°C)\n", 
+                   current_point->point_id, current_point->calibration_offset,
+                   current_point->target_temperature, current_point->adjusted_temperature);
             break;
             
         case CAL_KEY_MODE:
