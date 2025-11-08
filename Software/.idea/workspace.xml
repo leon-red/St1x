@@ -20,10 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" afterDir="false" />
-    </list>
+    <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,7 +146,7 @@
       <workItem from="1762459315622" duration="1560000" />
       <workItem from="1762506885653" duration="297000" />
       <workItem from="1762507193503" duration="41077000" />
-      <workItem from="1762594593671" duration="32186000" />
+      <workItem from="1762594593671" duration="33475000" />
     </task>
     <task id="LOCAL-00001" summary="2025/10/20">
       <option name="closed" value="true" />
