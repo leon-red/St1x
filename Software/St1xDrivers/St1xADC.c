@@ -411,7 +411,13 @@ void drawOnOLED(u8g2_t *u8g2) {
         if (time_delta > 0.05f) time_delta = 0.02f; // 降低上限到20ms，确保高频更新
         
         // 调用平滑显示函数
-        displayed_temperature = smoothTemperatureDisplay(displayed_temperature, filtered_temp, time_delta);
+    displayed_temperature = smoothTemperatureDisplay(displayed_temperature, filtered_temp, time_delta);
+    
+    // 借鉴Arduino项目的稳定显示策略：在±1°C范围内直接显示设定点温度
+    extern float target_temperature;
+    if (fabs(displayed_temperature - target_temperature) <= 1.0f) {
+        displayed_temperature = target_temperature;
+    }
     }
     
     // 添加调试：检查显示温度计算
@@ -613,10 +619,12 @@ float smoothTemperatureDisplay(float current_display, float target_temp, float t
         speed_factor = 25.0f;  // 接近目标快速响应
     } else if (abs_temp_diff > 3.0f) {
         speed_factor = 15.0f;  // 精确接近阶段
+    } else if (abs_temp_diff > 2.0f) {
+        speed_factor = 6.0f;   // PID稳定区边缘：更平稳
     } else if (abs_temp_diff > 1.0f) {
-        speed_factor = 8.0f;   // 微调阶段
+        speed_factor = 3.0f;   // PID稳定区：非常平稳
     } else {
-        speed_factor = 4.0f;   // 最终稳定阶段
+        speed_factor = 1.5f;   // 最终稳定阶段：极平稳
     }
     
     // 根据温度阶段智能加速
