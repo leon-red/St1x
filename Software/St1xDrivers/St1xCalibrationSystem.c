@@ -9,13 +9,20 @@
 static const CalibrationHardwareInterface* hw_interface = NULL;
 
 // 校准系统配置
-#define CALIBRATION_POINTS 9
-#define TEMPERATURE_TOLERANCE 5.0f
-#define TEMPERATURE_STABLE_TIME 1000
-#define KEY_DEBOUNCE_TIME 10
-#define UPDATE_INTERVAL 50  // 50ms更新间隔
-#define TEMPERATURE_ADJUST_STEP 1.0f  // 温度调整步进值
-#define CALIBRATION_TEMPERATURE_LIMIT 500.0f  // 校准模式下的温度限制
+// 需要与主系统同步的参数通过硬件抽象层接口动态获取
+// 校准系统特有的参数保持硬编码
+#define CALIBRATION_POINTS 9                    // 校准系统特有：校准点数
+#define TEMPERATURE_TOLERANCE 5.0f              // 校准系统特有：温度容差
+#define TEMPERATURE_STABLE_TIME 1000            // 校准系统特有：温度稳定时间
+#define UPDATE_INTERVAL 50                       // 校准系统特有：更新间隔
+#define TEMPERATURE_ADJUST_STEP 1.0f            // 校准系统特有：温度调整步进值
+
+// 与主系统同步的参数
+#define KEY_DEBOUNCE_TIME (hw_interface ? hw_interface->getKeyDebounceTime() : 50)
+#define CAL_KEY_LONG_PRESS_TIME (hw_interface ? hw_interface->getKeyLongPressTime() : 1000)
+
+// 温度限制变量（支持临时变更，用于校准更高温度）
+static float calibration_temperature_limit = 500.0f;
 
 // 调试开关 - 设置为1启用调试输出，0禁用
 #define CALIBRATION_DEBUG_ENABLED 0
@@ -63,8 +70,25 @@ static CalibrationPoint calibration_points[CALIBRATION_POINTS];
 static CalibrationInterface calibration_interfaces[CALIBRATION_POINTS];
 static uint8_t current_point_index = 0;
 static uint32_t last_update_time = 0;
-static uint32_t last_key_time = 0;
 static uint8_t save_result = 0;
+
+// 按键状态机（与主系统保持一致）
+typedef enum {
+    KEY_STATE_RELEASE,
+    KEY_STATE_PRESS
+} KeyState;
+
+typedef struct {
+    KeyState state;
+    uint32_t press_time;
+    uint8_t handled;
+} KeyStateInfo;
+
+static KeyStateInfo cal_key_up_state = {KEY_STATE_RELEASE, 0, 0};
+static KeyStateInfo cal_key_down_state = {KEY_STATE_RELEASE, 0, 0};
+static KeyStateInfo cal_key_mode_state = {KEY_STATE_RELEASE, 0, 0};
+
+// 调试显示相关变量
 static uint8_t cal_key_debug_display = 0;
 static uint32_t cal_key_debug_time = 0;
 static CalibrationKeyType last_displayed_key = CAL_KEY_NONE;
@@ -85,6 +109,10 @@ static void ProcessCalibrationPoint(uint8_t point_index);
 static void DrawCalibrationInterface(u8g2_t *u8g2, uint8_t point_index);
 static const char* GetPointStateText(CalibrationPointState state);
 static const char* GetPointHelpText(CalibrationPointState state);
+static CalibrationKeyType CalibrationKey_Scan(void);
+
+// 温度限制管理函数
+static void SetCalibrationTemperatureLimit(float limit);
 
 /**
  * @brief 初始化独立校准系统
@@ -106,7 +134,19 @@ void CalibrationSystem_Init(const CalibrationHardwareInterface* hw_interface_ptr
     current_point_index = 0;
     save_result = 0;
     last_update_time = 0;
-    last_key_time = 0;
+    
+    // 初始化按键状态
+    cal_key_up_state.state = KEY_STATE_RELEASE;
+    cal_key_up_state.press_time = 0;
+    cal_key_up_state.handled = 0;
+    
+    cal_key_down_state.state = KEY_STATE_RELEASE;
+    cal_key_down_state.press_time = 0;
+    cal_key_down_state.handled = 0;
+    
+    cal_key_mode_state.state = KEY_STATE_RELEASE;
+    cal_key_mode_state.press_time = 0;
+    cal_key_mode_state.handled = 0;
     
     // 重置电压不足状态
     low_voltage_state = 0;
@@ -116,6 +156,15 @@ void CalibrationSystem_Init(const CalibrationHardwareInterface* hw_interface_ptr
     for (int i = 0; i < CALIBRATION_POINTS; i++) {
         InitializeCalibrationPoint(i);
         InitializeCalibrationInterface(i);
+    }
+    
+    // 设置初始温度限制（使用硬件接口或默认值）
+    if (hw_interface && hw_interface->getTemperatureLimit) {
+        calibration_temperature_limit = hw_interface->getTemperatureLimit();
+        CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit set to %.1f°C via HAL\n", calibration_temperature_limit);
+    } else {
+        calibration_temperature_limit = 500.0f;
+        CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit set to default %.1f°C\n", calibration_temperature_limit);
     }
     
     CAL_DEBUG_PRINTF("[CalibrationSystem] Initialization completed successfully\n");
@@ -225,9 +274,18 @@ void CalibrationSystem_Stop(void) {
     }
     
     // 恢复正常的温度限制
-    extern float max_temperature_limit;
-    max_temperature_limit = NORMAL_TEMPERATURE_LIMIT;
-    CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit restored to %.1f°C\n", max_temperature_limit);
+    if (hw_interface && hw_interface->setTemperatureLimit) {
+        hw_interface->setTemperatureLimit(NORMAL_TEMPERATURE_LIMIT);
+        if (hw_interface->getTemperatureLimit) {
+            float current_limit = hw_interface->getTemperatureLimit();
+            CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit restored to %.1f°C via HAL\n", current_limit);
+        }
+    } else {
+        // 备用方案：直接设置温度限制
+        extern float max_temperature_limit;
+        max_temperature_limit = NORMAL_TEMPERATURE_LIMIT;
+        CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit restored to %.1f°C directly\n", max_temperature_limit);
+    }
     
     // 重置系统状态
     system_state = CAL_STATE_IDLE;
@@ -256,21 +314,13 @@ void CalibrationSystem_Update(u8g2_t *u8g2) {
     }
     last_update_time = current_time;
     
-    // 处理按键输入（独立校准系统自己处理按键）
-    static CalibrationKeyType last_key = CAL_KEY_NONE;
+    // 处理按键输入（使用与主系统相同的状态机机制）
+    CalibrationKeyType key = CalibrationKey_Scan();
     
-    CalibrationKeyType key = hw_interface->keyScan();
-    
-    // 系统运行中的按键处理 - 优化响应速度
-    if (key != CAL_KEY_NONE && key != last_key) {
-        // 减少防抖时间到50ms，与主系统保持一致
-        if ((current_time - last_key_time) >= 50) {  
-            CalibrationSystem_HandleKey(key);
-            last_key_time = current_time;
-        }
+    // 如果有按键触发，则处理按键
+    if (key != CAL_KEY_NONE) {
+        CalibrationSystem_HandleKey(key);
     }
-    
-    last_key = key;
     
     // 处理电压检测状态
     if (system_state == CAL_STATE_VOLTAGE_CHECK) {
@@ -298,9 +348,18 @@ static void ProcessVoltageCheckState(uint32_t current_time) {
         CAL_DEBUG_PRINTF("[CalibrationSystem] Voltage sufficient, starting calibration...\n");
         
         // 在校准模式下临时提高温度限制到500度
-        extern float max_temperature_limit;
-        max_temperature_limit = CALIBRATION_TEMPERATURE_LIMIT;
-        CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit temporarily increased to %.1f°C\n", max_temperature_limit);
+        if (hw_interface && hw_interface->setTemperatureLimit) {
+            hw_interface->setTemperatureLimit(CALIBRATION_TEMPERATURE_LIMIT);
+            if (hw_interface->getTemperatureLimit) {
+                float current_limit = hw_interface->getTemperatureLimit();
+                CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit temporarily increased to %.1f°C via HAL\n", current_limit);
+            }
+        } else {
+            // 备用方案：直接设置温度限制
+            extern float max_temperature_limit;
+            max_temperature_limit = CALIBRATION_TEMPERATURE_LIMIT;
+            CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit temporarily increased to %.1f°C directly\n", max_temperature_limit);
+        }
         
         // 重置状态
         current_point_index = 0;
@@ -505,7 +564,7 @@ static void DrawCalibrationInterface(u8g2_t *u8g2, uint8_t point_index) {
         }
         u8g2_DrawStr(u8g2, 0, 36, buffer);
         
-        // 温度偏差（实测-目标）
+        // 温度偏差（实测-目标）- 显示有符号偏差，与稳定性判断使用绝对值保持一致
         float temp_diff = current_temp - point->target_temperature;
         if (temp_diff >= 0) {
             sprintf(buffer, "D:+%.1fC", temp_diff);
@@ -563,12 +622,6 @@ void CalibrationSystem_HandleKey(CalibrationKeyType key) {
     }
     
     uint32_t current_time = hw_interface->getTick();
-    
-    // 按键防抖
-    if ((current_time - last_key_time) < KEY_DEBOUNCE_TIME) {
-        return;
-    }
-    last_key_time = current_time;
     
     // 设置按键调试显示（统一设置一次）
     cal_key_debug_display = 1;
@@ -645,6 +698,96 @@ static void SetPointTemperature(uint8_t point_index) {
     
     printf("[CalibrationSystem] Setting Point %d temperature to %.1f°C\n", 
            point->point_id, target_temp);
+}
+
+/**
+ * @brief 按键扫描函数（与主系统完全一致的实现）
+ * @return 按键类型
+ */
+static CalibrationKeyType CalibrationKey_Scan(void) {
+    if (hw_interface == NULL) {
+        return CAL_KEY_NONE;
+    }
+    
+    uint32_t current_time = hw_interface->getTick();
+    CalibrationKeyType key_pressed = CAL_KEY_NONE;
+    
+    // 获取原始按键状态
+    CalibrationKeyType raw_key = hw_interface->keyScan();
+    
+    // 扫描向上按键
+    if (raw_key == CAL_KEY_UP) {
+        if (cal_key_up_state.state == KEY_STATE_RELEASE) {
+            // 按键刚按下，记录时间
+            cal_key_up_state.state = KEY_STATE_PRESS;
+            cal_key_up_state.press_time = current_time;
+            cal_key_up_state.handled = 0;
+        } else if (cal_key_up_state.state == KEY_STATE_PRESS && !cal_key_up_state.handled) {
+            // 按键持续按下，检查是否达到防抖时间
+            if ((current_time - cal_key_up_state.press_time) >= KEY_DEBOUNCE_TIME) {
+                key_pressed = CAL_KEY_UP;
+                cal_key_up_state.handled = 1;  // 标记为已处理
+            }
+        }
+    } else {
+        if (cal_key_up_state.state == KEY_STATE_PRESS) {
+            // 按键释放，重置状态
+            cal_key_up_state.state = KEY_STATE_RELEASE;
+            cal_key_up_state.handled = 0;
+        }
+    }
+    
+    // 扫描向下按键
+    if (raw_key == CAL_KEY_DOWN) {
+        if (cal_key_down_state.state == KEY_STATE_RELEASE) {
+            // 按键刚按下，记录时间
+            cal_key_down_state.state = KEY_STATE_PRESS;
+            cal_key_down_state.press_time = current_time;
+            cal_key_down_state.handled = 0;
+        } else if (cal_key_down_state.state == KEY_STATE_PRESS && !cal_key_down_state.handled) {
+            // 按键持续按下，检查是否达到防抖时间
+            if ((current_time - cal_key_down_state.press_time) >= KEY_DEBOUNCE_TIME) {
+                key_pressed = CAL_KEY_DOWN;
+                cal_key_down_state.handled = 1;  // 标记为已处理
+            }
+        }
+    } else {
+        if (cal_key_down_state.state == KEY_STATE_PRESS) {
+            // 按键释放，重置状态
+            cal_key_down_state.state = KEY_STATE_RELEASE;
+            cal_key_down_state.handled = 0;
+        }
+    }
+    
+    // 扫描模式按键（特殊处理：支持短按和长按）
+    if (raw_key == CAL_KEY_MODE) {
+        if (cal_key_mode_state.state == KEY_STATE_RELEASE) {
+            // 按键刚按下，记录时间
+            cal_key_mode_state.state = KEY_STATE_PRESS;
+            cal_key_mode_state.press_time = current_time;
+            cal_key_mode_state.handled = 0;
+        } else if (cal_key_mode_state.state == KEY_STATE_PRESS && !cal_key_mode_state.handled) {
+            // 检查是否达到长按时间
+            if ((current_time - cal_key_mode_state.press_time) >= CAL_KEY_LONG_PRESS_TIME) {
+                key_pressed = CAL_KEY_MODE_LONG;
+                cal_key_mode_state.handled = 1;  // 标记为已处理
+            }
+            // 注意：短按检测在按键释放时处理，避免与长按冲突
+        }
+    } else {
+        if (cal_key_mode_state.state == KEY_STATE_PRESS) {
+            // 按键释放，检查是否达到短按时间
+            if (!cal_key_mode_state.handled && (current_time - cal_key_mode_state.press_time) >= KEY_DEBOUNCE_TIME) {
+                key_pressed = CAL_KEY_MODE;
+                cal_key_mode_state.handled = 1;  // 标记为已处理
+            }
+            // 重置状态
+            cal_key_mode_state.state = KEY_STATE_RELEASE;
+            cal_key_mode_state.handled = 0;
+        }
+    }
+    
+    return key_pressed;
 }
 
 /**
@@ -773,4 +916,51 @@ void St1xCalibration_ClearData(void) {
             calibration_points[i].calibration_offset = 0.0f;
         }
     }
+}
+
+/**
+ * @brief 设置校准温度限制（支持临时变更）
+ * @param limit 新的温度限制值（°C）
+ */
+static void SetCalibrationTemperatureLimit(float limit) {
+    // 验证温度限制的合理性
+    if (limit < 100.0f) {
+        CAL_DEBUG_PRINTF("[CalibrationSystem] WARNING: Temperature limit too low (%.1f°C), using minimum 100°C\n", limit);
+        limit = 100.0f;
+    }
+    
+    if (limit > 800.0f) {
+        CAL_DEBUG_PRINTF("[CalibrationSystem] WARNING: Temperature limit too high (%.1f°C), using maximum 800°C\n", limit);
+        limit = 800.0f;
+    }
+    
+    // 更新校准系统内部温度限制
+    calibration_temperature_limit = limit;
+    
+    // 同时更新硬件抽象层的温度限制（如果接口可用）
+    if (hw_interface && hw_interface->setTemperatureLimit) {
+        hw_interface->setTemperatureLimit(limit);
+        CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit set to %.1f°C via HAL\n", limit);
+    } else {
+        // 备用方案：直接设置温度限制
+        extern float max_temperature_limit;
+        max_temperature_limit = limit;
+        CAL_DEBUG_PRINTF("[CalibrationSystem] Temperature limit set to %.1f°C directly\n", limit);
+    }
+}
+
+/**
+ * @brief 获取当前校准温度限制
+ * @return 当前温度限制值（°C）
+ */
+float CalibrationSystem_GetTemperatureLimit(void) {
+    return calibration_temperature_limit;
+}
+
+/**
+ * @brief 设置校准温度限制（公开接口）
+ * @param limit 新的温度限制值（°C）
+ */
+void CalibrationSystem_SetTemperatureLimit(float limit) {
+    SetCalibrationTemperatureLimit(limit);
 }

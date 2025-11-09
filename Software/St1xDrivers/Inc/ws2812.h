@@ -24,5 +24,17 @@ void WS2812_Test2(void);
 void Show_All_Colors();
 void HeatingStatusLEDEffect(void);
 
+/* HSV颜色模型相关函数 */
+struct RGB_24bits HSVtoRGB(float h, float s, float v);
+void HSV_RainbowEffect(void);
+void HSV_BreathingEffect(uint8_t hue);
+
+/* 智能亮度控制系统 */
+void RGB_AdjustBrightness(struct RGB_24bits* color, float brightness);
+void HSV_SmartBrightnessControl(float hue, float saturation, float target_brightness);
+void TemperatureSmartLEDControl(float current_temp, float target_temp, uint8_t heating_status);
+void FastRGB_SetColor(uint8_t r, uint8_t g, uint8_t b);
+void SystemStatusLEDIndicator(uint8_t system_state);
+
 
 #endif

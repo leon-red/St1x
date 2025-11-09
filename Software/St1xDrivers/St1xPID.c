@@ -18,6 +18,8 @@
 #include "adc.h"       // 传感器读取功能
 #include "tim.h"       // 定时器功能
 #include <math.h>      // 数学计算功能
+#include <stdio.h>     // 标准输入输出功能
+#include "St1xCalibrationSystem.h" // 校准系统功能
 
 // ==================== 声明外部变量 ====================
 // 这些变量在其他文件中定义，但我们需要在这里使用它们
@@ -166,6 +168,7 @@ float pidTemperatureControl(float current_temp) {
  * 
  * 功能：设置想要达到的温度，并重置PID控制器状态
  * 原理：改变目标温度后需要重置PID的积分和误差历史
+ *       如果校准系统正在运行，自动同步PID参数到校准系统
  * 
  * @param temperature 目标温度
  */
@@ -174,6 +177,16 @@ void setT12Temperature(float temperature) {
     t12_pid.integral = 0.0;               // 清空积分项
     t12_pid.prev_error = 0.0;             // 清空上次误差
     t12_pid.last_time = HAL_GetTick();    // 更新时间戳
+    
+    // 如果校准系统正在运行，自动同步PID参数
+    extern uint8_t CalibrationSystem_IsActive(void);
+    extern void SyncPIDParametersFromMainSystem(void);
+    
+    if (CalibrationSystem_IsActive()) {
+        SyncPIDParametersFromMainSystem();
+        printf("[PID] Calibration system active, PID parameters synchronized: kp=%.1f, ki=%.1f, kd=%.1f\n", 
+               t12_pid.kp, t12_pid.ki, t12_pid.kd);
+    }
 }
 
 /**

@@ -20,6 +20,15 @@
 #define ATemp   0              // 环境温度补偿值（冷端补偿）
 #define Thermal_Voltage 0.0033f // 热电偶电压-温度转换系数（mV/°C）
 
+// 温度传感器参数导出函数（供校准系统使用）
+float getThermalVoltageParameter(void) {
+    return Thermal_Voltage;
+}
+
+float getColdJunctionTempParameter(void) {
+    return ATemp;
+}
+
 // 滤波器配置
 #define TEMP_FILTER_SIZE 4      // 控制用温度滤波器窗口大小（快速响应）
 #define DISPLAY_FILTER_SIZE 8   // 显示用温度滤波器窗口大小（平滑显示）

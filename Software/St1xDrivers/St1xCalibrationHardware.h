@@ -43,4 +43,12 @@ void StopCalibrationHeating(void);
  */
 void CalibrationHardware_Init(void);
 
+/**
+ * @brief 同步主系统的PID参数到校准系统
+ * 
+ * 这个函数用于确保校准系统使用与主系统完全相同的PID参数
+ * 当主系统PID参数调整时，调用此函数即可自动同步
+ */
+void SyncPIDParametersFromMainSystem(void);
+
 #endif /* ST1X_CALIBRATION_HARDWARE_H */

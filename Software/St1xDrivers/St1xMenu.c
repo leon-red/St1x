@@ -288,7 +288,8 @@ uint8_t Menu_Process(void) {
     }
     
     // 检查是否超时，自动返回主菜单
-    if ((HAL_GetTick() - last_operation_time) >= AUTO_RETURN_TIME) {
+    // 注意：在校准模式下禁用自动返回功能
+    if (!St1xCalibration_IsInProgress() && (HAL_GetTick() - last_operation_time) >= AUTO_RETURN_TIME) {
         // 直接退出菜单系统
         menu_active = 0;
         return 0;

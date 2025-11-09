@@ -11,6 +11,15 @@
 // 按键去抖动时间
 #define DEBOUNCE_TIME 50
 
+// 按键参数导出函数（供校准系统使用）
+uint32_t getKeyDebounceTimeParameter(void) {
+    return DEBOUNCE_TIME;
+}
+
+uint32_t getKeyLongPressTimeParameter(void) {
+    return LONG_PRESS_TIME;
+}
+
 // 菜单键长按检测变量
 static uint32_t menu_key_press_time = 0;
 static uint8_t menu_key_pressed = 0;
