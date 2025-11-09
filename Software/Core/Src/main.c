@@ -190,6 +190,9 @@ int main(void)
         last_standby_check = current_time;
     }
     
+    // 更新WS2812呼吸灯效果
+    HeatingStatusLEDEffect();
+    
     // 根据当前系统模式处理不同的逻辑
     System_ModeHandler(current_time);
     

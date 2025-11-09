@@ -7,12 +7,12 @@
 #include "main.h"
 
 
-//´æ´¢Ò»¸ö×ª»¯ºóµÄRGB2½øÖÆÊý  ¹²24bits
-struct RGB_24bits                    //½á¹¹Ìå
+//ï¿½æ´¢Ò»ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½RGB2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½24bits
+struct RGB_24bits                    //ï¿½á¹¹ï¿½ï¿½
 {
-    unsigned char G_VAL;                 //ÂÌÉ«  0-255
-    unsigned char R_VAL;                  //ºìÉ« 0-255
-    unsigned char B_VAL;                  //À¶É«0-255
+    unsigned char G_VAL;                 //ï¿½ï¿½É«  0-255
+    unsigned char R_VAL;                  //ï¿½ï¿½É« 0-255
+    unsigned char B_VAL;                  //ï¿½ï¿½É«0-255
 };
 
 
@@ -22,6 +22,7 @@ void Send_24bits(struct RGB_24bits RGB_VAL);
 void Test_ws2812(void);
 void WS2812_Test2(void);
 void Show_All_Colors();
+void HeatingStatusLEDEffect(void);
 
 
 #endif

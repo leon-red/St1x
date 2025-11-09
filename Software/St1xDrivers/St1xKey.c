@@ -245,21 +245,23 @@ KeyType Key_Scan(void) {
                 key_pressed = KEY_MODE_LONG;
                 key_mode_state.handled = 1;  // 标记为已处理
             }
-            // 检查是否达到防抖时间（短按）
-            else if ((current_time - key_mode_state.press_time) >= DEBOUNCE_TIME) {
-                key_pressed = KEY_MODE;
-                key_mode_state.handled = 1;  // 标记为已处理
-            }
+            // 注意：短按检测在按键释放时处理，避免与长按冲突
         }
     } else {
         if (key_mode_state.state == KEY_STATE_PRESS) {
-            // 按键释放，重置状态
+            // 按键释放，检查是否达到短按时间
+            if (!key_mode_state.handled && (current_time - key_mode_state.press_time) >= DEBOUNCE_TIME) {
+                key_pressed = KEY_MODE;
+                key_mode_state.handled = 1;  // 标记为已处理
+            }
+            // 重置状态
             key_mode_state.state = KEY_STATE_RELEASE;
             key_mode_state.handled = 0;
         }
     }
     
     return key_pressed;
+
 }
 
 /**

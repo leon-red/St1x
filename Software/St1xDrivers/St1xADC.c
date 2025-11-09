@@ -471,9 +471,11 @@ void drawOnOLED(u8g2_t *u8g2) {
     if (!heating_control_enabled) {
         // 1. PID是否工作-否-不显示
         // 不显示任何状态文字
+        // LED状态机已统一在HeatingStatusLEDEffect()中管理
     } else if (!heating_status) {
         // 2. PID是否工作-是-加热状态-否-显示"Stop"
         u8g2_DrawStr(u8g2, 102, 62, "Stop");
+        // LED状态机已统一在HeatingStatusLEDEffect()中管理
     } else if (focused_heating_mode) {
         // 3. PID是否工作-是-是否进入专注模式-是-显示"Heating"
         u8g2_DrawStr(u8g2, 83, 62, "Heating");
