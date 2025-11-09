@@ -35,6 +35,7 @@ void HSV_SmartBrightnessControl(float hue, float saturation, float target_bright
 void TemperatureSmartLEDControl(float current_temp, float target_temp, uint8_t heating_status);
 void FastRGB_SetColor(uint8_t r, uint8_t g, uint8_t b);
 void SystemStatusLEDIndicator(uint8_t system_state);
+void UnifiedLEDStateMachine(void);
 
 
 #endif

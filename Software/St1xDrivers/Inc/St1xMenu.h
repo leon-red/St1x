@@ -54,4 +54,7 @@ void SubMenu3CalibrationAction(void);  // 温度校准动作函数
 void Menu_InitSystem(void);
 uint8_t Menu_Process(void);
 
+// 显示系统函数声明
+void drawMainDisplay(u8g2_t* u8g2);
+
 #endif /* ST1XMENU_H_ */

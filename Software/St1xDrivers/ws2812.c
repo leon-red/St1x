@@ -4,6 +4,7 @@
 #include "ws2812.h"
 #include "main.h"
 #include "St1xADC.h"
+#include "St1xStatic.h"
 #include <stdlib.h>
 #include <math.h>
 
@@ -69,7 +70,7 @@ struct RGB_24bits HSVtoRGB(float h, float s, float v) {
     return rgb;
 }
 
-/*д������ʱ��*/
+/*发送一位数据的时间控制*/
 void Send_A_bit(unsigned char VAL) {
     if (VAL != 1) {
         LED_RED_GPIO_Port->BSRR = LED_RGB_Pin;
@@ -190,11 +191,11 @@ void Reset_LED() {
 }
 
 
-/*����24λ�ַ�������RGB��Ϣ��8λ��*/
+/*发送24位数据，包含RGB信息，每个颜色8位*/
 void Send_24bits(struct RGB_24bits RGB_VAL) {
     unsigned char i;
     for (i = 0; i < 8; i++) {
-        Send_A_bit(RGB_VAL.G_VAL >> (7 - i) & 0x01);//ע���ǴӸ�λ�ȷ�
+        Send_A_bit(RGB_VAL.G_VAL >> (7 - i) & 0x01);//注意是从高位先发送
     }
     for (i = 8; i < 16; i++) {
         Send_A_bit(RGB_VAL.R_VAL >> (15 - i) & 0x01);
@@ -258,7 +259,10 @@ void Show_All_Colors() {
                 color.G_VAL = g;
                 color.B_VAL = b;
                 Send_24bits(color);
-
+            }
+        }
+    }
+}
 /**
  * @brief 使用HSV模型的彩虹渐变效果
  * 相比RGB模型，HSV实现彩虹渐变更加简单直观
@@ -327,10 +331,7 @@ void HSV_BreathingEffect(uint8_t hue) {
     // 更新LED显示
     Reset_LED();
     Send_24bits(RGB);
-}
-            }
-        }
-    }
+
 }
 
 /**
@@ -639,4 +640,71 @@ void HeatingStatusLEDEffect(void) {
     
     // 更新LED显示
     Send_24bits(RGB);
+}
+
+/**
+ * @brief 统一LED状态机
+ * 整合所有LED控制逻辑，解决状态冲突问题
+ * 状态优先级：错误状态 > 静置状态 > 停止加热状态 > 加热/工作状态
+ */
+void UnifiedLEDStateMachine(void) {
+    static uint32_t last_update_time = 0;
+    uint32_t current_time = HAL_GetTick();
+    
+    // 每20ms更新一次LED状态
+    if (current_time - last_update_time < 20) {
+        return;
+    }
+    last_update_time = current_time;
+    
+    // 获取系统状态变量
+    extern uint8_t heating_status;
+    extern uint8_t heating_control_enabled;
+    extern float target_temperature;
+    
+    // 使用函数接口获取静置状态和手动停止状态
+    uint8_t is_in_standby_mode = St1xStatic_IsInStandbyMode();  // 静置模式标志
+    uint8_t manually_stopped = St1xStatic_IsManuallyStopped();  // 手动停止标志
+    
+    float current_temp = getDisplayFilteredTemperature();
+    float temp_diff = target_temperature - current_temp;
+    
+    // 状态优先级判断
+    
+    // 1. 错误状态（最高优先级）
+    if (current_temp < 0.0f || current_temp > 500.0f) {
+        // 传感器异常：闪烁红色
+        static uint8_t blink_state = 0;
+        static uint32_t last_blink_time = 0;
+        
+        if (current_time - last_blink_time > 500) {
+            last_blink_time = current_time;
+            blink_state = !blink_state;
+            
+            if (blink_state) {
+                FastRGB_SetColor(100, 0, 0);  // 亮红色
+            } else {
+                FastRGB_SetColor(0, 0, 0);    // 熄灭
+            }
+        }
+        return;
+    }
+    
+    // 2. 静置状态（第二优先级）
+    if (is_in_standby_mode && heating_status) {
+        // 静置模式：蓝色呼吸灯
+        LED_BreathingEffect(0);  // 蓝色模式
+        return;
+    }
+    
+    // 3. 停止加热状态（第三优先级）
+    if (!heating_status && !manually_stopped) {
+        // 停止加热：黄色呼吸灯
+        LED_BreathingEffect(1);  // 黄色模式
+        return;
+    }
+    
+    // 4. 加热/工作状态（最低优先级）
+    // 使用原有的智能温度LED控制
+    TemperatureSmartLEDControl(current_temp, target_temperature, heating_status);
 }

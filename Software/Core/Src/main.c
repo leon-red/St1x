@@ -190,8 +190,11 @@ int main(void)
         last_standby_check = current_time;
     }
     
-    // 更新WS2812呼吸灯效果
-    HeatingStatusLEDEffect();
+    // 静置状态下的屏幕和LED控制（优先级高于普通LED效果）
+    St1xStatic_TimerCallback();
+    
+    // LED控制由统一的LED状态机处理，避免状态冲突
+    // HeatingStatusLEDEffect() 已被整合到 UnifiedLEDStateMachine() 中
     
     // 根据当前系统模式处理不同的逻辑
     System_ModeHandler(current_time);
@@ -436,7 +439,7 @@ void System_NormalModeHandler(uint32_t current_time) {
     
     // 如果需要更新显示，则执行显示操作
     if (need_display_update) {
-        drawOnOLED(&u8g2);
+        drawMainDisplay(&u8g2);
         
         // 如果启用了调试显示，则显示调试信息
         if (debug_display_enabled) {

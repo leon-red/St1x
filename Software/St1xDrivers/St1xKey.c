@@ -1,5 +1,4 @@
 #include "St1xKey.h"
-#include "u8g2.h"  // 添加u8g2头文件包含
 
 // 按键状态定义
 #define KEY_STATE_RELEASE 0
@@ -259,7 +258,9 @@ KeyType Key_Scan(void) {
     } else {
         if (key_mode_state.state == KEY_STATE_PRESS) {
             // 按键释放，检查是否达到短按时间
-            if (!key_mode_state.handled && (current_time - key_mode_state.press_time) >= DEBOUNCE_TIME) {
+            // 只有在没有检测到长按的情况下才返回短按
+            if (!key_mode_state.handled && (current_time - key_mode_state.press_time) >= DEBOUNCE_TIME && 
+                (current_time - key_mode_state.press_time) < LONG_PRESS_TIME) {
                 key_pressed = KEY_MODE;
                 key_mode_state.handled = 1;  // 标记为已处理
             }

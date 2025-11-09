@@ -21,16 +21,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Leon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xCalibrationSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xCalibrationSystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xMenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xStatic.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xStatic.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/ws2812.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/ws2812.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationHardware.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationHardware.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationHardware.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationHardware.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationSystem.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationSystem.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationHardware.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xMenu.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xMenu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xPID.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xPID.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/St1xDrivers/lis2dw12_read_data_polling.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/ws2812.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/ws2812.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,35 +68,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;OpenOCD 下载并运行.St1x.elf.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Leon/OneDrive/Leon/St1x/Software/Core/Src/main.c&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "OpenOCD 下载并运行.St1x.elf.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "D:/Leon/OneDrive/Leon/St1x/Software/Core/Src/main.c",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Errors",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Leon\OneDrive\Leon\St1x\Software\St1xDrivers" />
       <recent name="D:\Leon\OneDrive\Leon\St1x\Software\St1xDrivers\Inc" />
+      <recent name="D:\Leon\OneDrive\Leon\St1x\Software\St1xDrivers" />
       <recent name="D:\Leon\OneDrive\Leon\St1x\Hardware\Inc" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="St1x.elf" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="St1x" TARGET_NAME="St1x.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="St1x" RUN_TARGET_NAME="St1x.elf">
       <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="D:\Leon\Desktop\DesignDocument\St1x\Software\cmsis.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
         <debugger kind="GDB" isBundled="true" />
@@ -155,7 +164,8 @@
       <workItem from="1762507193503" duration="41077000" />
       <workItem from="1762594593671" duration="33475000" />
       <workItem from="1762639510576" duration="532000" />
-      <workItem from="1762675378268" duration="11170000" />
+      <workItem from="1762675378268" duration="14592000" />
+      <workItem from="1762691410005" duration="7445000" />
     </task>
     <task id="LOCAL-00001" summary="2025/10/20">
       <option name="closed" value="true" />

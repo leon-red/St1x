@@ -4,7 +4,7 @@
 #include "St1xStatic.h"
 #include "St1xCalibrationSystem.h"
 #include <stdio.h>
-#include <string.h>
+#include <math.h>
 
 // 全局菜单上下文
 static MenuContext g_menuCtx;
@@ -21,13 +21,35 @@ static uint8_t calibration_ready = 0;  // 是否处于校准准备状态
 // 上次操作时间
 static uint32_t last_operation_time = 0;
 
+// ==================== 显示系统相关变量 ====================
+
+// 显示温度滤波系统
+#define DISPLAY_FILTER_SIZE 8   // 显示用温度滤波器窗口大小（平滑显示）
+static float display_temperature_buffer[DISPLAY_FILTER_SIZE] = {0}; // 显示温度缓冲区
+static uint8_t display_filter_index = 0;                             // 显示缓冲区索引
+static uint8_t display_filter_initialized = 0;                      // 显示滤波器初始化标志
+static float display_filtered_temperature = 0;                      // 滤波后的显示温度
+
+// 温度显示动画系统
+static float displayed_temperature = 0;                    // 当前屏幕显示的温度值
+static uint32_t last_display_update = 0;                  // 上次显示更新时间
+static uint8_t first_display_update = 1;                  // 首次显示更新标志
+
+// 系统状态变量声明
+extern uint16_t DMA_ADC[2];           // DMA传输的ADC原始数据（通道0:温度，通道1:电压）
+extern uint8_t heating_control_enabled; // PID控制使能标志
+
+// 系统安全参数
+#define USB_VOLTAGE_THRESHOLD 15.0f  // USB电压最低工作阈值（低于此值停止加热）
+
 // 前向声明
-void Menu_DefaultAction(void);
 void Level1Item3Action(void);
 void Level1Item3Display(void);
 uint8_t is_static_display_mode(void);
 void exit_static_display_mode(void);
-void SubMenu3CalibrationAction(void);
+
+// 显示系统函数声明
+float smoothTemperatureDisplay(float current_display, float target_temp, float time_delta);
 
 // 示例子菜单项
 MenuItem subMenu1Items[] = {
@@ -350,7 +372,8 @@ uint8_t Menu_Process(void) {
                 if (g_menuCtx.menuLevel > 0) {
                     Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_BACK);
                 } else {
-                    // 已经在根菜单，退出菜单系统
+                    // 已经在根菜单，显示退出提示或执行其他操作
+                    // 这里可以添加退出确认逻辑，暂时保持原样
                     menu_active = 0;
                     return 0;
                 }
@@ -368,16 +391,304 @@ uint8_t Menu_Process(void) {
     if (St1xCalibration_IsInProgress()) {
         // 在校准模式下，显示校准界面
         St1xCalibration_MainLoop(&u8g2);
-    } else if (St1xCalibration_IsInProgress()) {
-        // 显示校准界面（由校准模块处理）
-        St1xCalibration_MainLoop(&u8g2);
     } else if (is_static_display_mode()) {
         // 处理静态数据显示
         Level1Item3Display();
     } else {
-        // 显示菜单
+        // 在菜单模式下，始终显示菜单界面（包括根菜单级别）
         Menu_Display(&g_menuCtx, &u8g2);
     }
     
     return 1; // 菜单仍在运行
+}
+
+// ==================== 显示系统函数实现 ====================
+
+/**
+ * @brief 温度传感器参数配置
+ */
+#define ATemp   0              // 环境温度补偿值（冷端补偿）
+#define Thermal_Voltage 0.0033f // 热电偶电压-温度转换系数（mV/°C）
+
+
+
+/**
+ * @brief 更新显示用温度滤波器
+ * 
+ * 功能：为OLED显示提供平滑的温度读数
+ * 原理：使用8点移动平均滤波，提供稳定的显示效果
+ * 特点：大窗口滤波，响应平滑，适合视觉显示
+ * 
+ * @param adcValue ADC原始读数
+ */
+void updateDisplayTemperatureFilter(uint16_t adcValue) {
+    // 防止传感器读数异常
+    if (adcValue > 4000) {
+        return;
+    }
+    
+    float current_temp = calculateT12Temperature(adcValue);
+    
+    // 如果是第一次使用，初始化缓冲区和显示温度
+    if (!display_filter_initialized) {
+        for (uint8_t i = 0; i < DISPLAY_FILTER_SIZE; i++) {
+            display_temperature_buffer[i] = current_temp;
+        }
+        display_filtered_temperature = current_temp;
+        
+        // 只在重启后首次初始化时设置显示温度，但保持first_display_update标志不变
+        if (first_display_update) {
+            displayed_temperature = current_temp;  // 初始化显示温度
+        }
+        
+        display_filter_initialized = 1;
+    }
+    
+    display_temperature_buffer[display_filter_index] = current_temp;
+    display_filter_index = (display_filter_index + 1) % DISPLAY_FILTER_SIZE;
+    
+    // 计算平均值
+    float sum = 0;
+    for (uint8_t i = 0; i < DISPLAY_FILTER_SIZE; i++) {
+        sum += display_temperature_buffer[i];
+    }
+    display_filtered_temperature = sum / DISPLAY_FILTER_SIZE;
+}
+
+/**
+ * @brief 获取显示用滤波温度
+ * 
+ * 功能：返回经过8点滤波处理的显示温度值
+ * 特点：响应平滑，适合OLED屏幕显示
+ * 
+ * @return 显示用滤波温度值（°C）
+ */
+float getDisplayFilteredTemperature(void) {
+    return display_filtered_temperature;
+}
+
+/**
+ * @brief 温度显示平滑动画函数
+ * 
+ * 功能：实现无停顿的连续温度显示动画效果
+ * 原理：基于动态速度因子的智能插值算法
+ * 特点：温差越大速度越快，温差越小越精确
+ * 速度控制：适应8-12秒快速升温需求
+ * 安全限制：限制最大单次变化幅度
+ * 
+ * @param current_display 当前显示温度（°C）
+ * @param target_temp 目标实际温度（°C）
+ * @param time_delta 时间差（秒）
+ * @return 平滑后的显示温度（°C）
+ */
+float smoothTemperatureDisplay(float current_display, float target_temp, float time_delta) {
+    // 优化版平滑算法：7秒内完成温度显示
+    // 基于动态加速和智能插值的快速响应算法
+    float temp_diff = target_temp - current_display;
+    float abs_temp_diff = fabs(temp_diff);
+    
+    // 动态速度因子：大幅提升响应速度，实现7秒内显示
+    float speed_factor = 0.0f;
+    
+    // 优化速度控制：适应7秒内快速显示
+    if (abs_temp_diff > 100.0f) {
+        speed_factor = 120.0f; // 超大温差极速响应
+    } else if (abs_temp_diff > 50.0f) {
+        speed_factor = 80.0f;  // 大温差快速响应
+    } else if (abs_temp_diff > 30.0f) {
+        speed_factor = 60.0f;  // 中等温差快速响应
+    } else if (abs_temp_diff > 15.0f) {
+        speed_factor = 40.0f;  // 小温差快速响应
+    } else if (abs_temp_diff > 8.0f) {
+        speed_factor = 25.0f;  // 接近目标快速响应
+    } else if (abs_temp_diff > 3.0f) {
+        speed_factor = 15.0f;  // 精确接近阶段
+    } else if (abs_temp_diff > 2.0f) {
+        speed_factor = 6.0f;   // PID稳定区边缘：更平稳
+    } else if (abs_temp_diff > 1.0f) {
+        speed_factor = 3.0f;   // PID稳定区：非常平稳
+    } else {
+        speed_factor = 1.5f;   // 最终稳定阶段：极平稳
+    }
+    
+    // 根据温度阶段智能加速
+    if (current_display < 150.0f) {
+        speed_factor *= 1.8f; // 低温阶段大幅加速
+    } else if (current_display > 300.0f) {
+        speed_factor *= 0.9f; // 高温阶段轻微减速
+    }
+    
+    // 计算目标步长（度/秒 * 时间差）
+    float target_step = speed_factor * time_delta;
+    
+    // 确保步长方向正确
+    if (temp_diff < 0) {
+        target_step = -target_step;
+    }
+    
+    // 放宽最大单次变化幅度限制
+    float max_step = 15.0f; // 放宽限制以支持更快响应
+    if (fabs(target_step) > max_step) {
+        target_step = (target_step > 0) ? max_step : -max_step;
+    }
+    
+    // 确保显示温度不会超过实际温度
+    if (fabs(temp_diff) < fabs(target_step)) {
+        // 如果步长会超过目标温度，直接到达目标
+        return target_temp;
+    } else {
+        // 否则正常更新
+        float new_display = current_display + target_step;
+        
+        // 强制最小变化，确保显示持续更新
+        if (abs_temp_diff > 0.5f && fabs(target_step) < 0.5f) {
+            new_display += (temp_diff > 0) ? 0.5f : -0.5f;
+        }
+        
+        return new_display;
+    }
+}
+
+/**
+ * @brief 主显示界面绘制函数
+ * 
+ * 功能：在OLED屏幕上实时显示温度、电压、状态等信息
+ * 显示内容：当前温度、目标温度、PID温度、ADC值、USB电压、加热状态
+ * 重启检测：使用系统启动时间和PID状态双重判断重启状态
+ * 温度显示：重启后直接显示实际温度，正常启动使用平滑动画
+ * 
+ * @param u8g2 OLED显示对象指针
+ */
+void drawMainDisplay(u8g2_t *u8g2) {
+    char display_buffer[32];
+    
+    // 检查静置状态，如果是静置状态则不更新显示内容
+    extern uint8_t St1xStatic_IsInStandbyMode(void);
+    
+    uint8_t in_standby_mode = St1xStatic_IsInStandbyMode();
+    
+    // 如果是静置状态且正在加热（降温状态），则不更新显示内容，保持屏幕亮度设置
+    if (in_standby_mode && heating_status) {
+        return; // 静置状态下不更新显示，保持当前亮度
+    }
+    
+    // 确保传感器数据正在更新
+    extern uint8_t adc_sampling_flag;
+    if (adc_sampling_flag == 0) {
+        extern ADC_HandleTypeDef hadc1;
+        HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&DMA_ADC, 2);
+    }
+
+    // 获取要显示的数据
+    float usb_voltage = DMA_ADC[1] * 3.3f / 4095.0f / 0.151f;
+
+    // 直接使用传感器数据计算显示温度
+    float raw_temp = calculateT12Temperature(DMA_ADC[0]);
+
+    // 更新显示用滤波器
+    updateDisplayTemperatureFilter(DMA_ADC[0]);
+    // 使用滤波后的显示温度
+    float filtered_temp = getDisplayFilteredTemperature();
+    
+    // 获取控制用的滤波温度
+    extern float getFilteredTemperature(void);
+    float pid_temp = getFilteredTemperature();
+    
+    // 实现平滑的温度显示动画效果
+    uint32_t current_time = HAL_GetTick();
+    
+    // 强制高频更新显示，消除停顿感
+    // 每次调用都更新显示，确保流畅性
+    
+    // 判断是否重启后首次显示：使用系统启动时间和PID状态双重判断
+    static uint32_t system_start_time = 0;
+    if (system_start_time == 0) {
+        system_start_time = current_time;  // 记录系统启动时间
+    }
+    
+    // 重启检测：系统启动时间较短（<2秒）且PID未工作
+    if ((current_time - system_start_time) < 2000 && !heating_control_enabled) {
+        // 重启后首次显示更新，直接使用当前实际温度，不使用平滑算法
+        last_display_update = current_time;
+        displayed_temperature = filtered_temp;
+    } else if (first_display_update) {
+        // 正常启动后的首次显示，使用平滑算法
+        float time_delta = (current_time - last_display_update) / 1000.0f;
+        last_display_update = current_time;
+        
+        if (time_delta > 0.05f) time_delta = 0.02f;
+        
+        displayed_temperature = smoothTemperatureDisplay(displayed_temperature, filtered_temp, time_delta);
+        first_display_update = 0;  // 清除首次显示标志
+    } else {
+        // 正常显示更新，使用平滑算法
+        // 计算时间差（秒），大幅提高更新频率
+        float time_delta = (current_time - last_display_update) / 1000.0f;
+        last_display_update = current_time;
+        
+        // 大幅提高更新频率，适应快速升温
+        if (time_delta > 0.05f) time_delta = 0.02f; // 降低上限到20ms，确保高频更新
+        
+        // 调用平滑显示函数
+        displayed_temperature = smoothTemperatureDisplay(displayed_temperature, filtered_temp, time_delta);
+        
+        // 借鉴Arduino项目的稳定显示策略：在±1°C范围内直接显示设定点温度
+        if (fabs(displayed_temperature - target_temperature) <= 1.0f) {
+            displayed_temperature = target_temperature;
+        }
+    }
+    
+    // 完整清除屏幕缓冲区，避免画面残留
+    u8g2_ClearBuffer(u8g2);
+    
+    // 显示当前温度（大字体）
+    u8g2_SetFont(u8g2, u8g2_font_fur30_tf);
+    sprintf(display_buffer, "%0.0f", displayed_temperature);
+    u8g2_DrawStr(u8g2, 33, 56, display_buffer);
+    u8g2_DrawStr(u8g2, 3, 56, "C");
+    
+    // 显示其他信息（小字体）
+    u8g2_SetFont(u8g2, u8g2_font_spleen6x12_mf);
+    
+    // 显示控制用温度
+    sprintf(display_buffer, "PID:%0.0f", pid_temp);
+    u8g2_DrawStr(u8g2, 3, 76, display_buffer);
+    
+    // 显示传感器原始数据
+    sprintf(display_buffer, "ADC0:%d", DMA_ADC[0]);
+    u8g2_DrawStr(u8g2, 4, 12, display_buffer);
+    
+    // 显示USB电压
+    sprintf(display_buffer, "USB:%0.1f V", usb_voltage);
+    u8g2_DrawStr(u8g2, 67, 12, display_buffer);
+    
+    // 显示电压状态
+    if (usb_voltage >= USB_VOLTAGE_THRESHOLD) {
+        u8g2_DrawStr(u8g2, 114, 26, "OK");
+    } else {
+        u8g2_DrawStr(u8g2, 108, 26, "LOW");
+    }
+    
+    // 显示目标温度
+    sprintf(display_buffer, "SET:%0.0f", target_temperature);
+    u8g2_DrawStr(u8g2, 68, 76, display_buffer);
+    
+    // 显示加热状态
+    // 更友好的状态显示逻辑
+    if (!heating_control_enabled) {
+        // 1. PID是否工作-否-不显示
+        // 不显示任何状态文字
+    } else if (!heating_status) {
+        // 2. PID是否工作-是-加热状态-否-显示"Stop"
+        u8g2_DrawStr(u8g2, 102, 62, "Stop");
+    } else if (focused_heating_mode) {
+        // 3. PID是否工作-是-是否进入专注模式-是-显示"Heating"
+        u8g2_DrawStr(u8g2, 83, 62, "Heating");
+    } else {
+        // 4. PID是否工作-是-是否进入专注模式-否-PID是否在控制状态-是-显示"Work"
+        u8g2_DrawStr(u8g2, 102, 62, "Work");
+    }
+
+    // 把缓冲区内容发送到屏幕显示
+    u8g2_SendBuffer(u8g2);
 }

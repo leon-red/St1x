@@ -1,8 +1,12 @@
 #include "St1xStatic.h"
 #include "lis2dw12_reg.h"
+#include "main.h"
 #include "spi.h"
-#include "St1xPID.h"
 #include "St1xADC.h"
+#include "St1xKey.h"
+#include "St1xPID.h"
+#include "St1xFlash.h"
+#include "u8g2.h"
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -16,19 +20,9 @@ static uint8_t sensor_initialized = 0;
 static float last_acceleration_mg[3] = {0.0f, 0.0f, 0.0f};  // 上次加速度值
 static float acceleration_change[3] = {0.0f, 0.0f, 0.0f};   // 加速度变化量
 
-// 声明外部变量
-extern uint8_t heating_status;
-extern float target_temperature;
-extern TIM_HandleTypeDef htim2;
-
-// 声明外部函数
-extern void startHeatingControlTimer(void);
-extern void stopHeatingControlTimer(void);
-extern void setT12Temperature(float temperature);
-
 // 静置时间控制参数（可配置，单位：分钟）
-#define DEFAULT_STANDBY_TIME_REDUCE_TEMP 15    // 15分钟后进入休眠状态
-#define DEFAULT_STANDBY_TIME_TURN_OFF 30       // 30分钟停止加热
+#define DEFAULT_STANDBY_TIME_REDUCE_TEMP 1    // 15分钟后进入休眠状态
+#define DEFAULT_STANDBY_TIME_TURN_OFF 2       // 30分钟停止加热
 #define DEFAULT_REDUCED_TEMPERATURE 160.0f     // 休眠状态下的温度维持
 
 // 时间单位转换宏
@@ -37,14 +31,21 @@ extern void setT12Temperature(float temperature);
 // 静置时间控制变量
 static uint32_t last_movement_time = 0;               // 上次检测到运动的时间
 static uint32_t standby_start_time = 0;               // 开始静置的时间
-static uint8_t is_in_standby_mode = 0;                // 是否处于静置模式
+static uint8_t is_in_standby_mode = 0;                // 是否处于待机模式（降低温度）
+static uint8_t is_in_sleep_mode = 0;                  // 是否处于睡眠模式（停止加热）
 static float original_target_temperature = 0.0f;      // 原始目标温度
 static uint8_t standby_mode_initialized = 0;          // 静置模式是否已初始化
-static uint32_t last_debug_print_time = 0;            // 上次调试打印时间
+static uint32_t last_debug_print_time = 0;            // 手动停止标记
 static uint8_t manually_stopped = 0;                  // 是否手动停止加热
 
+// OLED屏幕亮度控制相关变量
+static uint8_t oled_brightness = 255; // 默认最大亮度
+static uint8_t oled_standby_brightness = 76; // 30%亮度 (255 * 0.3 = 76.5)
+
+// 全局u8g2对象指针，用于定时器回调
+static u8g2_t* global_u8g2 = NULL;
+
 // 传感器误差阈值，用于过滤小幅度的数值跳变
-#define ACCELERATION_NOISE_THRESHOLD 10.0f            // 加速度噪声阈值 (mg)
 #define MOVEMENT_THRESHOLD 50.0f                      // 运动检测阈值 (mg)
 #define STANDBY_TIME_THRESHOLD 5000                   // 静置时间阈值 (ms)
 
@@ -71,7 +72,6 @@ void St1xStatic_SetStandbyParameters(uint32_t time_to_reduce_temp, uint32_t time
     
     // 确保参数在合理范围内
     if (reduced_temperature < 50.0f) reduced_temperature = 50.0f;
-    extern float max_temperature_limit;
     if (reduced_temperature > max_temperature_limit) reduced_temperature = max_temperature_limit;
     
     if (standby_time_reduce_temp > standby_time_turn_off) {
@@ -125,22 +125,16 @@ static void St1xStatic_CheckStandbyControl(void) {
     
     // 计算总加速度变化量
     float total_accel_change = acceleration_change[0] + acceleration_change[1] + acceleration_change[2];
-    
-    // 调试打印信息
-    if ((current_time - last_debug_print_time) >= 2000) { // 每2秒打印一次调试信息
-        //printf("AccelChange: %.2f, LastMove: %lu, StandbyStart: %lu\n", 
-        //       total_accel_change, last_movement_time, standby_start_time);
-        last_debug_print_time = current_time;
-    }
-    
+
     // 只有当加速度变化超过运动检测阈值时才视为有效运动
     if (total_accel_change > MOVEMENT_THRESHOLD) {
         last_movement_time = current_time;
         standby_start_time = current_time; // 重置静置开始时间
         
-        // 如果处于静置模式，则退出静置模式并恢复原始温度
-        if (is_in_standby_mode) {
+        // 如果处于待机模式或睡眠模式，则退出静置模式并恢复原始温度
+        if (is_in_standby_mode || is_in_sleep_mode) {
             is_in_standby_mode = 0;
+            is_in_sleep_mode = 0;
             if (!heating_status && !manually_stopped) {
                 // 如果加热已停止且不是手动停止的，重新启动加热
                 heating_status = 1;
@@ -153,7 +147,7 @@ static void St1xStatic_CheckStandbyControl(void) {
         }
         // 如果不是静置模式但加热已停止且不是手动停止的，说明是设备被拿起后需要恢复加热
         // 但只有在之前确实在加热的情况下才恢复加热
-        else if (!heating_status && !manually_stopped && is_in_standby_mode) {
+        else if (!heating_status && !manually_stopped && (is_in_standby_mode || is_in_sleep_mode)) {
             heating_status = 1;
             startHeatingControlTimer();
             setT12Temperature(original_target_temperature);
@@ -186,23 +180,25 @@ static void St1xStatic_CheckStandbyControl(void) {
     
     // 只有当距离上次运动时间超过阈值时，才认为可以进入静置状态
     if (time_since_last_movement >= STANDBY_TIME_THRESHOLD) {
-        // 如果静置时间超过设定的关闭时间，则停止加热
+        // 如果静置时间超过设定的关闭时间，则进入睡眠模式（停止加热）
         if (standby_duration >= standby_time_turn_off) {
-            // 停止加热
+            // 停止加热，进入睡眠模式
             if (heating_status) {
                 __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
                 stopHeatingControlTimer();
                 heating_status = 0;
-                is_in_standby_mode = 1;
+                is_in_sleep_mode = 1;  // 进入睡眠模式
+                is_in_standby_mode = 0; // 退出待机模式
                 manually_stopped = 0;  // 自动停止，标记为非手动停止
             }
         }
-        // 如果静置时间超过设定的降低温度时间，则降低温度
+        // 如果静置时间超过设定的降低温度时间，则进入待机模式（降低温度）
         else if (standby_duration >= standby_time_reduce_temp) {
-            if (!is_in_standby_mode) {
-                // 刚进入静置模式，保存原始温度
+            if (!is_in_standby_mode && !is_in_sleep_mode) {
+                // 刚进入待机模式，保存原始温度
                 original_target_temperature = target_temperature;
                 is_in_standby_mode = 1;
+                is_in_sleep_mode = 0; // 确保不在睡眠模式
             }
             
             // 设置降低后的温度
@@ -262,70 +258,6 @@ void St1xStatic_Init(void) {
 }
 
 /**
- * @brief 显示6轴传感器数据
- * @param u8g2 u8g2显示对象指针
- */
-void St1xStatic_Display(u8g2_t* u8g2) {
-    // 检查静置控制
-    St1xStatic_CheckStandbyControl();
-    
-    uint8_t reg;
-    
-    // 读取数据前先检查传感器是否已初始化
-    if (!sensor_initialized) {
-        u8g2_ClearBuffer(u8g2);
-        u8g2_SetFont(u8g2, u8g2_font_ncenB08_tr);
-        u8g2_DrawStr(u8g2, 0, 20, "Sensor Not Found!");
-        u8g2_SendBuffer(u8g2);
-        return;
-    }
-    
-    // 检查是否有新数据
-    lis2dw12_flag_data_ready_get(&dev_ctx, &reg);
-    
-    if (reg) {
-        // 读取加速度数据
-        memset(data_raw_acceleration, 0x00, 3 * sizeof(int16_t));
-        lis2dw12_acceleration_raw_get(&dev_ctx, data_raw_acceleration);
-        
-        // 转换为mg单位
-        acceleration_mg[0] = lis2dw12_from_fs2_to_mg(data_raw_acceleration[0]);
-        acceleration_mg[1] = lis2dw12_from_fs2_to_mg(data_raw_acceleration[1]);
-        acceleration_mg[2] = lis2dw12_from_fs2_to_mg(data_raw_acceleration[2]);
-    }
-    
-    // 显示数据
-    u8g2_ClearBuffer(u8g2);
-    
-    // 显示标题
-    u8g2_SetFont(u8g2, u8g2_font_ncenB08_tr);
-    u8g2_DrawStr(u8g2, 0, 10, "6-Axis Sensor Data");
-    
-    // 显示X轴数据
-    u8g2_SetFont(u8g2, u8g2_font_spleen6x12_mf);
-    char x_str[20];
-    sprintf(x_str, "X: %6.2f mg", acceleration_mg[0]);
-    u8g2_DrawStr(u8g2, 0, 25, x_str);
-    
-    // 显示Y轴数据
-    char y_str[20];
-    sprintf(y_str, "Y: %6.2f mg", acceleration_mg[1]);
-    u8g2_DrawStr(u8g2, 0, 37, y_str);
-    
-    // 显示Z轴数据
-    char z_str[20];
-    sprintf(z_str, "Z: %6.2f mg", acceleration_mg[2]);
-    u8g2_DrawStr(u8g2, 0, 49, z_str);
-    
-    // 显示设备ID
-    char id_str[20];
-    sprintf(id_str, "ID: 0x%02X", whoamI);
-    u8g2_DrawStr(u8g2, 0, 61, id_str);
-    
-    u8g2_SendBuffer(u8g2);
-}
-
-/**
  * @brief 菜单项动作函数
  */
 void St1xStatic_Action(void) {
@@ -339,6 +271,9 @@ void St1xStatic_Action(void) {
 void St1xStatic_DisplayData(u8g2_t* u8g2) {
     // 检查静置控制
     St1xStatic_CheckStandbyControl();
+    
+    // 调用屏幕和LED控制函数
+    St1xStatic_StandbyDisplayControl(u8g2);
     
     // 如果传入NULL，只执行检查逻辑，不进行显示
     if (u8g2 == NULL) {
@@ -495,10 +430,10 @@ float St1xStatic_GetTotalAcceleration(void) {
 }
 
 /**
- * @brief 检查是否处于静置模式
+ * @brief 检查是否处于待机模式（降低温度）
  */
 uint8_t St1xStatic_IsInStandbyMode(void) {
-    // 只有在加热状态下才考虑静置模式
+    // 只有在加热状态下才考虑待机模式
     if (!heating_status) {
         return 0;
     }
@@ -506,8 +441,15 @@ uint8_t St1xStatic_IsInStandbyMode(void) {
 }
 
 /**
+ * @brief 检查是否处于睡眠模式（停止加热）
+ */
+uint8_t St1xStatic_IsInSleepMode(void) {
+    return is_in_sleep_mode;
+}
+
+/**
  * @brief 设置手动停止标记
- * @param stopped 1表示手动停止，0表示非手动停止
+ * @param stopped 是否手动停止
  */
 void St1xStatic_SetManuallyStopped(uint8_t stopped) {
     manually_stopped = stopped;
@@ -519,4 +461,80 @@ void St1xStatic_SetManuallyStopped(uint8_t stopped) {
  */
 uint8_t St1xStatic_IsManuallyStopped(void) {
     return manually_stopped;
+}
+
+/**
+ * @brief OLED屏幕亮度控制函数
+ * @param u8g2 u8g2显示对象指针
+ * @param brightness 亮度值 (0-255)
+ */
+static void OLED_SetBrightness(u8g2_t* u8g2, uint8_t brightness) {
+    // 使用u8x8_SetContrast函数设置OLED对比度（亮度）
+    // 注意：u8g2库中通常使用u8x8_SetContrast来控制屏幕亮度
+    if (u8g2 != NULL) {
+        u8x8_SetContrast(u8g2_GetU8x8(u8g2), brightness);
+    }
+}
+
+
+
+/**
+ * @brief 静置状态下的屏幕亮度控制
+ * 统一调度机制：静置触发待机（降低温度）时降低亮度，静置触发睡眠（停止发热）时关闭屏幕
+ * @param u8g2 u8g2显示对象指针
+ */
+void St1xStatic_StandbyDisplayControl(u8g2_t* u8g2) {
+    // 检查当前静置状态
+    uint32_t standby_duration = St1xStatic_GetStandbyDuration();
+    uint8_t in_standby_mode = St1xStatic_IsInStandbyMode();
+    
+    // 统一调度逻辑：
+    // 1. 静置触发睡眠状态（停止发热）- 关闭屏幕
+    if (!heating_status && !manually_stopped) {
+        // 静置触发睡眠：停止加热且非手动停止，关闭屏幕
+        if (u8g2 != NULL) {
+            OLED_SetBrightness(u8g2, 0);
+        }
+    }
+    // 2. 静置触发待机状态（降低温度）- 降低亮度
+    else if (in_standby_mode && heating_status) {
+        // 静置触发待机：降低温度但仍保持加热，设置屏幕亮度为30%
+        if (u8g2 != NULL) {
+            OLED_SetBrightness(u8g2, oled_standby_brightness);
+        }
+    }
+    // 3. 正常工作状态 - 恢复正常亮度
+    else {
+        // 正常工作状态：恢复OLED屏幕正常亮度
+        if (u8g2 != NULL) {
+            OLED_SetBrightness(u8g2, oled_brightness);
+        }
+    }
+}
+
+/**
+ * @brief 设置全局u8g2对象指针
+ * 用于定时器回调函数持续控制屏幕亮度
+ * @param u8g2 u8g2显示对象指针
+ */
+void St1xStatic_SetGlobalU8g2(u8g2_t* u8g2) {
+    global_u8g2 = u8g2;
+}
+
+/**
+ * @brief 定时器回调函数
+ * 每100ms调用一次，持续控制屏幕亮度
+ */
+void St1xStatic_TimerCallback(void) {
+    static uint32_t last_call_time = 0;
+    uint32_t current_time = HAL_GetTick();
+    
+    // 每100ms执行一次控制
+    if (current_time - last_call_time < 100) {
+        return;
+    }
+    last_call_time = current_time;
+    
+    // 调用屏幕亮度控制函数
+    St1xStatic_StandbyDisplayControl(global_u8g2);
 }
