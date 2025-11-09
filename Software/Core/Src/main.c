@@ -324,6 +324,9 @@ void AppModules_Init(void) {
     CalibrationHardware_Init();    // 初始化校准系统硬件抽象层
     CalibrationSystem_Init(GetCalibrationHardwareInterface());  // 初始化独立校准系统
     St1xStatic_SetDefaultStandbyParameters();  // 设置默认参数
+    
+    // 初始化冷端补偿温度（使用刚上电时的环境温度）
+    initializeColdJunctionTemperature();
 }
 
 //===========================
@@ -504,6 +507,7 @@ void Error_Handler(void)
 #ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
   * @param  file: pointer to the source file name
   * @param  line: assert_param error line source number
   * @retval None

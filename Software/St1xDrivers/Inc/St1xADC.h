@@ -43,10 +43,30 @@ void systemStatusMonitor(void);
 #define NORMAL_TEMPERATURE_LIMIT 460.0f  // 正常模式下的温度限制
 #define CALIBRATION_TEMPERATURE_LIMIT 500.0f  // 校准模式下的温度限制
 
+// 环境温度获取相关常量
+#define ADC_SAMPLES_FOR_DENOISE 32  // ADC去噪采样次数
+#define CHIP_TEMP_V25 1.43f         // STM32F1内部温度传感器在25°C时的电压(V)
+#define CHIP_TEMP_AVG_SLOPE 4.3f    // STM32F1内部温度传感器平均斜率(mV/°C)
+#define VREFINT_CAL 1.21f           // 内部参考电压校准值(V)
+
 // 全局温度限制变量（可在校准模式下临时修改）
 extern float max_temperature_limit;
 
 // 加热状态变量声明
 extern uint8_t heating_status;
+
+// DMA ADC数据缓冲区声明
+extern uint16_t DMA_ADC[3];
+
+// 环境温度获取函数声明
+float getChipInternalTemperature(void);
+float getFilteredChipTemperature(void);
+float getAmbientTemperatureEstimate(void);
+void updateAmbientTemperatureFilter(void);
+void initializeColdJunctionTemperature(void);
+
+// 环境温度相关变量声明
+extern float ambient_temperature;
+extern float chip_temperature_filtered;
 
 #endif /* ST1XADC_H_ */

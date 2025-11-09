@@ -23,7 +23,7 @@
 
 // ==================== 声明外部变量 ====================
 // 这些变量在其他文件中定义，但我们需要在这里使用它们
-extern uint16_t DMA_ADC[2];               // 传感器数据
+extern uint16_t DMA_ADC[3];               // 传感器数据
 extern float target_temperature;          // 目标温度
 extern uint32_t last_control_time;        // 上次控制时间
 extern uint32_t heating_start_time;       // 开始加热时间
@@ -272,7 +272,7 @@ void heatingControlTimerCallback(void) {
             break;
             
         case 2: // 执行采样
-            HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&DMA_ADC, 2);
+            HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&DMA_ADC, 3);
             updateTemperatureFilter(DMA_ADC[0]);
             sampling_phase = 3;
             break;

@@ -36,7 +36,7 @@ static uint32_t last_display_update = 0;                  // 上次显示更新�
 static uint8_t first_display_update = 1;                  // 首次显示更新标志
 
 // 系统状态变量声明
-extern uint16_t DMA_ADC[2];           // DMA传输的ADC原始数据（通道0:温度，通道1:电压）
+extern uint16_t DMA_ADC[3];           // DMA传输的ADC原始数据（通道0:温度，通道1:电压）
 extern uint8_t heating_control_enabled; // PID控制使能标志
 
 // 系统安全参数
@@ -576,7 +576,7 @@ void drawMainDisplay(u8g2_t *u8g2) {
     extern uint8_t adc_sampling_flag;
     if (adc_sampling_flag == 0) {
         extern ADC_HandleTypeDef hadc1;
-        HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&DMA_ADC, 2);
+        HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&DMA_ADC, 3);
     }
 
     // 获取要显示的数据
@@ -668,6 +668,12 @@ void drawMainDisplay(u8g2_t *u8g2) {
     } else {
         u8g2_DrawStr(u8g2, 108, 26, "LOW");
     }
+    
+    // 显示环境温度（基于烙铁笔项目的思路）
+    extern float getAmbientTemperatureEstimate(void);
+    float ambient_temp = getAmbientTemperatureEstimate();
+    sprintf(display_buffer, "Amb:%0.0f", ambient_temp);
+    u8g2_DrawStr(u8g2, 67, 26, display_buffer);
     
     // 显示目标温度
     sprintf(display_buffer, "SET:%0.0f", target_temperature);

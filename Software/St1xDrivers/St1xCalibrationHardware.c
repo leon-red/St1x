@@ -26,7 +26,7 @@ static const CalibrationHardwareInterface* g_hw_interface = NULL;
  */
 float getCalibrationTemperature(void) {
     // 外部变量声明 - 从St1xADC.c中获取ADC数据
-    extern uint16_t DMA_ADC[2];  // ADC数据数组，[0]为温度传感器，[1]为USB电压
+    extern uint16_t DMA_ADC[3];  // ADC数据数组，[0]为温度传感器，[1]为USB电压
     
     // 直接调用ADC获取原始温度值，不进行460度限制
     uint16_t adcValue = DMA_ADC[0];  // 获取ADC原始值（温度传感器）
@@ -45,7 +45,7 @@ float getCalibrationTemperature(void) {
                mV_per_degree, cold_junction_temp);
     }
     
-    const float adc_ref_voltage = 3.3;      // ADC参考电压
+    const float adc_ref_voltage = 3.3f;      // ADC参考电压
     const uint16_t adc_max = 4095;          // ADC最大值
     
     // 防止读数异常

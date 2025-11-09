@@ -15,7 +15,7 @@
 // ==================== 模块二：系统常量配置 ====================
 
 // 温度传感器参数配置
-#define ATemp   0              // 环境温度补偿值（冷端补偿）
+static float ATemp = 0;              // 环境温度补偿值（冷端补偿），初始为0，上电后更新为实际环境温度
 #define Thermal_Voltage 0.0033f // 热电偶电压-温度转换系数（mV/°C）
 
 // 温度传感器参数导出函数（供校准系统使用）
@@ -25,6 +25,52 @@ float getThermalVoltageParameter(void) {
 
 float getColdJunctionTempParameter(void) {
     return ATemp;
+}
+
+// ADC参数导出函数（供校准系统使用）
+float getADCReferenceVoltageParameter(void) {
+    return 3.3f;  // ADC参考电压
+}
+
+uint16_t getADCMaxValueParameter(void) {
+    return 4095;  // ADC最大值
+}
+
+uint16_t getTemperatureSensorADCValueParameter(void) {
+    return DMA_ADC[0];  // 温度传感器ADC原始值
+}
+
+/**
+ * initializeColdJunctionTemperature - 初始化冷端补偿温度
+ * 
+ * 功能：在系统启动时获取环境温度作为冷端补偿值
+ * 特点：只在上电时执行一次，使用芯片内部温度传感器
+ * 应用：为热电偶温度测量提供准确的环境温度补偿
+ */
+void initializeColdJunctionTemperature(void) {
+    // 等待系统稳定（约1秒）
+    HAL_Delay(1000);
+    
+    // 获取芯片内部温度（需要多次采样取平均）
+    float sum_temp = 0;
+    uint8_t sample_count = 10;
+    
+    for (uint8_t i = 0; i < sample_count; i++) {
+        float chip_temp = getChipInternalTemperature();
+        sum_temp += chip_temp;
+        HAL_Delay(100); // 每次采样间隔100ms
+    }
+    
+    // 计算平均芯片温度
+    float avg_chip_temp = sum_temp / sample_count;
+    
+    // 根据实测结果，芯片温度比环境温度高3~5度
+    // 使用4°C偏移量来估计实际环境温度
+    ATemp = avg_chip_temp - 4.0f;
+    
+    // 环境温度范围限制
+    if (ATemp < -20.0f) ATemp = -20.0f;
+    if (ATemp > 60.0f) ATemp = 60.0f;
 }
 
 // 滤波器配置
@@ -54,7 +100,7 @@ float target_temperature = 360.0f;  // 用户设定的目标温度值
 uint8_t heating_status = 0;          // 当前加热状态（0=停止，1=加热）
 
 // 传感器数据缓存
-uint16_t DMA_ADC[2] = {0};           // DMA传输的ADC原始数据（通道0:温度，通道1:电压）
+uint16_t DMA_ADC[3] = {0};           // DMA传输的ADC原始数据（通道0:温度，通道1:电压，通道2:保留）
 
 // 时间记录变量
 uint32_t last_control_time = 0;      // 上次PID控制执行时间
@@ -70,6 +116,13 @@ uint32_t heating_start_time = 0;     // 加热开始时间戳
 
 // 温度校准参数结构
 TemperatureCalibration t12_cal = {0.0f, 1.0f, 0, 4095}; // T12烙铁头校准参数
+
+// 环境温度相关变量
+float ambient_temperature = 25.0f;           // 环境温度估计值
+float chip_temperature_filtered = 25.0f;     // 滤波后的芯片内部温度
+static float chip_temp_buffer[8] = {0};      // 芯片温度滤波器缓冲区
+static uint8_t chip_temp_index = 0;           // 芯片温度滤波器索引
+static uint8_t chip_temp_initialized = 0;     // 芯片温度滤波器初始化标志
 
 // ==================== 模块四：内部私有变量 ====================
 
@@ -314,6 +367,119 @@ void systemStatusMonitor(void) {
         // 检查系统状态
         checkUSBVoltage();
         checkTemperatureSafety();
+        
+        // 更新环境温度估计（每100ms更新一次）
+        updateAmbientTemperatureFilter();
+        
         last_status_check = current_time;
     }
+}
+
+// ==================== 模块十一：环境温度获取系统 ====================
+
+/**
+ * getChipInternalTemperature - 获取STM32芯片内部温度
+ * 
+ * 功能：读取STM32F1内部温度传感器，转换为实际温度值
+ * 原理：使用内部温度传感器通道（ADC_CHANNEL_TEMPSENSOR）
+ * 温度计算：基于STM32F1数据手册的温度传感器特性
+ * 参考：STM32F103xx数据手册 - 内部温度传感器特性
+ * 
+ * @return 芯片内部温度值（°C）
+ */
+float getChipInternalTemperature(void) {
+    // 检查DMA_ADC数组是否有效
+    if (DMA_ADC[2] == 0) {
+        return 25.0f; // 默认返回室温
+    }
+    
+    // 获取内部温度传感器的ADC值（通道2）
+    uint16_t temp_adc = DMA_ADC[2];
+    
+    // 计算温度（基于STM32F1数据手册）
+    // 公式：温度 = (V25 - Vsense) / Avg_Slope + 25
+    // 其中：V25 = 1.43V（25°C时的电压）
+    //       Avg_Slope = 4.3mV/°C
+    //       Vsense = (ADC值 * Vdda) / 4095
+    
+    // 假设Vdda = 3.3V（实际应用中可能需要校准）
+    float vdda = 3.3f;
+    float vsense = (temp_adc * vdda) / 4095.0f;
+    float temperature = ((CHIP_TEMP_V25 - vsense) * 1000.0f) / CHIP_TEMP_AVG_SLOPE + 25.0f;
+    
+    // 温度范围限制
+    if (temperature < -40.0f) temperature = -40.0f;
+    if (temperature > 125.0f) temperature = 125.0f;
+    
+    return temperature;
+}
+
+/**
+ * getFilteredChipTemperature - 获取滤波后的芯片温度
+ * 
+ * 功能：返回经过滤波处理的芯片内部温度值
+ * 特点：使用8点移动平均滤波，响应较慢但稳定性好
+ * 用途：适合用于环境温度估计和显示
+ * 
+ * @return 滤波后的芯片内部温度（°C）
+ */
+float getFilteredChipTemperature(void) {
+    return chip_temperature_filtered;
+}
+
+/**
+ * updateAmbientTemperatureFilter - 更新环境温度滤波器
+ * 
+ * 功能：更新芯片温度滤波器并估计环境温度
+ * 原理：芯片温度与环境温度存在热耦合关系
+ * 特点：使用8点移动平均滤波，缓慢响应环境温度变化
+ * 应用：为烙铁头提供环境温度补偿参考
+ */
+void updateAmbientTemperatureFilter(void) {
+    // 获取当前芯片内部温度
+    float current_chip_temp = getChipInternalTemperature();
+    
+    // 更新芯片温度滤波器
+    chip_temp_buffer[chip_temp_index] = current_chip_temp;
+    chip_temp_index = (chip_temp_index + 1) % 8;
+    
+    // 如果是第一次使用，用当前值填满整个缓冲区
+    if (!chip_temp_initialized) {
+        for (uint8_t i = 0; i < 8; i++) {
+            chip_temp_buffer[i] = current_chip_temp;
+        }
+        chip_temp_initialized = 1;
+        ADC_DEBUG_PRINTF("CHIP TEMP FILTER INIT: temp=%.2f\n", current_chip_temp);
+    }
+    
+    // 计算平均芯片温度
+    float sum = 0;
+    for (uint8_t i = 0; i < 8; i++) {
+        sum += chip_temp_buffer[i];
+    }
+    chip_temperature_filtered = sum / 8.0f;
+    
+    // 估计环境温度：芯片温度减去4°C偏移（根据实际测试调整为3~5度平均值）
+    ambient_temperature = chip_temperature_filtered - 4.0f;
+    
+    // 环境温度范围限制
+    if (ambient_temperature < -20.0f) ambient_temperature = -20.0f;
+    if (ambient_temperature > 60.0f) ambient_temperature = 60.0f;
+    
+    // 添加调试输出
+    ADC_DEBUG_PRINTF("Ambient Temp: chip=%.2f, filtered=%.2f, ambient=%.2f\n", 
+           current_chip_temp, chip_temperature_filtered, ambient_temperature);
+}
+
+/**
+ * getAmbientTemperatureEstimate - 获取环境温度估计值
+ * 
+ * 功能：返回基于芯片内部温度估计的环境温度
+ * 特点：响应较慢，但能反映环境温度变化趋势
+ * 用途：为烙铁头温度补偿提供环境温度参考
+ * 
+ * @return 估计的环境温度值（°C）
+ */
+float getAmbientTemperatureEstimate(void) {
+    return ambient_temperature;
 }
