@@ -28,7 +28,7 @@ static uint32_t last_operation_time = 0;
 static float display_temperature_buffer[DISPLAY_FILTER_SIZE] = {0}; // 显示温度缓冲区
 static uint8_t display_filter_index = 0;                             // 显示缓冲区索引
 static uint8_t display_filter_initialized = 0;                      // 显示滤波器初始化标志
-static float display_filtered_temperature = 0;                      // 滤波后的显示温度
+float display_filtered_temperature = 0;                             // 滤波后的显示温度
 
 // 温度显示动画系统
 static float displayed_temperature = 0;                    // 当前屏幕显示的温度值
@@ -311,7 +311,7 @@ uint8_t Menu_Process(void) {
     
     // 检查是否超时，自动返回主菜单
     // 注意：在校准模式下禁用自动返回功能
-    if (!St1xCalibration_IsInProgress() && (HAL_GetTick() - last_operation_time) >= AUTO_RETURN_TIME) {
+    if (!CalibrationSystem_IsActive() && (HAL_GetTick() - last_operation_time) >= AUTO_RETURN_TIME) {
         // 直接退出菜单系统
         menu_active = 0;
         return 0;
@@ -326,9 +326,9 @@ uint8_t Menu_Process(void) {
     }
     
     // 检查是否处于校准模式
-    if (St1xCalibration_IsInProgress()) {
+    if (CalibrationSystem_IsActive()) {
         // 在校准模式下，按键由校准模块处理
-        St1xCalibration_HandleKey(key);
+        CalibrationSystem_HandleKey(key);
     } else {
         // 正常菜单模式下的按键处理
         switch (key) {
@@ -388,9 +388,9 @@ uint8_t Menu_Process(void) {
     extern u8g2_t u8g2;
     
     // 检查是否处于校准模式
-    if (St1xCalibration_IsInProgress()) {
+    if (CalibrationSystem_IsActive()) {
         // 在校准模式下，显示校准界面
-        St1xCalibration_MainLoop(&u8g2);
+        CalibrationSystem_Update(&u8g2);
     } else if (is_static_display_mode()) {
         // 处理静态数据显示
         Level1Item3Display();
@@ -455,17 +455,8 @@ void updateDisplayTemperatureFilter(uint16_t adcValue) {
     display_filtered_temperature = sum / DISPLAY_FILTER_SIZE;
 }
 
-/**
- * @brief 获取显示用滤波温度
- * 
- * 功能：返回经过8点滤波处理的显示温度值
- * 特点：响应平滑，适合OLED屏幕显示
- * 
- * @return 显示用滤波温度值（°C）
- */
-float getDisplayFilteredTemperature(void) {
-    return display_filtered_temperature;
-}
+// 显示用滤波温度变量声明（直接使用变量替代函数）
+extern float display_filtered_temperature;
 
 /**
  * @brief 温度显示平滑动画函数
@@ -587,12 +578,12 @@ void drawMainDisplay(u8g2_t *u8g2) {
 
     // 更新显示用滤波器
     updateDisplayTemperatureFilter(DMA_ADC[0]);
-    // 使用滤波后的显示温度
-    float filtered_temp = getDisplayFilteredTemperature();
+    // 使用滤波后的显示温度（直接使用变量）
+    float filtered_temp = display_filtered_temperature;
     
-    // 获取控制用的滤波温度
-    extern float getFilteredTemperature(void);
-    float pid_temp = getFilteredTemperature();
+    // 获取控制用的滤波温度（直接使用变量）
+    extern float filtered_temperature;
+    float pid_temp = filtered_temperature;
     
     // 实现平滑的温度显示动画效果
     uint32_t current_time = HAL_GetTick();
@@ -670,8 +661,8 @@ void drawMainDisplay(u8g2_t *u8g2) {
     }
     
     // 显示环境温度（基于烙铁笔项目的思路）
-    extern float getAmbientTemperatureEstimate(void);
-    float ambient_temp = getAmbientTemperatureEstimate();
+    extern float ambient_temperature;  // 直接使用环境温度变量
+    float ambient_temp = ambient_temperature;
     sprintf(display_buffer, "Amb:%0.0f", ambient_temp);
     u8g2_DrawStr(u8g2, 67, 26, display_buffer);
     

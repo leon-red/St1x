@@ -57,4 +57,7 @@ uint8_t Menu_Process(void);
 // 显示系统函数声明
 void drawMainDisplay(u8g2_t* u8g2);
 
+// 显示系统变量声明
+extern float display_filtered_temperature;
+
 #endif /* ST1XMENU_H_ */

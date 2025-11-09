@@ -321,8 +321,7 @@ void Timer_Init(void) {
 void AppModules_Init(void) {
     Key_Init();                     // 初始化按键处理
     St1xStatic_Init();             // 初始化静态传感器显示
-    CalibrationHardware_Init();    // 初始化校准系统硬件抽象层
-    CalibrationSystem_Init(GetCalibrationHardwareInterface());  // 初始化独立校准系统
+    CalibrationSystem_Init();      // 初始化独立校准系统
     St1xStatic_SetDefaultStandbyParameters();  // 设置默认参数
     
     // 初始化冷端补偿温度（使用刚上电时的环境温度）
@@ -429,7 +428,8 @@ void System_NormalModeHandler(uint32_t current_time) {
     
     // 温度变化超过阈值时也需要更新显示
     static float last_displayed_temp = 0;
-    float current_temp = getDisplayFilteredTemperature();
+    extern float display_filtered_temperature;  // 直接使用显示滤波温度变量
+    float current_temp = display_filtered_temperature;
     if (fabs(current_temp - last_displayed_temp) > 0.5f) {
         need_display_update = 1;
         last_displayed_temp = current_temp;
@@ -483,7 +483,7 @@ void System_CalibrationModeHandler(uint32_t current_time) {
     // 处理校准模式下的按键
     if (key != KEY_NONE) {
         // 将按键传递给校准系统处理
-        St1xCalibration_HandleKey(key);
+        CalibrationSystem_HandleKey(key);
     }
     
     CalibrationSystem_Update(&u8g2);

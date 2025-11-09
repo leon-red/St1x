@@ -80,4 +80,24 @@ void stopHeatingControlTimer(void);
  */
 void heatingControlTimerCallback(void);
 
+// ==================== PID参数获取函数声明 ====================
+
+/**
+ * @brief 获取当前PID比例系数
+ * @return 当前比例系数值
+ */
+float getPID_Kp(void);
+
+/**
+ * @brief 获取当前PID积分系数
+ * @return 当前积分系数值
+ */
+float getPID_Ki(void);
+
+/**
+ * @brief 获取当前PID微分系数
+ * @return 当前微分系数值
+ */
+float getPID_Kd(void);
+
 #endif

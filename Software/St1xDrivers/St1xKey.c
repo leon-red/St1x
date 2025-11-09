@@ -128,6 +128,12 @@ void handleHeatingControl(void) {
  * @param direction 调节方向，1为增加，-1为减少
  */
 void handleTemperatureAdjust(int direction) {
+    // 如果校准系统正在运行，阻止主系统修改目标温度
+    extern uint8_t CalibrationSystem_IsActive(void);
+    if (CalibrationSystem_IsActive()) {
+        return;  // 校准系统激活时，主系统不处理温度调节
+    }
+    
     if (direction > 0) {
         // 增加5度
         target_temperature += 5.0;
@@ -159,6 +165,12 @@ void handleTemperatureAdjust(int direction) {
  * @param key 按键类型
  */
 void handleMainTemperatureAdjust(KeyType key) {
+    // 如果校准系统正在运行，阻止主系统修改目标温度
+    extern uint8_t CalibrationSystem_IsActive(void);
+    if (CalibrationSystem_IsActive()) {
+        return;  // 校准系统激活时，主系统不处理温度调节
+    }
+    
     switch (key) {
         case KEY_UP:
             // 增加目标温度
@@ -272,25 +284,4 @@ KeyType Key_Scan(void) {
     
     return key_pressed;
 
-}
-
-/**
- * @brief 获取按键编号（兼容旧接口）
- * @return 按键编号
- */
-uint8_t Key_GetNum_New(void) {
-    KeyType key = Key_Scan();
-    
-    switch (key) {
-        case KEY_UP:
-            return 1;
-        case KEY_DOWN:
-            return 2;
-        case KEY_MODE:
-            return 3;
-        case KEY_MODE_LONG:
-            return 4;
-        default:
-            return 0;
-    }
 }

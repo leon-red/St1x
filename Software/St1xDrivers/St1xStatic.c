@@ -390,7 +390,8 @@ void St1xStatic_DisplayDebugInfo(u8g2_t* u8g2) {
         time_since_last_movement = HAL_GetTick() - last_movement_time;
     }
     
-    float total_accel = St1xStatic_GetTotalAcceleration();
+    // 直接使用加速度变化量之和
+    float total_accel = acceleration_change[0] + acceleration_change[1] + acceleration_change[2];
     uint8_t in_standby = St1xStatic_IsInStandbyMode();
     
     // 格式化并显示信息
@@ -417,17 +418,7 @@ uint32_t St1xStatic_GetStandbyDuration(void) {
     return HAL_GetTick() - standby_start_time;
 }
 
-/**
- * @brief 获取当前总加速度值（mg）
- */
-float St1xStatic_GetTotalAcceleration(void) {
-    if (!sensor_initialized) {
-        return 0.0f;
-    }
-    
-    // 返回加速度变化量之和
-    return acceleration_change[0] + acceleration_change[1] + acceleration_change[2];
-}
+
 
 /**
  * @brief 检查是否处于待机模式（降低温度）

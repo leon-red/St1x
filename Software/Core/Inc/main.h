@@ -31,8 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "St1xCalibrationHardware.h"
-#include "St1xCalibrationSystem.h"
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

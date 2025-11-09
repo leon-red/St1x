@@ -18,27 +18,7 @@
 static float ATemp = 0;              // 环境温度补偿值（冷端补偿），初始为0，上电后更新为实际环境温度
 #define Thermal_Voltage 0.0033f // 热电偶电压-温度转换系数（mV/°C）
 
-// 温度传感器参数导出函数（供校准系统使用）
-float getThermalVoltageParameter(void) {
-    return Thermal_Voltage;
-}
-
-float getColdJunctionTempParameter(void) {
-    return ATemp;
-}
-
-// ADC参数导出函数（供校准系统使用）
-float getADCReferenceVoltageParameter(void) {
-    return 3.3f;  // ADC参考电压
-}
-
-uint16_t getADCMaxValueParameter(void) {
-    return 4095;  // ADC最大值
-}
-
-uint16_t getTemperatureSensorADCValueParameter(void) {
-    return DMA_ADC[0];  // 温度传感器ADC原始值
-}
+// 温度传感器参数宏定义已移至St1xADC.h头文件中，供外部直接调用
 
 /**
  * initializeColdJunctionTemperature - 初始化冷端补偿温度
@@ -48,8 +28,8 @@ uint16_t getTemperatureSensorADCValueParameter(void) {
  * 应用：为热电偶温度测量提供准确的环境温度补偿
  */
 void initializeColdJunctionTemperature(void) {
-    // 等待系统稳定（约1秒）
-    HAL_Delay(1000);
+    // 等待系统稳定（约0.5秒）
+    HAL_Delay(500);
     
     // 获取芯片内部温度（需要多次采样取平均）
     float sum_temp = 0;
@@ -64,9 +44,8 @@ void initializeColdJunctionTemperature(void) {
     // 计算平均芯片温度
     float avg_chip_temp = sum_temp / sample_count;
     
-    // 根据实测结果，芯片温度比环境温度高3~5度
-    // 使用4°C偏移量来估计实际环境温度
-    ATemp = avg_chip_temp - 4.0f;
+    // 使用6°C偏移量来估计实际环境温度
+    ATemp = avg_chip_temp - 6.0f;
     
     // 环境温度范围限制
     if (ATemp < -20.0f) ATemp = -20.0f;
@@ -130,7 +109,7 @@ static uint8_t chip_temp_initialized = 0;     // 芯片温度滤波器初始化�
 static float temperature_buffer[TEMP_FILTER_SIZE] = {0};  // 温度数据环形缓冲区
 static uint8_t filter_index = 0;                          // 缓冲区写入索引
 static uint8_t filter_initialized = 0;                    // 滤波器初始化标志
-static float filtered_temperature = 0;                   // 滤波后的控制温度
+float filtered_temperature = 0;                   // 滤波后的控制温度
 
 // PWM加热控制相关
 static uint32_t heating_control_interval = 50;  // 加热控制周期
@@ -181,10 +160,10 @@ float calculateADCForTemperature(float target_temp) {
 
 float calculateT12Temperature(uint16_t adcValue) {
     // 传感器参数
-    const float mV_per_degree = Thermal_Voltage;  // 每摄氏度对应的电压
-    const float cold_junction_temp = ATemp;       // 环境温度补偿
-    const float adc_ref_voltage = 3.3f;            // ADC参考电压
-    const uint16_t adc_max = 4095;                // ADC最大值
+    const float mV_per_degree = THERMAL_VOLTAGE_PARAMETER;  // 每摄氏度对应的电压
+    const float cold_junction_temp = ATemp;                // 环境温度补偿
+    const float adc_ref_voltage = ADC_REFERENCE_VOLTAGE;    // ADC参考电压
+    const uint16_t adc_max = ADC_MAX_VALUE;                 // ADC最大值
 
     // 防止读数异常
     if (adcValue > adc_max) adcValue = adc_max;
@@ -216,17 +195,7 @@ float calculateT12Temperature(uint16_t adcValue) {
 
 // ==================== 模块七：温度滤波系统 ====================
 
-/**
- * getFilteredTemperature - 获取控制用滤波温度
- * 
- * 功能：返回经过快速滤波处理的温度值，用于PID控制
- * 特点：响应速度快，稳定性好，适合实时控制
- * 
- * @return 滤波后的控制温度值（°C）
- */
-float getFilteredTemperature(void) {
-    return filtered_temperature;
-}
+
 
 /**
  * updateTemperatureFilter - 更新控制温度滤波器
@@ -322,7 +291,7 @@ uint8_t checkUSBVoltage(void) {
  * @return 1=温度安全，0=温度异常（已执行保护）
  */
 uint8_t checkTemperatureSafety(void) {
-    float current_temp = getFilteredTemperature();
+    float current_temp = filtered_temperature;
     
     // 温度超限保护（使用全局可配置的温度限制）
     if (current_temp > max_temperature_limit) {
@@ -414,18 +383,7 @@ float getChipInternalTemperature(void) {
     return temperature;
 }
 
-/**
- * getFilteredChipTemperature - 获取滤波后的芯片温度
- * 
- * 功能：返回经过滤波处理的芯片内部温度值
- * 特点：使用8点移动平均滤波，响应较慢但稳定性好
- * 用途：适合用于环境温度估计和显示
- * 
- * @return 滤波后的芯片内部温度（°C）
- */
-float getFilteredChipTemperature(void) {
-    return chip_temperature_filtered;
-}
+
 
 /**
  * updateAmbientTemperatureFilter - 更新环境温度滤波器
@@ -471,15 +429,100 @@ void updateAmbientTemperatureFilter(void) {
            current_chip_temp, chip_temperature_filtered, ambient_temperature);
 }
 
+// ==================== 模块十二：校准系统接口函数 ====================
+
+// 环境温度相关变量声明（直接使用变量替代函数）
+extern float chip_temperature_filtered;
+extern float ambient_temperature;
+extern float filtered_temperature;
+
+
+
 /**
- * getAmbientTemperatureEstimate - 获取环境温度估计值
+ * setCalibrationTemperature - 设置校准目标温度
  * 
- * 功能：返回基于芯片内部温度估计的环境温度
- * 特点：响应较慢，但能反映环境温度变化趋势
- * 用途：为烙铁头温度补偿提供环境温度参考
+ * 功能：为校准系统设置目标温度值
+ * 特点：允许设置超过460度的校准温度
+ * 用途：校准模式下设置目标温度
  * 
- * @return 估计的环境温度值（°C）
+ * @param temperature 目标温度值（°C）
  */
-float getAmbientTemperatureEstimate(void) {
-    return ambient_temperature;
+void setCalibrationTemperature(float temperature) {
+    // 在校准模式下允许设置更高温度
+    target_temperature = temperature;
+    
+    // 如果温度超过正常限制，临时提高温度限制
+    if (temperature > max_temperature_limit) {
+        max_temperature_limit = CALIBRATION_TEMPERATURE_LIMIT;
+    }
+}
+
+
+
+/**
+ * scanCalibrationKeys - 扫描校准按键
+ * 
+ * 功能：检测校准模式下的按键操作
+ * 特点：专门为校准系统设计的按键扫描函数
+ * 按键功能：温度+、温度-、确认、取消
+ * 
+ * @return 按键状态（0=无按键，1=温度+，2=温度-，3=确认，4=取消）
+ */
+uint8_t scanCalibrationKeys(void) {
+    // 这里需要实现具体的按键扫描逻辑
+    // 暂时返回0表示无按键，后续需要根据实际硬件实现
+    return 0;
+}
+
+/**
+ * saveCalibrationData - 保存校准数据
+ * 
+ * 功能：将校准结果保存到非易失存储器
+ * 特点：保存温度校准参数和PID参数
+ * 用途：校准完成后保存数据
+ * 
+ * @param offsets 温度偏移量数组
+ * @param count 数据点数量
+ */
+void saveCalibrationData(float* offsets, uint8_t count) {
+    // 这里需要实现具体的EEPROM或Flash存储逻辑
+    // 暂时为空实现，后续需要根据实际硬件实现
+    (void)offsets;
+    (void)count;
+}
+
+/**
+ * StopCalibrationHeating - 停止校准加热
+ * 
+ * 功能：在校准模式下停止加热控制
+ * 特点：专门为校准系统设计的停止加热函数
+ * 用途：校准完成或取消时停止加热
+ */
+void StopCalibrationHeating(void) {
+    // 停止PWM输出
+    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
+    
+    // 停止加热控制定时器
+    stopHeatingControlTimer();
+    
+    // 重置加热状态
+    heating_status = 0;
+}
+
+/**
+ * StartCalibrationHeating - 启动校准加热
+ * 
+ * 功能：在校准模式下启动加热控制
+ * 特点：专门为校准系统设计的启动加热函数
+ * 用途：校准开始时启动加热
+ */
+void StartCalibrationHeating(void) {
+    // 启动加热控制定时器
+    startHeatingControlTimer();
+    
+    // 设置加热状态
+    heating_status = 1;
+    
+    // 记录加热开始时间
+    heating_start_time = HAL_GetTick();
 }

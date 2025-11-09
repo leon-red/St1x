@@ -168,7 +168,6 @@ float pidTemperatureControl(float current_temp) {
  * 
  * 功能：设置想要达到的温度，并重置PID控制器状态
  * 原理：改变目标温度后需要重置PID的积分和误差历史
- *       如果校准系统正在运行，自动同步PID参数到校准系统
  * 
  * @param temperature 目标温度
  */
@@ -177,16 +176,39 @@ void setT12Temperature(float temperature) {
     t12_pid.integral = 0.0;               // 清空积分项
     t12_pid.prev_error = 0.0;             // 清空上次误差
     t12_pid.last_time = HAL_GetTick();    // 更新时间戳
-    
-    // 如果校准系统正在运行，自动同步PID参数
-    extern uint8_t CalibrationSystem_IsActive(void);
-    extern void SyncPIDParametersFromMainSystem(void);
-    
-    if (CalibrationSystem_IsActive()) {
-        SyncPIDParametersFromMainSystem();
-        printf("[PID] Calibration system active, PID parameters synchronized: kp=%.1f, ki=%.1f, kd=%.1f\n", 
-               t12_pid.kp, t12_pid.ki, t12_pid.kd);
-    }
+}
+
+/**
+ * getPID_Kp - 获取当前PID比例系数
+ * 
+ * 功能：返回当前使用的PID比例系数
+ * 
+ * @return 当前比例系数值
+ */
+float getPID_Kp(void) {
+    return t12_pid.kp;
+}
+
+/**
+ * getPID_Ki - 获取当前PID积分系数
+ * 
+ * 功能：返回当前使用的PID积分系数
+ * 
+ * @return 当前积分系数值
+ */
+float getPID_Ki(void) {
+    return t12_pid.ki;
+}
+
+/**
+ * getPID_Kd - 获取当前PID微分系数
+ * 
+ * 功能：返回当前使用的PID微分系数
+ * 
+ * @return 当前微分系数值
+ */
+float getPID_Kd(void) {
+    return t12_pid.kd;
 }
 
 /**
@@ -279,7 +301,8 @@ void heatingControlTimerCallback(void) {
             
         case 3: // 恢复加热
             {
-                float control_temp = getFilteredTemperature();
+                extern float filtered_temperature;
+                float control_temp = filtered_temperature;
                 
                 // 检查是否应该启动专注加热模式（仅在加热状态下且非专注加热模式下且PID控制已启用）
                 if (heating_status && !focused_heating_mode && heating_control_enabled) {

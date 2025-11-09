@@ -26,7 +26,6 @@ typedef struct {
 
 // 函数声明
 float calculateT12Temperature(uint16_t adcValue);
-float getFilteredTemperature(void);
 void updateTemperatureFilter(uint16_t adcValue);
 uint8_t isUSBVoltageSufficient(void);
 uint8_t checkUSBVoltage(void);
@@ -49,6 +48,11 @@ void systemStatusMonitor(void);
 #define CHIP_TEMP_AVG_SLOPE 4.3f    // STM32F1内部温度传感器平均斜率(mV/°C)
 #define VREFINT_CAL 1.21f           // 内部参考电压校准值(V)
 
+// ==================== 温度传感器参数宏定义（供外部调用） ====================
+#define THERMAL_VOLTAGE_PARAMETER 0.0033f  // 热电偶电压-温度转换系数（mV/°C）
+#define ADC_REFERENCE_VOLTAGE 3.3f         // ADC参考电压
+#define ADC_MAX_VALUE 4095                 // ADC最大值
+
 // 全局温度限制变量（可在校准模式下临时修改）
 extern float max_temperature_limit;
 
@@ -60,13 +64,65 @@ extern uint16_t DMA_ADC[3];
 
 // 环境温度获取函数声明
 float getChipInternalTemperature(void);
-float getFilteredChipTemperature(void);
-float getAmbientTemperatureEstimate(void);
 void updateAmbientTemperatureFilter(void);
 void initializeColdJunctionTemperature(void);
 
 // 环境温度相关变量声明
 extern float ambient_temperature;
 extern float chip_temperature_filtered;
+
+// 控制温度滤波变量声明
+extern float filtered_temperature;
+
+
+
+// ==================== 校准系统接口函数声明 ====================
+
+/**
+ * setCalibrationTemperature - 设置校准目标温度
+ * 功能：为校准系统设置目标温度值
+ * @param temperature 目标温度值（°C）
+ */
+void setCalibrationTemperature(float temperature);
+
+/**
+ * isUSBVoltageSufficient - USB电压检测（校准系统专用）
+ * 功能：检测USB输入电压是否满足加热要求
+ * @return 1=电压足够（≥15V），0=电压不足
+ */
+uint8_t isUSBVoltageSufficient(void);
+
+/**
+ * scanCalibrationKeys - 扫描校准按键
+ * 功能：检测校准模式下的按键操作
+ * @return 按键状态（0=无按键，1=温度+，2=温度-，3=确认，4=取消）
+ */
+uint8_t scanCalibrationKeys(void);
+
+/**
+ * saveCalibrationData - 保存校准数据
+ * 功能：将校准结果保存到非易失存储器
+ * @param offsets 温度偏移量数组
+ * @param count 数据点数量
+ */
+void saveCalibrationData(float* offsets, uint8_t count);
+
+/**
+ * StopCalibrationHeating - 停止校准加热
+ * 功能：在校准模式下停止加热控制
+ */
+void StopCalibrationHeating(void);
+
+/**
+ * StartCalibrationHeating - 启动校准加热
+ * 功能：在校准模式下启动加热控制
+ */
+void StartCalibrationHeating(void);
+
+/**
+ * SyncPIDParametersFromMainSystem - 同步PID参数
+ * 功能：从主系统同步PID参数到校准系统
+ */
+void SyncPIDParametersFromMainSystem(void);
 
 #endif /* ST1XADC_H_ */
