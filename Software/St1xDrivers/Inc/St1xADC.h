@@ -62,19 +62,32 @@ extern uint8_t heating_status;
 // DMA ADC数据缓冲区声明
 extern uint16_t DMA_ADC[3];
 
-// 环境温度获取函数声明
-float getChipInternalTemperature(void);
-void updateAmbientTemperatureFilter(void);
-void initializeColdJunctionTemperature(void);
-
 // 环境温度相关变量声明
 extern float ambient_temperature;
-extern float chip_temperature_filtered;
 
 // 控制温度滤波变量声明
 extern float filtered_temperature;
 
+// 目标温度变量声明
+extern float target_temperature;
 
+// 系统状态标志声明
+extern uint8_t adc_sampling_flag;
+extern uint8_t heating_control_enabled;
+
+// 采样状态机变量声明
+extern uint8_t sampling_phase;
+extern uint32_t sample_start_time;
+extern uint16_t saved_pwm_value;
+
+// 时间记录变量声明
+extern uint32_t last_control_time;
+extern uint32_t heating_start_time;
+
+// 环境温度获取函数声明
+float getChipInternalTemperature(void);
+void updateAmbientTemperatureFilter(void);
+void initializeColdJunctionTemperature(void);
 
 // ==================== 校准系统接口函数声明 ====================
 

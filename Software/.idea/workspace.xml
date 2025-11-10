@@ -22,19 +22,12 @@
   <component name="ChangeListManager">
     <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xADC.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xADC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xCalibrationHardware.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xCalibrationSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xCalibrationSystem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xMenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xPID.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xPID.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationHardware.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationSystem.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationSystem.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xMenu.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xMenu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xPID.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xPID.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +158,7 @@
       <workItem from="1762594593671" duration="33475000" />
       <workItem from="1762639510576" duration="532000" />
       <workItem from="1762675378268" duration="14592000" />
-      <workItem from="1762691410005" duration="37960000" />
+      <workItem from="1762691410005" duration="42118000" />
     </task>
     <task id="LOCAL-00001" summary="2025/10/20">
       <option name="closed" value="true" />

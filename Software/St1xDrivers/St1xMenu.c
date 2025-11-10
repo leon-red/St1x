@@ -466,15 +466,27 @@ extern float display_filtered_temperature;
  * 特点：温差越大速度越快，温差越小越精确
  * 速度控制：适应8-12秒快速升温需求
  * 安全限制：限制最大单次变化幅度
+
+/**
+ * @brief 平滑温度显示算法
+ * 功能：实现温度显示的平滑动画效果，在停止加热或不在工作状态时立即响应实际温度变化
  * 
- * @param current_display 当前显示温度（°C）
- * @param target_temp 目标实际温度（°C）
+ * @param current_display 当前显示温度
+ * @param target_temp 目标温度（实际传感器温度）
  * @param time_delta 时间差（秒）
- * @return 平滑后的显示温度（°C）
+ * @return float 新的显示温度
  */
 float smoothTemperatureDisplay(float current_display, float target_temp, float time_delta) {
-    // 优化版平滑算法：7秒内完成温度显示
-    // 基于动态加速和智能插值的快速响应算法
+    // 检查加热状态：如果停止加热或不在工作状态，立即响应实际温度
+    extern uint8_t heating_control_enabled;
+    extern uint8_t heating_status;
+    
+    // 如果PID未工作或加热已停止，直接显示实际温度
+    if (!heating_control_enabled || !heating_status) {
+        return target_temp;
+    }
+    
+    // 正常加热状态下的平滑显示算法
     float temp_diff = target_temp - current_display;
     float abs_temp_diff = fabs(temp_diff);
     
@@ -558,10 +570,8 @@ void drawMainDisplay(u8g2_t *u8g2) {
     
     uint8_t in_standby_mode = St1xStatic_IsInStandbyMode();
     
-    // 如果是静置状态且正在加热（降温状态），则不更新显示内容，保持屏幕亮度设置
-    if (in_standby_mode && heating_status) {
-        return; // 静置状态下不更新显示，保持当前亮度
-    }
+    // 如果是静置状态且正在加热（降温状态），则只更新屏幕亮度，不跳过显示内容
+    // 修改：移除直接return的逻辑，确保屏幕在静置状态下仍然刷新
     
     // 确保传感器数据正在更新
     extern uint8_t adc_sampling_flag;
