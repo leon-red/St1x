@@ -41,6 +41,7 @@
 #include "St1xKey.h"
 #include "St1xStatic.h"
 #include "St1xCalibrationSystem.h"
+#include "Buzzer.h"
 
 // 声明外部变量
 extern uint8_t heating_status;
@@ -154,6 +155,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
 
@@ -302,6 +304,7 @@ void Display_Init(void) {
     spi_oled_Init(&u8g2);           // 初始化OLED
     u8g2_DrawXBMP(&u8g2,0,0,128,80,Logo);  // 显示开机LOGO
     u8g2_SendBuffer(&u8g2);
+    buzzerStartupBeep();            // 播放开机启动音
     HAL_Delay(1000);
     u8g2_ClearBuffer(&u8g2);
 }
@@ -402,9 +405,16 @@ void System_NormalModeHandler(uint32_t current_time) {
             handleMainTemperatureAdjust(key);
         }
         
-        // 处理MODE键短按 - 加热控制
+        // 处理MODE键短按 - 加热控制或调试模式下的归零校准
         if (key == KEY_MODE) {
-            handleHeatingControl();
+            if (debug_display_enabled) {
+                // 调试显示模式下，执行归零校准
+                St1xStatic_ManualZeroCalibration();
+                buzzerConfirmBeep();  // 播放确认音
+            } else {
+                // 正常模式下，执行加热控制
+                handleHeatingControl();
+            }
         }
         
         // 显示按键状态（用于调试）

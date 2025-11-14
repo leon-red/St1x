@@ -3,6 +3,7 @@
 #include "St1xKey.h"
 #include "St1xStatic.h"
 #include "St1xCalibrationSystem.h"
+#include "Buzzer.h"
 #include <stdio.h>
 #include <math.h>
 
@@ -50,6 +51,8 @@ void exit_static_display_mode(void);
 
 // 显示系统函数声明
 float smoothTemperatureDisplay(float current_display, float target_temp, float time_delta);
+
+
 
 // 示例子菜单项
 MenuItem subMenu1Items[] = {
@@ -350,16 +353,13 @@ uint8_t Menu_Process(void) {
                 
             case KEY_MODE:
                 if (is_static_display_mode()) {
-                    // 在静态显示模式下，KEY_MODE键用于退出
-                    exit_static_display_mode();
-                    // 同时执行加热控制逻辑
-                    handleHeatingControl();
+                    // 在静态显示模式下，KEY_MODE键执行归零校准
+                    St1xStatic_ManualZeroCalibration();
+                    // 播放确认音
+                    buzzerConfirmBeep();
                     break;
                 }
-                // 在菜单中，KEY_MODE按键同时用于菜单导航和加热控制
-                // 调用加热控制函数
-                handleHeatingControl();
-                // 执行菜单导航
+                // 在菜单中，KEY_MODE按键仅用于菜单导航，不影响主界面状态
                 Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_ENTER);
                 break;
                 
@@ -597,6 +597,21 @@ void drawMainDisplay(u8g2_t *u8g2) {
     
     // 实现平滑的温度显示动画效果
     uint32_t current_time = HAL_GetTick();
+    
+    // 温度达到目标温度检测（误差-10度）
+    static uint8_t temperature_reached_flag = 0;
+    float temperature_error = filtered_temp - target_temperature;
+    
+    // 如果温度达到目标温度误差-10度以内，且正在加热，播放提示音
+    if (heating_status && heating_control_enabled && temperature_error >= -10.0f && temperature_error <= 0.0f) {
+        if (!temperature_reached_flag) {
+            buzzerConfirmBeep();  // 播放确认音
+            temperature_reached_flag = 1;
+        }
+    } else {
+        // 重置标志
+        temperature_reached_flag = 0;
+    }
     
     // 强制高频更新显示，消除停顿感
     // 每次调用都更新显示，确保流畅性

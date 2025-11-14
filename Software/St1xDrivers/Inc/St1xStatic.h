@@ -24,6 +24,9 @@ uint8_t St1xStatic_IsInSleepMode(void);
 // 调试信息显示函数
 void St1xStatic_DisplayDebugInfo(u8g2_t* u8g2);
 
+// 手动归零校准函数
+void St1xStatic_ManualZeroCalibration(void);
+
 // 静置状态下的屏幕和LED控制函数
 void St1xStatic_StandbyDisplayControl(u8g2_t* u8g2);
 void St1xStatic_SetGlobalU8g2(u8g2_t* u8g2);

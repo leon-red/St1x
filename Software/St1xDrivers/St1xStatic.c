@@ -17,8 +17,10 @@ static int16_t data_raw_acceleration[3];
 static float acceleration_mg[3];
 static uint8_t whoamI;
 static uint8_t sensor_initialized = 0;
-static float last_acceleration_mg[3] = {0.0f, 0.0f, 0.0f};
+static float last_acceleration_mg[3] = {0.0f, 0.0f, 0.0f};  // 用于静置检测的上一帧数据
 static float acceleration_change[3] = {0.0f, 0.0f, 0.0f};
+static float zero_calibration_offset[3] = {0.0f, 0.0f, 0.0f};  // 归零校准的基准值
+static uint8_t zero_calibration_saved = 0;  // 标记是否已保存归零校准数据到FLASH
 
 // 静置时间控制参数（可配置，单位：分钟）
 #define DEFAULT_STANDBY_TIME_REDUCE_TEMP 1    // 1分钟后进入休眠状态
@@ -123,6 +125,9 @@ static void St1xStatic_CheckStandbyControl(void) {
         
         // 退出静置模式
         if (is_in_standby_mode || is_in_sleep_mode) {
+            // 恢复屏幕供电（PA15）
+            HAL_GPIO_WritePin(OLED_PW_EN_GPIO_Port, OLED_PW_EN_Pin, GPIO_PIN_SET);
+            
             is_in_standby_mode = 0;
             is_in_sleep_mode = 0;
             if (!heating_status && !manually_stopped) {
@@ -172,6 +177,9 @@ static void St1xStatic_CheckStandbyControl(void) {
                 is_in_sleep_mode = 1;
                 is_in_standby_mode = 0;
                 manually_stopped = 0;
+                
+                // 关闭屏幕供电（PA15）
+                HAL_GPIO_WritePin(OLED_PW_EN_GPIO_Port, OLED_PW_EN_Pin, GPIO_PIN_RESET);
             }
         }
         // 进入待机模式（降低温度）
@@ -188,6 +196,69 @@ static void St1xStatic_CheckStandbyControl(void) {
             }
         }
     }
+}
+
+// 传感器归零校准函数（基于当前位置）
+static void St1xStatic_ZeroCalibration(void) {
+    if (!sensor_initialized) return;
+    
+    // 等待传感器稳定
+    platform_delay(100);
+    
+    // 读取多组数据进行平均，提高校准精度
+    int32_t sum_x = 0, sum_y = 0, sum_z = 0;
+    uint8_t calibration_samples = 10;
+    
+    for (uint8_t i = 0; i < calibration_samples; i++) {
+        int16_t temp_data[3];
+        
+        // 等待新数据
+        uint8_t reg;
+        do {
+            lis2dw12_flag_data_ready_get(&dev_ctx, &reg);
+        } while (!reg);
+        
+        // 读取加速度数据
+        lis2dw12_acceleration_raw_get(&dev_ctx, temp_data);
+        
+        sum_x += temp_data[0];
+        sum_y += temp_data[1];
+        sum_z += temp_data[2];
+        
+        platform_delay(10); // 10ms间隔
+    }
+    
+    // 计算平均值作为当前位置的基准值
+    int16_t current_offset_x = sum_x / calibration_samples;
+    int16_t current_offset_y = sum_y / calibration_samples;
+    int16_t current_offset_z = sum_z / calibration_samples;
+    
+    // 计算当前重力向量的大小（用于检测设备放置姿态）
+    float current_gravity_mg = sqrtf(
+        lis2dw12_from_fs2_to_mg(current_offset_x) * lis2dw12_from_fs2_to_mg(current_offset_x) +
+        lis2dw12_from_fs2_to_mg(current_offset_y) * lis2dw12_from_fs2_to_mg(current_offset_y) +
+        lis2dw12_from_fs2_to_mg(current_offset_z) * lis2dw12_from_fs2_to_mg(current_offset_z)
+    );
+    
+    // 智能归零策略：基于当前位置进行归零
+    // 无论设备处于什么姿态，都基于当前位置进行归零
+    
+    // 设置归零校准的基准值（保存到专门的数组中）
+    zero_calibration_offset[0] = lis2dw12_from_fs2_to_mg(current_offset_x);
+    zero_calibration_offset[1] = lis2dw12_from_fs2_to_mg(current_offset_y);
+    zero_calibration_offset[2] = lis2dw12_from_fs2_to_mg(current_offset_z);
+    
+    // 保存归零校准数据到FLASH
+    if (St1xFlash_SaveCalibrationData(zero_calibration_offset, 3)) {
+        zero_calibration_saved = 1;
+    }
+    
+    // 可以在这里添加硬件偏移校准（如果需要）
+    // lis2dw12_offset_set(&dev_ctx, current_offset_x, current_offset_y, current_offset_z);
+    
+    // 保存校准状态用于调试
+    static float last_calibration_gravity = 0.0f;
+    last_calibration_gravity = current_gravity_mg;
 }
 
 // 初始化静态传感器显示模块
@@ -223,6 +294,14 @@ void St1xStatic_Init(void) {
         
         sensor_initialized = 1;
         standby_mode_initialized = 0;
+        
+        // 尝试从FLASH加载归零校准数据
+        if (St1xFlash_LoadCalibrationData(zero_calibration_offset, 3)) {
+            zero_calibration_saved = 1;
+        } else {
+            // 如果FLASH中没有有效数据，执行归零校准
+            St1xStatic_ZeroCalibration();
+        }
     }
 }
 
@@ -276,20 +355,20 @@ void St1xStatic_DisplayData(u8g2_t* u8g2) {
     u8g2_SetFont(u8g2, u8g2_font_ncenB08_tr);
     u8g2_DrawStr(u8g2, 0, 10, "6-Axis Sensor Data");
     
-    // 显示X轴数据
+    // 显示X轴数据（相对于归零校准基准值的差值）
     u8g2_SetFont(u8g2, u8g2_font_spleen6x12_mf);
     char x_str[20];
-    sprintf(x_str, "X: %6.2f mg", acceleration_mg[0]);
+    sprintf(x_str, "X: %6.2f mg", acceleration_mg[0] - zero_calibration_offset[0]);
     u8g2_DrawStr(u8g2, 0, 25, x_str);
     
-    // 显示Y轴数据
+    // 显示Y轴数据（相对于归零校准基准值的差值）
     char y_str[20];
-    sprintf(y_str, "Y: %6.2f mg", acceleration_mg[1]);
+    sprintf(y_str, "Y: %6.2f mg", acceleration_mg[1] - zero_calibration_offset[1]);
     u8g2_DrawStr(u8g2, 0, 37, y_str);
     
-    // 显示Z轴数据
+    // 显示Z轴数据（相对于归零校准基准值的差值）
     char z_str[20];
-    sprintf(z_str, "Z: %6.2f mg", acceleration_mg[2]);
+    sprintf(z_str, "Z: %6.2f mg", acceleration_mg[2] - zero_calibration_offset[2]);
     u8g2_DrawStr(u8g2, 0, 49, z_str);
     
     // 显示设备ID
@@ -337,16 +416,29 @@ void St1xStatic_DisplayDebugInfo(u8g2_t* u8g2) {
     float total_accel = acceleration_change[0] + acceleration_change[1] + acceleration_change[2];
     uint8_t in_standby = St1xStatic_IsInStandbyMode();
     
+    // 计算当前重力向量大小（用于校准状态显示）
+    float current_gravity = sqrtf(
+        last_acceleration_mg[0] * last_acceleration_mg[0] +
+        last_acceleration_mg[1] * last_acceleration_mg[1] +
+        last_acceleration_mg[2] * last_acceleration_mg[2]
+    );
+    
     // 格式化并显示信息
     char debug_str1[30];
     char debug_str2[30];
+    char debug_str3[30];
     
     sprintf(debug_str1, "A:%.0f SB:%d HT:%d", total_accel, in_standby, heating_status);
-    sprintf(debug_str2, "L:%lu", time_since_last_movement/1000);
+    sprintf(debug_str2, "L:%lu G:%.0f", time_since_last_movement/1000, current_gravity);
+    sprintf(debug_str3, "Z:%.0f", last_acceleration_mg[2]);
     
     // 在指定位置显示
     u8g2_DrawStr(u8g2, 15, 26, debug_str1);
     u8g2_DrawStr(u8g2, 15, 38, debug_str2);
+    u8g2_DrawStr(u8g2, 15, 50, debug_str3);
+    
+    // 添加MODE按键校准提示
+    u8g2_DrawStr(u8g2, 15, 62, "MODE:Zero Calib");
 }
 
 // 获取当前静置持续时间
@@ -378,6 +470,17 @@ void St1xStatic_SetManuallyStopped(uint8_t stopped) {
 // 检查是否手动停止加热
 uint8_t St1xStatic_IsManuallyStopped(void) {
     return manually_stopped;
+}
+
+// 手动归零校准函数（可在菜单中调用）
+void St1xStatic_ManualZeroCalibration(void) {
+    if (!sensor_initialized) {
+        // 如果传感器未初始化，先初始化
+        St1xStatic_Init();
+    } else {
+        // 执行归零校准
+        St1xStatic_ZeroCalibration();
+    }
 }
 
 // OLED屏幕亮度控制函数

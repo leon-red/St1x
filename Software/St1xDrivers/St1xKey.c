@@ -1,4 +1,5 @@
 #include "St1xKey.h"
+#include "Buzzer.h"
 
 // 按键状态定义
 #define KEY_STATE_RELEASE 0
@@ -79,6 +80,7 @@ void handleHeatingControl(void) {
         stopHeatingControlTimer();
         heating_status = 0;
         St1xStatic_SetManuallyStopped(1);  // 手动停止加热
+        buzzerErrorBeep();  // 电压不足时播放错误提示音
         return;
     }
     
@@ -98,6 +100,7 @@ void handleHeatingControl(void) {
         startHeatingControlTimer();
         heating_status = 1;
         St1xStatic_SetManuallyStopped(0);  // 开始加热，重置手动停止标记
+        buzzerConfirmBeep();  // 开始加热时播放确认音
         
         // 重置采样状态机
         extern uint8_t sampling_phase;
@@ -113,6 +116,7 @@ void handleHeatingControl(void) {
         stopHeatingControlTimer();
         heating_status = 0;
         St1xStatic_SetManuallyStopped(1);  // 手动停止加热
+        buzzerShortBeep();  // 停止加热时播放短促提示音
         
         extern uint8_t sampling_phase;
         extern uint32_t sample_start_time;
@@ -152,6 +156,9 @@ void handleTemperatureAdjust(int direction) {
             target_temperature = 0.0;
         }
     }
+
+    // 播放温度调节提示音
+    buzzerShortBeep();
 
     // 如果正在加热，更新目标温度
     if (heating_status == 1) {
