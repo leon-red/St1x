@@ -21,10 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xADC.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xADC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xCalibrationSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/old/St1xCalibrationSystem_old.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xCalibrationSystem.c" beforeDir="false" afterPath="$PROJECT_DIR$/old/St1xCalibrationSystem_old.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xStatic.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +161,7 @@
       <workItem from="1763134072813" duration="6619000" />
       <workItem from="1763160759339" duration="6492000" />
       <workItem from="1763168435155" duration="14516000" />
-      <workItem from="1763261010776" duration="17270000" />
+      <workItem from="1763261010776" duration="17614000" />
     </task>
     <task id="LOCAL-00001" summary="2025/10/20">
       <option name="closed" value="true" />

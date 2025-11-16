@@ -60,7 +60,7 @@ uint16_t saved_pwm_value = 0;
  * 初始化冷端补偿温度
  */
 void initializeColdJunctionTemperature(void) {
-    HAL_Delay(500);
+    HAL_Delay(200);
     
     float sum_temp = 0;
     for (uint8_t i = 0; i < 10; i++) {

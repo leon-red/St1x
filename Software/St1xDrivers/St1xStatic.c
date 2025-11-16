@@ -492,6 +492,16 @@ static void OLED_SetBrightness(u8g2_t* u8g2, uint8_t brightness) {
 
 // 静置状态下的屏幕亮度控制
 void St1xStatic_StandbyDisplayControl(u8g2_t* u8g2) {
+    // 检查是否处于传感器数据显示界面
+    extern uint8_t is_static_display_mode(void);
+    if (is_static_display_mode()) {
+        // 在传感器数据显示界面，保持正常亮度
+        if (u8g2 != NULL) {
+            OLED_SetBrightness(u8g2, oled_brightness);
+        }
+        return;
+    }
+    
     // 检查当前静置状态
     uint32_t standby_duration = St1xStatic_GetStandbyDuration();
     uint8_t in_standby_mode = St1xStatic_IsInStandbyMode();
