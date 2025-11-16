@@ -219,30 +219,30 @@ void systemStatusMonitor(void) {
     }
 }
 
-/**
- * 校准系统接口函数
- */
-void setCalibrationTemperature(float temperature) {
-    target_temperature = temperature;
-    if (temperature > max_temperature_limit) {
-        max_temperature_limit = CALIBRATION_TEMPERATURE_LIMIT;
-    }
-}
-
-void StopCalibrationHeating(void) {
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
-    stopHeatingControlTimer();
-    heating_status = 0;
-}
-
-void StartCalibrationHeating(void) {
-    startHeatingControlTimer();
-    heating_status = 1;
-    heating_start_time = HAL_GetTick();
-}
-
-// 简化后的空函数（保持接口兼容）
-uint8_t scanCalibrationKeys(void) { return 0; }
-void saveCalibrationData(float* offsets, uint8_t count) { (void)offsets; (void)count; }
-
-// 删除重复的变量声明
+///**
+// * 校准系统接口函数
+// */
+//void setCalibrationTemperature(float temperature) {
+//    target_temperature = temperature;
+//    if (temperature > max_temperature_limit) {
+//        max_temperature_limit = CALIBRATION_TEMPERATURE_LIMIT;
+//    }
+//}
+//
+//void StopCalibrationHeating(void) {
+//    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
+//    stopHeatingControlTimer();
+//    heating_status = 0;
+//}
+//
+//void StartCalibrationHeating(void) {
+//    startHeatingControlTimer();
+//    heating_status = 1;
+//    heating_start_time = HAL_GetTick();
+//}
+//
+//// 简化后的空函数（保持接口兼容）
+//uint8_t scanCalibrationKeys(void) { return 0; }
+//void saveCalibrationData(float* offsets, uint8_t count) { (void)offsets; (void)count; }
+//
+//// 删除重复的变量声明

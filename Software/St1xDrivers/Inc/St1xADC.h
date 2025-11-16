@@ -110,7 +110,7 @@ uint8_t isUSBVoltageSufficient(void);
  * 功能：检测校准模式下的按键操作
  * @return 按键状态（0=无按键，1=温度+，2=温度-，3=确认，4=取消）
  */
-uint8_t scanCalibrationKeys(void);
+//uint8_t scanCalibrationKeys(void);
 
 /**
  * saveCalibrationData - 保存校准数据
@@ -118,7 +118,7 @@ uint8_t scanCalibrationKeys(void);
  * @param offsets 温度偏移量数组
  * @param count 数据点数量
  */
-void saveCalibrationData(float* offsets, uint8_t count);
+//void saveCalibrationData(float* offsets, uint8_t count);
 
 /**
  * StopCalibrationHeating - 停止校准加热

@@ -42,6 +42,7 @@
 #include "St1xStatic.h"
 #include "St1xCalibrationSystem.h"
 #include "Buzzer.h"
+#include "St1xSystemManager.h"
 
 // 声明外部变量
 extern uint8_t heating_status;
@@ -85,49 +86,31 @@ u8g2_t u8g2;
 uint8_t menu_active = 0;
 
 // OLED更新计时
-static uint32_t last_oled_update = 0;
+uint32_t last_oled_update = 0;
 
 // 调试显示标志
-static uint8_t debug_display_enabled = 0;  // 默认关闭调试显示 0关闭 1开启
+uint8_t debug_display_enabled = 0;  // 默认关闭调试显示 0关闭 1开启
 
-// 系统运行模式
-typedef enum {
-    SYSTEM_MODE_NORMAL,     // 正常运行模式
-    SYSTEM_MODE_MENU,       // 菜单模式
-    SYSTEM_MODE_CALIBRATION // 校准模式
-} SystemMode;
-
-static SystemMode current_system_mode = SYSTEM_MODE_NORMAL;  // 当前系统模式
+// 使用系统管理模块中定义的系统模式
+extern SystemMode current_system_mode;
 
 // 系统状态标志
-static uint8_t timer_started = 0;  // 定时器启动标志
-static uint32_t last_standby_check = 0;  // 上次静置检查时间
-static float last_displayed_temp = 0;  // 上次显示的温度值
-static uint32_t menu_enter_delay = 0;  // 菜单进入延迟计时
+uint8_t timer_started = 0;  // 定时器启动标志
+uint32_t last_standby_check = 0;  // 上次静置检查时间
+float last_displayed_temp = 0;  // 上次显示的温度值
+uint32_t menu_enter_delay = 0;  // 菜单进入延迟计时
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 
-// 系统模式管理函数
-void enterMenuMode(void);
-void enterCalibrationMode(void);
-void exitCalibrationMode(void);
-
-// 系统初始化函数
+// 系统初始化函数（保留硬件相关初始化）
 void System_Init(void);
 void LED_Init(void);
 void Display_Init(void);
 void ADC_Init(void);
 void Timer_Init(void);
-void AppModules_Init(void);
-
-// 系统状态处理函数
-void System_ModeHandler(uint32_t current_time);
-void System_NormalModeHandler(uint32_t current_time);
-void System_MenuModeHandler(void);
-void System_CalibrationModeHandler(uint32_t current_time);
 
 /* USER CODE END PFP */
 
@@ -214,7 +197,7 @@ int main(void)
     St1xStatic_TimerCallback();
     
     // 根据当前系统模式处理不同的逻辑
-    System_ModeHandler(current_time);
+    SystemManager_ModeHandler(current_time);
     
     // 各模块有独立的定时刷新机制，无需主循环延时
   }
@@ -275,14 +258,14 @@ void SystemClock_Config(void)
 //===========================
 
 /**
- * @brief 系统初始化 - 负责所有外设和模块的初始化
+ * @brief 系统初始化 - 负责硬件外设的初始化
  */
 void System_Init(void) {
     LED_Init();
     Display_Init();
     ADC_Init();
     Timer_Init();
-    AppModules_Init();
+    SystemManager_AppModulesInit();  // 应用模块初始化已移动到系统管理模块
 }
 
 /**
@@ -324,181 +307,17 @@ void Timer_Init(void) {
     // 首次显示更新完成后，在System_NormalModeHandler中再启动定时器
 }
 
-/**
- * @brief 应用模块初始化
- */
-void AppModules_Init(void) {
-    Key_Init();                     // 初始化按键处理
-    St1xStatic_Init();             // 初始化静态传感器显示
-    CalibrationSystem_Init();      // 初始化独立校准系统
-    St1xStatic_SetDefaultStandbyParameters();  // 设置默认参数
-    
-    // 初始化冷端补偿温度（使用刚上电时的环境温度）
-    initializeColdJunctionTemperature();
-}
 
-//===========================
-// 系统模式管理函数
-//===========================
 
-void enterMenuMode(void) {
-    current_system_mode = SYSTEM_MODE_MENU;
-    menu_active = 1;
-    Menu_InitSystem();  // 初始化菜单系统
-}
 
-void enterCalibrationMode(void) {
-    current_system_mode = SYSTEM_MODE_CALIBRATION;
-    CalibrationSystem_Start();
-}
 
-// 退出校准模式
-void exitCalibrationMode(void) {
-    CalibrationSystem_Stop();
-    current_system_mode = SYSTEM_MODE_NORMAL;
-}
 
-//===========================
-// 系统状态处理函数
-//===========================
 
-/**
- * @brief 系统模式处理主函数
- * @param current_time 当前系统时间(ms)
- */
-void System_ModeHandler(uint32_t current_time) {
-    switch (current_system_mode) {
-        case SYSTEM_MODE_NORMAL:
-            System_NormalModeHandler(current_time);
-            break;
-            
-        case SYSTEM_MODE_MENU:
-            System_MenuModeHandler();
-            break;
-            
-        case SYSTEM_MODE_CALIBRATION:
-            System_CalibrationModeHandler(current_time);
-            break;
-    }
-}
 
-/**
- * @brief 正常运行模式处理
- * @param current_time 当前系统时间(ms)
- */
-void System_NormalModeHandler(uint32_t current_time) {
-    // 检查校准系统是否激活，如果激活则移交控制权
-    if (CalibrationSystem_IsActive()) {
-        // 校准系统激活时，将系统模式切换到校准模式
-        current_system_mode = SYSTEM_MODE_CALIBRATION;
-        return;
-    }
-    
-    KeyType key = Key_Scan();
-    static uint8_t key_debug_display = 0;
-    static uint32_t key_debug_time = 0;
-    
-    // 处理按键输入
-    if (key != KEY_NONE) {
-        // 处理温度调节按键
-        if (key == KEY_UP || key == KEY_DOWN) {
-            handleMainTemperatureAdjust(key);
-        }
-        
-        // 处理MODE键短按 - 加热控制或调试模式下的归零校准
-        if (key == KEY_MODE) {
-            if (debug_display_enabled) {
-                // 调试显示模式下，执行归零校准
-                St1xStatic_ManualZeroCalibration();
-                buzzerConfirmBeep();  // 播放确认音
-            } else {
-                // 正常模式下，执行加热控制
-                handleHeatingControl();
-            }
-        }
-        
-        // 显示按键状态（用于调试）
-        key_debug_display = 1;
-        key_debug_time = current_time;
-        
-        // 处理菜单键 - 如果检测到长按，进入菜单模式
-        if (key == KEY_MODE_LONG) {
-            menu_enter_delay = current_time + MENU_ENTER_DELAY;
-        }
-    }
-    
-    // 延迟进入菜单模式
-    if (menu_enter_delay > 0 && current_time >= menu_enter_delay) {
-        menu_enter_delay = 0;
-        enterMenuMode();
-    }
-    
-    // 检测需要更新显示的条件
-    uint8_t need_display_update = 0;
-    
-    // 有按键按下时，需要更新显示
-    if (key != KEY_NONE) {
-        need_display_update = 1;
-    }
-    
-    // 温度变化超过阈值时也需要更新显示
-    extern float display_filtered_temperature;  // 直接使用显示滤波温度变量
-    float current_temp = display_filtered_temperature;
-    if (fabs(current_temp - last_displayed_temp) > TEMP_DISPLAY_THRESHOLD) {
-        need_display_update = 1;
-        last_displayed_temp = current_temp;
-    }
-    
-    // 定期更新显示
-    if ((current_time - last_oled_update) >= DISPLAY_UPDATE_INTERVAL) {
-        need_display_update = 1;
-    }
-    
-    // 如果需要更新显示，则执行显示操作
-    if (need_display_update) {
-        drawMainDisplay(&u8g2);
-        
-        // 如果启用了调试显示，则显示调试信息
-        if (debug_display_enabled) {
-            St1xStatic_DisplayDebugInfo(&u8g2);
-        }
-        
-        u8g2_SendBuffer(&u8g2);
-        last_oled_update = current_time;
-        
-        // 首次显示更新完成后，启动TIM2中断（PID控制）
-        if (!timer_started) {
-            HAL_TIM_Base_Start_IT(&htim2);  // 启动TIM2中断
-            timer_started = 1;
-        }
-    }
-}
 
-/**
- * @brief 菜单模式处理
- */
-void System_MenuModeHandler(void) {
-    if (!Menu_Process()) {
-        // 菜单已退出，返回正常模式
-        current_system_mode = SYSTEM_MODE_NORMAL;
-        menu_active = 0;
-    }
-}
 
-/**
- * @brief 校准模式处理
- * @param current_time 当前系统时间(ms)
- */
-void System_CalibrationModeHandler(uint32_t current_time) {
-    KeyType key = Key_Scan();
-    
-    // 处理校准模式下的按键
-    if (key != KEY_NONE) {
-        CalibrationSystem_HandleKey(key);
-    }
-    
-    CalibrationSystem_Update(&u8g2);
-}
+
+
 
 /* USER CODE END 4 */
 
