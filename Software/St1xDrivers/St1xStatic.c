@@ -375,6 +375,10 @@ void St1xStatic_DisplayData(u8g2_t* u8g2) {
     char id_str[20];
     sprintf(id_str, "ID: 0x%02X", whoamI);
     u8g2_DrawStr(u8g2, 0, 61, id_str);
+
+    u8g2_DrawStr(u8g2, 0, 71, "Press MODE to 6-Axis");
+    u8g2_DrawStr(u8g2, 0, 80, "Sensor Calibration");
+
     
     u8g2_SendBuffer(u8g2);
 }

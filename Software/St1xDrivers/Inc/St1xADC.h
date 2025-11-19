@@ -38,15 +38,17 @@ float getDisplayFilteredTemperature(void);
 // 系统状态监控函数
 void systemStatusMonitor(void);
 
+// 温度计算方式选择宏定义
+// 设置为1使用9点校准插值计算，设置为0使用原有线性计算
+#define USE_9POINT_CALIBRATION 1
+
 // 温度限制常量定义
-#define NORMAL_TEMPERATURE_LIMIT 480.0f  // 正常模式下的温度限制
-#define CALIBRATION_TEMPERATURE_LIMIT 500.0f  // 校准模式下的温度限制
+#define NORMAL_TEMPERATURE_LIMIT 550.0f  // 正常模式下的温度限制
+#define CALIBRATION_TEMPERATURE_LIMIT 650.0f  // 校准模式下的温度限制
 
 // 环境温度获取相关常量
-#define ADC_SAMPLES_FOR_DENOISE 32  // ADC去噪采样次数
 #define CHIP_TEMP_V25 1.43f         // STM32F1内部温度传感器在25°C时的电压(V)
 #define CHIP_TEMP_AVG_SLOPE 4.3f    // STM32F1内部温度传感器平均斜率(mV/°C)
-#define VREFINT_CAL 1.21f           // 内部参考电压校准值(V)
 
 // ==================== 温度传感器参数宏定义（供外部调用） ====================
 #define THERMAL_VOLTAGE_PARAMETER 0.0033f  // 热电偶电压-温度转换系数（mV/°C）
@@ -137,5 +139,14 @@ void StartCalibrationHeating(void);
  * 功能：从主系统同步PID参数到校准系统
  */
 void SyncPIDParametersFromMainSystem(void);
+
+// 9点校准插值计算相关函数声明
+void selectVoltageCalculationMethod(uint8_t method);
+uint8_t getCurrentVoltageCalculationMethod(void);
+void setCalibrationPoint(uint8_t index, uint16_t adc_value, float temperature);
+void getCalibrationPoint(uint8_t index, uint16_t* adc_value, float* temperature);
+float getCalibrationOffset(uint8_t index);
+void reloadCalibrationData(void);
+float calculateT12TemperatureEnhanced(uint16_t adcValue);
 
 #endif /* ST1XADC_H_ */

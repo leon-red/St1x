@@ -6,7 +6,7 @@
 
 #include "St1xADC.h"
 #include "St1xPID.h"
-#include "adc.h"
+#include "St1xFlash.h"
 #include "tim.h"
 #include <math.h>
 
@@ -18,7 +18,7 @@
 #define CHIP_TEMP_FILTER_SIZE 8
 
 // 全局变量
-static float ATemp = 0;
+static float ATemp = -1.0f;
 float max_temperature_limit = NORMAL_TEMPERATURE_LIMIT;
 float target_temperature = 360.0f;
 uint8_t heating_status = 0;
@@ -77,6 +77,12 @@ void initializeColdJunctionTemperature(void) {
  * ADC值到温度转换
  */
 float calculateT12Temperature(uint16_t adcValue) {
+    // 检查ATemp是否已初始化
+    if (ATemp < -0.5f) {
+        // ATemp未初始化，调用初始化函数
+        initializeColdJunctionTemperature();
+    }
+    
     if (adcValue > ADC_MAX_VALUE) adcValue = ADC_MAX_VALUE;
     
     float voltage = (adcValue * ADC_REFERENCE_VOLTAGE) / ADC_MAX_VALUE;
@@ -149,10 +155,9 @@ uint8_t checkSystemSafety(void) {
         return 0;
     }
     
-    // 温度检查
+    // 温度检查 - 使用动态温度限制，而不是固定限制
     if (filtered_temperature > max_temperature_limit || 
-        filtered_temperature < 0.0f || 
-        filtered_temperature > 500.0f) {
+        filtered_temperature < 0.0f) {
         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
         stopHeatingControlTimer();
         heating_status = 0;
@@ -246,3 +251,153 @@ void systemStatusMonitor(void) {
 //void saveCalibrationData(float* offsets, uint8_t count) { (void)offsets; (void)count; }
 //
 //// 删除重复的变量声明
+
+// 9点校准插值计算相关变量和函数
+#define CALIBRATION_POINTS_COUNT 9
+
+// 9点校准数据结构
+typedef struct {
+    uint16_t adc_value;    // ADC原始值
+    float temperature;     // 对应的实际温度值
+} CalibrationPoint;
+
+// 9点校准数据数组（从FLASH读取）
+static CalibrationPoint calibration_points[CALIBRATION_POINTS_COUNT];
+
+// 校准偏移值数组（从FLASH读取）
+static float calibration_offsets[CALIBRATION_POINTS_COUNT] = {0};
+
+// 电压计算方式选择标志
+// 根据宏定义自动初始化
+#if USE_9POINT_CALIBRATION == 0
+static uint8_t voltage_calculation_method = 1; // 9点插值
+#else
+static uint8_t voltage_calculation_method = 0; // 线性计算
+#endif
+
+// 初始化校准数据（从FLASH读取）
+static void initializeCalibrationData(void) {
+    // 定义9点校准温度点（与校准系统保持一致）
+    static const float cal_temps[CALIBRATION_POINTS_COUNT] = {
+        80.0f, 130.0f, 180.0f, 230.0f, 280.0f,
+        330.0f, 380.0f, 430.0f, 480.0f
+    };
+    
+    // 从FLASH加载校准偏移值
+    if (St1xFlash_IsCalibrationDataValid()) {
+        St1xFlash_LoadCalibrationData(calibration_offsets, CALIBRATION_POINTS_COUNT);
+        
+        // 应用偏移值到校准点温度
+        // 校准点实际温度 = 校准系统目标温度 + 偏移值
+        for (uint8_t i = 0; i < CALIBRATION_POINTS_COUNT; i++) {
+            calibration_points[i].temperature = cal_temps[i] + calibration_offsets[i];
+        }
+    } else {
+        // 如果没有校准数据，使用校准系统目标温度作为默认值
+        for (uint8_t i = 0; i < CALIBRATION_POINTS_COUNT; i++) {
+            calibration_offsets[i] = 0.0f;
+            calibration_points[i].temperature = cal_temps[i];
+        }
+    }
+    
+    // 注意：ADC值需要在校准过程中实际测量得到
+    // 这里暂时使用线性分布的ADC值作为占位符
+    // 实际应用中，这些ADC值应该在校准过程中测量并保存
+    for (uint8_t i = 0; i < CALIBRATION_POINTS_COUNT; i++) {
+        calibration_points[i].adc_value = i * (4095 / (CALIBRATION_POINTS_COUNT - 1));
+    }
+}
+
+// 9点插值计算函数
+static float calculateTemperatureBy9PointInterpolation(uint16_t adcValue) {
+    // 边界检查
+    if (adcValue <= calibration_points[0].adc_value) {
+        return calibration_points[0].temperature;
+    }
+    if (adcValue >= calibration_points[CALIBRATION_POINTS_COUNT-1].adc_value) {
+        return calibration_points[CALIBRATION_POINTS_COUNT-1].temperature;
+    }
+    
+    // 查找adcValue所在的区间
+    uint8_t i;
+    for (i = 0; i < CALIBRATION_POINTS_COUNT - 1; i++) {
+        if (adcValue >= calibration_points[i].adc_value && 
+            adcValue <= calibration_points[i+1].adc_value) {
+            break;
+        }
+    }
+    
+    // 线性插值计算
+    float ratio = (float)(adcValue - calibration_points[i].adc_value) / 
+                  (float)(calibration_points[i+1].adc_value - calibration_points[i].adc_value);
+    
+    float temperature = calibration_points[i].temperature + 
+                        ratio * (calibration_points[i+1].temperature - calibration_points[i].temperature);
+    
+    // 应用冷端补偿
+    temperature += ATemp;
+    
+    // 温度范围限制
+    if (temperature < 0) temperature = 0;
+    if (temperature > max_temperature_limit) temperature = max_temperature_limit;
+    
+    return temperature;
+}
+
+// 选择电压计算方式
+void selectVoltageCalculationMethod(uint8_t method) {
+    if (method <= 1) {
+        voltage_calculation_method = method;
+        
+        // 如果选择9点插值，初始化校准数据
+        if (method == 1) {
+            initializeCalibrationData();
+        }
+    }
+}
+
+// 获取当前使用的电压计算方式
+uint8_t getCurrentVoltageCalculationMethod(void) {
+    return voltage_calculation_method;
+}
+
+// 设置9点校准数据
+void setCalibrationPoint(uint8_t index, uint16_t adc_value, float temperature) {
+    if (index < CALIBRATION_POINTS_COUNT) {
+        calibration_points[index].adc_value = adc_value;
+        calibration_points[index].temperature = temperature;
+    }
+}
+
+// 获取9点校准数据
+void getCalibrationPoint(uint8_t index, uint16_t* adc_value, float* temperature) {
+    if (index < CALIBRATION_POINTS_COUNT && adc_value != NULL && temperature != NULL) {
+        *adc_value = calibration_points[index].adc_value;
+        *temperature = calibration_points[index].temperature;
+    }
+}
+
+// 获取校准偏移值
+float getCalibrationOffset(uint8_t index) {
+    if (index < CALIBRATION_POINTS_COUNT) {
+        return calibration_offsets[index];
+    }
+    return 0.0f;
+}
+
+// 重新加载校准数据（当FLASH数据更新后调用）
+void reloadCalibrationData(void) {
+    initializeCalibrationData();
+}
+
+// 增强的温度计算函数（支持两种计算方式）
+float calculateT12TemperatureEnhanced(uint16_t adcValue) {
+    // 根据运行时选择的计算方式进行计算
+    if (voltage_calculation_method == 1) {
+        // 使用9点插值计算
+        return calculateTemperatureBy9PointInterpolation(adcValue);
+    } else {
+        // 使用原有的线性计算
+        return calculateT12Temperature(adcValue);
+    }
+}

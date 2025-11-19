@@ -3,9 +3,11 @@
 #include "St1xKey.h"
 #include "St1xStatic.h"
 #include "St1xCalibrationSystem.h"
+#include "St1xADC.h"
 #include "Buzzer.h"
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 
 // 全局菜单上下文
 static MenuContext g_menuCtx;
@@ -48,6 +50,7 @@ void Level1Item3Action(void);
 void Level1Item3Display(void);
 uint8_t is_static_display_mode(void);
 void exit_static_display_mode(void);
+void Toggle9PointCalibrationAction(void);
 
 // 显示系统函数声明
 float smoothTemperatureDisplay(float current_display, float target_temp, float time_delta);
@@ -58,34 +61,40 @@ float smoothTemperatureDisplay(float current_display, float target_temp, float t
 MenuItem subMenu1Items[] = {
     {"Sub1-Item1", Menu_DefaultAction, NULL, 0},
     {"Sub1-Item2", Menu_DefaultAction, NULL, 0},
-    {"Sub1-Item3", Menu_DefaultAction, NULL, 0}
+    {"Sub1-Item3", Menu_DefaultAction, NULL, 0},
+    {NULL, NULL, NULL, 0}  // 结束标记
 };
 
 MenuItem subMenu2Items[] = {
     {"Sub2-Item1", Menu_DefaultAction, NULL, 0},
-    {"Sub2-Item2", Menu_DefaultAction, NULL, 0}
+    {"Sub2-Item2", Menu_DefaultAction, NULL, 0},
+    {NULL, NULL, NULL, 0}  // 结束标记
 };
 
 MenuItem subMenu3Items[] = {
     {"Temperature Calib", SubMenu3CalibrationAction, NULL, 0},
     {"Sub3-Item2", Menu_DefaultAction, NULL, 0},
     {"Sub3-Item3", Menu_DefaultAction, NULL, 0},
-    {"Sub3-Item4", Menu_DefaultAction, NULL, 0}
+    {"Sub3-Item4", Menu_DefaultAction, NULL, 0},
+    {NULL, NULL, NULL, 0}  // 结束标记
 };
 
 // 二级菜单项
 MenuItem level2MenuItems[] = {
-    {"SubMenu1", NULL, subMenu1Items, 3},
-    {"SubMenu2", NULL, subMenu2Items, 2},
-    {"Temperature Calib", SubMenu3CalibrationAction, NULL, 0}
+    {"SubMenu1", NULL, subMenu1Items, 3},  // 3个有效菜单项
+    {"SubMenu2", NULL, subMenu2Items, 2},  // 2个有效菜单项
+    {"Temperature Calib", SubMenu3CalibrationAction, NULL, 0},
+    {"9-Point Calib", Toggle9PointCalibrationAction, NULL, 0},
+    {NULL, NULL, NULL, 0}  // 结束标记
 };
 
 // 一级菜单项
 MenuItem rootMenuItems[] = {
     {"Level1-Item1", Menu_DefaultAction, NULL, 0},
     {"Level1-Item2", Menu_DefaultAction, NULL, 0},
-    {"Level2Menu", NULL, level2MenuItems, 3},
-    {"Level1-Item3", Level1Item3Action, NULL, 0}
+    {"Level2Menu", NULL, level2MenuItems, 4},
+    {"6-Axis Calibration", Level1Item3Action, NULL, 0},
+    {NULL, NULL, NULL, 0}  // 结束标记
 };
 
 /**
@@ -115,6 +124,22 @@ void SubMenu3CalibrationAction(void) {
     // 使用新的状态机模式进入校准模式
     // 电压检查由校准系统内部处理，这里不需要重复检查
     CalibrationSystem_Start();
+}
+
+/**
+ * @brief 9点校准开关切换动作函数
+ */
+void Toggle9PointCalibrationAction(void) {
+    // 获取当前计算方式
+    uint8_t current_method = getCurrentVoltageCalculationMethod();
+    
+    // 切换计算方式（0=线性计算，1=9点插值）
+    uint8_t new_method = (current_method == 0) ? 1 : 0;
+    
+    // 设置新的计算方式
+    selectVoltageCalculationMethod(new_method);
+    
+    // 可以添加一些视觉反馈，比如LED闪烁或屏幕提示
 }
 
 // 传感器显示模式标志
@@ -164,19 +189,42 @@ void Level1Item3Display(void) {
 }
 
 /**
+ * @brief 获取当前菜单项数量
+ * @param ctx 菜单上下文指针
+ * @return 菜单项数量
+ */
+static uint8_t getCurrentMenuItemCount(MenuContext* ctx) {
+    uint8_t itemCount = 0;
+    
+    // 获取当前菜单项数量（统一使用遍历方式）
+    while (itemCount < MAX_MENU_ITEMS && ctx->currentMenu[itemCount].name != NULL) {
+        itemCount++;
+    }
+    
+    // 如果遍历失败（比如菜单数组没有以NULL结尾），使用后备方案
+    if (itemCount == 0) {
+        if (ctx->menuLevel == 0) {
+            itemCount = sizeof(rootMenuItems) / sizeof(MenuItem) - 1; // 减去结束标记
+        } else {
+            itemCount = ctx->menuStack[ctx->menuLevel]->subMenuCount;
+        }
+    }
+    
+    // 确保不超过最大菜单项数
+    if (itemCount > MAX_MENU_ITEMS) {
+        itemCount = MAX_MENU_ITEMS;
+    }
+    
+    return itemCount;
+}
+
+/**
  * @brief 处理菜单输入
  * @param ctx 菜单上下文指针
  * @param direction 输入方向
  */
 void Menu_HandleInput(MenuContext* ctx, MenuDirection direction) {
-    uint8_t itemCount = 0;
-    
-    // 获取当前菜单项数量
-    if (ctx->menuLevel == 0) {
-        itemCount = sizeof(rootMenuItems) / sizeof(MenuItem);
-    } else {
-        itemCount = ctx->menuStack[ctx->menuLevel]->subMenuCount;
-    }
+    uint8_t itemCount = getCurrentMenuItemCount(ctx);
     
     switch (direction) {
         case MENU_DIRECTION_UP:
@@ -184,12 +232,12 @@ void Menu_HandleInput(MenuContext* ctx, MenuDirection direction) {
                 ctx->currentItemIndex--;
             } else {
                 // 光标在第一项时向上移动，跳转到最后一项
-                ctx->currentItemIndex = itemCount - 1;
+                ctx->currentItemIndex = (itemCount > 0) ? itemCount - 1 : 0;
             }
             break;
             
         case MENU_DIRECTION_DOWN:
-            if (ctx->currentItemIndex < itemCount - 1) {
+            if (ctx->currentItemIndex < itemCount - 1 && itemCount > 0) {
                 ctx->currentItemIndex++;
             } else {
                 // 光标在最后一项时向下移动，跳转到第一项
@@ -234,13 +282,41 @@ void Menu_HandleInput(MenuContext* ctx, MenuDirection direction) {
 }
 
 /**
+ * @brief 显示单个菜单项
+ * @param u8g2 u8g2显示对象指针
+ * @param item 菜单项
+ * @param y Y坐标
+ * @param isSelected 是否选中
+ */
+static void displayMenuItem(u8g2_t* u8g2, MenuItem* item, uint8_t y, uint8_t isSelected) {
+    // 如果是当前选中项，显示箭头
+    if (isSelected) {
+        u8g2_DrawStr(u8g2, 0, y, ">");
+    }
+    
+    // 显示菜单项名称
+    u8g2_DrawStr(u8g2, 10, y, item->name);
+    
+    // 特殊处理：显示9点校准开关状态
+    if (strcmp(item->name, "9-Point Calib") == 0) {
+        uint8_t current_method = getCurrentVoltageCalculationMethod();
+        u8g2_DrawStr(u8g2, 90, y, current_method == 1 ? "[ON]" : "[OFF]");
+    }
+    
+    // 如果有子菜单，显示标记
+    if (item->subMenu != NULL) {
+        u8g2_DrawStr(u8g2, 110, y, ">");
+    }
+}
+
+/**
  * @brief 显示菜单
  * @param ctx 菜单上下文指针
  * @param u8g2 u8g2显示对象指针
  */
 void Menu_Display(MenuContext* ctx, u8g2_t* u8g2) {
     uint8_t i;
-    uint8_t itemCount = 0;
+    uint8_t itemCount = getCurrentMenuItemCount(ctx);
     uint8_t startY = 20;
     uint8_t lineHeight = 12;
     
@@ -251,35 +327,20 @@ void Menu_Display(MenuContext* ctx, u8g2_t* u8g2) {
     u8g2_SetFont(u8g2, u8g2_font_ncenB08_tr);
     u8g2_DrawStr(u8g2, 0, 10, "MENU:");
     
-    // 获取当前菜单项数量
-    if (ctx->menuLevel == 0) {
-        itemCount = sizeof(rootMenuItems) / sizeof(MenuItem);
-    } else {
-        itemCount = ctx->menuStack[ctx->menuLevel]->subMenuCount;
-    }
-    
-    // 显示菜单项
+    // 显示菜单项（确保不超过有效菜单项数量）
     for (i = 0; i < itemCount && i < MAX_MENU_ITEMS; i++) {
+        // 检查菜单项是否有效
+        if (ctx->currentMenu[i].name == NULL) {
+            break;
+        }
         uint8_t y = startY + i * lineHeight;
-        
-        // 如果是当前选中项，显示箭头
-        if (i == ctx->currentItemIndex) {
-            u8g2_DrawStr(u8g2, 0, y, ">");
-        }
-        
-        // 显示菜单项名称
-        u8g2_DrawStr(u8g2, 10, y, ctx->currentMenu[i].name);
-        
-        // 如果有子菜单，显示标记
-        if (ctx->currentMenu[i].subMenu != NULL) {
-            u8g2_DrawStr(u8g2, 110, y, ">");
-        }
+        displayMenuItem(u8g2, &ctx->currentMenu[i], y, i == ctx->currentItemIndex);
     }
     
     // 显示层级信息
     char levelStr[20];
     sprintf(levelStr, "Level: %d", ctx->menuLevel + 1);
-    u8g2_DrawStr(u8g2, 0, 64, levelStr);
+    u8g2_DrawStr(u8g2, 0, 80, levelStr);
     
     // 发送缓冲区内容到显示屏
     u8g2_SendBuffer(u8g2);
@@ -303,6 +364,72 @@ void Menu_InitSystem(void) {
 }
 
 /**
+ * @brief 处理静态显示模式下的按键
+ * @param key 按键类型
+ * @return 1表示已处理，0表示未处理
+ */
+static uint8_t handleStaticDisplayKey(KeyType key) {
+    if (!is_static_display_mode()) {
+        return 0;
+    }
+    
+    switch (key) {
+        case KEY_MODE:
+            // 在静态显示模式下，KEY_MODE键执行归零校准
+            St1xStatic_ManualZeroCalibration();
+            buzzerConfirmBeep();
+            return 1;
+            
+        case KEY_MODE_LONG:
+            // 在静态显示模式下，长按KEY_MODE键用于退出
+            exit_static_display_mode();
+            return 1;
+            
+        case KEY_UP:
+        case KEY_DOWN:
+            // 在静态显示模式下，UP/DOWN键无操作
+            return 1;
+            
+        default:
+            return 0;
+    }
+}
+
+/**
+ * @brief 处理正常菜单模式下的按键
+ * @param key 按键类型
+ * @return 1表示菜单仍在运行，0表示菜单已退出
+ */
+static uint8_t handleNormalMenuKey(KeyType key) {
+    switch (key) {
+        case KEY_UP:
+            Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_DOWN);
+            break;
+            
+        case KEY_DOWN:
+            Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_UP);
+            break;
+            
+        case KEY_MODE:
+            Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_ENTER);
+            break;
+            
+        case KEY_MODE_LONG:
+            if (g_menuCtx.menuLevel > 0) {
+                Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_BACK);
+            } else {
+                menu_active = 0;
+                return 0;
+            }
+            break;
+            
+        default:
+            break;
+    }
+    return 1;
+}
+
+/**
  * @brief 菜单系统任务处理函数（非阻塞方式）
  * @return 1表示菜单仍在运行，0表示菜单已退出
  */
@@ -315,7 +442,6 @@ uint8_t Menu_Process(void) {
     // 检查是否超时，自动返回主菜单
     // 注意：在校准模式下禁用自动返回功能
     if (!CalibrationSystem_IsActive() && (HAL_GetTick() - last_operation_time) >= AUTO_RETURN_TIME) {
-        // 直接退出菜单系统
         menu_active = 0;
         return 0;
     }
@@ -333,54 +459,12 @@ uint8_t Menu_Process(void) {
         // 在校准模式下，按键由校准模块处理
         CalibrationSystem_HandleKey(key);
     } else {
-        // 正常菜单模式下的按键处理
-        switch (key) {
-            case KEY_UP:
-                if (is_static_display_mode()) {
-                    // 在静态显示模式下，UP键无操作
-                    break;
-                }
-                Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_DOWN); // 向下移动
-                break;
-                
-            case KEY_DOWN:
-                if (is_static_display_mode()) {
-                    // 在静态显示模式下，DOWN键无操作
-                    break;
-                }
-                Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_UP); // 向上移动
-                break;
-                
-            case KEY_MODE:
-                if (is_static_display_mode()) {
-                    // 在静态显示模式下，KEY_MODE键执行归零校准
-                    St1xStatic_ManualZeroCalibration();
-                    // 播放确认音
-                    buzzerConfirmBeep();
-                    break;
-                }
-                // 在菜单中，KEY_MODE按键仅用于菜单导航，不影响主界面状态
-                Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_ENTER);
-                break;
-                
-            case KEY_MODE_LONG:
-                if (is_static_display_mode()) {
-                    // 在静态显示模式下，长按KEY_MODE键用于退出
-                    exit_static_display_mode();
-                    break;
-                }
-                if (g_menuCtx.menuLevel > 0) {
-                    Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_BACK);
-                } else {
-                    // 已经在根菜单，显示退出提示或执行其他操作
-                    // 这里可以添加退出确认逻辑，暂时保持原样
-                    menu_active = 0;
-                    return 0;
-                }
-                break;
-                
-            default:
-                break;
+        // 先处理静态显示模式按键
+        if (!handleStaticDisplayKey(key)) {
+            // 如果不是静态显示模式，处理正常菜单按键
+            if (!handleNormalMenuKey(key)) {
+                return 0;
+            }
         }
     }
     
@@ -668,32 +752,32 @@ void drawMainDisplay(u8g2_t *u8g2) {
     
     // 显示控制用温度
     sprintf(display_buffer, "PID:%0.0f", pid_temp);
-    u8g2_DrawStr(u8g2, 3, 76, display_buffer);
+    u8g2_DrawStr(u8g2, 3, 80, display_buffer);
     
     // 显示传感器原始数据
     sprintf(display_buffer, "ADC0:%d", DMA_ADC[0]);
-    u8g2_DrawStr(u8g2, 4, 12, display_buffer);
+    u8g2_DrawStr(u8g2, 4, 11, display_buffer);
     
     // 显示USB电压
     sprintf(display_buffer, "USB:%0.1f V", usb_voltage);
-    u8g2_DrawStr(u8g2, 67, 12, display_buffer);
+    u8g2_DrawStr(u8g2, 67, 11, display_buffer);
     
     // 显示电压状态
     if (usb_voltage >= USB_VOLTAGE_THRESHOLD) {
-        u8g2_DrawStr(u8g2, 114, 26, "OK");
+        u8g2_DrawStr(u8g2, 114, 24, "OK");
     } else {
-        u8g2_DrawStr(u8g2, 108, 26, "LOW");
+        u8g2_DrawStr(u8g2, 108, 24, "LOW");
     }
     
     // 显示环境温度（基于烙铁笔项目的思路）
     extern float ambient_temperature;  // 直接使用环境温度变量
     float ambient_temp = ambient_temperature;
     sprintf(display_buffer, "Amb:%0.0f", ambient_temp);
-    u8g2_DrawStr(u8g2, 67, 26, display_buffer);
+    u8g2_DrawStr(u8g2, 86, 71, display_buffer);
     
     // 显示目标温度
     sprintf(display_buffer, "SET:%0.0f", target_temperature);
-    u8g2_DrawStr(u8g2, 68, 76, display_buffer);
+    u8g2_DrawStr(u8g2, 80, 80, display_buffer);
     
     // 显示加热状态
     // 更友好的状态显示逻辑
@@ -702,13 +786,13 @@ void drawMainDisplay(u8g2_t *u8g2) {
         // 不显示任何状态文字
     } else if (!heating_status) {
         // 2. PID是否工作-是-加热状态-否-显示"Stop"
-        u8g2_DrawStr(u8g2, 102, 62, "Stop");
+        u8g2_DrawStr(u8g2, 1, 68, "Stop");
     } else if (focused_heating_mode) {
         // 3. PID是否工作-是-是否进入专注模式-是-显示"Heating"
-        u8g2_DrawStr(u8g2, 83, 62, "Heating");
+        u8g2_DrawStr(u8g2, 1, 68, "Heating");
     } else {
         // 4. PID是否工作-是-是否进入专注模式-否-PID是否在控制状态-是-显示"Work"
-        u8g2_DrawStr(u8g2, 102, 62, "Work");
+        u8g2_DrawStr(u8g2, 1, 68, "Work");
     }
 
     // 把缓冲区内容发送到屏幕显示
