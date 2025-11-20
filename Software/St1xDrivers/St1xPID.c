@@ -36,6 +36,11 @@ extern uint32_t initial_heating_end_time;
 #define AGGRESSIVE_HEATING_TEMP_DIFF 5.0f // 激进加热温度差阈值 - 温度差大于5°C时使用100%功率加热
 #define PID_PRECISION_THRESHOLD 2.0f  // PID精确控制阈值 - 温度差小于2°C时启用精确PID参数
 
+// 冷启动专用参数
+#define COLD_START_AGGRESSIVE_KP 15.0f    // 冷启动激进比例系数
+#define COLD_START_AGGRESSIVE_KI 0.8f     // 冷启动激进积分系数
+#define COLD_START_AGGRESSIVE_KD 8.0f     // 冷启动激进微分系数
+
 // 全局变量
 PID_Controller t12_pid = {0.5, 0.01, 1.2, 0.0, 0.0, 0.0, 0};
 uint8_t focused_heating_mode = 0;
@@ -48,6 +53,14 @@ float pidTemperatureControl(float current_temp) {
     if (dt <= 0) dt = 0.01f;
     
     float error = t12_pid.setpoint - current_temp;
+    
+    // 冷启动模式检查 - 使用更激进的加热策略
+    extern uint8_t isColdStartMode(void);
+    if (isColdStartMode() && error > 20.0f) {
+        // 冷启动模式下，温度差大于20°C时使用100%功率加热
+        t12_pid.last_time = current_time;
+        return 100.0f;
+    }
     
     // 专注加热模式检查
     if (heating_status && heating_control_enabled && error > FOCUSED_HEATING_TEMP_DIFF && !focused_heating_mode) {
@@ -71,15 +84,27 @@ float pidTemperatureControl(float current_temp) {
         return 0.0f;
     }
     
-    // 精确PID模式
+    // 精确PID模式 - 根据冷启动状态选择参数
     if (fabs(error) < PID_PRECISION_THRESHOLD) {
-        t12_pid.kp = PID_CONSERVATIVE_KP * 0.6f;
-        t12_pid.ki = PID_CONSERVATIVE_KI * 1.5f;
-        t12_pid.kd = PID_CONSERVATIVE_KD * 1.2f;
+        if (isColdStartMode()) {
+            t12_pid.kp = COLD_START_AGGRESSIVE_KP * 0.6f;
+            t12_pid.ki = COLD_START_AGGRESSIVE_KI * 1.5f;
+            t12_pid.kd = COLD_START_AGGRESSIVE_KD * 1.2f;
+        } else {
+            t12_pid.kp = PID_CONSERVATIVE_KP * 0.6f;
+            t12_pid.ki = PID_CONSERVATIVE_KI * 1.5f;
+            t12_pid.kd = PID_CONSERVATIVE_KD * 1.2f;
+        }
     } else {
-        t12_pid.kp = PID_CONSERVATIVE_KP;
-        t12_pid.ki = PID_CONSERVATIVE_KI;
-        t12_pid.kd = PID_CONSERVATIVE_KD;
+        if (isColdStartMode()) {
+            t12_pid.kp = COLD_START_AGGRESSIVE_KP;
+            t12_pid.ki = COLD_START_AGGRESSIVE_KI;
+            t12_pid.kd = COLD_START_AGGRESSIVE_KD;
+        } else {
+            t12_pid.kp = PID_CONSERVATIVE_KP;
+            t12_pid.ki = PID_CONSERVATIVE_KI;
+            t12_pid.kd = PID_CONSERVATIVE_KD;
+        }
     }
     
     // PID计算
@@ -142,6 +167,17 @@ void heatingControlTimerCallback(void) {
     if (heating_status == 0 || heating_control_enabled == 0) {
         return;
     }
+
+    // 冷启动模式检查 - 在每次控制循环中更新冷启动状态
+    extern void checkAndEnterColdStartMode(float current_temp);
+    extern void updateColdJunctionTemperature(void);
+    extern float filtered_temperature;
+    
+    // 更新冷端补偿温度
+    updateColdJunctionTemperature();
+    
+    // 检查并更新冷启动模式状态
+    checkAndEnterColdStartMode(filtered_temperature);
 
     // 专注加热模式处理
     // 专注加热模式用于快速升温，当温度差较大时启用

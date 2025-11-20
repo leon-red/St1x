@@ -47,6 +47,10 @@
 // 声明外部变量
 extern uint8_t heating_status;
 
+// 环境温度感知系统相关变量声明
+extern uint32_t system_start_time;
+extern uint32_t last_heating_time;
+
 // 校准系统所需的外部函数声明
 extern float getCalibrationTemperature(void);
 extern uint8_t isUSBVoltageSufficient(void);
@@ -199,6 +203,12 @@ int main(void)
     // 根据当前系统模式处理不同的逻辑
     SystemManager_ModeHandler(current_time);
     
+    // 更新蜂鸣器状态机
+    buzzerBeep_update();
+    
+    // 更新启动音状态机
+//    buzzerStartupBeep_update();
+    
     // 各模块有独立的定时刷新机制，无需主循环延时
   }
   /* USER CODE END 3 */
@@ -261,10 +271,16 @@ void SystemClock_Config(void)
  * @brief 系统初始化 - 负责硬件外设的初始化
  */
 void System_Init(void) {
+    // 记录系统启动时间
+    system_start_time = HAL_GetTick();
+    
     LED_Init();
     Display_Init();
     ADC_Init();
     Timer_Init();
+    buzzer_init();  // 初始化蜂鸣器状态机
+//    buzzerStartupBeep();            // 播放开机启动音
+    buzzerRadarBeep();             // 播放渐进启动音
     SystemManager_AppModulesInit();  // 应用模块初始化已移动到系统管理模块
 }
 
@@ -287,8 +303,7 @@ void Display_Init(void) {
     spi_oled_Init(&u8g2);           // 初始化OLED
     u8g2_DrawXBMP(&u8g2,0,0,128,80,Logo);  // 显示开机LOGO
     u8g2_SendBuffer(&u8g2);
-    buzzerStartupBeep();            // 播放开机启动音
-    HAL_Delay(1000);
+    HAL_Delay(1000);                // 显示开机LOGO 1秒钟
     u8g2_ClearBuffer(&u8g2);
 }
 

@@ -51,7 +51,7 @@ void systemStatusMonitor(void);
 #define CHIP_TEMP_AVG_SLOPE 4.3f    // STM32F1内部温度传感器平均斜率(mV/°C)
 
 // ==================== 温度传感器参数宏定义（供外部调用） ====================
-#define THERMAL_VOLTAGE_PARAMETER 0.0033f  // 热电偶电压-温度转换系数（mV/°C）
+#define THERMAL_VOLTAGE_PARAMETER 0.0044f  // 热电偶电压-温度转换系数（mV/°C）
 #define ADC_REFERENCE_VOLTAGE 3.3f         // ADC参考电压
 #define ADC_MAX_VALUE 4095                 // ADC最大值
 
@@ -141,6 +141,45 @@ void StartCalibrationHeating(void);
 void SyncPIDParametersFromMainSystem(void);
 
 // 9点校准插值计算相关函数声明
+void selectVoltageCalculationMethod(uint8_t method);
+uint8_t getCurrentVoltageCalculationMethod(void);
+void setCalibrationPoint(uint8_t index, uint16_t adc_value, float temperature);
+void getCalibrationPoint(uint8_t index, uint16_t* adc_value, float* temperature);
+float getCalibrationOffset(uint8_t index);
+void reloadCalibrationData(void);
+float calculateT12TemperatureEnhanced(uint16_t adcValue);
+
+// 环境温度传感器配置
+#define EXTERNAL_TEMP_SENSOR_ENABLED 0  // 设置为1启用外部温度传感器
+#define ENVIRONMENT_TEMP_SAMPLING_INTERVAL 30000  // 环境温度采样间隔(ms)
+
+// 环境温度传感器类型定义
+typedef enum {
+    TEMP_SENSOR_CHIP_INTERNAL = 0,  // 使用芯片内部温度传感器
+    TEMP_SENSOR_EXTERNAL_DS18B20,   // 使用外部DS18B20传感器
+    TEMP_SENSOR_EXTERNAL_NTC        // 使用外部NTC热敏电阻
+} TempSensorType;
+
+// 环境温度传感器配置结构体
+typedef struct {
+    TempSensorType sensor_type;      // 传感器类型
+    float current_temperature;       // 当前温度值
+    float filtered_temperature;      // 滤波后温度值
+    uint32_t last_sample_time;      // 上次采样时间
+    uint8_t sensor_available;        // 传感器是否可用
+} EnvironmentSensor;
+
+// 新增环境温度相关函数声明
+void initEnvironmentTemperatureSensor(void);
+float getRealEnvironmentTemperature(void);
+void updateEnvironmentTemperatureFilter(void);
+float getEstimatedEnvironmentTemperature(void);
+void setEnvironmentSensorType(TempSensorType sensor_type);
+TempSensorType getCurrentEnvironmentSensorType(void);
+uint8_t isExternalTempSensorAvailable(void);
+
+// 增强的温度计算函数声明
+float calculateT12TemperatureEnhancedWithEnvCompensation(uint16_t adcValue);
 void selectVoltageCalculationMethod(uint8_t method);
 uint8_t getCurrentVoltageCalculationMethod(void);
 void setCalibrationPoint(uint8_t index, uint16_t adc_value, float temperature);

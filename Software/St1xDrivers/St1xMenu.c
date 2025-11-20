@@ -404,14 +404,17 @@ static uint8_t handleNormalMenuKey(KeyType key) {
     switch (key) {
         case KEY_UP:
             Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_DOWN);
+            buzzerShortBeep();
             break;
             
         case KEY_DOWN:
             Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_UP);
+            buzzerShortBeep();
             break;
             
         case KEY_MODE:
             Menu_HandleInput(&g_menuCtx, MENU_DIRECTION_ENTER);
+            buzzerConfirmBeep();
             break;
             
         case KEY_MODE_LONG:
@@ -487,14 +490,6 @@ uint8_t Menu_Process(void) {
 }
 
 // ==================== 显示系统函数实现 ====================
-
-/**
- * @brief 温度传感器参数配置
- */
-#define ATemp   0              // 环境温度补偿值（冷端补偿）
-#define Thermal_Voltage 0.0033f // 热电偶电压-温度转换系数（mV/°C）
-
-
 
 /**
  * @brief 更新显示用温度滤波器

@@ -187,4 +187,8 @@ void SystemManager_AppModulesInit(void) {
     // 初始化冷端补偿温度（使用刚上电时的环境温度）
     extern void initializeColdJunctionTemperature(void);
     initializeColdJunctionTemperature();
+    
+    // 初始化冷启动状态
+    extern void initializeColdStartState(void);
+    initializeColdStartState();
 }

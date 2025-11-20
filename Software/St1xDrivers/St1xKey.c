@@ -6,7 +6,7 @@
 #define KEY_STATE_PRESS 1
 
 // 长按时间定义（毫秒）
-#define LONG_PRESS_TIME 1000  // 长按1秒进入菜单
+#define LONG_PRESS_TIME 500  // 长按0.5秒进入菜单
 
 // 按键去抖动时间
 #define DEBOUNCE_TIME 50
@@ -188,6 +188,7 @@ void handleMainTemperatureAdjust(KeyType key) {
             }
             // 更新PID控制器的目标温度
             setT12Temperature(target_temperature);
+            buzzerShortBeep();
             break;
 
         case KEY_DOWN:
@@ -198,6 +199,7 @@ void handleMainTemperatureAdjust(KeyType key) {
             }
             // 更新PID控制器的目标温度
             setT12Temperature(target_temperature);
+            buzzerShortBeep();
             break;
 
         default:
