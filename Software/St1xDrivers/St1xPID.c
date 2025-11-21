@@ -7,6 +7,7 @@
 
 #include "St1xPID.h"
 #include "St1xADC.h"
+#include "St1xFocusedHeating.h"
 #include "adc.h"
 #include "tim.h"
 #include <math.h>
@@ -31,7 +32,6 @@ extern uint32_t initial_heating_end_time;
 #define PID_CONSERVATIVE_KI 2.5f    // 保守模式积分系数
 #define PID_CONSERVATIVE_KD 12.0f   // 保守模式微分系数
 #define CONTROL_INTERVAL 50         // 控制间隔（毫秒）- 每50ms执行一次完整的控制周期
-#define FOCUSED_HEATING_DURATION 2000 // 专注加热持续时间（毫秒）- 专注加热模式最长持续2秒
 #define FOCUSED_HEATING_TEMP_DIFF 15.0f // 专注加热温度差阈值 - 当目标温度与当前温度差大于15°C时启用专注加热
 #define AGGRESSIVE_HEATING_TEMP_DIFF 5.0f // 激进加热温度差阈值 - 温度差大于5°C时使用100%功率加热
 #define PID_PRECISION_THRESHOLD 2.0f  // PID精确控制阈值 - 温度差小于2°C时启用精确PID参数
@@ -43,8 +43,9 @@ extern uint32_t initial_heating_end_time;
 
 // 全局变量
 PID_Controller t12_pid = {0.5, 0.01, 1.2, 0.0, 0.0, 0.0, 0};
+
+// 专注加热模式标志（保持兼容性，但实际使用状态机）
 uint8_t focused_heating_mode = 0;
-static uint32_t focused_heating_start_time = 0;
 
 // PID温度控制算法
 float pidTemperatureControl(float current_temp) {
@@ -62,15 +63,16 @@ float pidTemperatureControl(float current_temp) {
         return 100.0f;
     }
     
-    // 专注加热模式检查
-    if (heating_status && heating_control_enabled && error > FOCUSED_HEATING_TEMP_DIFF && !focused_heating_mode) {
-        focused_heating_mode = 1;
-        focused_heating_start_time = current_time;
-    }
-    
-    if (focused_heating_mode) {
-        t12_pid.last_time = current_time;
-        return 100.0f;
+    // 专注加热模式检查 - 使用状态机管理
+    if (heating_status && heating_control_enabled && error > FOCUSED_HEATING_TEMP_DIFF) {
+        // 使用状态机检查是否需要专注加热
+        if (FocusedHeating_Update(current_time, current_temp, t12_pid.setpoint)) {
+            focused_heating_mode = 1; // 保持兼容性
+            t12_pid.last_time = current_time;
+            return 100.0f;
+        } else {
+            focused_heating_mode = 0; // 专注加热完成或不需要
+        }
     }
     
     // 激进加热模式
@@ -179,20 +181,11 @@ void heatingControlTimerCallback(void) {
     // 检查并更新冷启动模式状态
     checkAndEnterColdStartMode(filtered_temperature);
 
-    // 专注加热模式处理
+    // 专注加热模式处理 - 使用状态机管理
     // 专注加热模式用于快速升温，当温度差较大时启用
-    if (focused_heating_mode) {
-        // 检查专注加热持续时间是否已到
-        if ((current_time - focused_heating_start_time) >= FOCUSED_HEATING_DURATION) {
-            focused_heating_mode = 0; // 关闭专注加热模式
-            // 再次检查加热状态，确保安全
-            if (heating_status == 0 || heating_control_enabled == 0) {
-                return;
-            }
-        } else {
-            // 专注加热期间，设置PWM为最大值（100%占空比）
-            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
-        }
+    if (FocusedHeating_IsActive()) {
+        // 专注加热期间，设置PWM为最大值（100%占空比）
+        __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
     }
 
     // 控制间隔检查：确保控制周期为50ms
@@ -204,17 +197,46 @@ void heatingControlTimerCallback(void) {
     last_control_time = current_time;
     
     // 采样阶段状态机
-    // 采用四阶段采样策略，避免加热干扰温度测量
+    // 优化采样策略：专注加热期间减少采样中断
+    static uint32_t last_sample_time = 0;
+    static uint8_t sample_counter = 0;
+    
     switch (sampling_phase) {
         case 0: // 准备采样阶段
-            // 保存当前PWM值，用于采样后恢复
-            saved_pwm_value = __HAL_TIM_GET_COMPARE(&htim2, TIM_CHANNEL_2);
-            // 关闭加热，准备采样（PWM设为0）
-            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
-            // 记录采样开始时间
-            sample_start_time = current_time;
-            // 进入等待稳定阶段
-            sampling_phase = 1;
+            // 检查是否处于专注加热模式
+            if (FocusedHeating_IsActive()) {
+                // 专注加热期间：降低采样频率，每4个控制周期采样一次（12.5Hz）
+                sample_counter++;
+                if (sample_counter >= 4) {
+                    sample_counter = 0;
+                    // 需要采样：采用简化采样流程，不关闭加热
+                    HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&DMA_ADC, 3);
+                    // 更新温度滤波器
+                    updateTemperatureFilter(DMA_ADC[0]);
+                    last_sample_time = current_time;
+                } else {
+                    // 不需要采样：直接跳过采样阶段，保持最大功率
+                    // 专注加热期间保持最大功率
+                    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
+                    // 直接进入控制计算阶段
+                    sampling_phase = 3;
+                    break;
+                }
+                // 专注加热期间保持最大功率
+                __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
+                // 直接进入控制计算阶段
+                sampling_phase = 3;
+            } else {
+                // 正常模式：采用四阶段采样策略，避免加热干扰温度测量
+                // 保存当前PWM值，用于采样后恢复
+                saved_pwm_value = __HAL_TIM_GET_COMPARE(&htim2, TIM_CHANNEL_2);
+                // 关闭加热，准备采样（PWM设为0）
+                __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
+                // 记录采样开始时间
+                sample_start_time = current_time;
+                // 进入等待稳定阶段
+                sampling_phase = 1;
+            }
             break;
             
         case 1: // 等待稳定阶段
@@ -240,24 +262,23 @@ void heatingControlTimerCallback(void) {
                 float control_temp = filtered_temperature;
                 
                 // 根据当前状态选择控制策略
-                if (heating_status && !focused_heating_mode && heating_control_enabled) {
-                    // 正常加热状态，检查是否需要进入专注加热模式
+                if (heating_status && heating_control_enabled) {
+                    // 检查是否需要专注加热
                     float error = t12_pid.setpoint - control_temp;
-                    if (error > FOCUSED_HEATING_TEMP_DIFF) {
-                        // 温度差大于阈值，进入专注加热模式
-                        focused_heating_mode = 1;
-                        focused_heating_start_time = current_time;
+                    
+                    // 使用状态机管理专注加热
+                    if (FocusedHeating_Update(current_time, control_temp, t12_pid.setpoint)) {
+                        // 专注加热模式，保持最大功率
+                        focused_heating_mode = 1; // 保持兼容性
                         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
                     } else {
-                        // 使用PID算法计算PWM占空比
+                        // 正常PID控制模式
+                        focused_heating_mode = 0; // 保持兼容性
                         float pwm_duty = pidTemperatureControl(control_temp);
                         // 将占空比转换为PWM计数值（10000对应100%）
                         uint16_t pwm_value = (uint16_t)(pwm_duty * 10000 / 100);
                         __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, pwm_value);
                     }
-                } else if (focused_heating_mode) {
-                    // 专注加热模式，保持最大功率
-                    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 10000);
                 } else {
                     // 其他情况使用PID控制
                     float pwm_duty = pidTemperatureControl(control_temp);
