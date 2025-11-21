@@ -334,7 +334,7 @@ typedef struct {
     float env_temp_coeff;      // 环境温度相关系数
 } ThermocoupleCalibration;
 
-static ThermocoupleCalibration thermocouple_cal = {0.0044f, 0.00001f, 0.00005f};
+static ThermocoupleCalibration thermocouple_cal = {THERMAL_VOLTAGE_PARAMETER, 0.00001f, 0.00005f};
 
 /**
  * 智能估算环境温度
@@ -383,8 +383,8 @@ void updateThermocoupleCalibration(float env_temp) {
         thermocouple_cal.env_temp_coeff = 0.00005f; // 常温环境
     }
     
-    // 根据环境温度调整基础系数
-    thermocouple_cal.base_coeff = 0.0044f + (env_temp - 25.0f) * 0.000002f;
+    // 根据环境温度调整基础系数（基于统一的THERMAL_VOLTAGE_PARAMETER）
+    thermocouple_cal.base_coeff = THERMAL_VOLTAGE_PARAMETER + (env_temp - 25.0f) * 0.000002f;
 }
 
 /**

@@ -22,21 +22,8 @@
   <component name="ChangeListManager">
     <list default="true" id="81df058d-98d2-4dbc-b37e-a0c55f83d0ee" name="更改" comment="2025/10/20">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buzzer.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buzzer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/gpio.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/tim.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/tim.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1x.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/St1x.ioc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Buzzer.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Buzzer.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Buzzer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/Buzzer.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/Buzzer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/Inc/St1xADC.h" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/Inc/St1xADC.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xADC.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xKey.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xMenu.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xMenu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xPID.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xPID.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/St1xDrivers/St1xSystemManager.c" beforeDir="false" afterPath="$PROJECT_DIR$/St1xDrivers/St1xSystemManager.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,11 +86,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="St1x.elf" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="St1x" TARGET_NAME="St1x.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="St1x" RUN_TARGET_NAME="St1x.elf">
       <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="D:\Leon\Desktop\DesignDocument\St1x\Software\cmsis.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
         <debugger kind="GDB" isBundled="true" />
@@ -181,7 +163,8 @@
       <workItem from="1763453237820" duration="4874000" />
       <workItem from="1763466026302" duration="120000" />
       <workItem from="1763522223541" duration="12758000" />
-      <workItem from="1763609935802" duration="19504000" />
+      <workItem from="1763609935802" duration="19933000" />
+      <workItem from="1763690534731" duration="789000" />
     </task>
     <task id="LOCAL-00001" summary="2025/10/20">
       <option name="closed" value="true" />
