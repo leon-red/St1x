@@ -1,5 +1,6 @@
 // 精简版校准系统实现 - 保持所有接口不变，大幅精简内部实现
 #include "St1xCalibrationSystem.h"
+#include "St1xFocusedHeating.h"
 #include "u8g2.h"
 #include "St1xKey.h"
 #include "St1xFlash.h"
@@ -216,6 +217,9 @@ void CalibrationSystem_Start(void) {
     // 设置校准模式温度限制
     max_temperature_limit = CALIBRATION_TEMPERATURE_LIMIT;
     
+    // 设置专注加热状态机为校准模式
+    FocusedHeating_SetCalibrationMode(1);
+    
     sys_state = CAL_STATE_VOLTAGE_CHECK;
     low_volt_start = HAL_GetTick();
 }
@@ -230,6 +234,9 @@ void CalibrationSystem_Stop(void) {
     
     // 恢复正常模式温度限制
     max_temperature_limit = NORMAL_TEMPERATURE_LIMIT;
+    
+    // 设置专注加热状态机为正常模式
+    FocusedHeating_SetCalibrationMode(0);
     
     // 优化：无论原始加热状态如何，都恢复原始目标温度
     // 确保用户设置的温度在退出校准系统后得到正确恢复

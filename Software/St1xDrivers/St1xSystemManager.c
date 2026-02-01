@@ -1,4 +1,5 @@
 #include "St1xSystemManager.h"
+#include "St1xFocusedHeating.h"
 #include "u8g2_oled.h"
 #include "St1xKey.h"
 #include "St1xMenu.h"
@@ -31,6 +32,9 @@ void SystemManager_Init(void) {
     last_standby_check = 0;
     last_displayed_temp = 0;
     menu_enter_delay = 0;
+    
+    // 初始化专注加热状态机
+    FocusedHeating_Init();
 }
 
 // 系统模式管理函数

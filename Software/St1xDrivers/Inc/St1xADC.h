@@ -51,7 +51,7 @@ void systemStatusMonitor(void);
 #define CHIP_TEMP_AVG_SLOPE 4.3f    // STM32F1内部温度传感器平均斜率(mV/°C)
 
 // ==================== 温度传感器参数宏定义（供外部调用） ====================
-#define THERMAL_VOLTAGE_PARAMETER 0.0048f  // 热电偶电压-温度转换系数（mV/°C）
+#define THERMAL_VOLTAGE_PARAMETER 0.0049f  // 热电偶电压-温度转换系数（mV/°C）
 #define ADC_REFERENCE_VOLTAGE 3.3f         // ADC参考电压
 #define ADC_MAX_VALUE 4095                 // ADC最大值
 
