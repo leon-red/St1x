@@ -23,8 +23,8 @@ static float zero_calibration_offset[3] = {0.0f, 0.0f, 0.0f};  // 归零校准�
 static uint8_t zero_calibration_saved = 0;  // 标记是否已保存归零校准数据到FLASH
 
 // 静置时间控制参数（可配置，单位：分钟）
-#define DEFAULT_STANDBY_TIME_REDUCE_TEMP 1    // 1分钟后进入休眠状态
-#define DEFAULT_STANDBY_TIME_TURN_OFF 2       // 2分钟停止加热
+#define DEFAULT_STANDBY_TIME_REDUCE_TEMP 15    // 15分钟后进入休眠状态
+#define DEFAULT_STANDBY_TIME_TURN_OFF 30       // 30分钟停止加热
 #define DEFAULT_REDUCED_TEMPERATURE 160.0f    // 休眠状态下的温度维持
 
 // 时间单位转换宏

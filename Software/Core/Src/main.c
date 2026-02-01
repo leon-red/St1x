@@ -204,7 +204,7 @@ int main(void)
     SystemManager_ModeHandler(current_time);
     
     // 更新蜂鸣器状态机
-    buzzerBeep_update();
+//    buzzerBeep_update();
     
     // 更新启动音状态机
 //    buzzerStartupBeep_update();
@@ -278,9 +278,9 @@ void System_Init(void) {
     Display_Init();
     ADC_Init();
     Timer_Init();
-    buzzer_init();  // 初始化蜂鸣器状态机
+//    buzzer_init();  // 初始化蜂鸣器状态机
 //    buzzerStartupBeep();            // 播放开机启动音
-    buzzerRadarBeep();             // 播放渐进启动音
+//    buzzerRadarBeep();             // 播放渐进启动音
     SystemManager_AppModulesInit();  // 应用模块初始化已移动到系统管理模块
 }
 
